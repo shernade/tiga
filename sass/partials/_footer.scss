@@ -1,0 +1,58 @@
+#colophon {
+	.footer {
+		background: #222;
+		@include border-radius(5px);
+	}
+}
+
+#site-credit {
+	@include container(gutter() auto);
+	margin-bottom: gutter();
+}
+	
+.copyleft {
+	display: block;
+	@include adjust-font-size-to(12px);
+	@include text-shadow(1px 1px 0 rgba(255,255,255, .5));
+	margin: 0 2.041%;
+}
+
+.credit {
+	@extend .copyleft;
+}
+
+/* 	FOOTER SIDEBAR
+	----------------- */
+
+#footer-sidebar {
+	display: block;
+	padding: 0 rhythm(1.1);
+	position: relative;
+}
+
+.footer-widget {
+	@include columns(6, 24);
+	color: #fff;
+	@include text-shadow(1px 1px 1px rgba(black, .9));
+	.widget {
+		.widget-title {
+			color: #aaa;
+		}
+		li {
+			border-bottom: 1px solid #333;
+			padding: .4em 0;
+			&:before {
+				content: "";
+				padding-right: 0;
+			}
+			a {
+				color: #fff;
+				@include text-shadow(1px 1px 1px rgba(black, .9));
+			}
+		}
+	}
+}
+
+.footer-4  {
+	@include omega(24);
+}

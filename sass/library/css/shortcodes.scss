@@ -1,0 +1,675 @@
+@import "blueprint";
+@import "compass";
+@import "compass/css3";
+@import "compass/utilities";
+
+/*
+File Name: 		Shortcodes
+Description: 	Shortcodes list for tiga theme
+Version: 		0.0.1
+Author: 		Satrya
+Since:			tiga 0.0.1
+License: 		GNU General Public License v3
+License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/* 	NOTICE
+	----------------- */
+.notice {
+    display: block;
+	margin: 5px 0 10px;
+    padding: 10px 10px 10px 30px;
+}
+
+.normal {
+	background: #eee image-url("shortcodes/normal.png") no-repeat 7px 15px;
+    border: 1px solid #ddd;
+	color: #888;
+}
+
+.warning {
+    background: $notice-bg-color image-url("shortcodes/warning.png") no-repeat 7px 15px;
+    border: 1px solid $notice-border-color;
+	color: $notice-color;
+}
+
+.tip {
+    background: #FEF6D2 image-url("shortcodes/idea.png") no-repeat 7px 15px;
+    border: 1px solid #EFE3AE;
+	color: $notice-color;
+}
+
+.info {
+	background: $info-bg-color image-url("shortcodes/info.png") no-repeat 7px 15px;
+    border: 1px solid $info-border-color;
+	color: $info-color;
+}
+
+.error {
+	background: $error-bg-color image-url("shortcodes/error.png") no-repeat 7px 15px;
+    border: 1px solid $error-border-color;
+	color: $error-color;
+}
+
+.download {
+	background: $success-bg-color image-url("shortcodes/download.png") no-repeat 7px 15px;
+    border: 1px solid $success-border-color;
+	color: $success-color;
+}
+
+.success {
+	background: #EDFCD5 image-url("shortcodes/success.png") no-repeat 7px 15px;
+    border: 1px solid #D4EBAF;
+	color: $success-color;
+}
+
+.help {
+	background: #b8e1f3 image-url("shortcodes/help.png") no-repeat 7px 15px;
+    border: 1px solid #77bddd;
+	color: #205791;
+}
+
+.delete {
+	background: #f7c5c7 image-url("shortcodes/delete.png") no-repeat 7px 15px;
+    border: 1px solid #f9a2a5;
+	color: #7b1c0f;
+}
+
+/* 	BUTTON
+	Copyright (c) 2012 Thibaut Courouble
+	http://www.webinterfacelab.com/snippets/3d-buttons
+	Licensed under the MIT License:
+	http://www.opensource.org/licenses/mit-license.php
+	
+	Modified by Satrya - @satryaWp
+	----------------- */
+.button {
+	background-color: #dfdfdf;
+	@include background-image(linear-gradient(top, #f1f1f1 0%, #dfdfdf 70%, #dadada 100%));
+	border-width: 1px 1px 0;
+	border-style: solid;
+	border-color: #cecece #bababa #a8a8a8;
+	@include border-radius(3px 3px 2px 2px);
+	@include box-sizing(content-box);
+	@include box-shadow(inset 0 1px #fdfdfd,
+                      inset 0 0 0 1px #eaeaea,
+                      0 1px #a8a8a8,
+                      0 3px #bbb,
+                      0 4px #a8a8a8,
+                      0 5px 2px rgba(0, 0, 0, .25));
+	color: #555555;
+	font-size: 11px;
+	font-weight: bold;
+	height: 28px;
+	@include inline-block;
+	line-height: 28px;
+	margin: 0 0 5px;
+	padding: 0 12px;
+	@include text-shadow(0 1px #fff);
+  
+	&:hover, 
+	&:active {
+		background: #dfdfdf;
+		border-top-color: #c9c9c9;
+		text-decoration: none;
+	}
+  
+	&:active, 
+	&.btn-green:active, 
+	&.btn-blue:active, 
+	&.btn-yellow:active, 
+	&.btn-red:active, 
+	&.btn-purple:active, 
+	&.btn-grey:active, 
+	&.btn-black:active {
+		border-width: 0;
+		@include border-radius(3px);
+		@include box-shadow(
+			inset 0 0 3px rgba(0, 0, 0, .3), 
+			inset 0 1px 1px rgba(0, 0, 0, .4), 
+			0 1px #fff
+		);
+		margin-bottom: 0;
+		padding: 1px 13px 0;
+		position: relative;
+		top: 3px;
+	}
+	
+	&.btn-small { 
+		font-size: 0.8em;
+		height: 21px;
+		line-height: 21px;
+		padding: 0 10px;
+		
+		&:active, 
+		&.btn-green:active, 
+		&.btn-blue:active, 
+		&.btn-yellow:active, 
+		&.btn-red:active, 
+		&.btn-purple:active, 
+		&.btn-grey:active, 
+		&.btn-black:active {
+			padding: 1px 11px 0;
+			position: relative;
+			top: 3px;
+		}
+	}
+	
+	&.btn-large { 
+		font-size: 1.4em;
+		height: 44px;
+		line-height: 44px;
+		padding: 0 16px;
+		
+		&:active, 
+		&.btn-green:active, 
+		&.btn-blue:active, 
+		&.btn-yellow:active, 
+		&.btn-red:active, 
+		&.btn-purple:active, 
+		&.btn-grey:active, 
+		&.btn-black:active {
+			margin: 0 0 5px;
+			padding: 1px 17px 0;
+			position: relative;
+			top: 5px;
+		}
+	}
+	
+	&.btn-xlarge {
+		font-size: 1.8em;
+		height: 48px;
+		line-height: 48px;
+		padding: 0 20px;
+		
+		&:active, 
+		&.btn-green:active, 
+		&.btn-blue:active, 
+		&.btn-yellow:active, 
+		&.btn-red:active, 
+		&.btn-purple:active, 
+		&.btn-grey:active, 
+		&.btn-black:active {
+			margin: 0 0 5px;
+			padding: 1px 21px 0;
+			position: relative;
+			top: 8px;
+		}
+	}
+  
+	&.btn-green {
+		background-color: #94d362;
+		@include background-image(linear-gradient(top, #c0eb85 0%, #94d362 70%, #8ed258 100%));
+		border-color: #91ce5e #7ab04b #5e903f;
+		@include box-shadow(inset 0 1px #d9f3b5,
+							inset 0 0 0 1px #b1e095,
+							0 1px #5e903f,
+							0 3px #6da445,
+							0 4px #5e903f,
+							0 5px 2px rgba(0, 0, 0, .4)
+						);
+		color: #465f25;
+		@include text-shadow(0 1px #d9f3b5);
+    
+		&:hover, 
+		&:active {
+			background: #94d362;
+			border-top-color: #82bd53;
+		}
+	}
+  
+	&.btn-blue {
+		background-color: #61cdf3;
+		@include background-image(linear-gradient(top, #9be5fa 0%, #61cdf3 70%, #5fbde8 100%));
+		border-color: #6fbad1 #3fa3c0 #3583ab;
+		@include box-shadow(inset 0 1px #c5f0fd,
+							inset 0 0 0 1px #8ad1eb,
+							0 1px #3583ab,
+							0 3px #3f9db8,
+							0 4px #3583ab,
+							0 5px 2px rgba(0, 0, 0, .4)
+						);
+		color: #236277;
+		@include text-shadow(0 1px #c2ecf9);
+    
+		&:hover, 
+		&:active {
+			background: #61cdf3;
+			border-top-color: #3eaac9;
+		}
+	}
+  
+	&.btn-yellow {
+		background-color: #f6ba49;
+		@include background-image(linear-gradient(top, #ffdd67 0%, #f6ba49 70%, #f4b03e 100%));
+		border-color: #efb443 #d9a238 #a57825;
+		@include box-shadow(inset 0 1px #ffeca6,
+							inset 0 0 0 1px #e5c96d,
+							0 1px #a57825,
+							0 3px #c08a28,
+							0 4px #a57825,
+							0 5px 2px rgba(0, 0, 0, .4)
+						);
+		color: #7e4f27;
+		@include text-shadow(0 1px #f2e294);
+    
+		&:hover, &:active {
+			background: #f6ba49;
+			border-top-color: #e5ab3d;
+		}
+	}
+  
+	&.btn-red {
+		background-color: #e46565;
+		@include background-image(linear-gradient(top, #eb9093 0%, #e46565 70%, #e25755 100%));
+		border-color: #e1696e #c85252 #a03a38;
+		@include box-shadow(inset 0 1px #dcaaaa,
+							inset 0 0 0 1px #df777a,
+							0 1px #a03a38,
+							0 3px #be4b49,
+							0 4px #a03a38,
+							0 5px 2px rgba(0, 0, 0, .4)
+						);
+		color: #702526;
+		@include text-shadow(0 1px #ea8f99);
+    
+		&:hover, 
+		&:active {
+			background: #e46565;
+			border-top-color: #d0585a;
+		}
+	}
+  
+	&.btn-purple {
+		background-color: #e393d3;
+		@include background-image(linear-gradient(top, #f1bee3 0%, #e393d3 70%, #df8dce 100%));
+		border-color: #e391d0 #c27ab3 #8a517d;
+		@include box-shadow(inset 0 1px #f5d6ee,
+							inset 0 0 0 1px #dcaacf,
+							0 1px #8a517d,
+							0 3px #a7619a,
+							0 4px #8a517d,
+							0 5px 2px rgba(0, 0, 0, .4)
+						);
+		color: #714667;
+		@include text-shadow(0 1px #f2c5e6);
+		
+		&:hover, 
+		&:active {
+			background: #e393d3;
+			border-top-color: #c87eb8;
+		}
+	}
+	
+	&.btn-black {
+		background-color: #4f4f4f;
+		@include background-image(linear-gradient(top, #696969 0%, #4f4f4f 70%, #3c3c3c 100%));
+		border-color: #505050 #414141 #2c2c2c;
+		@include box-shadow(inset 0 1px #828282,
+							inset 0 0 0 1px #555,
+							0 1px #2c2c2c,
+							0 3px #444,
+							0 4px #2c2c2c,
+							0 5px 2px rgba(0, 0, 0, .4)
+						);
+		color: #f1f1f1;
+		@include text-shadow(0 1px #111);
+    
+		&:hover, 
+		&:active {
+			background: #4f4f4f;
+			border-top-color: #494949;
+		}
+	}
+}
+
+.ie9 {
+	.button {
+		border-width: 1px;
+		padding: 0 12px;
+	}
+}
+
+/* 	FANCYBOX
+	----------------- */
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	margin-left: -20px;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1104;
+	display: none;
+	div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 40px;
+		height: 480px;
+		background-image: image-url("shortcodes/fancybox/fancybox.png");
+	}
+}
+
+#fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1100;
+	display: none;
+}
+
+#fancybox-tmp {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	overflow: auto;
+	display: none;
+}
+
+#fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	z-index: 1101;
+	outline: none;
+	display: none;
+}
+
+#fancybox-outer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+#fancybox-content {
+	width: 0;
+	height: 0;
+	padding: 0;
+	outline: none;
+	position: relative;
+	overflow: hidden;
+	z-index: 1102;
+	border: 0px solid #fff;
+}
+
+#fancybox-hide-sel-frame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	z-index: 1101;
+}
+
+#fancybox-close {
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	width: 30px;
+	height: 30px;
+	background: transparent image-url("shortcodes/fancybox/fancybox.png") -40px 0px;
+	cursor: pointer;
+	z-index: 1103;
+	display: none;
+}
+
+#fancybox-error {
+	color: #444;
+	font: normal 12px/20px Arial;
+	padding: 14px;
+	margin: 0;
+}
+
+#fancybox-img {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	line-height: 0;
+	vertical-align: top;
+}
+
+#fancybox-frame {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+}
+
+#fancybox-left, #fancybox-right {
+	position: absolute;
+	bottom: 0px;
+	height: 100%;
+	width: 35%;
+	cursor: pointer;
+	outline: none;
+	background: transparent image-url("shortcodes/fancybox/blank.gif");
+	z-index: 1102;
+	display: none;
+}
+
+#fancybox-left {
+	left: 0px;
+}
+
+#fancybox-right {
+	right: 0px;
+}
+
+#fancybox-left-ico, #fancybox-right-ico {
+	position: absolute;
+	top: 50%;
+	left: -9999px;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	cursor: pointer;
+	z-index: 1102;
+	display: block;
+}
+
+#fancybox-left-ico {
+	background-image: image-url("shortcodes/fancybox/fancybox.png");
+	background-position: -40px -30px;
+}
+
+#fancybox-right-ico {
+	background-image: image-url("shortcodes/fancybox/fancybox.png");
+	background-position: -40px -60px;
+}
+
+#fancybox-left:hover, #fancybox-right:hover {
+	visibility: visible; /* IE6 */
+}
+
+#fancybox-left:hover span {
+	left: 20px;
+}
+
+#fancybox-right:hover span {
+	left: auto;
+	right: 20px;
+}
+
+.fancybox-bg {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 20px;
+	height: 20px;
+	z-index: 1001;
+}
+
+#fancybox-bg-n {
+	top: -20px;
+	left: 0;
+	width: 100%;
+	background-image: image-url("shortcodes/fancybox/fancybox-x.png");
+}
+
+#fancybox-bg-ne {
+	top: -20px;
+	right: -20px;
+	background-image: image-url("shortcodes/fancybox/fancybox.png");
+	background-position: -40px -162px;
+}
+
+#fancybox-bg-e {
+	top: 0;
+	right: -20px;
+	height: 100%;
+	background-image: image-url("shortcodes/fancybox/fancybox-y.png");
+	background-position: -20px 0px;
+}
+
+#fancybox-bg-se {
+	bottom: -20px;
+	right: -20px;
+	background-image: image-url("shortcodes/fancybox/fancybox.png");
+	background-position: -40px -182px; 
+}
+
+#fancybox-bg-s {
+	bottom: -20px;
+	left: 0;
+	width: 100%;
+	background-image: image-url("shortcodes/fancybox/fancybox-x.png");
+	background-position: 0px -20px;
+}
+
+#fancybox-bg-sw {
+	bottom: -20px;
+	left: -20px;
+	background-image: image-url("shortcodes/fancybox/fancybox.png");
+	background-position: -40px -142px;
+}
+
+#fancybox-bg-w {
+	top: 0;
+	left: -20px;
+	height: 100%;
+	background-image: image-url("shortcodes/fancybox/fancybox-y.png");
+}
+
+#fancybox-bg-nw {
+	top: -20px;
+	left: -20px;
+	background-image: image-url("shortcodes/fancybox/fancybox.png");
+	background-position: -40px -122px;
+}
+
+#fancybox-title {
+	font-family: Helvetica;
+	font-size: 12px;
+	z-index: 1102;
+}
+
+.fancybox-title-inside {
+	padding-bottom: 10px;
+	text-align: center;
+	color: #333;
+	background: #fff;
+	position: relative;
+}
+
+.fancybox-title-outside {
+	padding-top: 10px;
+	color: #fff;
+}
+
+.fancybox-title-over {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #FFF;
+	text-align: left;
+}
+
+#fancybox-title-over {
+	padding: 10px;
+	background-image: image-url("shortcodes/fancybox/fancy_title_over.png");
+	display: block;
+}
+
+.fancybox-title-float {
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+	height: 32px;
+}
+
+#fancybox-title-float-wrap {
+	border: none;
+	border-collapse: collapse;
+	width: auto;
+}
+
+#fancybox-title-float-wrap td {
+	border: none;
+	white-space: nowrap;
+}
+
+#fancybox-title-float-left {
+	padding: 0 0 0 15px;
+	background: image-url("shortcodes/fancybox/fancybox.png") -40px -90px no-repeat;
+}
+
+#fancybox-title-float-main {
+	color: #FFF;
+	line-height: 29px;
+	font-weight: bold;
+	padding: 0 0 3px 0;
+	background: image-url("shortcodes/fancybox/fancybox-x.png") 0px -40px;
+}
+
+#fancybox-title-float-right {
+	padding: 0 0 0 15px;
+	background: image-url("shortcodes/fancybox/fancybox.png") -55px -90px no-repeat;
+}
+
+/* IE6 */
+
+.fancybox-ie6 #fancybox-close { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_close.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-left-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_nav_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-right-ico { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_nav_right.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-title-over { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_title_over.png', sizingMethod='scale'); zoom: 1; }
+.fancybox-ie6 #fancybox-title-float-left { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_title_left.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-main { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_title_main.png', sizingMethod='scale'); }
+.fancybox-ie6 #fancybox-title-float-right { background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_title_right.png', sizingMethod='scale'); }
+
+.fancybox-ie6 #fancybox-bg-w, .fancybox-ie6 #fancybox-bg-e, .fancybox-ie6 #fancybox-left, .fancybox-ie6 #fancybox-right, #fancybox-hide-sel-frame {
+	height: expression(this.parentNode.clientHeight + "px");
+}
+
+#fancybox-loading.fancybox-ie6 {
+	position: absolute; margin-top: 0;
+	top: expression( (-20 + (document.documentElement.clientHeight ? document.documentElement.clientHeight/2 : document.body.clientHeight/2 ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )) + 'px');
+}
+
+#fancybox-loading.fancybox-ie6 div	{ background: transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_loading.png', sizingMethod='scale'); }
+
+/* IE6, IE7, IE8 */
+
+.fancybox-ie .fancybox-bg { background: transparent !important; }
+
+.fancybox-ie #fancybox-bg-n { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_shadow_n.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-ne { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_shadow_ne.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-e { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_shadow_e.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-se { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_shadow_se.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-s { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_shadow_s.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-sw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_shadow_sw.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-w { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_shadow_w.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-nw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/shortcodes/fancybox/fancy_shadow_nw.png', sizingMethod='scale'); }

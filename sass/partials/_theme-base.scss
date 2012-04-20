@@ -1,0 +1,62 @@
+@include establish-baseline(16px);
+
+/* 	SELECTION
+	----------------- */
+@include selection(#000, #fff);
+
+
+/* 	LINKS
+	----------------- */
+a { 
+	color: $link-color;
+	text-decoration: none;
+	
+	&:visited {
+		color: $link-visited-color;
+	}
+	
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: none;
+	}
+	
+	&:focus {
+		outline: none;
+	}
+
+}
+
+/* 	STRUCTURAL LAYOUT
+	----------------- */
+#page {
+	background-color: #fff;
+	// background: #fff url(library/img/grid.png) repeat;
+	// @include box-shadow(0 0 5px rgba(black, .2));
+	@include container(1.5em auto);
+}
+
+#masthead {
+	@include full(false, 0, gutter() + gutter() + gutter());
+	padding-top: side-gutter();
+}
+
+#main {
+	@include full;
+}
+
+#primary {
+	@include columns(17, 24);
+}
+
+#secondary {
+	@include columns(7, 24);
+	@include omega(24);
+}
+
+#colophon {
+	@include container;
+	.footer {
+		@include full;
+		padding: rhythm() 0;
+	}
+}
