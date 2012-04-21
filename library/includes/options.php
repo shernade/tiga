@@ -215,7 +215,7 @@ function optionsframework_options() {
 						'type' => 'info');
 						
 	$options[] = array( 'name' => __('Google Webmaster Tools', 'tiga'),
-						'desc' => __('<a href="http://www.google.com/webmasters">Google webmaster tools &raquo;</a>', 'tiga'),
+						'desc' => __('<a href="http://www.google.com/webmasters/">Google webmaster tools &raquo;</a>', 'tiga'),
 						'id' => 'tiga_meta_google',
 						'std' => '',
 						'type' => 'text');
@@ -233,6 +233,23 @@ function optionsframework_options() {
 						'type' => 'text');
 						
 	/* ============================== End Meta Verivication Settings ================================= */	
+	
+	$options[] = array( 'name' => __('Ads Settings', 'tiga'),
+						'type' => 'heading');
+						
+	$options[] = array( 'name' => __('Ads 1', 'tiga'),
+						'desc' => __('Ads after post title on single post', 'tiga'),
+						'id' => 'tiga_ads_after_title',
+						'std' => '',
+						'type' => 'textarea');
+						
+	$options[] = array( 'name' => __('Ads 2', 'tiga'),
+						'desc' => __('Ads after post content on single post', 'tiga'),
+						'id' => 'tiga_ads_after_content',
+						'std' => '',
+						'type' => 'textarea'); 
+	
+	/* ============================== End Ads Settings ================================= */	
 	
 	$options[] = array( 'name' => 'Advanced Settings',
 						'type' => 'heading');
@@ -272,7 +289,7 @@ function optionsframework_options() {
 /* 
  * Custom script for theme options
  *
- * @since tiga 2.1.0
+ * @since tiga 0.0.1
  */
 
 add_action('optionsframework_custom_scripts', 'tiga_custom_scripts');

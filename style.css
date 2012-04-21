@@ -2268,7 +2268,7 @@ html[xmlns] .slides {
 *********************************/
 .flexslider {
   background: url('library/img/loader.gif?1334910829') no-repeat center center white;
-  margin-bottom: 2.1em;
+  margin-bottom: 3em;
   min-height: 325px;
   position: relative;
   zoom: 1;
@@ -2746,4 +2746,12 @@ article #author-info #author-description p {
   font-size: 1.091em;
   line-height: 2em;
   margin: 0 0 0.75em;
+}
+
+/* 	ADS
+	----------------- */
+.ads-after-title,
+.ads-after-content {
+  display: block;
+  margin: 1.05em 0;
 }

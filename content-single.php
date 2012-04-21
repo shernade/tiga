@@ -18,12 +18,20 @@
 		</div><!-- .entry-meta -->
 		
 	</header><!-- .entry-header -->
-
+	
+	<?php if(of_get_option('tiga_ads_after_title')): ?>
+		<div class="ads-after-title"><?php echo stripslashes(of_get_option('tiga_ads_after_title')); ?></div>
+	<?php endif; ?>
+	
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tiga' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
-
+	
+	<?php if(of_get_option('tiga_ads_after_content')): ?>
+		<div class="ads-after-content"><?php echo stripslashes(of_get_option('tiga_ads_after_content')); ?></div>
+	<?php endif; ?>
+	
 	<footer class="entry-meta">
 	
 		<?php if(of_get_option('tiga_social_share')):

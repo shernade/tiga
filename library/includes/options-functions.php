@@ -18,7 +18,7 @@ add_action('wp_footer','tiga_analytics');
 /**
  * Output Custom CSS from theme options
  *
- * @subpackage tiga
+ * @package tiga
  * @since tiga 0.0.1
  */
  
@@ -33,7 +33,7 @@ function tiga_custom_css() {
 /**
  * Output favicon from theme options
  *
- * @subpackage tiga
+ * @package tiga
  * @since tiga 0.0.1
  */
 
@@ -47,7 +47,7 @@ function tiga_custom_favicon() {
 /**
  * Output iframe blocker from theme options
  *
- * @subpackage tiga
+ * @package tiga
  * @since tiga 0.0.1
  */
 
@@ -63,7 +63,7 @@ function tiga_iframe_blocker() {
 /**
  * Output Google meta verification from theme options
  *
- * @subpackage tiga
+ * @package tiga
  * @since tiga 0.0.1
  */
  
@@ -77,7 +77,7 @@ function tiga_meta_google(){
 /**
  * Output Bing meta verification from theme options
  *
- * @subpackage tiga
+ * @package tiga
  * @since tiga 0.0.1
  */
 
@@ -91,7 +91,7 @@ function tiga_meta_bing(){
 /**
  * Output Alexa meta verification from theme options
  *
- * @subpackage tiga
+ * @package tiga
  * @since tiga 0.0.1
  */
  
@@ -105,7 +105,7 @@ function tiga_meta_alexa(){
 /**
  * Output analytics code in footer from theme options
  *
- * @subpackage tiga
+ * @package tiga
  * @since tiga 0.0.1
  */
 
