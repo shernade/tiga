@@ -108,6 +108,16 @@ function optionsframework_options() {
 						'id' => 'tiga_og_thumb',
 						'type' => 'upload');
 						
+	$options[] = array( 'name' => __('Layouts', 'tiga'),
+						'desc' => __('Available layout', 'tiga'),
+						'id' => 'tiga_layouts',
+						'std' => 'lcontent',
+						'type' => 'images',
+						'options' => array(
+							'lcontent' => $imageadminpathlayouts . '2cl.png',
+							'rcontent' => $imageadminpathlayouts . '2cr.png')
+						);
+						
 	$options[] = array( 'name' => __('Show featured posts', 'tiga'),
 						'desc' => __('Check this options to show featured posts on home page', 'tiga'),
 						'id' => 'tiga_show_featured',
@@ -211,7 +221,7 @@ function optionsframework_options() {
 						'type' => 'heading');
 						
 	$options[] = array( 'name' => __('Webmaster Tools Setting', 'tiga'),
-						'desc' => __('You can use the boxes below to verify with the different Webmaster Tools. Only enter the meta values/content. <br /><br />ex: <i><meta name="google-site-verification" content="<b>2141241512</b>" /></i>', 'tiga'),
+						'desc' => __('You can use the boxes below to verify with the different Webmaster Tools. Only enter the meta values/content. <br />ex: <i><meta name="google-site-verification" content="<b>2141241512</b>" /></i>', 'tiga'),
 						'type' => 'info');
 						
 	$options[] = array( 'name' => __('Google Webmaster Tools', 'tiga'),

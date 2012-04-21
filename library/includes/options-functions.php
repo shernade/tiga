@@ -60,6 +60,26 @@ function tiga_iframe_blocker() {
 	<?php endif;
 }
 
+
+/**
+ * Output custom class for layouts
+ *
+ * @package tiga
+ * @since tiga 0.0.1
+ */
+function tiga_custom_layouts() {
+	$layouts = of_get_option('tiga_layouts');
+	
+	if ( 'lcontent' == $layouts )
+		$classes[] = 'two-columns left-primary right-secondary';
+	else
+		$classes[] = 'two-columns right-primary left-secondary';
+		
+	return $classes;
+}
+add_filter( 'body_class', 'tiga_custom_layouts' );
+ 
+
 /**
  * Output Google meta verification from theme options
  *

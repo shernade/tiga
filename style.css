@@ -304,6 +304,19 @@ a:focus {
   padding: 1.5em 0;
 }
 
+.right-primary #primary {
+  display: inline;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1.25em;
+}
+.right-primary #secondary {
+  display: inline;
+  float: left;
+  width: 31.915%;
+  margin-right: 2.128%;
+}
+
 /* =============================================================================
 - Typography
 Headings, text element, lists, code, and more
