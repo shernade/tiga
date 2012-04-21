@@ -90,7 +90,7 @@ if ( ! function_exists( 'tiga_content_nav' ) ):
 function tiga_content_nav( $nav_id ) {
 	global $wp_query;
 
-	$nav_class = 'site-navigation paging-navigation';
+	$nav_class = 'site-navigation paging-navigation clearfix';
 	if ( is_single() )
 		$nav_class = 'site-navigation post-navigation clearfix';
 
@@ -104,13 +104,15 @@ function tiga_content_nav( $nav_id ) {
 		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'tiga' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
+		
+		<?php if(function_exists('wp_pagenavi')) : wp_pagenavi(); else : // integrate wp-pagenavi ?>
+			<?php if ( get_next_posts_link() ) : ?>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'tiga' ) ); ?></div>
+			<?php endif; ?>
 
-		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'tiga' ) ); ?></div>
-		<?php endif; ?>
-
-		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'tiga' ) ); ?></div>
+			<?php if ( get_previous_posts_link() ) : ?>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'tiga' ) ); ?></div>
+			<?php endif; ?>
 		<?php endif; ?>
 
 	<?php endif; ?>

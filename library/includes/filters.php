@@ -28,7 +28,7 @@ function tiga_doctype() {
  * @since tiga 0.0.1
  */
 function tiga_excerpt_length( $length ) {
-	return 50;
+	return 35;
 }
 add_filter( 'excerpt_length', 'tiga_excerpt_length' );
 

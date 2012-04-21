@@ -45,11 +45,8 @@ function css_browser_selector(u){var ua=u.toLowerCase(),is=function(t){return ua
 
 /**
  * jQuery Friendly IE6 Upgrade Notice Plugin 1.0.0
- *
  * http://code.google.com/p/friendly-ie6-upgrade-notice/
- *
  * Copyright (c) 2012 Emil Uzelac - ThemeID
- *
  * http://www.gnu.org/licenses/gpl.html
  */
 if (jQuery.browser.msie && jQuery.browser.version <= 6)
@@ -108,3 +105,23 @@ D.append(j=b('<div id="fancybox-content"></div>'),E=b('<a id="fancybox-close"></
 b.fn.mousewheel&&f.bind("mousewheel.fb",function(a,c){if(h)a.preventDefault();else if(b(a.target).get(0).clientHeight==0||b(a.target).get(0).scrollHeight===b(a.target).get(0).clientHeight){a.preventDefault();b.fancybox[c>0?"prev":"next"]()}});b.support.opacity||f.addClass("fancybox-ie");if(M){t.addClass("fancybox-ie6");f.addClass("fancybox-ie6");b('<iframe id="fancybox-hide-sel-frame" src="'+(/^https/i.test(window.location.href||"")?"javascript:void(false)":"about:blank")+'" scrolling="no" border="0" frameborder="0" tabindex="-1"></iframe>').prependTo(D)}}};
 b.fn.fancybox.defaults={padding:10,margin:40,opacity:false,modal:false,cyclic:false,scrolling:"auto",width:560,height:340,autoScale:true,autoDimensions:true,centerOnScroll:false,ajax:{},swf:{wmode:"transparent"},hideOnOverlayClick:true,hideOnContentClick:false,overlayShow:true,overlayOpacity:0.7,overlayColor:"#777",titleShow:true,titlePosition:"float",titleFormat:null,titleFromAlt:false,transitionIn:"fade",transitionOut:"fade",speedIn:300,speedOut:300,changeSpeed:300,changeFade:"fast",easingIn:"swing",
 easingOut:"swing",showCloseButton:true,showNavArrows:true,enableEscapeButton:true,enableKeyboardNav:true,onStart:function(){},onCancel:function(){},onComplete:function(){},onCleanup:function(){},onClosed:function(){},onError:function(){}};b(document).ready(function(){b.fancybox.init()})})(jQuery);
+
+/**
+ * Equal Heights Plugin
+ * Equalize the heights of elements. Great for columns or any elements
+ * that need to be the same size (floats, etc).
+ * 
+ * Version 1.0
+ * Updated 12/10/2008
+ *
+ * Copyright (c) 2008 Rob Glazebrook (cssnewbie.com) 
+ *
+ * Usage: $(object).equalHeights([minHeight], [maxHeight]);
+ * 
+ * Example 1: $(".cols").equalHeights(); Sets all columns to the same height.
+ * Example 2: $(".cols").equalHeights(400); Sets all cols to at least 400px tall.
+ * Example 3: $(".cols").equalHeights(100,300); Cols are at least 100 but no more
+ * than 300 pixels tall. Elements with too much content will gain a scrollbar.
+ * 
+ */
+(function($){$.fn.equalHeights=function(minHeight,maxHeight){tallest=(minHeight)?minHeight:0;this.each(function(){if($(this).height()>tallest){tallest=$(this).height()}});if((maxHeight)&&tallest>maxHeight)tallest=maxHeight;return this.each(function(){$(this).height(tallest).css("overflow","hidden")})}})(jQuery);

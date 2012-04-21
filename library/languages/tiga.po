@@ -1,0 +1,404 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tiga 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-21 12:58+0700\n"
+"PO-Revision-Date: 2012-04-21 12:58+0700\n"
+"Last-Translator: Satrya <satryabima24@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: d:/xampp/htdocs/satrya/wp-content/themes/tiga\n"
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/404.php:35
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/archive.php:22
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/archive.php:25
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/archive.php:32
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/author.php:27
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/archive.php:40
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/archive.php:43
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/archive.php:46
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/author.php:48
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content-page.php:18
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content-single.php:24
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content.php:31
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/image.php:86
+msgid "Pages:"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content-page.php:19
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content-single.php:67
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content.php:65
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/image.php:34
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/image.php:100
+msgid "Edit"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content-single.php:35
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content.php:40
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content.php:50
+msgid ", "
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content-single.php:43
+#, php-format
+msgid "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content-single.php:45
+#, php-format
+msgid "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content-single.php:51
+#, php-format
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content-single.php:53
+#, php-format
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content.php:30
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content.php:44
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content.php:55
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content.php:62
+msgid "Leave a comment"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content.php:62
+msgid "1 Comment"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/content.php:62
+msgid "% Comments"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/footer.php:31
+#, php-format
+msgid "Powered by <a href=\"http://wordpress.org/\" title=\"%1$s\" rel=\"generator\">%2$s</a> &middot; Theme by <a href=\"http://satrya.me/\" title=\"%3$s\" rel=\"designer\">%4$s</a>"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/image.php:24
+#, php-format
+msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/image.php:38
+msgid "&larr; Previous"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/image.php:39
+msgid "Next &rarr;"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/image.php:92
+#, php-format
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/image.php:94
+#, php-format
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/no-results.php:20
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/search.php:17
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/admin/options-framework.php:237
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/admin/options-framework.php:269
+msgid "Default options restored."
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/admin/options-framework.php:310
+msgid "Options saved."
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/admin/options-framework.php:366
+msgid "Tiga Theme Options"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/admin/options-medialibrary-uploader.php:26
+msgid "Options Framework Internal Container"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/admin/options-medialibrary-uploader.php:128
+msgid "Upload"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/admin/options-medialibrary-uploader.php:151
+msgid "View File"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/admin/options-medialibrary-uploader.php:288
+msgid "Gallery"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/admin/options-medialibrary-uploader.php:288
+msgid "Previously Uploaded"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:72
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:74
+msgid "Category Archive: "
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:98
+#, php-format
+msgid "Posts Published in: %s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:150
+msgid "Search Results:"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:155
+msgid "Tag Archive:"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:160
+msgid "Posts Written by:"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:165
+msgid "Error 404:"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:166
+msgid "Page Not Found"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:170
+msgid "Post Format Archive:"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:214
+msgid "Display your recent tweets to your readers."
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:215
+msgid "&raquo; tiga Twitter Widget"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:332
+msgid "Use this widget to list your recent Aside, Status, Quote, and Link posts"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:333
+msgid "&raquo; tiga Ephemera"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:365
+msgid "Ephemera"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:404
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:420
+msgid "0 <span class=\"reply\">comments &rarr;</span>"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:404
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:420
+msgid "1 <span class=\"reply\">comment &rarr;</span>"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:404
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:420
+msgid "% <span class=\"reply\">comments &rarr;</span>"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/extensions.php:514
+msgid "Social"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:29
+msgid "Two"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:29
+msgid "Three"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:29
+msgid "Four"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:29
+msgid "Five"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:29
+msgid "Six"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:29
+msgid "Seven"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:29
+msgid "Eight"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:29
+msgid "Nine"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:29
+msgid "Ten"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:32
+msgid "Enable"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:32
+msgid "Disable"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/options.php:61
+msgid "General Settings"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/setup.php:43
+msgid "Primary Navigation"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/setup.php:44
+msgid "Secondary Navigation"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/templates.php:109
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/templates.php:113
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/templates.php:131
+#, php-format
+msgid "Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/templates.php:137
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/templates.php:203
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/templates.php:258
+#, php-format
+msgid "%1$s on %2$s <span class=\"says\">said:</span>"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/templates.php:264
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/templates.php:281
+msgid "Reply <span>&darr;</span>"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/templates.php:320
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/templates.php:321
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/widgets.php:19
+msgid "General"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/widgets.php:20
+msgid "This sidebar appears on the right side of your site"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/widgets.php:28
+msgid "Footer Sidebar 1"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/widgets.php:29
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/widgets.php:38
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/widgets.php:47
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/widgets.php:56
+msgid "This sidebar appears on the footer side of your site"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/widgets.php:37
+msgid "Footer Sidebar 2"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/widgets.php:46
+msgid "Footer Sidebar 3"
+msgstr ""
+
+#: d:/xampp/htdocs/satrya/wp-content/themes/tiga/library/includes/widgets.php:55
+msgid "Footer Sidebar 4"
+msgstr ""
+

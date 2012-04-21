@@ -266,14 +266,20 @@ a:focus {
 #primary {
   display: inline;
   float: left;
-  width: 70.213%;
+  width: 65.957%;
   margin-right: 2.128%;
 }
 
 #secondary {
+  background-color: #f5f5f5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
   display: inline;
   float: left;
-  width: 27.66%;
+  width: 31.915%;
   margin-right: 2.128%;
   display: inline;
   float: right;
@@ -658,13 +664,15 @@ input[type="button"] {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #dddddd url('library/img/button.png?1331603458') repeat-x;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
-  background-image: -webkit-linear-gradient(#ffffff, #dddddd);
-  background-image: -moz-linear-gradient(#ffffff, #dddddd);
-  background-image: -o-linear-gradient(#ffffff, #dddddd);
-  background-image: -ms-linear-gradient(#ffffff, #dddddd);
-  background-image: linear-gradient(#ffffff, #dddddd);
+  background: #dddddd;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFDDDDDD');
+  background: url('library/img/button.png?1331603458') repeat-x, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
+  background: url('library/img/button.png?1331603458') repeat-x, -webkit-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1331603458') repeat-x, -moz-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1331603458') repeat-x, -o-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1331603458') repeat-x, -ms-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1331603458') repeat-x, linear-gradient(#ffffff, #dddddd);
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
@@ -684,6 +692,9 @@ button:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
+  background: #eee;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC');
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(1px, #eeeeee), color-stop(100%, #cccccc));
   background-image: -webkit-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
   background-image: -moz-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
@@ -695,6 +706,9 @@ button:active,
 input[type="reset"]:active,
 input[type="submit"]:active,
 input[type="button"]:active {
+  background: #ddd;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFDDDDDD');
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(1px, #dddddd), color-stop(100%, #eeeeee));
   background-image: -webkit-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
   background-image: -moz-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
@@ -943,7 +957,7 @@ table,
 td {
   border: 1px solid #e8e8e8;
   border-collapse: collapse;
-  margin: 5px 0 10px;
+  margin: 1.5em 0;
   padding: 5px 10px;
 }
 
@@ -1311,6 +1325,9 @@ Styles for header area such as header, custom header, menus etc.
 /* 	SECONDARY NAVIGATION
 	----------------- */
 .secondary-navigation {
+  background: #252525;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF252525', endColorstr='#FF0A0A0A');
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #252525), color-stop(100%, #0a0a0a));
   background-image: -webkit-linear-gradient(#252525, #0a0a0a);
   background-image: -moz-linear-gradient(#252525, #0a0a0a);
@@ -1397,6 +1414,13 @@ Styles for header area such as header, custom header, menus etc.
 .secondary-navigation ul ul li:hover {
   background-color: #e7e7e7;
 }
+.secondary-navigation ul ul li:hover:first-child {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
 .secondary-navigation ul ul li:last-child {
   border-bottom: none;
 }
@@ -1437,37 +1461,16 @@ This is our main styles for theme development
   font-size: 0.875em;
   line-height: 1.714em;
   margin-bottom: 1.5em;
-  display: inline;
-  float: left;
 }
 
-article.featured-carousel {
-  border-bottom: none;
-  display: inline;
-  float: left;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 660px;
-}
-article.featured-carousel img {
-  display: block;
-}
-article.featured-carousel .carousel-item {
-  background: #f0f0f0;
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  display: block;
-  padding: 7px;
+article.featured-slides {
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bototm: 0;
   position: relative;
 }
 
-.carousel-thumbnail img {
-  height: auto;
-}
-
-.carousel-content {
+.slides-content {
   background-color: rgba(0, 0, 0, 0.6);
   bottom: 0;
   height: 100%;
@@ -1476,77 +1479,32 @@ article.featured-carousel .carousel-item {
   position: absolute;
   width: 100%;
 }
-.carousel-content h2 {
+.slides-content h2 {
   font-size: 1.5em;
   line-height: 2em;
-  padding: .5em 1em;
+  padding: .5em 1em 0;
 }
-.carousel-content .entry-summary {
+.slides-content h2 a {
+  color: #fff;
+}
+.slides-content .entry-summary {
   font-size: 0.875em;
   line-height: 1.714em;
   padding: .5em 1.5em;
 }
-.carousel-content h2 a,
-.carousel-content .entry-summary {
+.slides-content h2 a,
+.slides-content .entry-summary {
   color: #fff;
   margin: 0;
 }
-.carousel-content a:hover {
+.slides-content a:hover {
   color: #fff;
 }
 
-.carousel-control {
-  display: inline;
-  float: right;
-}
-.carousel-control #prev,
-.carousel-control #next {
-  background-color: #555;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-  border-radius: 25px;
-  height: 25px;
-  -webkit-transition: all 0.15s ease-in;
-  -moz-transition: all 0.15s ease-in;
-  -ms-transition: all 0.15s ease-in;
-  -o-transition: all 0.15s ease-in;
-  transition: all 0.15s ease-in;
-  width: 25px;
-}
-.carousel-control #prev:hover,
-.carousel-control #next:hover {
-  background-color: #333;
-}
-.carousel-control #prev span,
-.carousel-control #next span {
-  color: #fff;
-  font-size: 0.688em;
-  line-height: 2.182em;
-  left: 7px;
-  position: relative;
-  top: -2px;
-}
-.carousel-control #prev {
-  display: inline;
-  float: left;
-  margin-right: 0.15em;
-}
-.carousel-control #next {
-  display: inline;
-  float: left;
-}
-
-.caroufredsel_wrapper {
-  clear: both;
-}
-
+/* see Plugin area to see more feature posts style */
 /*	HOME PAGE RECENT POSTS
 	----------------- */
 .recentposts-heading {
-  float: none;
-  display: block;
   margin-bottom: 0;
 }
 
@@ -1554,8 +1512,23 @@ article.featured-carousel .carousel-item {
   overflow: hidden;
 }
 
-.first-posts .entry-thumbnail {
-  margin: 0.45em 2.041% 0 0;
+article.cols {
+  display: inline;
+  float: left;
+  width: 48.387%;
+  margin-right: 3.226%;
+}
+article.cols:nth-child(2n+2) {
+  display: inline;
+  float: right;
+  margin-right: 0;
+  #margin-left: -1.25em;
+}
+article.cols .entry-thumbnail {
+  float: none;
+  display: block;
+  margin: 0 0 0.75em;
+  width: 100%;
 }
 
 /* 	MAIN STYLES
@@ -1564,6 +1537,12 @@ article {
   border-bottom: 4px double #eeeeee;
   margin-bottom: 1.5em;
   padding-bottom: 0.75em;
+  /* post heading */
+}
+article .entry-title {
+  font-size: 1.385em;
+  line-height: 1.467em;
+  margin-bottom: 0.45em;
 }
 article .entry-title a {
   color: #333333;
@@ -1571,10 +1550,10 @@ article .entry-title a {
 article .entry-title a:hover {
   color: #5e9ae2;
 }
-article .carousel-content .entry-title a {
+article .slides-content .entry-title a {
   color: #fff;
 }
-article .carousel-content .entry-title a:hover {
+article .slides-content .entry-title a:hover {
   color: #5e9ae2;
 }
 article .entry-content,
@@ -1589,12 +1568,36 @@ article .entry-content .widget {
 article #searchform {
   margin-bottom: 1.5em;
 }
+article h1 {
+  font-size: 1.846em;
+  line-height: 1.3em;
+}
+article h2 {
+  font-size: 1.615em;
+  line-height: 1.371em;
+}
+article h3 {
+  font-size: 1.385em;
+  line-height: 1.467em;
+}
+article h4 {
+  font-size: 1.231em;
+  line-height: 1.5em;
+}
+article h5 {
+  font-size: 1.077em;
+  line-height: 1.371em;
+}
+article h6 {
+  font-size: 1.077em;
+  line-height: 1.371em;
+}
 
 .entry-thumbnail {
   display: inline;
   float: left;
-  width: 21.212%;
-  margin-right: 3.03%;
+  width: 22.581%;
+  margin-right: 3.226%;
   margin-left: 2.041%;
 }
 .entry-thumbnail a,
@@ -1618,6 +1621,17 @@ article #searchform {
 .edit-link {
   clear: both;
   display: block;
+}
+
+.sticky {
+  background-color: #f5f5f5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border-bottom: 0;
+  padding: 1em;
 }
 
 /*	AUTHOR PAGE
@@ -1660,15 +1674,15 @@ article #searchform {
 .previous-image {
   display: inline;
   float: left;
-  width: 45.455%;
-  margin-right: 3.03%;
+  width: 48.387%;
+  margin-right: 3.226%;
 }
 
 .next-image {
   display: inline;
   float: left;
-  width: 51.515%;
-  margin-right: 3.03%;
+  width: 48.387%;
+  margin-right: 3.226%;
   display: inline;
   float: right;
   margin-right: 0;
@@ -1684,7 +1698,7 @@ Styles for sidebar and all widget areas
   border-bottom: 4px double #eeeeee;
   font-size: 0.75em;
   line-height: 2em;
-  margin-bottom: 1.5em;
+  margin: 1.5em;
   padding-bottom: 0.75em;
 }
 .widget:last-child {
@@ -1733,8 +1747,7 @@ Styles for sidebar and all widget areas
 /* 	CALENDAR WIDGET
 	----------------- */
 .widget_calendar {
-  width: 100%;
-  border: medium none;
+  border: none;
 }
 
 #calendar_wrap th {
@@ -1780,6 +1793,9 @@ Styles for sidebar and all widget areas
 
 /* 	SEARCH WIDGET
 	----------------- */
+.widget_search {
+  padding-bottom: 1.5em;
+}
 .widget_search input[type="text"] {
   background: #fafafa;
   border: 1px solid #eeeeee;
@@ -2085,6 +2101,10 @@ Styles for footer area
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
 }
+.footer-widget .widget {
+  border-bottom: none;
+  margin: 0 0 2.25em;
+}
 .footer-widget .widget .widget-title {
   color: #aaa;
 }
@@ -2112,6 +2132,228 @@ Styles for footer area
 - Plugins
 Collection of styles for theme plugins such as lightbox, slider, tooltip etc
 ============================================================================= */
+/*
+ * jQuery FlexSlider v1.8
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+.flexslider .slides img {
+  max-width: 100%;
+  display: block;
+}
+
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+.slides:after {
+  clear: both;
+}
+
+.slides:before,
+.slides:after {
+  content: "";
+  display: table;
+}
+
+html[xmlns] .slides {
+  display: block;
+}
+
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {
+  background: url('library/img/loader.gif?1334910829') no-repeat center center white;
+  position: relative;
+  border: 4px solid #fff;
+  margin-bottom: 2.1em;
+  min-height: 325px;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  zoom: 1;
+}
+.flexslider .slides {
+  zoom: 1;
+}
+.flexslider .slides > li {
+  position: relative;
+}
+
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {
+  zoom: 1;
+  position: relative;
+}
+
+/* Caption style */
+/* IE rgba() hack */
+.flex-caption {
+  background: none;
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+  background: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  left: 0;
+  margin: 0;
+  padding: 2%;
+  position: absolute;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  width: 96%;
+  zoom: 1;
+}
+
+/* Direction Nav */
+.flex-direction-nav {
+  height: 0;
+}
+.flex-direction-nav li a {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 7%;
+  cursor: pointer;
+  color: #fff;
+  display: block;
+  height: 20px;
+  margin: 0;
+  position: absolute;
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -ms-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+  width: 30px;
+}
+.flex-direction-nav li a span {
+  display: block;
+  position: relative;
+}
+.flex-direction-nav li a:hover {
+  background-color: #000;
+}
+.flex-direction-nav li .next {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -ms-border-top-left-radius: 5px;
+  -o-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  right: 0;
+}
+.flex-direction-nav li .next span {
+  left: 8px;
+  top: -2px;
+}
+.flex-direction-nav li .prev {
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  left: 0;
+}
+.flex-direction-nav li .prev span {
+  left: 7px;
+  top: -2px;
+}
+.flex-direction-nav li .disabled {
+  opacity: .3;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+
+/* Control Nav */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+.flex-control-nav li {
+  margin: 0 0 0 5px;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+}
+.flex-control-nav li {
+  *display: inline;
+}
+.flex-control-nav li:first-child {
+  margin: 0;
+}
+.flex-control-nav li a {
+  width: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  height: 12px;
+  display: block;
+  background: #ccc;
+  cursor: pointer;
+  text-indent: -999em;
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -ms-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+.flex-control-nav li a:hover {
+  background: #333333;
+}
+.flex-control-nav li a.active {
+  background: #000;
+  cursor: default;
+}
+
 /* =============================================================================
 - Utility
 List of helper classes (eg clearfix, alignment, etc)
@@ -2288,7 +2530,6 @@ Styles for repsonsive layouts
   display: block;
   font-size: 0.688em;
   line-height: 2.182em;
-  overflow: hidden;
   margin: 3em 0;
 }
 
@@ -2313,6 +2554,68 @@ Styles for repsonsive layouts
 
 .paging-navigation {
   margin: 1.2em 0;
+}
+
+.wp-pagenavi .pages,
+.wp-pagenavi .current,
+.wp-pagenavi a {
+  -webkit-appearance: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background: #dddddd;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFDDDDDD');
+  background: url('library/img/button.png?1331603458') repeat-x, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
+  background: url('library/img/button.png?1331603458') repeat-x, -webkit-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1331603458') repeat-x, -moz-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1331603458') repeat-x, -o-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1331603458') repeat-x, -ms-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1331603458') repeat-x, linear-gradient(#ffffff, #dddddd);
+  border: 1px solid;
+  border-color: #dddddd #bbbbbb #999999;
+  cursor: pointer;
+  color: #333333;
+  margin-right: 1em;
+  padding: .75em 1em;
+}
+.wp-pagenavi .extend {
+  margin-right: 1em;
+}
+.wp-pagenavi .last {
+  float: none;
+  margin-right: 0;
+}
+.wp-pagenavi a:hover:hover {
+  background: #eee;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(1px, #eeeeee), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  background-image: -moz-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  background-image: -o-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  background-image: -ms-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  background-image: linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+}
+.wp-pagenavi a:hover:active {
+  background: #ddd;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFDDDDDD');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(1px, #dddddd), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
+  background-image: -moz-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
+  background-image: -o-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
+  background-image: -ms-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
+  background-image: linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
+  box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
+  border-color: #999999 #bbbbbb #dddddd;
 }
 
 /* 	POST PAGES

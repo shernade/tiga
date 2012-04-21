@@ -24,5 +24,8 @@ $j(document).ready(function(){
 		'transitionIn'	: 'elastic',
 		'transitionOut'	: 'elastic'
 	});
+	
+	// Equal height
+	$j("article.cols").equalHeights();
 
 });
