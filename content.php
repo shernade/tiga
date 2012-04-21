@@ -62,7 +62,7 @@
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'tiga' ), __( '1 Comment', 'tiga' ), __( '% Comments', 'tiga' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', 'tiga' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'tiga' ), '<span class="sep"> | </span><span class="post-edit">', '</span>' ); ?>
 		
 	</footer><!-- #entry-meta -->
 	

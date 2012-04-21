@@ -31,7 +31,7 @@ get_header();
 								get_the_title( $post->post_parent )
 							);
 						?>
-						<?php edit_post_link( __( 'Edit', 'tiga' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
+						<?php edit_post_link( __( 'Edit', 'tiga' ), '<span class="sep"> | </span> <span class="post-edit">', '</span>' ); ?>
 					</div><!-- .entry-meta -->
 
 					<nav id="image-navigation">
@@ -97,7 +97,7 @@ get_header();
 					<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
 						<?php _e( 'Both comments and trackbacks are currently closed.', 'tiga' ); ?>
 					<?php endif; ?>
-					<?php edit_post_link( __( 'Edit', 'tiga' ), ' <span class="edit-link">', '</span>' ); ?>
+					<?php edit_post_link( __( 'Edit', 'tiga' ), ' <span class="post-edit">', '</span>' ); ?>
 				</footer><!-- .entry-meta -->
 			</article><!-- #post-<?php the_ID(); ?> -->
 

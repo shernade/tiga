@@ -9,14 +9,14 @@
  */
  
 
-// Display our recent posts, showing full content for the very latest, ignoring Aside posts
+// Display our recent posts, ignoring Aside, Gallery and Quote posts
 $recent_args = array(
 	'order' => 'DESC',
 	'post__not_in' => get_option( 'sticky_posts' ),
 	'tax_query' => array(
 		array(
 			'taxonomy' => 'post_format',
-			'terms' => array( 'post-format-aside', 'post-format-link', 'post-format-status', 'post-format-quote' ),
+			'terms' => array( 'post-format-aside', 'post-format-gallery', 'post-format-gallery' ),
 			'field' => 'slug',
 			'operator' => 'NOT IN',
 		),
@@ -36,11 +36,11 @@ $counter = 0;
 			<article id="post-<?php the_ID(); ?>" <?php post_class('first-posts clearfix'); ?>>
 			
 				<?php if(has_post_thumbnail()){ ?>
-					<span class="entry-thumbnail last">
+					<figure class="entry-thumbnail last">
 						<a href="<?php the_permalink() ?>">
 							<?php the_post_thumbnail('140px', array( 'class' => 'photo thumbnail', 'alt' => get_the_title(), 'title' => get_the_title()));?>
 						</a>
-					</span>
+					</figure>
 				<?php } ?>
 				
 				<div class="left-content">
@@ -67,11 +67,11 @@ $counter = 0;
 				</header>
 				
 				<?php if(has_post_thumbnail()){ ?>
-					<span class="entry-thumbnail">
+					<figure class="entry-thumbnail">
 						<a href="<?php the_permalink() ?>">
 							<?php the_post_thumbnail('300px', array( 'class' => 'photo thumbnail', 'alt' => get_the_title(), 'title' => get_the_title()));?>
 						</a>
-					</span>
+					</figure>
 				<?php } ?>
 			
 				<div class="entry-summary">

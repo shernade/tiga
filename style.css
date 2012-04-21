@@ -1031,35 +1031,40 @@ p img,
 }
 
 .wp-caption {
-  background: white;
+  background: #000;
   margin-bottom: 1.625em;
   max-width: 96%;
-  padding: 9px;
+  padding: 15px 10px 10px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .wp-caption img {
   display: block;
   margin: 0 auto;
   max-width: 98%;
 }
-.wp-caption .wp-caption-text {
-  color: #666666;
-  font-size: 0.75em;
-  line-height: 2em;
+.wp-caption:hover {
+  background: #eee;
 }
-
-.gallery-caption {
-  color: #666666;
-  font-size: 0.75em;
-  line-height: 2em;
+.wp-caption:hover .wp-caption-text {
+  color: #333;
 }
-
+.wp-caption:hover .wp-caption-text:before {
+  color: #333;
+}
 .wp-caption .wp-caption-text {
-  margin-bottom: 0.6em;
-  padding: 10px 0 5px 40px;
+  color: #fff;
+  font-size: 0.923em;
+  line-height: 2em;
+  margin: 0;
+  padding: 15px 0 5px 40px;
   position: relative;
 }
 .wp-caption .wp-caption-text:before {
-  color: #666666;
+  color: #fff;
   content: '\2014';
   font-size: 0.875em;
   line-height: 1.714em;
@@ -1068,7 +1073,13 @@ p img,
   margin-right: 5px;
   position: absolute;
   left: 10px;
-  top: 13px;
+  top: 17px;
+}
+
+.gallery-caption {
+  color: #666666;
+  font-size: 0.75em;
+  line-height: 2em;
 }
 
 /* 	GALLERY
@@ -1464,9 +1475,12 @@ This is our main styles for theme development
 }
 
 article.featured-slides {
-  border-bottom: 0;
+  border: 4px solid #fff;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   padding-bottom: 0;
-  margin-bototm: 0;
+  margin-bottom: 0;
   position: relative;
 }
 
@@ -1505,7 +1519,7 @@ article.featured-slides {
 /*	HOME PAGE RECENT POSTS
 	----------------- */
 .recentposts-heading {
-  margin-bottom: 0;
+  margin-bottom: 0.75em;
 }
 
 .left-content {
@@ -1535,7 +1549,7 @@ article.cols .entry-thumbnail {
 	----------------- */
 article {
   border-bottom: 4px double #eeeeee;
-  margin-bottom: 1.5em;
+  margin-bottom: 2.25em;
   padding-bottom: 0.75em;
   /* post heading */
 }
@@ -1618,7 +1632,7 @@ article h6 {
   color: #333333;
 }
 
-.edit-link {
+.page-edit {
   clear: both;
   display: block;
 }
@@ -1632,6 +1646,55 @@ article h6 {
   border-radius: 5px;
   border-bottom: 0;
   padding: 1em;
+}
+
+.flexslider .sticky {
+  background-color: transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+/*	POST FORMATS
+	----------------- */
+.entry-format {
+  font-size: 0.75em;
+  line-height: 2em;
+  color: #999;
+}
+
+.format-quote blockquote {
+  background: #f5f5f5 url('library/img/quotes.png?1329843070') no-repeat 1.3em 1.8em;
+  border: 0;
+  color: #111;
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-size: 1.385em;
+  line-height: 1.333em;
+  padding: 2em 20px;
+}
+.format-quote blockquote p {
+  margin: 0;
+  padding: 0 0 0 2.5em;
+}
+.format-quote blockquote p cite {
+  display: block;
+  padding-top: 0.75em;
+}
+
+.format-gallery .flexslider {
+  border: 4px solid #fff;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+.format-gallery .flex-direction-nav li a {
+  bottom: 0;
+}
+.format-gallery .flex-control-nav {
+  bottom: 0;
 }
 
 /*	AUTHOR PAGE
@@ -2205,16 +2268,9 @@ html[xmlns] .slides {
 *********************************/
 .flexslider {
   background: url('library/img/loader.gif?1334910829') no-repeat center center white;
-  position: relative;
-  border: 4px solid #fff;
   margin-bottom: 2.1em;
   min-height: 325px;
   position: relative;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
   zoom: 1;
 }
 .flexslider .slides {
@@ -2256,7 +2312,7 @@ html[xmlns] .slides {
 }
 .flex-direction-nav li a {
   background-color: rgba(0, 0, 0, 0.5);
-  bottom: 7%;
+  bottom: 0;
   cursor: pointer;
   color: #fff;
   display: block;
@@ -2311,7 +2367,7 @@ html[xmlns] .slides {
 .flex-control-nav {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -10%;
   text-align: center;
 }
 .flex-control-nav li {
@@ -2583,6 +2639,9 @@ Styles for repsonsive layouts
   color: #333333;
   margin-right: 1em;
   padding: .75em 1em;
+}
+.wp-pagenavi .current {
+  background: #eee;
 }
 .wp-pagenavi .extend {
   margin-right: 1em;

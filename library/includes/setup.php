@@ -37,6 +37,9 @@ if ( ! function_exists( 'tiga_setup' ) ):
 		// Add support for custom backgrounds
 		add_custom_background();
 		
+		// Add support for a variety of post formats
+		add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'quote', 'image' ) );
+		
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( 
 			array(
@@ -51,6 +54,7 @@ if ( ! function_exists( 'tiga_setup' ) ):
 		add_image_size( '140px' , 140, 140, true ); // 140px thumbnail
 		add_image_size( '300px' , 300, 130, true ); // 300px thumbnail
 		add_image_size( '700px' , 700, 300, true ); // 700px thumbnail
+		add_image_size( '620px' , 620, 350, true ); // 620px thumbnail
 		
 		// Add custom header image
 		add_custom_image_header('', 'tiga_admin_header_style');

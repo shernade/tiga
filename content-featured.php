@@ -28,9 +28,9 @@
 				<div class="slides-item">
 				
 					<?php if(has_post_thumbnail()){ ?>
-						<span class="slides-thumbnail">
+						<figure class="slides-thumbnail">
 							<?php the_post_thumbnail('700px', array( 'class' => 'photo thumbnail', 'alt' => get_the_title()));?>
-						</span>
+						</figure>
 					<?php } ?>
 					
 					<div class="slides-content">

@@ -18,8 +18,23 @@ $j(document).ready(function(){
     
     });
 	
+	jQuery(window).load(function() {
+		jQuery('.flexslider').flexslider({
+			slideshow: true,
+			slideshowSpeed: 4000,
+			pauseOnHover: true,
+			prevText: "<span>&larr;</span>",
+			nextText: "<span>&rarr;</span>"
+		}).find(".featured-slides").hover(
+			function() { $j(this).find(".slides-content").slideDown(); },
+			function() { $j(this).find(".slides-content").slideUp(); }
+		);
+		
+		
+	});
+	
 	// Fancybox shortcode
-	$j(".fancyimg").fancybox({
+	$j(".fancyimg, .format-gallery-item a").fancybox({
 		'overlayShow'	: true,
 		'transitionIn'	: 'elastic',
 		'transitionOut'	: 'elastic'

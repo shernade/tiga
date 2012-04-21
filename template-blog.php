@@ -3,7 +3,6 @@
  * Template Name: Blog Template
  * Description: A Page Template for displaying posts list
  *
- * @package WordPress
  * @package tiga
  * @since tiga 0.0.1
  */

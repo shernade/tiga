@@ -107,6 +107,7 @@ function tiga_remove_more_jump_link($link) {
 
 /**
  * Filter post title for post-format links
+ * credit : http://digwp.com/2011/04/tumblr-links-post-formats/
  *
  * @since tiga 0.0.1
  */

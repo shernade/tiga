@@ -75,20 +75,6 @@ function tiga_meta_google(){
 
 
 /**
- * Output Yahoo meta verification from theme options
- *
- * @subpackage tiga
- * @since tiga 0.0.1
- */
- 
-function tiga_meta_yahoo(){
-	$output = of_get_option('tiga_meta_yahoo');
-	if ( $output ) 
-		echo '<meta name="y_key" content="' . $output . '"> ' . "\n";
-}
-
-
-/**
  * Output Bing meta verification from theme options
  *
  * @subpackage tiga

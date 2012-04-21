@@ -220,12 +220,6 @@ function optionsframework_options() {
 						'std' => '',
 						'type' => 'text');
 						
-	$options[] = array( 'name' => __('Yahoo Site Explorer', 'tiga'),
-						'desc' => __('<a href="http://siteexplorer.search.yahoo.com/">Yahoo site explorer &raquo;</a>', 'tiga'),
-						'id' => 'tiga_meta_yahoo',
-						'std' => '',
-						'type' => 'text');
-						
 	$options[] = array( 'name' => __('Bing Webmaster', 'tiga'),
 						'desc' => __('<a href="http://www.bing.com/webmaster/">Bing webmaster &raquo;</a>', 'tiga'),
 						'id' => 'tiga_meta_bing',
