@@ -1544,6 +1544,7 @@ article.cols {
   float: left;
   width: 48.387%;
   margin-right: 3.226%;
+  min-height: 370px;
 }
 article.cols:nth-child(2n+2) {
   display: inline;
@@ -2675,6 +2676,10 @@ Styles for repsonsive layouts
   .flex-direction-nav li a {
     bottom: 0;
   }
+
+  .entry-content .flexslider .slides img {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 600px) {
   .site-branding, .main-navigation {
@@ -2781,6 +2786,38 @@ Styles for repsonsive layouts
   }
 }
 /* iphone portrait */
+@media screen and (max-width: 320px) {
+  .flexslider {
+    min-height: 175px;
+  }
+
+  .flex-direction-nav li a {
+    bottom: 2.5%;
+  }
+  .flex-direction-nav li .next span {
+    width: 23px;
+  }
+
+  .flex-control-nav {
+    bottom: -15%;
+  }
+
+  .slides-content .entry-summary {
+    display: none;
+  }
+  .slides-content h2 {
+    position: relative;
+    top: 28%;
+  }
+
+  .entry-meta .share {
+    display: none;
+  }
+
+  .wp-pagenavi .pages {
+    display: none;
+  }
+}
 /* =============================================================================
 - WordPress Pagination
 	- Post pages <!--nextpage-->

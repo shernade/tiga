@@ -2,7 +2,7 @@ var $j = jQuery.noConflict();
 $j(document).ready(function(){
 	
 	// Reponsive videos
-	$j(".content-right").fitVids();
+	$j("#content").fitVids();
 	
 	// Reponsive menus
 	$j(".secondary-nav").mobileMenu();
@@ -18,21 +18,6 @@ $j(document).ready(function(){
     
     });
 	
-	jQuery(window).load(function() {
-		jQuery('.flexslider').flexslider({
-			slideshow: true,
-			slideshowSpeed: 4000,
-			pauseOnHover: true,
-			prevText: "<span>&larr;</span>",
-			nextText: "<span>&rarr;</span>"
-		}).find(".featured-slides").hover(
-			function() { $j(this).find(".slides-content").slideDown(); },
-			function() { $j(this).find(".slides-content").slideUp(); }
-		);
-		
-		
-	});
-	
 	// Fancybox shortcode
 	$j(".fancyimg, .format-gallery-item a").fancybox({
 		'overlayShow'	: true,
@@ -40,7 +25,18 @@ $j(document).ready(function(){
 		'transitionOut'	: 'elastic'
 	});
 	
-	// Equal height
-	$j("article.cols").equalHeights();
+});
+
+$j(window).load(function(){
+	$j('.flexslider').flexslider({
+		slideshow: true,
+		slideshowSpeed: 4000,
+		pauseOnHover: true,
+		prevText: "<span>&larr;</span>",
+		nextText: "<span>&rarr;</span>"
+	}).find(".featured-slides").hover(
+		function() { $j(this).find(".slides-content").slideDown(); },
+		function() { $j(this).find(".slides-content").slideUp(); }
+	);
 
 });
