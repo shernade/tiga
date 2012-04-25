@@ -9,6 +9,7 @@
 add_action('wp_head', 'tiga_custom_favicon', 5);
 add_action('wp_head', 'tiga_custom_css', 10);
 add_action('wp_head', 'tiga_iframe_blocker', 11);
+add_filter( 'body_class', 'tiga_custom_layouts' );
 add_action('wp_head', 'tiga_meta_google', 2);
 add_action('wp_head', 'tiga_meta_yahoo', 2);
 add_action('wp_head', 'tiga_meta_bing', 2);
@@ -67,7 +68,7 @@ function tiga_iframe_blocker() {
  * @package tiga
  * @since tiga 0.0.1
  */
-function tiga_custom_layouts() {
+function tiga_custom_layouts($classes) {
 	$layouts = of_get_option('tiga_layouts');
 	
 	if ( 'lcontent' == $layouts )
@@ -77,7 +78,6 @@ function tiga_custom_layouts() {
 		
 	return $classes;
 }
-add_filter( 'body_class', 'tiga_custom_layouts' );
  
 
 /**

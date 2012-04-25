@@ -263,7 +263,7 @@ a:focus {
   margin: 0 2.041% 0 2.041%;
 }
 
-#primary {
+#primary, #secondary {
   display: inline;
   float: left;
   width: 65.957%;
@@ -304,7 +304,7 @@ a:focus {
   padding: 1.5em 0;
 }
 
-.right-primary #primary {
+.right-primary #primary, .right-primary #secondary {
   display: inline;
   float: right;
   margin-right: 0;
@@ -1196,22 +1196,22 @@ Styles for header area such as header, custom header, menus etc.
   margin-bottom: 2.041%;
 }
 
-.site-branding {
+.site-branding, .main-navigation {
   display: inline;
   float: left;
   width: 40.426%;
   margin-right: 2.128%;
 }
-.site-branding .site-title {
+.site-branding .site-title, .main-navigation .site-title {
   font-size: 2.5em;
   line-height: 1.2em;
   font-family: "OswaldBold", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
 }
-.site-branding .site-title a {
+.site-branding .site-title a, .main-navigation .site-title a {
   color: #333333;
 }
-.site-branding .site-title a:hover {
+.site-branding .site-title a:hover, .main-navigation .site-title a:hover {
   color: #5e9ae2;
 }
 
@@ -1766,6 +1766,54 @@ article h6 {
   text-align: right;
 }
 
+/*	ARCHIVES PAGE
+	----------------- */
+.archives-content .archives-left {
+  display: inline;
+  float: left;
+  width: 35.484%;
+  margin-right: 3.226%;
+}
+.archives-content .archives-left ul {
+  list-style: none;
+  padding-left: 1.5em;
+}
+.archives-content .archives-right {
+  overflow: hidden;
+}
+.archives-content .archives-right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.archives-content .archives-left h2,
+.archives-content .archives-right h2 {
+  margin-bottom: 0.75em;
+  color: #bbb;
+  display: block;
+  font-family: "BitterRegular", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-size: 0.846em;
+  line-height: 2.182em;
+  text-transform: uppercase;
+}
+.archives-content .archives-left ul li:before,
+.archives-content .archives-right ul li:before {
+  content: "{";
+  color: #777;
+  font-family: "EntypoRegular", sans-serif;
+  font-size: 1.538em;
+  line-height: 1.2em;
+  padding-right: 0.3em;
+}
+.archives-content .archives-left ul li a,
+.archives-content .archives-right ul li a {
+  color: #555;
+}
+.archives-content .archives-left ul li a:hover,
+.archives-content .archives-right ul li a:hover {
+  color: #5e9ae2;
+}
+
 /* =============================================================================
 - Sidebar & Widget
 Styles for sidebar and all widget areas
@@ -2243,8 +2291,9 @@ Collection of styles for theme plugins such as lightbox, slider, tooltip etc
   -webkit-backface-visibility: hidden;
 }
 .flexslider .slides img {
-  max-width: 100%;
   display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 .flex-pauseplay span {
@@ -2325,7 +2374,7 @@ html[xmlns] .slides {
 }
 .flex-direction-nav li a {
   background-color: rgba(0, 0, 0, 0.5);
-  bottom: 0;
+  bottom: 3%;
   cursor: pointer;
   color: #fff;
   display: block;
@@ -2583,11 +2632,155 @@ hr.lightborder {
 - Media Queries
 Styles for repsonsive layouts
 ============================================================================= */
-/* Smaller than standard 960 (devices and browsers) */
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-/* All Mobile Sizes (devices and browser) */
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media screen and (max-width: 767px) {
+  #page {
+    *zoom: 1;
+    margin: 1.5em auto;
+    width: 49.25em;
+    max-width: 100%;
+  }
+  #page:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #primary, #secondary {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-right: 2.674%;
+    margin-right: 0;
+  }
+
+  .entry-thumbnail a,
+  .entry-thumbnail img {
+    width: 100%;
+  }
+
+  #secondary {
+    margin-top: 1.05em;
+  }
+  #secondary .widget {
+    display: inline;
+    float: left;
+    width: 44.385%;
+    margin-right: 2.674%;
+  }
+  #secondary .widget:nth-child(2n+2) {
+    display: inline;
+    float: right;
+  }
+
+  .flex-direction-nav li a {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .site-branding, .main-navigation {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-right: 3.311%;
+    margin: 0 0 1.5em;
+    text-align: center;
+  }
+
+  .main-navigation {
+    text-align: left;
+  }
+  .main-navigation ul {
+    display: inline;
+    float: left;
+  }
+  .main-navigation ul li a {
+    margin: 0 3em 0 0;
+  }
+  .main-navigation ul li.arrow:after {
+    right: 25px;
+  }
+
+  .secondary-nav {
+    display: none;
+  }
+
+  .secondary-navigation {
+    background: #fff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .secondary-navigation .mobileMenu {
+    display: inline;
+    float: left;
+    width: 100%;
+  }
+
+  .flex-direction-nav li a {
+    bottom: 11%;
+  }
+
+  .flex-control-nav {
+    bottom: 0;
+  }
+
+  #secondary .widget {
+    display: inline;
+    float: left;
+    width: 44.04%;
+    margin-right: 3.311%;
+  }
+  #secondary .widget:nth-child(2n+2) {
+    margin-left: 0;
+  }
+
+  #colophon .footer-widget {
+    display: inline;
+    float: left;
+    width: 48.344%;
+    margin-right: 3.311%;
+  }
+  #colophon .footer-widget:nth-child(2n+2) {
+    display: inline;
+    float: right;
+    margin-right: 0;
+    #margin-left: -1.25em;
+  }
+}
+/* iphone landscape */
+@media screen and (max-width: 480px) {
+  article.first-posts .entry-thumbnail {
+    display: none;
+  }
+  article.cols {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-right: 3.311%;
+    margin-right: 0;
+  }
+
+  #secondary .widget {
+    display: inline;
+    float: left;
+    width: 91.391%;
+    margin-right: 3.311%;
+  }
+  #secondary .widget:nth-child(2n+2) {
+    display: inline;
+    float: left;
+    margin-left: 1.5em;
+  }
+
+  #colophon .footer-widget {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-right: 3.311%;
+    margin-right: 0;
+  }
+}
+/* iphone portrait */
 /* =============================================================================
 - WordPress Pagination
 	- Post pages <!--nextpage-->
@@ -2605,15 +2798,15 @@ Styles for repsonsive layouts
 .nav-previous {
   display: inline;
   float: left;
-  width: 45.455%;
-  margin-right: 3.03%;
+  width: 44.55%;
+  margin-right: 4.739%;
 }
 
 .nav-next {
   display: inline;
   float: left;
-  width: 51.515%;
-  margin-right: 3.03%;
+  width: 50.711%;
+  margin-right: 4.739%;
   display: inline;
   float: right;
   margin-right: 0;
@@ -2767,4 +2960,53 @@ article #author-info #author-description p {
 .ads-after-content {
   display: block;
   margin: 1.05em 0;
+}
+
+/* 	CONTACT FORM 7
+	----------------- */
+.entry-content .wpcf7 {
+  background: #eee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 0 1.5em 0;
+  padding: 1.4em;
+}
+.entry-content .wpcf7 input[type="text"],
+.entry-content .wpcf7 input[type="email"],
+.entry-content .wpcf7 textarea {
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2) inset;
+}
+.entry-content .wpcf7 input[type="text"]:focus,
+.entry-content .wpcf7 input[type="email"]:focus,
+.entry-content .wpcf7 textarea:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.entry-content .wpcf7 input[type="text"],
+.entry-content .wpcf7 input[type="email"] {
+  height: 2.5em;
+}
+.entry-content div.wpcf7-validation-errors,
+.entry-content div.wpcf7-mail-sent-ng {
+  background: #f00;
+  border: 2px solid #f00;
+  color: #fff;
+}
+.entry-content span.wpcf7-not-valid-tip {
+  background: #f00;
+  border: 1px solid #f00;
+  color: #fff;
+  left: 105%;
+  padding: 0.2em 0.75em;
+  top: -21%;
+  width: 18em;
+}
+.entry-content div.wpcf7 img.ajax-loader {
+  margin-left: 1em;
 }

@@ -109,13 +109,13 @@ function optionsframework_options() {
 						'type' => 'upload');
 						
 	$options[] = array( 'name' => __('Layouts', 'tiga'),
-						'desc' => __('Available layout', 'tiga'),
+						'desc' => __('Available layout(left content, right content)', 'tiga'),
 						'id' => 'tiga_layouts',
 						'std' => 'lcontent',
 						'type' => 'images',
 						'options' => array(
-							'lcontent' => $imageadminpathlayouts . '2cl.png',
-							'rcontent' => $imageadminpathlayouts . '2cr.png')
+							'lcontent' => $imageadminpathlayouts . '2cr.png',
+							'rcontent' => $imageadminpathlayouts . '2cl.png')
 						);
 						
 	$options[] = array( 'name' => __('Show featured posts', 'tiga'),
@@ -136,10 +136,16 @@ function optionsframework_options() {
 						'id' => 'tiga_footer_widgets',
 						'type' => 'checkbox');
 						
-	$options[] = array( 'name' => __('Display social share button', 'tiga'),
-						'desc' => __('Check this option if you want display the social share button on single posts', 'tiga'),
-						'id' => 'tiga_social_share',
-						'type' => 'checkbox');
+	$options[] = array( "name" => __('Display social share button', 'tiga'),
+						"desc" => __('Display social share on single post and page', 'tiga'),
+						"id" => "tiga_social_share",
+						"std" => 'tiga_post', // These items get checked by default
+						"type" => "radio",
+						"options" => array(
+							'tiga_post' => __('Single post', 'tiga'),
+							'tiga_page' => __('Page', 'tiga'),
+							'tiga_both' => __('Both', 'tiga')
+						));
 						
 	$options[] = array( 'name' => __('Display author box', 'tiga'),
 						'desc' => __('Check this option if you want display the author box on single posts', 'tiga'),

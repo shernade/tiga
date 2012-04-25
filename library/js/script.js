@@ -5,7 +5,7 @@ $j(document).ready(function(){
 	$j(".content-right").fitVids();
 	
 	// Reponsive menus
-	$j(".nav").mobileMenu();
+	$j(".secondary-nav").mobileMenu();
 	
 	// Drop down menus
 	$j(".main-navigation ul li ul, .secondary-navigation ul li ul").parent().addClass("arrow");

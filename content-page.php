@@ -20,9 +20,11 @@
 	</div><!-- .entry-content -->
 	
 	<footer class="entry-meta">
-		<?php if(of_get_option('tiga_social_share')):
-			tiga_share_buttons();
-		endif; ?>
+		<?php 
+			$socialpage = of_get_option('tiga_social_share');
+			if( ('tiga_page' == $socialpage) || ('tiga_both' == $socialpage) )
+				tiga_share_buttons();
+		?>
 	</footer>
 	
 </article><!-- #post-<?php the_ID(); ?> -->

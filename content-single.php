@@ -1,6 +1,6 @@
 <?php
 /**
- * The Template for displaying content on single posts
+ * The Template for displaying content on single post
  *
  * @package tiga
  * @since tiga 0.0.1
@@ -34,9 +34,11 @@
 	
 	<footer class="entry-meta">
 	
-		<?php if(of_get_option('tiga_social_share')):
-			tiga_share_buttons();
-		endif; ?>
+		<?php 
+			$socialpage = of_get_option('tiga_social_share');
+			if( ('tiga_post' == $socialpage) || ('tiga_both' == $socialpage) )
+				tiga_share_buttons();
+		?>
 	
 		<?php 
 			/* translators: used between list items, there is a space after the comma */
@@ -74,9 +76,9 @@
 
 		<?php edit_post_link( __( 'Edit', 'tiga' ), '<span class="post-edit">', '</span>' ); ?>
 		
-		<?php if(of_get_option('tiga_author_box')):
+		<?php if(of_get_option('tiga_author_box'))
 			tiga_the_author();
-		endif; ?>
+		?>
 		
 	</footer><!-- .entry-meta -->
 	
