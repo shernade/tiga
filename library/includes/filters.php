@@ -125,6 +125,7 @@ function tiga_link_filter($link, $post) {
  *
  * @since tiga 0.0.1
  */
+add_filter( 'body_class', 'tiga_body_classes' );
 function tiga_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author
 	if ( is_multi_author() ) {
@@ -133,7 +134,6 @@ function tiga_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'tiga_body_classes' );
 
 
 /**
@@ -141,6 +141,7 @@ add_filter( 'body_class', 'tiga_body_classes' );
  *
  * @since tiga 0.0.1
  */
+add_filter( 'attachment_link', 'tiga_enhanced_image_navigation', 10, 2 );
 function tiga_enhanced_image_navigation( $url, $id ) {
 	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
 		return $url;
@@ -151,6 +152,5 @@ function tiga_enhanced_image_navigation( $url, $id ) {
 
 	return $url;
 }
-add_filter( 'attachment_link', 'tiga_enhanced_image_navigation', 10, 2 );
  
 ?>

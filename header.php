@@ -11,7 +11,7 @@ tiga_doctype(); ?>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
@@ -56,15 +56,6 @@ tiga_doctype(); ?>
 			</nav> <!-- end .site-navigation -->
 			
 		</div> <!-- end #main-header -->
-		
-		<?php /* $header_image = get_header_image();
-			if ( ! empty( $header_image ) ) { ?>
-				<div id="custom-header">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo( 'name' ); ?>">
-					</a>
-				</div> <!-- end #custom-header -->
-		<?php } // end if ( ! empty( $header_image ) )  */?>
 		
 		<nav class="site-navigation secondary-navigation clearfix" role="navigation">
 			<?php wp_nav_menu( array( 

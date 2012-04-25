@@ -56,33 +56,5 @@ if ( ! function_exists( 'tiga_setup' ) ):
 		add_image_size( '700px' , 700, 300, true ); // 700px thumbnail
 		add_image_size( '620px' , 620, 350, true ); // 620px thumbnail
 		
-		// Add custom header image
-		add_custom_image_header('', 'tiga_admin_header_style');
-		
-		// The default header text color
-		define('HEADER_TEXTCOLOR', '');
-		
-		// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
-		define('HEADER_IMAGE', '%s/library/img/default-header.jpg'); // %s is the template dir uri
-		
-		// The height and width of your custom header.
-		// Add a filter to tiga_header_image_width and tiga_header_image_width to change these values.
-		define('HEADER_IMAGE_WIDTH', apply_filters( 'tiga_header_image_width', 940) );
-		define('HEADER_IMAGE_HEIGHT', apply_filters( 'tiga_header_image_width', 175) );
-		
-		// no text in the custom header
-		define('NO_HEADER_TEXT', true );
-
-		// Styles the header image
-		function tiga_admin_header_style() { ?>
-		<style type="text/css">
-		#headimg {
-			background: url(<?php header_image() ?>) no-repeat center;  
-			height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
-			width: <?php echo HEADER_IMAGE_WIDTH; ?>px;
-		}
-		</style>
-		<?php
-		}
 	}
 endif; // end tiga_setup
