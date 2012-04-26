@@ -266,39 +266,7 @@ function optionsframework_options() {
 						'type' => 'textarea'); 
 	
 	/* ============================== End Ads Settings ================================= */	
-	
-	$options[] = array( 'name' => 'Advanced Settings',
-						'type' => 'heading');
-						
-	$options[] = array( 'name' => 'Example Image Selector',
-						'desc' => 'Images for layout.',
-						'id' => 'example_images',
-						'std' => '2c-l-fixed',
-						'type' => 'images',
-						'options' => array(
-							'1col-fixed' => $imageadminpathlayouts . '1col.png',
-							'2c-l-fixed' => $imageadminpathlayouts . '2cl.png',
-							'2c-r-fixed' => $imageadminpathlayouts . '2cr.png')
-						);
-						
-	$options[] = array( 'name' =>  'Example Background',
-						'desc' => 'Change the background CSS.',
-						'id' => 'example_background',
-						'std' => $background_defaults, 
-						'type' => 'background');
-								
-							
-	$options[] = array( 'name' => 'Colorpicker',
-						'desc' => 'No color selected by default.',
-						'id' => 'example_colorpicker',
-						'std' => '',
-						'type' => 'color');
-						
-	$options[] = array( 'name' => 'Typography',
-						'desc' => 'Example typography.',
-						'id' => 'example_typography',
-						'std' => array('size' => '12px','face' => 'verdana','style' => 'bold italic','color' => '#123456'),
-						'type' => 'typography');			
+			
 	return $options;
 }
 
