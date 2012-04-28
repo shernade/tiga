@@ -28,12 +28,13 @@ function tiga_first_image() {
 	return $first_img;
 } 
 
-add_action('wp_head', 'tiga_open_graph', 1);
+
 /**
  * Prints the Facebook open-graph meta
  *
  * @since tiga 0.0.1
  */
+add_action('wp_head', 'tiga_open_graph', 1);
 function tiga_open_graph() {
 	global $post, $posts;
 	$thumbs = of_get_option('tiga_og_thumb');
@@ -69,12 +70,12 @@ function tiga_open_graph() {
 } //end tiga_open_graph()
 
  
-if ( ! function_exists( 'tiga_content_nav' ) ):
 /**
  * Display navigation to next/previous pages when applicable
  *
  * @since tiga 0.0.1
  */
+if ( ! function_exists( 'tiga_content_nav' ) ):
 function tiga_content_nav( $nav_id ) {
 	global $wp_query;
 
@@ -111,12 +112,12 @@ function tiga_content_nav( $nav_id ) {
 endif; // tiga_content_nav()
  
  
-if ( ! function_exists( 'tiga_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  *
  * @since tiga 0.0.1
  */
+if ( ! function_exists( 'tiga_posted_on' ) ) :
 function tiga_posted_on() {
 	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'tiga' ),
 		esc_url( get_permalink() ),
@@ -173,12 +174,12 @@ add_action( 'edit_category', 'tiga_category_transient_flusher' );
 add_action( 'save_post', 'tiga_category_transient_flusher' );
 
 
-if ( ! function_exists( 'tiga_the_author' ) ) :
 /**
  * Display author information on single posts
  *
  * @since tiga 0.0.1
  */
+if ( ! function_exists( 'tiga_the_author' ) ) :
 function tiga_the_author() {
 	if ( get_the_author_meta( 'description' ) && of_get_option('tiga_author_box') ) : // If a user has filled out their description and checked the "display author box" option, show a bio on their entries ?>
 	<div id="author-info">
@@ -200,20 +201,18 @@ function tiga_the_author() {
 endif; // tiga_the_author()
 
 
-add_action( 'widgets_init', 'tiga_remove_recent_comments_style' );
 /**
  * This function removes default styles set by WordPress recent comments widget.
  *
  * @since tiga 0.0.1
  */
+add_action( 'widgets_init', 'tiga_remove_recent_comments_style' );
 function tiga_remove_recent_comments_style() {
 	global $wp_widget_factory;
 	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
 } // end tiga_remove_recent_comments_style()
 
 
-
-if ( ! function_exists( 'tiga_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
@@ -221,6 +220,7 @@ if ( ! function_exists( 'tiga_comment' ) ) :
  *
  * @since tiga 1.0
  */
+if ( ! function_exists( 'tiga_comment' ) ) :
 function tiga_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
@@ -279,12 +279,12 @@ function tiga_comment( $comment, $args, $depth ) {
 endif; // ends check for tiga_comment()
 
 
-if ( ! function_exists( 'tiga_do_breadrumbs' ) ) :
 /**
  * Display custom breadcrumbs
  *
  * @since tiga 0.0.1
  */
+if ( ! function_exists( 'tiga_do_breadrumbs' ) ) :
 function tiga_do_breadrumbs() {
 
 	// If you installed wordpress seo or yoast breadcrumbs plugin, this function will automatically
@@ -297,12 +297,12 @@ function tiga_do_breadrumbs() {
 endif; // tiga_do_breadrumbs()
 
 
-if ( ! function_exists( 'tiga_comment_nav' ) ) :
 /**
  * Display navigation to next/previous comments pages when applicable
  *
  * @since tiga 0.0.1
  */
+if ( ! function_exists( 'tiga_comment_nav' ) ) :
 function tiga_comment_nav() {
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 	<nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation clearfix">
@@ -328,12 +328,13 @@ function tiga_url_grabber() {
 	return esc_url_raw( $matches[1] );
 }
 
-if ( ! function_exists( 'tiga_share_buttons' ) ) :
+
 /**
  * Display the social share button
  *
  * @since tiga 0.0.1
  */
+if ( ! function_exists( 'tiga_share_buttons' ) ) :
 function tiga_share_buttons() {
 	global $post;
 	?>

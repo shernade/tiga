@@ -248,8 +248,6 @@ a:focus {
   margin: 1.5em auto;
   width: 61.25em;
   max-width: 100%;
-  position: relative;
-  behavior: url(PIE.htc);
 }
 #page:after {
   content: "";
@@ -1556,8 +1554,8 @@ article.cols:nth-child(2n+2) {
   #margin-left: -1.25em;
 }
 article.cols .entry-title {
-  font-size: 1.385em;
-  line-height: 1.6em;
+  font-size: 1.313em;
+  line-height: 1.371em;
 }
 article.cols .entry-thumbnail {
   float: none;

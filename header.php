@@ -48,20 +48,22 @@ tiga_doctype(); ?>
 				<h1 class="assistive-text"><?php _e( 'Menu', 'tiga' ); ?></h1>
 				<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tiga' ); ?>"><?php _e( 'Skip to content', 'tiga' ); ?></a></div>
 
-				<?php wp_nav_menu( array( 
-						'theme_location' => 'primary', 
+				<?php wp_nav_menu( array(  
 						'container' => '',
-						'menu_class' => 'main-nav' ) 
+						'menu_class' => 'main-nav',
+						'theme_location' => 'primary') 
 					); ?>
 			</nav> <!-- end .site-navigation -->
 			
 		</div> <!-- end #main-header -->
 		
 		<nav class="site-navigation secondary-navigation clearfix" role="navigation">
-			<?php wp_nav_menu( array( 
-					'theme_location' => 'secondary', 
+			<?php 
+			if (has_nav_menu('secondary'))
+			wp_nav_menu( array(  
 					'container' => '',
-					'menu_class' => 'secondary-nav' ) 
+					'menu_class' => 'secondary-nav',
+					'theme_location' => 'secondary' ) 
 				); ?>
 		</nav> <!-- end .site-navigation -->
 	</header><!-- #masthead .site-header -->
