@@ -1,0 +1,5 @@
+html.ie .secondary-navigation,
+html.ie #page {
+  position: relative;
+  behavior: url(PIE.htc);
+}

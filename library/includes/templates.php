@@ -68,18 +68,6 @@ function tiga_open_graph() {
 	
 } //end tiga_open_graph()
 
-
-add_filter( 'wp_page_menu_args', 'tiga_page_menu_args' );
-/**
- * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
- *
- * @since tiga 0.0.1
- */
-function tiga_page_menu_args( $args ) {
-	$args['show_home'] = true;
-	return $args;
-} // end tiga_page_menu_args()
-
  
 if ( ! function_exists( 'tiga_content_nav' ) ):
 /**

@@ -63,17 +63,17 @@ See: http://codex.wordpress.org/Child_Themes
 }
 
 @font-face {
-  font-family: 'OswaldBold';
-  src: url("library/fonts/oswald/Oswald-Bold-webfont.eot");
-  src: url("library/fonts/oswald/Oswald-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/oswald/Oswald-Bold-webfont.woff") format("woff"), url("library/fonts/oswald/Oswald-Bold-webfont.ttf") format("truetype"), url("library/fonts/oswald/Oswald-Bold-webfont.svg#OswaldBold") format("svg");
+  font-family: 'BitterRegular';
+  src: url("library/fonts/bitter/Bitter-Regular-webfont.eot");
+  src: url("library/fonts/bitter/Bitter-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/bitter/Bitter-Regular-webfont.woff") format("woff"), url("library/fonts/bitter/Bitter-Regular-webfont.ttf") format("truetype"), url("library/fonts/bitter/Bitter-Regular-webfont.svg#BitterRegular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'BitterRegular';
-  src: url("library/fonts/bitter/Bitter-Regular-webfont.eot");
-  src: url("library/fonts/bitter/Bitter-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/bitter/Bitter-Regular-webfont.woff") format("woff"), url("library/fonts/bitter/Bitter-Regular-webfont.ttf") format("truetype"), url("library/fonts/bitter/Bitter-Regular-webfont.svg#BitterRegular") format("svg");
+  font-family: 'FrancoisOneRegular';
+  src: url("library/fonts/francois/FrancoisOne-webfont.eot");
+  src: url("library/fonts/francois/FrancoisOne-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/francois/FrancoisOne-webfont.woff") format("woff"), url("library/fonts/francois/FrancoisOne-webfont.ttf") format("truetype"), url("library/fonts/francois/FrancoisOne-webfont.svg#FrancoisOneRegular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -193,7 +193,7 @@ table {
 Basic and global styles for structural layout, page templates and link styles
 ============================================================================= */
 body {
-  background-color: white;
+  background: url('library/img/pattern.png?1335543580') repeat left top white;
   color: #333333;
   font-family: "BitterRegular", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
   font-size: 100%;
@@ -241,10 +241,15 @@ a:focus {
 	----------------- */
 #page {
   background-color: #fff;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   *zoom: 1;
   margin: 1.5em auto;
   width: 61.25em;
   max-width: 100%;
+  position: relative;
+  behavior: url(PIE.htc);
 }
 #page:after {
   content: "";
@@ -359,7 +364,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "OswaldBold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "FrancoisOneRegular", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* 	TEXT ELEMENT
@@ -1205,7 +1210,7 @@ Styles for header area such as header, custom header, menus etc.
 .site-branding .site-title, .main-navigation .site-title {
   font-size: 2.5em;
   line-height: 1.2em;
-  font-family: "OswaldBold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "FrancoisOneRegular", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
 }
 .site-branding .site-title a, .main-navigation .site-title a {
@@ -1350,8 +1355,6 @@ Styles for header area such as header, custom header, menus etc.
 	----------------- */
 .secondary-navigation {
   background: #252525;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF252525', endColorstr='#FF0A0A0A');
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #252525), color-stop(100%, #0a0a0a));
   background-image: -webkit-linear-gradient(#252525, #0a0a0a);
   background-image: -moz-linear-gradient(#252525, #0a0a0a);
@@ -1481,7 +1484,7 @@ This is our main styles for theme development
 }
 
 .featuredposts-heading, .recentposts-heading {
-  font-family: "OswaldBold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "FrancoisOneRegular", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.875em;
   line-height: 1.714em;
   margin-bottom: 1.5em;
@@ -1552,6 +1555,10 @@ article.cols:nth-child(2n+2) {
   margin-right: 0;
   #margin-left: -1.25em;
 }
+article.cols .entry-title {
+  font-size: 1.385em;
+  line-height: 1.6em;
+}
 article.cols .entry-thumbnail {
   float: none;
   display: block;
@@ -1568,8 +1575,6 @@ article {
   /* post heading */
 }
 article .entry-title {
-  font-size: 1.385em;
-  line-height: 1.467em;
   margin-bottom: 0.45em;
 }
 article .entry-title a {
@@ -1713,6 +1718,12 @@ article h6 {
 
 /*	AUTHOR PAGE
 	----------------- */
+#author-info {
+  border-top: 4px double #eeeeee;
+  border-bottom: 4px double #eeeeee;
+  margin-bottom: 1.5em;
+  padding: 1em 0;
+}
 #author-info #author-avatar {
   display: inline;
   float: left;
@@ -1736,6 +1747,7 @@ article h6 {
 #author-info #author-description p {
   font-size: 0.813em;
   line-height: 1.846em;
+  margin: 0;
 }
 
 /*	ATTACHMENT PAGE
@@ -2180,13 +2192,13 @@ Styles for comments area(comment form & comment lists)
 - Footer
 Styles for footer area
 ============================================================================= */
-#colophon .footer {
-  background: #222;
+#colophon {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+  background: #222;
 }
 
 #site-credit {
@@ -2207,14 +2219,12 @@ Styles for footer area
   font-size: 0.75em;
   line-height: 2em;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-  margin: 0 2.041%;
 }
 
 /* 	FOOTER SIDEBAR
 	----------------- */
 #footer-sidebar {
   display: block;
-  padding: 0 1.65em;
   position: relative;
 }
 
@@ -2867,9 +2877,6 @@ Styles for repsonsive layouts
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #dddddd;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFDDDDDD');
   background: url('library/img/button.png?1331603458') repeat-x, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
   background: url('library/img/button.png?1331603458') repeat-x, -webkit-linear-gradient(#ffffff, #dddddd);
   background: url('library/img/button.png?1331603458') repeat-x, -moz-linear-gradient(#ffffff, #dddddd);
@@ -2918,6 +2925,11 @@ Styles for repsonsive layouts
   -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
   box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
   border-color: #999999 #bbbbbb #dddddd;
+}
+
+#nav-above,
+#nav-below {
+  margin-bottom: 3em;
 }
 
 /* 	POST PAGES
