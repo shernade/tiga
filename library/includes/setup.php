@@ -14,7 +14,8 @@ if ( ! function_exists( 'tiga_setup' ) ):
 		/**
 		 * Set the content width based on the theme's design and stylesheet.
 		 */
-		 if ( ! isset( $content_width ) ) $content_width = 620;
+		global $content_width;
+		if ( ! isset( $content_width ) ) $content_width = 620;
 		
 		/* Make tiga available for translation.
 		 * Translations can be added to the /languages/ directory.

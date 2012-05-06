@@ -20,11 +20,13 @@ get_header(); ?>
 			 
 		query_posts( 'post_type=post&paged=' . $paged );
 				
-		if (have_posts()): ?>
+		if (have_posts()): 
+		global $more;
+		$more = 0;
+		?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 * If you want to overload this in a child theme then include a file
