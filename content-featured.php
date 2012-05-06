@@ -9,7 +9,7 @@
  */
 ?>
 
-<ul class="slides">
+<ul id="slides">
 	<?php
 		// code by justin tadlock & nathan rice 
 		// http://justintadlock.com/archives/2009/03/28/get-the-latest-sticky-posts-in-wordpress
@@ -46,4 +46,4 @@
 		</li>
 		
 	<?php endwhile; ?>
-</ul> <!-- end .carousel-wrapper -->
+</ul> <!-- end .slides -->

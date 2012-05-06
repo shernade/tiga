@@ -1,3 +1,6 @@
+/* Author:
+Satrya - http://twitter.com/msattt
+*/
 var $j = jQuery.noConflict();
 $j(document).ready(function(){
 	
@@ -25,9 +28,11 @@ $j(document).ready(function(){
 		'transitionOut'	: 'elastic'
 	});
 	
+	$j('#slides').carouFredSel();
+	
 });
 
-$j(window).load(function(){
+/* $j(window).load(function(){
 	$j('.flexslider').flexslider({
 		slideshow: true,
 		slideshowSpeed: 4000,
@@ -40,3 +45,4 @@ $j(window).load(function(){
 	);
 
 });
+*/
