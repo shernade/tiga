@@ -11,7 +11,6 @@ add_action('wp_head', 'tiga_custom_css', 10);
 add_action('wp_head', 'tiga_iframe_blocker', 11);
 add_filter( 'body_class', 'tiga_custom_layouts' );
 add_action('wp_head', 'tiga_meta_google', 2);
-add_action('wp_head', 'tiga_meta_yahoo', 2);
 add_action('wp_head', 'tiga_meta_bing', 2);
 add_action('wp_head', 'tiga_meta_alexa', 2);
 add_action('wp_footer','tiga_analytics');
@@ -71,10 +70,10 @@ function tiga_iframe_blocker() {
 function tiga_custom_layouts($classes) {
 	$layouts = of_get_option('tiga_layouts');
 	
-	if ( 'lcontent' == $layouts )
-		$classes[] = 'two-columns left-primary right-secondary';
-	else
+	if ( 'rcontent' == $layouts )
 		$classes[] = 'two-columns right-primary left-secondary';
+	else
+		$classes[] = 'two-columns left-primary right-secondary';
 		
 	return $classes;
 }
