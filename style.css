@@ -1499,7 +1499,6 @@ article.featured-slides {
   margin-bottom: 0;
   overflow: hidden;
   padding-bottom: 0;
-  position: relative;
 }
 article.featured-slides h2 {
   margin-bottom: 0;
@@ -1941,7 +1940,7 @@ Styles for sidebar and all widget areas
 .widget_search input[type="text"] {
   background: #fafafa;
   border: 1px solid #eeeeee;
-  padding: 5px 10px;
+  padding: 0 10px;
   display: inline;
   float: left;
   width: 60%;
