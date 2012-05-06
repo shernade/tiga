@@ -23,8 +23,8 @@
 		<?php else : ?>
 		<div class="entry-content">
 			
-			<div class="flexslider">
-				<ul class="slides">
+			<div class="rslides_container">
+				<ul class="rslides">
 				<?php
 					// basic code by:
 					// twentyeleven gallery format,

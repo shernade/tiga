@@ -9,7 +9,7 @@
  */
 ?>
 
-<ul id="slides">
+<ul class="rslides">
 	<?php
 		// code by justin tadlock & nathan rice 
 		// http://justintadlock.com/archives/2009/03/28/get-the-latest-sticky-posts-in-wordpress

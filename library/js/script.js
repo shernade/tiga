@@ -28,21 +28,13 @@ $j(document).ready(function(){
 		'transitionOut'	: 'elastic'
 	});
 	
-	$j('#slides').carouFredSel();
+	// Slideshow
+    $j(".rslides").responsiveSlides({
+		auto: false,
+        pager: true,
+        nav: true,
+        speed: 500,
+        maxwidth: 700
+    });
 	
 });
-
-/* $j(window).load(function(){
-	$j('.flexslider').flexslider({
-		slideshow: true,
-		slideshowSpeed: 4000,
-		pauseOnHover: true,
-		prevText: "<span>&larr;</span>",
-		nextText: "<span>&rarr;</span>"
-	}).find(".featured-slides").hover(
-		function() { $j(this).find(".slides-content").slideDown(); },
-		function() { $j(this).find(".slides-content").slideUp(); }
-	);
-
-});
-*/

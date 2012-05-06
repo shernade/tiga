@@ -14,7 +14,7 @@ get_header(); ?>
 		<div id="content" role="main">
 			
 			<?php if(of_get_option('tiga_show_featured')) : ?>
-				<section class="featured-posts flexslider">
+				<section class="featured-posts rslides_container">
 					<div class="featuredposts-heading"><?php _e( 'Featured Posts', 'tiga' ); ?></div>
 				
 					<?php get_template_part( 'content', 'featured' ); ?>
