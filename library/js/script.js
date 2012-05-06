@@ -35,6 +35,9 @@ $j(document).ready(function(){
         nav: true,
         speed: 500,
         maxwidth: 700
-    });
+    }).find(".featured-slides").hover(
+		function() { $j(this).find(".slides-content").slideDown(); },
+		function() { $j(this).find(".slides-content").slideUp();	}
+	);
 	
 });
