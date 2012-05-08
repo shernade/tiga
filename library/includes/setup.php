@@ -30,7 +30,7 @@ if ( ! function_exists( 'tiga_setup' ) ):
 				require_once( $locale_file );
 				
 		// This theme styles the visual editor with editor-style.css to match the theme style.
-		add_editor_style('library/css/editor-style.css');
+		add_editor_style();
 		
 		// Add default posts and comments RSS feed links to <head>.
 		add_theme_support( 'automatic-feed-links' );

@@ -30,7 +30,7 @@ $j(document).ready(function(){
 	
 	// Slideshow
     $j(".rslides").responsiveSlides({
-		auto: false,
+		auto: true,
         pager: true,
         nav: true,
         speed: 500,

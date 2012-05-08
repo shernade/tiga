@@ -18,8 +18,6 @@ add_action('wp_head', 'tiga_style_for_ie', 10);
 function tiga_enqueue_styles() {
 	wp_enqueue_style( 'style', get_stylesheet_uri(), '', '0.0.1', 'all' );
 	
-	wp_enqueue_style('print', get_template_directory_uri() . '/library/css/print.css', '', '0.0.1', 'print');
-	
 	wp_enqueue_style('shortcodes', get_template_directory_uri() . '/library/css/shortcodes.css', '', '0.0.1', 'all');
 }
 
@@ -28,7 +26,7 @@ function tiga_deregister_styles() {
 }
 
 function tiga_style_for_ie() {?>
-<!--[if gte IE 7]>
+<!--[if lt IE 9]>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/ie.css" media="screen">
 <![endif]-->
 <?php
