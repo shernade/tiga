@@ -2221,15 +2221,20 @@ Styles for footer area
 .footer-widget .widget .widget-title {
   color: #aaa;
 }
-.footer-widget .widget li {
+.footer-widget .widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-widget .widget ul li {
   border-bottom: 1px solid #333;
   padding: .4em 0;
 }
-.footer-widget .widget li:before {
+.footer-widget .widget ul li:before {
   content: "";
   padding-right: 0;
 }
-.footer-widget .widget li a {
+.footer-widget .widget ul li a {
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
 }
