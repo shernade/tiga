@@ -55,14 +55,6 @@ See: http://codex.wordpress.org/Child_Themes
    =============================================================================
 */
 @font-face {
-  font-family: 'EntypoRegular';
-  src: url("library/fonts/entypo/entypo-webfont.eot");
-  src: url("library/fonts/entypo/entypo-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/entypo/entypo-webfont.woff") format("woff"), url("library/fonts/entypo/entypo-webfont.ttf") format("truetype"), url("library/fonts/entypo/entypo-webfont.svg#EntypoRegular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'BitterRegular';
   src: url("library/fonts/bitter/Bitter-Regular-webfont.eot");
   src: url("library/fonts/bitter/Bitter-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/bitter/Bitter-Regular-webfont.woff") format("woff"), url("library/fonts/bitter/Bitter-Regular-webfont.ttf") format("truetype"), url("library/fonts/bitter/Bitter-Regular-webfont.svg#BitterRegular") format("svg");
@@ -193,7 +185,7 @@ table {
 Basic and global styles for structural layout, page templates and link styles
 ============================================================================= */
 body {
-  background: url('library/img/pattern.png?1335543580') repeat left top white;
+  background: url('library/img/pattern.png?1336531459') repeat left top white;
   color: #333333;
   font-family: "BitterRegular", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
   font-size: 100%;
@@ -533,7 +525,7 @@ ul.checks {
 ul.checks li {
   list-style: none;
   margin: 0;
-  background: url('library/img/icon-check.png?1331129863') no-repeat 0.15em 0.6em;
+  background: url('library/img/icon-check.png?1336531459') no-repeat 0.15em 0.6em;
   padding: 0.3em 0 0.3em 1.8em;
 }
 
@@ -686,12 +678,12 @@ input[type="button"] {
   background: #dddddd;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFFFFFF', endColorstr='#FFDDDDDD');
-  background: url('library/img/button.png?1331603458') repeat-x, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
-  background: url('library/img/button.png?1331603458') repeat-x, -webkit-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png?1331603458') repeat-x, -moz-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png?1331603458') repeat-x, -o-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png?1331603458') repeat-x, -ms-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png?1331603458') repeat-x, linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1336531459') repeat-x, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
+  background: url('library/img/button.png?1336531459') repeat-x, -webkit-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1336531459') repeat-x, -moz-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1336531459') repeat-x, -o-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1336531459') repeat-x, -ms-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1336531459') repeat-x, linear-gradient(#ffffff, #dddddd);
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
@@ -868,7 +860,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('library/img/select_arrow.gif?1331603458');
+    background-image: url('library/img/select_arrow.gif?1336531459');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -917,7 +909,7 @@ optgroup::-moz-focus-inner {
 
 .ie6_button,
 * html button {
-  background: #dddddd url('library/img/button.png?1331603458') repeat-x;
+  background: #dddddd url('library/img/button.png?1336531459') repeat-x;
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
@@ -1683,7 +1675,7 @@ article h6 {
 }
 
 .format-quote blockquote {
-  background: #f5f5f5 url('library/img/quotes.png?1329843070') no-repeat 1.3em 1.8em;
+  background: #f5f5f5 url('library/img/quotes.png?1336531459') no-repeat 1.3em 1.8em;
   border: 0;
   color: #111;
   font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
@@ -1806,14 +1798,11 @@ article h6 {
   line-height: 2.182em;
   text-transform: uppercase;
 }
-.archives-content .archives-left ul li:before,
-.archives-content .archives-right ul li:before {
-  content: "{";
-  color: #777;
-  font-family: "EntypoRegular", sans-serif;
-  font-size: 1.538em;
-  line-height: 1.2em;
-  padding-right: 0.3em;
+.archives-content .archives-left ul,
+.archives-content .archives-right ul {
+  list-style: disc;
+  margin: 0;
+  padding: 0 0 0 1.5em;
 }
 .archives-content .archives-left ul li a,
 .archives-content .archives-right ul li a {
@@ -1847,17 +1836,9 @@ Styles for sidebar and all widget areas
   text-transform: uppercase;
 }
 .widget ul {
-  list-style: none;
+  list-style: circle;
   margin: 0;
-  padding: 0;
-}
-.widget ul li:before {
-  content: "{";
-  color: #777;
-  font-family: "EntypoRegular", sans-serif;
-  font-size: 1.667em;
-  line-height: 1.2em;
-  padding-right: 0.3em;
+  padding: 0 0 0 1.5em;
 }
 .widget ul li a {
   color: #777;
@@ -2300,7 +2281,7 @@ Collection of styles for theme plugins such as lightbox, slider, tooltip etc
 }
 
 .rslides1_nav {
-  background: transparent url('library/img/slide-nav.gif?1335909956') no-repeat left top;
+  background: transparent url('library/img/slide-nav.gif?1336531459') no-repeat left top;
   height: 61px;
   left: 0;
   margin-top: -25px;
@@ -2767,12 +2748,12 @@ Styles for repsonsive layouts
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: url('library/img/button.png?1331603458') repeat-x, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
-  background: url('library/img/button.png?1331603458') repeat-x, -webkit-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png?1331603458') repeat-x, -moz-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png?1331603458') repeat-x, -o-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png?1331603458') repeat-x, -ms-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png?1331603458') repeat-x, linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1336531459') repeat-x, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
+  background: url('library/img/button.png?1336531459') repeat-x, -webkit-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1336531459') repeat-x, -moz-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1336531459') repeat-x, -o-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1336531459') repeat-x, -ms-linear-gradient(#ffffff, #dddddd);
+  background: url('library/img/button.png?1336531459') repeat-x, linear-gradient(#ffffff, #dddddd);
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
