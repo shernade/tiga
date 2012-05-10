@@ -34,10 +34,11 @@ $j(document).ready(function(){
         pager: true,
         nav: true,
         speed: 500,
+		pauseControls: true,
         maxwidth: 700
     }).find(".featured-slides").hover(
 		function() { $j(this).find(".slides-content").slideDown(); },
-		function() { $j(this).find(".slides-content").slideUp();	}
+		function() { $j(this).find(".slides-content").slideUp(); }
 	);
 	
 });
