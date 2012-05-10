@@ -3,7 +3,7 @@
 -------------------------------------------------------
 
 Contributors	: satrya
-Demo	: http://satrya.me/demo/tiga
+Demo			: http://satrya.me/demo/tiga
 Description	: Responsive and super clean blogging theme. It supports 5 widget areas, post-format and more(try it yourself). Has an optional full-width page template and sitemap page template, also translation ready.
 Requires at least: 3.3
 Tested up to	: 3.3.2
