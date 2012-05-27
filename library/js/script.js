@@ -17,7 +17,7 @@ $j(document).ready(function(){
         $j(this).find("ul:first").slideToggle("fast");
     }, function(){
         $j(this).removeClass("hover");
-        $j(this).find("ul:first").hide("slow");
+        $j(this).find("ul:first").hide("fast");
     
     });
 	

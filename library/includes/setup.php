@@ -23,11 +23,6 @@ if ( ! function_exists( 'tiga_setup' ) ):
 		 * to change 'tiga' to the name of your theme in all the template files.
 		 */
 		 load_theme_textdomain( 'tiga', get_template_directory() . '/library/languages' );
-
-			$locale = get_locale();
-			$locale_file = get_template_directory() . "/library/languages/$locale.php";
-			if ( is_readable( $locale_file ) )
-				require_once( $locale_file );
 				
 		// This theme styles the visual editor with editor-style.css to match the theme style.
 		add_editor_style();
@@ -52,10 +47,10 @@ if ( ! function_exists( 'tiga_setup' ) ):
 		// This theme uses Featured Images (also known as post thumbnails)
 		add_theme_support( 'post-thumbnails' );
 		// Add custom image sizes
-		add_image_size( '140px' , 140, 140, true ); // 140px thumbnail
-		add_image_size( '300px' , 300, 130, true ); // 300px thumbnail
-		add_image_size( '700px' , 700, 300, true ); // 700px thumbnail
-		add_image_size( '620px' , 620, 350, true ); // 620px thumbnail
+		add_image_size( 'tiga-140px' , 140, 140, true ); // 140px thumbnail
+		add_image_size( 'tiga-300px' , 300, 130, true ); // 300px thumbnail
+		add_image_size( 'tiga-700px' , 700, 300, true ); // 700px thumbnail
+		add_image_size( 'tiga-620px' , 620, 350, true ); // 620px thumbnail
 		
 	}
 endif; // end tiga_setup

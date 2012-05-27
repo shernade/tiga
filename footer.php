@@ -31,7 +31,7 @@
 		<?php printf( __('Powered by <a href="http://wordpress.org/" title="%1$s" rel="generator">%2$s</a> &middot; Theme by <a href="http://satrya.me/" title="%3$s" rel="designer">%4$s</a>', 'tiga'),
 			esc_attr( 'A Semantic Personal Publishing Platform'),
 			'WordPress',
-			esc_attr( 'tiga theme creator'),
+			esc_attr( 'Satrya'),
 			'Satrya'
 		); ?>
 	</span>

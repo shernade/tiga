@@ -7,15 +7,24 @@
  * @package tiga
  * @since tiga 0.0.1
  */
- 
+
 /**
- * tiga_doctype();
- * Renders the current DOCTYPE of the page. By default it displays the HTML5 Doctype
- * 
+ * wp_title filter
+ *
  * @since tiga 0.0.1
  */
-function tiga_doctype() {
-	echo apply_filters('tiga_doctype', '<!DOCTYPE html>'). "\n";
+add_filter( 'wp_title', 'tiga_title' );
+function tiga_title( $title ) {
+   
+    $site_title = get_bloginfo( 'name' );
+    $filtered_title = $site_title . $title;
+    
+    if ( is_singular() ) {
+        $the_title = get_the_title();
+        $filtered_title = $the_title;
+    }
+    
+    return $filtered_title;
 }
 
  
@@ -79,11 +88,7 @@ add_filter( 'get_the_excerpt', 'tiga_custom_excerpt_more' );
  *
  * @since tiga 0.0.1
  */
-
-add_filter( 'gallery_style', 'tiga_remove_gallery_css' );
-function tiga_remove_gallery_css( $css ) {
-	return preg_replace( "#<style type='text/css'>(.*?)</style>#s", '', $css );
-}
+add_filter( 'use_default_gallery_style', '__return_false' );
 
 
 /**

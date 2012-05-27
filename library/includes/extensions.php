@@ -521,29 +521,29 @@ class tiga_Social_Widget extends WP_Widget
 		
 		<ul class="social-buttons clearfix">
 			<?php if(of_get_option('tiga_email')) { ?>
-				<li><a href="mailto:<?php echo of_get_option('tiga_email'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/mail.png'; ?>"></a></li>
+				<li><a href="mailto:<?php echo esc_attr( of_get_option('tiga_email') ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/mail.png'; ?>"></a></li>
 			<?php } if(of_get_option('tiga_twitter_username')) { ?>
-				<li><a href="http://twitter.com/<?php echo of_get_option('tiga_twitter_username'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/twitter.png'; ?>"></a></li>
+				<li><a href="http://twitter.com/<?php echo esc_attr( of_get_option('tiga_twitter_username') ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/twitter.png'; ?>"></a></li>
 			<?php } if(of_get_option('tiga_fb_username')) { ?>
-				<li><a href="http://www.facebook.com/<?php echo of_get_option('tiga_fb_username'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/facebook.png'; ?>"></a></li>
+				<li><a href="http://www.facebook.com/<?php echo esc_attr( of_get_option('tiga_fb_username') ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/facebook.png'; ?>"></a></li>
 			<?php } if(of_get_option('tiga_gplus_username')) { ?>
-				<li><a href="https://plus.google.com/u/<?php echo of_get_option('tiga_gplus_username'); ?>/" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/google+.png'; ?>"></a></li>
+				<li><a href="https://plus.google.com/u/<?php echo esc_attr( of_get_option('tiga_gplus_username') ); ?>/" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/google+.png'; ?>"></a></li>
 			<?php } if(of_get_option('tiga_ytube_username')) { ?>
-				<li><a href="http://www.youtube.com/user/<?php echo of_get_option('tiga_ytube_username'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/youtube.png'; ?>"></a></li>
+				<li><a href="http://www.youtube.com/user/<?php echo esc_attr( of_get_option('tiga_ytube_username') ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/youtube.png'; ?>"></a></li>
 			<?php } if(of_get_option('tiga_flickr_username')) { ?>
-				<li><a href="http://www.flickr.com/photos/<?php echo of_get_option('tiga_ytube_username'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/flickr.png'; ?>"></a></li>
+				<li><a href="http://www.flickr.com/photos/<?php echo esc_attr( of_get_option('tiga_flickr_username') ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/flickr.png'; ?>"></a></li>
 			<?php } if(of_get_option('tiga_linkedin_username')) { ?>
-				<li><a href="http://id.linkedin.com/in/<?php echo of_get_option('tiga_ytube_username'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/linkedin.png'; ?>"></a></li>
+				<li><a href="http://id.linkedin.com/in/<?php echo esc_attr( of_get_option('tiga_linkedin_username') ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/linkedin.png'; ?>"></a></li>
 			<?php } if(of_get_option('tiga_pinterest_username')) { ?>
-				<li><a href="http://pinterest.com/<?php echo of_get_option('tiga_pinterest_username'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/pinterest.png'; ?>"></a></li>
+				<li><a href="http://pinterest.com/<?php echo esc_attr( of_get_option('tiga_pinterest_username') ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/pinterest.png'; ?>"></a></li>
 			<?php } if(of_get_option('tiga_dribbble_username')) { ?>
-				<li><a href="http://dribbble.com/<?php echo of_get_option('tiga_dribbble_username'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/dribbble.png'; ?>"></a></li>
+				<li><a href="http://dribbble.com/<?php echo esc_attr( of_get_option('tiga_dribbble_username') ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/dribbble.png'; ?>"></a></li>
 			<?php } if(of_get_option('tiga_github_username')) { ?>
-				<li><a href="https://github.com/<?php echo of_get_option('tiga_github_username'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/github.png'; ?>"></a></li>
+				<li><a href="https://github.com/<?php echo esc_attr( of_get_option('tiga_github_username') ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/github.png'; ?>"></a></li>
 			<?php } if(of_get_option('tiga_lastfm_username')) { ?>
-				<li><a href="http://www.last.fm/user/<?php echo of_get_option('tiga_lastfm_username'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/last_fm.png'; ?>"></a></li>
+				<li><a href="http://www.last.fm/user/<?php echo esc_attr( of_get_option('tiga_lastfm_username') ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/last_fm.png'; ?>"></a></li>
 			<?php } if(of_get_option('tiga_vimeo_username')) { ?>
-				<li><a href="http://vimeo.com/<?php echo of_get_option('tiga_vimeo_username'); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/vimeo.png'; ?>"></a></li>
+				<li><a href="http://vimeo.com/<?php echo esc_attr( of_get_option('tiga_vimeo_username') ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(). '/library/img/icons/vimeo.png'; ?>"></a></li>
 			<?php } ?>
 		</ul>
 		

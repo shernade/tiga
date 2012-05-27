@@ -18,7 +18,6 @@ add_action('wp_footer','tiga_analytics');
 /**
  * Output Custom CSS from theme options
  *
- * @package tiga
  * @since tiga 0.0.1
  */
  
@@ -26,28 +25,24 @@ function tiga_custom_css() {
 	$custom_css = of_get_option('tiga_custom_css');
 	
 	if ($custom_css != '') {
-		echo "<!-- Custom Styling -->\n<style type=\"text/css\">\n" . $custom_css . "</style>\n";
+		echo "<!-- Custom Styling -->\n<style type=\"text/css\">\n" . esc_attr( $custom_css ) . "\n</style>\n";
 	}
 }
 
 /**
  * Output favicon from theme options
  *
- * @package tiga
  * @since tiga 0.0.1
  */
 
 function tiga_custom_favicon() {
 	if (of_get_option('tiga_custom_favicon'))
-		echo '<link rel="shortcut icon" href="'. of_get_option('tiga_custom_favicon') .'">'."\n";
-	else
-		echo '<link rel="shortcut icon" href="'. get_stylesheet_directory_uri() .'/library/img/WordPress.png">'."\n";
+		echo '<link rel="shortcut icon" href="'. esc_url( of_get_option('tiga_custom_favicon') ) .'">'."\n";
 }
 
 /**
  * Output iframe blocker from theme options
  *
- * @package tiga
  * @since tiga 0.0.1
  */
 
@@ -64,7 +59,6 @@ function tiga_iframe_blocker() {
 /**
  * Output custom class for layouts
  *
- * @package tiga
  * @since tiga 0.0.1
  */
 function tiga_custom_layouts($classes) {
@@ -82,49 +76,45 @@ function tiga_custom_layouts($classes) {
 /**
  * Output Google meta verification from theme options
  *
- * @package tiga
  * @since tiga 0.0.1
  */
  
 function tiga_meta_google(){
 	$output = of_get_option('tiga_meta_google');
 	if ( $output ) 
-		echo '<meta name="google-site-verification" content="' . $output . '"> ' . "\n";
+		echo '<meta name="google-site-verification" content="' . esc_attr( $output ) . '"> ' . "\n";
 }
 
 
 /**
  * Output Bing meta verification from theme options
  *
- * @package tiga
  * @since tiga 0.0.1
  */
 
 function tiga_meta_bing(){
 	$output = of_get_option('tiga_meta_bing');
 	if ( $output ) 
-		echo '<meta name="msvalidate.01" content="' . $output . '"> ' . "\n";
+		echo '<meta name="msvalidate.01" content="' . esc_attr( $output ) . '"> ' . "\n";
 }
 
 
 /**
  * Output Alexa meta verification from theme options
  *
- * @package tiga
  * @since tiga 0.0.1
  */
  
 function tiga_meta_alexa(){
 	$output = of_get_option('tiga_meta_alexa');
 	if ( $output ) 
-		echo '<meta name="alexaVerifyID" content="' . $output . '"> ' . "\n";
+		echo '<meta name="alexaVerifyID" content="' . esc_attr( $output ) . '"> ' . "\n";
 }
 
 
 /**
  * Output analytics code in footer from theme options
  *
- * @package tiga
  * @since tiga 0.0.1
  */
 

@@ -39,10 +39,10 @@
 		<ol class="commentlist">
 			<?php
 				/* Loop through and list the comments. Tell wp_list_comments()
-				 * to use _s_comment() to format the comments.
+				 * to use tiga_comment() to format the comments.
 				 * If you want to overload this in a child theme then you can
-				 * define _s_comment() and that will be used instead.
-				 * See _s_comment() in functions.php for more.
+				 * define tiga_comment() and that will be used instead.
+				 * See tiga_comment() in functions.php for more.
 				 */
 				wp_list_comments( array( 'callback' => 'tiga_comment' ) );
 			?>

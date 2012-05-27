@@ -38,7 +38,7 @@ $counter = 0;
 				<?php if(has_post_thumbnail()){ ?>
 					<figure class="entry-thumbnail last">
 						<a href="<?php the_permalink() ?>">
-							<?php the_post_thumbnail('140px', array( 'class' => 'photo thumbnail', 'alt' => get_the_title(), 'title' => get_the_title()));?>
+							<?php the_post_thumbnail('tiga-140px', array( 'class' => 'photo thumbnail', 'alt' => get_the_title(), 'title' => get_the_title()));?>
 						</a>
 					</figure>
 				<?php } ?>
@@ -69,7 +69,7 @@ $counter = 0;
 				<?php if(has_post_thumbnail()){ ?>
 					<figure class="entry-thumbnail">
 						<a href="<?php the_permalink() ?>">
-							<?php the_post_thumbnail('300px', array( 'class' => 'photo thumbnail', 'alt' => get_the_title(), 'title' => get_the_title()));?>
+							<?php the_post_thumbnail('tiga-300px', array( 'class' => 'photo thumbnail', 'alt' => get_the_title(), 'title' => get_the_title()));?>
 						</a>
 					</figure>
 				<?php } ?>

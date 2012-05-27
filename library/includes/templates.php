@@ -48,24 +48,24 @@ function tiga_open_graph() {
 			$excerpt = esc_attr(str_replace("\r\n",' ',substr(strip_tags(strip_shortcodes($post->post_content)), 0, 160)));
 		}
 ?>
-<!-- Open Graph Tags -->
-<meta property="og:type" content="article">
-<meta property="og:title" content="<?php single_post_title(''); ?>">
-<meta property="og:url" content="<?php the_permalink(); ?>">
-<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
-<meta property="og:description" content="<?php echo $excerpt; ?>">
-<meta property="og:image" content="<?php if ( (has_post_thumbnail()) ) { echo $getthumbnail[0]; } else { echo tiga_first_image(); } ?>">
-<!-- End Open Graph Tags -->
-<?php  } else { ?>
-<!-- Open Graph Tags -->
-<meta property="og:type" content="article">
-<meta property="og:title" content="<?php bloginfo('name'); ?>">
-<meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>">
-<meta property="og:description" content="<?php bloginfo('description'); ?>">
-<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
-<meta property="og:image" content="<?php echo esc_url( $thumbs ); ?>">
-<!-- End Open Graph Tags -->
-<?php  }
+	<!-- Open Graph Tags -->
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="<?php single_post_title(''); ?>">
+	<meta property="og:url" content="<?php the_permalink(); ?>">
+	<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
+	<meta property="og:description" content="<?php echo $excerpt; ?>">
+	<meta property="og:image" content="<?php if ( (has_post_thumbnail()) ) { echo $getthumbnail[0]; } else { echo tiga_first_image(); } ?>">
+	<!-- End Open Graph Tags -->
+	<?php  } else { ?>
+	<!-- Open Graph Tags -->
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="<?php bloginfo('name'); ?>">
+	<meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<meta property="og:description" content="<?php bloginfo('description'); ?>">
+	<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
+	<meta property="og:image" content="<?php echo esc_url( $thumbs ); ?>">
+	<!-- End Open Graph Tags -->
+	<?php  }
 	
 } //end tiga_open_graph()
 

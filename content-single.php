@@ -35,40 +35,40 @@
 	<footer class="entry-meta">
 	
 		<?php 
-			$socialpage = of_get_option('tiga_social_share');
-			if( ('tiga_post' == $socialpage) || ('tiga_both' == $socialpage) )
+			$tiga_socialpage = of_get_option('tiga_social_share');
+			if( ('tiga_post' == $tiga_socialpage) || ('tiga_both' == $tiga_socialpage) )
 				tiga_share_buttons();
 		?>
 	
 		<?php 
 			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'tiga' ) );
+			$tiga_category_list = get_the_category_list( __( ', ', 'tiga' ) );
 			
 			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', ', ' );
+			$tiga_tag_list = get_the_tag_list( '', ', ' );
 
 			if ( ! tiga_categorized_blog() ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
+				if ( '' != $tiga_tag_list ) {
 					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'tiga' );
 				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'tiga' );
+					$tiga_meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'tiga' );
 				}
 
 			} else {
 				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'tiga' );
+				if ( '' != $tiga_tag_list ) {
+					$tiga_meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'tiga' );
 				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'tiga' );
+					$tiga_meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'tiga' );
 				}
 
 			} // end check for categories on this blog
 
 			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
+				$tiga_meta_text,
+				$tiga_category_list,
+				$tiga_tag_list,
 				get_permalink(),
 				the_title_attribute( 'echo=0' )
 			);

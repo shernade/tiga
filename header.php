@@ -7,17 +7,21 @@
  * @package tiga
  * @since tiga 0.0.1
  */
-tiga_doctype(); ?>
-<html <?php language_attributes(); ?>>
+?>
+<!doctype html>
+<!--[if IE 7 ]>    <html class="oldie ie7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8 ]>    <html class="oldie ie8" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" <?php language_attributes(); ?>> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+	<title><?php wp_title(); ?></title>
 
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
 
@@ -35,7 +39,7 @@ tiga_doctype(); ?>
 				<?php if(of_get_option('tiga_custom_logo')) :
 					
 					$logotag  = (is_home() || is_front_page())? 'h1':'div'; // only display h1 tag in home page, SEO reason ?>
-						<<?php echo $logotag; ?> class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php bloginfo('name'); ?>" src="<?php echo of_get_option('tiga_custom_logo'); ?>"><span><?php bloginfo('name'); ?></span></a></<?php echo $logotag; ?>>
+						<<?php echo $logotag; ?> class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" src="<?php echo esc_url( of_get_option('tiga_custom_logo') ); ?>"><span><?php bloginfo('name'); ?></span></a></<?php echo $logotag; ?>>
 					<?php
 				else :
 					$titletag  = (is_home() || is_front_page())? 'h1':'div'; // only display h1 tag in home page, SEO reason ?>
@@ -44,7 +48,7 @@ tiga_doctype(); ?>
 				<?php endif; ?>
 			</div> <!-- end .site-branding -->
 
-			<nav class="site-navigation main-navigation last" role="navigation">
+			<nav class="site-navigation main-navigation" role="navigation">
 				<h1 class="assistive-text"><?php _e( 'Menu', 'tiga' ); ?></h1>
 				<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tiga' ); ?>"><?php _e( 'Skip to content', 'tiga' ); ?></a></div>
 

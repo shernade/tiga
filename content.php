@@ -37,22 +37,22 @@
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
 				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'tiga' ) );
-				if ( $categories_list && tiga_categorized_blog() ) :
+				$tiga_categories_list = get_the_category_list( __( ', ', 'tiga' ) );
+				if ( $tiga_categories_list && tiga_categorized_blog() ) :
 			?>
 			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'tiga' ), $categories_list ); ?>
+				<?php printf( __( 'Posted in %1$s', 'tiga' ), $tiga_categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
 
 			<?php
 				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'tiga' ) );
-				if ( $tags_list ) :
+				$tiga_tags_list = get_the_tag_list( '', __( ', ', 'tiga' ) );
+				if ( $tiga_tags_list ) :
 			?>
 			<span class="sep"> | </span>
 			<span class="tag-links">
-				<?php printf( __( 'Tagged %1$s', 'tiga' ), $tags_list ); ?>
+				<?php printf( __( 'Tagged %1$s', 'tiga' ), $tiga_tags_list ); ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>

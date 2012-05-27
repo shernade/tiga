@@ -16,55 +16,55 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
 }
 
 .normal {
-  background: #eeeeee url('../img/shortcodes/normal.png?1142175062') no-repeat 7px 15px;
+  background: #eeeeee url('../img/shortcodes/normal.png') no-repeat 7px 15px;
   border: 1px solid #ddd;
   color: #888;
 }
 
 .warning {
-  background: #fff6bf url('../img/shortcodes/warning.png?1330611610') no-repeat 7px 15px;
+  background: #fff6bf url('../img/shortcodes/warning.png') no-repeat 7px 15px;
   border: 1px solid #ffd324;
   color: #514721;
 }
 
 .tip {
-  background: #fef6d2 url('../img/shortcodes/idea.png?1330611610') no-repeat 7px 15px;
+  background: #fef6d2 url('../img/shortcodes/idea.png') no-repeat 7px 15px;
   border: 1px solid #EFE3AE;
   color: #514721;
 }
 
 .info {
-  background: #d5edf8 url('../img/shortcodes/info.png?1330611610') no-repeat 7px 15px;
+  background: #d5edf8 url('../img/shortcodes/info.png') no-repeat 7px 15px;
   border: 1px solid #92cae4;
   color: #205791;
 }
 
 .error {
-  background: #fbe3e4 url('../img/shortcodes/error.png?1330611610') no-repeat 7px 15px;
+  background: #fbe3e4 url('../img/shortcodes/error.png') no-repeat 7px 15px;
   border: 1px solid #fbc2c4;
   color: #8a1f11;
 }
 
 .download {
-  background: #e6efc2 url('../img/shortcodes/download.png?1330611610') no-repeat 7px 15px;
+  background: #e6efc2 url('../img/shortcodes/download.png') no-repeat 7px 15px;
   border: 1px solid #c6d880;
   color: #264409;
 }
 
 .success {
-  background: #edfcd5 url('../img/shortcodes/success.png?1330611610') no-repeat 7px 15px;
+  background: #edfcd5 url('../img/shortcodes/success.png') no-repeat 7px 15px;
   border: 1px solid #D4EBAF;
   color: #264409;
 }
 
 .help {
-  background: #b8e1f3 url('../img/shortcodes/help.png?1330611610') no-repeat 7px 15px;
+  background: #b8e1f3 url('../img/shortcodes/help.png') no-repeat 7px 15px;
   border: 1px solid #77bddd;
   color: #205791;
 }
 
 .delete {
-  background: #f7c5c7 url('../img/shortcodes/delete.png?1330611610') no-repeat 7px 15px;
+  background: #f7c5c7 url('../img/shortcodes/delete.png') no-repeat 7px 15px;
   border: 1px solid #f9a2a5;
   color: #7b1c0f;
 }
@@ -312,7 +312,7 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
   left: 0;
   width: 40px;
   height: 480px;
-  background-image: url('../img/shortcodes/fancybox/fancybox.png?1267729770');
+  background-image: url('../img/shortcodes/fancybox/fancybox.png');
 }
 
 #fancybox-overlay {
@@ -376,7 +376,7 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
   right: -15px;
   width: 30px;
   height: 30px;
-  background: transparent url('../img/shortcodes/fancybox/fancybox.png?1267729770') -40px 0px;
+  background: transparent url('../img/shortcodes/fancybox/fancybox.png') -40px 0px;
   cursor: pointer;
   z-index: 1103;
   display: none;
@@ -414,7 +414,7 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
   width: 35%;
   cursor: pointer;
   outline: none;
-  background: transparent url('../img/shortcodes/fancybox/blank.gif?1265008796');
+  background: transparent url('../img/shortcodes/fancybox/blank.gif');
   z-index: 1102;
   display: none;
 }
@@ -440,12 +440,12 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
 }
 
 #fancybox-left-ico {
-  background-image: url('../img/shortcodes/fancybox/fancybox.png?1267729770');
+  background-image: url('../img/shortcodes/fancybox/fancybox.png');
   background-position: -40px -30px;
 }
 
 #fancybox-right-ico {
-  background-image: url('../img/shortcodes/fancybox/fancybox.png?1267729770');
+  background-image: url('../img/shortcodes/fancybox/fancybox.png');
   background-position: -40px -60px;
 }
 
@@ -477,13 +477,13 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
   top: -20px;
   left: 0;
   width: 100%;
-  background-image: url('../img/shortcodes/fancybox/fancybox-x.png?1267764090');
+  background-image: url('../img/shortcodes/fancybox/fancybox-x.png');
 }
 
 #fancybox-bg-ne {
   top: -20px;
   right: -20px;
-  background-image: url('../img/shortcodes/fancybox/fancybox.png?1267729770');
+  background-image: url('../img/shortcodes/fancybox/fancybox.png');
   background-position: -40px -162px;
 }
 
@@ -491,14 +491,14 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
   top: 0;
   right: -20px;
   height: 100%;
-  background-image: url('../img/shortcodes/fancybox/fancybox-y.png?1267763748');
+  background-image: url('../img/shortcodes/fancybox/fancybox-y.png');
   background-position: -20px 0px;
 }
 
 #fancybox-bg-se {
   bottom: -20px;
   right: -20px;
-  background-image: url('../img/shortcodes/fancybox/fancybox.png?1267729770');
+  background-image: url('../img/shortcodes/fancybox/fancybox.png');
   background-position: -40px -182px;
 }
 
@@ -506,14 +506,14 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
   bottom: -20px;
   left: 0;
   width: 100%;
-  background-image: url('../img/shortcodes/fancybox/fancybox-x.png?1267764090');
+  background-image: url('../img/shortcodes/fancybox/fancybox-x.png');
   background-position: 0px -20px;
 }
 
 #fancybox-bg-sw {
   bottom: -20px;
   left: -20px;
-  background-image: url('../img/shortcodes/fancybox/fancybox.png?1267729770');
+  background-image: url('../img/shortcodes/fancybox/fancybox.png');
   background-position: -40px -142px;
 }
 
@@ -521,13 +521,13 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
   top: 0;
   left: -20px;
   height: 100%;
-  background-image: url('../img/shortcodes/fancybox/fancybox-y.png?1267763748');
+  background-image: url('../img/shortcodes/fancybox/fancybox-y.png');
 }
 
 #fancybox-bg-nw {
   top: -20px;
   left: -20px;
-  background-image: url('../img/shortcodes/fancybox/fancybox.png?1267729770');
+  background-image: url('../img/shortcodes/fancybox/fancybox.png');
   background-position: -40px -122px;
 }
 
@@ -560,7 +560,7 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
 
 #fancybox-title-over {
   padding: 10px;
-  background-image: url('../img/shortcodes/fancybox/fancy_title_over.png?1265092034');
+  background-image: url('../img/shortcodes/fancybox/fancy_title_over.png');
   display: block;
 }
 
@@ -584,7 +584,7 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
 
 #fancybox-title-float-left {
   padding: 0 0 0 15px;
-  background: url('../img/shortcodes/fancybox/fancybox.png?1267729770') -40px -90px no-repeat;
+  background: url('../img/shortcodes/fancybox/fancybox.png') -40px -90px no-repeat;
 }
 
 #fancybox-title-float-main {
@@ -592,12 +592,12 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
   line-height: 29px;
   font-weight: bold;
   padding: 0 0 3px 0;
-  background: url('../img/shortcodes/fancybox/fancybox-x.png?1267764090') 0px -40px;
+  background: url('../img/shortcodes/fancybox/fancybox-x.png') 0px -40px;
 }
 
 #fancybox-title-float-right {
   padding: 0 0 0 15px;
-  background: url('../img/shortcodes/fancybox/fancybox.png?1267729770') -55px -90px no-repeat;
+  background: url('../img/shortcodes/fancybox/fancybox.png') -55px -90px no-repeat;
 }
 
 /* IE6 */

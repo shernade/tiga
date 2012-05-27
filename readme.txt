@@ -1,20 +1,21 @@
 -------------------------------------------------------
 	TIGA THEME
 -------------------------------------------------------
+Tiga is based on _s(https://github.com/Automattic/_s) theme by Automattic, rebuild using blueprint css framework & my own css framework(basically css framework).
 
 Contributors	: satrya
 Demo			: http://satrya.me/demo/tiga
 Description	: Responsive and super clean blogging theme. It supports 5 widget areas, post-format and more(try it yourself). Has an optional full-width page template and sitemap page template, also translation ready.
 Requires at least: 3.3
 Tested up to	: 3.3.2
-Stable tag	: 0.0.1
+Stable tag	: 0.0.2
 License	: http://www.gnu.org/licenses/gpl-3.0.html
 
 -------------------------------------------------------
     THANKS YOU FOR DOWNLOADING TIGA THEME!
 -------------------------------------------------------
 
-Thanks for downloading tiga theme, I hope you enjoyed it!. If you spot a bug you can report to https://github.com/satryabima/tiga/issues or just send me an email.
+Thanks for downloading tiga theme, I hope you enjoyed it!. If you spot a bug you can report to https://github.com/satrya/tiga/issues or just send me an email.
 
 
 -------------------------------------------------------

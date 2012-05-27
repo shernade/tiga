@@ -12,35 +12,33 @@
 add_action('wp_enqueue_scripts', 'tiga_enqueue_styles');
 add_action('wp_enqueue_scripts', 'tiga_enqueue_scripts');
 add_action( 'wp_print_styles', 'tiga_deregister_styles', 100 );
-add_action('wp_head', 'tiga_style_for_ie', 10);
 
-
+/**
+ * Function to call the main and helper style file
+ *
+ * @since tiga 0.0.1
+ */
 function tiga_enqueue_styles() {
-	wp_enqueue_style( 'style', get_stylesheet_uri(), '', '0.0.1', 'all' );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), '', '0.0.2', 'all' );
 	
 	wp_enqueue_style('shortcodes', get_template_directory_uri() . '/library/css/shortcodes.css', '', '0.0.1', 'all');
 }
 
+/**
+ * Deregistering default wp-pagenavi style
+ *
+ * @since tiga 0.0.1
+ */
 function tiga_deregister_styles() {
 	wp_deregister_style( 'wp-pagenavi' ); // deregistering default wp-pagenavi style
 }
 
-function tiga_style_for_ie() {?>
-<!--[if lt IE 9]>
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/ie.css" media="screen">
-<![endif]-->
-<?php
-}
 
 function tiga_enqueue_scripts() {
 	global $post;
 	wp_enqueue_script( 'jquery' );
 	
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/library/js/libs/modernizr-2.5.3.min.js', array('jquery'), '2.5.3' );
-	
-	wp_enqueue_script( 'plugins', get_template_directory_uri() . '/library/js/plugins.js', array('jquery'), '20120410', true );
-	
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/library/js/script.js', array('jquery'), '20120410', true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -54,6 +52,9 @@ function tiga_enqueue_scripts() {
 		wp_enqueue_script( 'social-share', get_template_directory_uri() . '/library/js/libs/social-share.js', array( 'jquery' ), '20120410', true );
 	}
 	
+	wp_enqueue_script( 'plugins', get_template_directory_uri() . '/library/js/plugins.js', array('jquery'), '20120410', true );
+	
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/library/js/script.js', array('jquery'), '20120410', true );
 }
  
 ?>

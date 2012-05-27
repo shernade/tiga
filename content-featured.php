@@ -9,7 +9,7 @@
  */
 ?>
 
-<ul class="rslides">
+<ul class="rslides clearfix">
 	<?php
 		// code by justin tadlock & nathan rice 
 		// http://justintadlock.com/archives/2009/03/28/get-the-latest-sticky-posts-in-wordpress
@@ -29,7 +29,7 @@
 				
 					<?php if(has_post_thumbnail()){ ?>
 						<figure class="slides-thumbnail">
-							<?php the_post_thumbnail('700px', array( 'class' => 'photo thumbnail', 'alt' => get_the_title()));?>
+							<?php the_post_thumbnail('tiga-700px', array( 'class' => 'photo thumbnail', 'alt' => get_the_title()));?>
 						</figure>
 					<?php } ?>
 					
