@@ -35,6 +35,7 @@ $j(document).ready(function(){
         nav: true,
         speed: 500,
 		pauseControls: true,
+		pause: true,
         maxwidth: 700
     }).find(".featured-slides").hover(
 		function() { $j(this).find(".slides-content").slideDown(); },

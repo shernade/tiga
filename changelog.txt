@@ -1,2 +1,7 @@
+0.0.2
+- Sanitize all theme options output
+- Update grids
+- Remove CSS for IE
+
 0.0.1
 - Initial released
