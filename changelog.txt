@@ -1,7 +1,7 @@
-0.0.2
+0.0.2 - 27 May 2012
 - Sanitize all theme options output
 - Update grids
 - Remove CSS for IE
 
-0.0.1
+0.0.1 - 9 May 2012
 - Initial released
