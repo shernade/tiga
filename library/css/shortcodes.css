@@ -7,75 +7,13 @@ Since:			tiga 0.0.1
 License: 		GNU General Public License v3
 License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
 */
-/* 	NOTICE
-	----------------- */
-.notice {
-  display: block;
-  margin: 5px 0 10px;
-  padding: 10px 10px 10px 30px;
-}
-
-.normal {
-  background: #eeeeee url('../img/shortcodes/normal.png') no-repeat 7px 15px;
-  border: 1px solid #ddd;
-  color: #888;
-}
-
-.warning {
-  background: #fff6bf url('../img/shortcodes/warning.png') no-repeat 7px 15px;
-  border: 1px solid #ffd324;
-  color: #514721;
-}
-
-.tip {
-  background: #fef6d2 url('../img/shortcodes/idea.png') no-repeat 7px 15px;
-  border: 1px solid #EFE3AE;
-  color: #514721;
-}
-
-.info {
-  background: #d5edf8 url('../img/shortcodes/info.png') no-repeat 7px 15px;
-  border: 1px solid #92cae4;
-  color: #205791;
-}
-
-.error {
-  background: #fbe3e4 url('../img/shortcodes/error.png') no-repeat 7px 15px;
-  border: 1px solid #fbc2c4;
-  color: #8a1f11;
-}
-
-.download {
-  background: #e6efc2 url('../img/shortcodes/download.png') no-repeat 7px 15px;
-  border: 1px solid #c6d880;
-  color: #264409;
-}
-
-.success {
-  background: #edfcd5 url('../img/shortcodes/success.png') no-repeat 7px 15px;
-  border: 1px solid #D4EBAF;
-  color: #264409;
-}
-
-.help {
-  background: #b8e1f3 url('../img/shortcodes/help.png') no-repeat 7px 15px;
-  border: 1px solid #77bddd;
-  color: #205791;
-}
-
-.delete {
-  background: #f7c5c7 url('../img/shortcodes/delete.png') no-repeat 7px 15px;
-  border: 1px solid #f9a2a5;
-  color: #7b1c0f;
-}
-
 /* 	BUTTON
 	Copyright (c) 2012 Thibaut Courouble
 	http://www.webinterfacelab.com/snippets/3d-buttons
 	Licensed under the MIT License:
 	http://www.opensource.org/licenses/mit-license.php
 	
-	Modified by Satrya - @satryaWp
+	Modified by Satrya - @msattt
 	----------------- */
 .button {
   background-color: #dfdfdf;

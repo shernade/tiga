@@ -1,18 +1,15 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tiga 0.0.2\n"
+"Project-Id-Version: Tiga 0.0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-09 23:40+0700\n"
-"PO-Revision-Date: 2012-05-09 23:41+0700\n"
+"POT-Creation-Date: 2012-06-10 18:16+0700\n"
+"PO-Revision-Date: 2012-06-10 18:16+0700\n"
 "Last-Translator: Satrya <satryabima24@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: Satrya <satryabima24@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e;_n;_x;esc_attr__\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-Language: English\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;_n;esc_attr__\n"
 
 #: 404.php:16
 msgid "Oops! That page can&rsquo;t be found."
@@ -84,82 +81,24 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-aside.php:15
-msgid "Aside"
-msgstr ""
-
-#: content-aside.php:24
-#: content-image.php:25
-#: content-link.php:25
-#: content-quote.php:24
-#: content.php:30
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: content-aside.php:25
-#: content-gallery.php:50
-#: content-image.php:26
-#: content-link.php:26
-#: content-page.php:18
-#: content-quote.php:25
-#: content-single.php:28
-#: content.php:31
-msgid "Pages:"
-msgstr ""
-
-#: content-aside.php:33
-#: content-gallery.php:58
-#: content-image.php:34
-#: content-link.php:44
-#: content-page.php:19
-#: content-quote.php:33
-#: content-single.php:77
-#: content.php:65
-msgid "Edit"
-msgstr ""
-
 #: content-featured.php:37
-#: content-gallery.php:16
-#: content-image.php:16
-#: content-link.php:16
-#: content-recent.php:48
-#: content-recent.php:66
 #: content-single.php:14
-#: content.php:14
+#: content.php:13
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: content-gallery.php:15
-msgid "Gallery"
+#: content-page.php:18
+#: content-single.php:28
+#: image.php:86
+msgid "Pages:"
 msgstr ""
 
-#: content-image.php:15
-msgid "Image"
-msgstr ""
-
-#: content-link.php:15
-msgid "Link"
-msgstr ""
-
-#: content-link.php:33
-#, php-format
-msgid "Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
-msgstr ""
-
-#: content-link.php:39
-#, php-format
-msgid "View all posts by %s"
-msgstr ""
-
-#: content-quote.php:15
-msgid "Quote"
-msgstr ""
-
-#: content-single.php:45
-#: content.php:40
-#: content.php:50
-msgid ", "
+#: content-page.php:19
+#: content-single.php:77
+#: image.php:34
+#: image.php:100
+msgid "Edit"
 msgstr ""
 
 #: content-single.php:53
@@ -182,47 +121,17 @@ msgstr ""
 msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
 
-#: content.php:44
-#, php-format
-msgid "Posted in %1$s"
-msgstr ""
-
-#: content.php:55
-#, php-format
-msgid "Tagged %1$s"
-msgstr ""
-
-#: content.php:62
-msgid "Leave a comment"
-msgstr ""
-
-#: content.php:62
-msgid "1 Comment"
-msgstr ""
-
-#: content.php:62
-msgid "% Comments"
-msgstr ""
-
 #: footer.php:31
 #, php-format
 msgid "Powered by <a href=\"http://wordpress.org/\" title=\"%1$s\" rel=\"generator\">%2$s</a> &middot; Theme by <a href=\"http://satrya.me/\" title=\"%3$s\" rel=\"designer\">%4$s</a>"
 msgstr ""
 
-#: header.php:48
+#: header.php:52
 msgid "Menu"
 msgstr ""
 
-#: header.php:49
+#: header.php:53
 msgid "Skip to content"
-msgstr ""
-
-#: home.php:18
-msgid "Featured Posts"
-msgstr ""
-
-#: home.php:26
-msgid "Recent Posts"
 msgstr ""
 
 #: image.php:24
@@ -254,6 +163,10 @@ msgstr ""
 
 #: image.php:98
 msgid "Both comments and trackbacks are currently closed."
+msgstr ""
+
+#: index.php:22
+msgid "Featured Posts"
 msgstr ""
 
 #: no-results.php:14
@@ -298,113 +211,147 @@ msgstr ""
 msgid "Latest Posts"
 msgstr ""
 
-#: options-framework.php:168
-#: options-framework.php:169
-#: options-framework.php:372
+#: options-framework.php:170
 msgid "Tiga Theme Options"
 msgstr ""
 
-#: options-framework.php:243
+#: options-framework.php:240
 msgid "Click OK to reset. Any theme settings will be lost!"
 msgstr ""
 
-#: options-framework.php:275
+#: options-framework.php:253
+msgid "Need a Support ?"
+msgstr ""
+
+#: options-framework.php:255
+msgid "You can report an issue <a href=\"http://satrya.me/tiga-wordpress-theme/\" target=\"_blank\">here</a> or you can just drop me an email to asksatrya@gmail.com."
+msgstr ""
+
+#: options-framework.php:260
+msgid "Links"
+msgstr ""
+
+#: options-framework.php:263
+msgid "Tiga by Satrya"
+msgstr ""
+
+#: options-framework.php:264
+msgid "Follow me on Twitter @msattt"
+msgstr ""
+
+#: options-framework.php:270
+msgid "Contribute to Tiga Theme"
+msgstr ""
+
+#: options-framework.php:273
+msgid "You can contribute to this project by submitting a translation or you can <a href=\"https://github.com/satrya/tiga\" target=\"_blank\">fork the code on github</a>"
+msgstr ""
+
+#: options-framework.php:311
 msgid "Default options restored."
 msgstr ""
 
-#: options-framework.php:316
+#: options-framework.php:352
 msgid "Options saved."
 msgstr ""
 
-#: options-medialibrary-uploader.php:26
-msgid "Options Framework Internal Container"
+#: options-framework.php:408
+msgid "Theme Options"
 msgstr ""
 
-#: options-medialibrary-uploader.php:128
+#: options-medialibrary-uploader.php:26
+msgid "Theme Options Media"
+msgstr ""
+
+#: options-medialibrary-uploader.php:129
 msgid "Upload"
 msgstr ""
 
-#: options-medialibrary-uploader.php:151
+#: options-medialibrary-uploader.php:152
 msgid "View File"
 msgstr ""
 
-#: options-medialibrary-uploader.php:288
+#: options-medialibrary-uploader.php:289
+msgid "Gallery"
+msgstr ""
+
+#: options-medialibrary-uploader.php:289
 msgid "Previously Uploaded"
 msgstr ""
 
-#: options-sanitize.php:218
+#: options-sanitize.php:232
 msgid "No Repeat"
 msgstr ""
 
-#: options-sanitize.php:219
+#: options-sanitize.php:233
 msgid "Repeat Horizontally"
 msgstr ""
 
-#: options-sanitize.php:220
+#: options-sanitize.php:234
 msgid "Repeat Vertically"
 msgstr ""
 
-#: options-sanitize.php:221
+#: options-sanitize.php:235
 msgid "Repeat All"
 msgstr ""
 
-#: options-sanitize.php:234
+#: options-sanitize.php:248
 msgid "Top Left"
 msgstr ""
 
-#: options-sanitize.php:235
+#: options-sanitize.php:249
 msgid "Top Center"
 msgstr ""
 
-#: options-sanitize.php:236
+#: options-sanitize.php:250
 msgid "Top Right"
 msgstr ""
 
-#: options-sanitize.php:237
+#: options-sanitize.php:251
 msgid "Middle Left"
 msgstr ""
 
-#: options-sanitize.php:238
+#: options-sanitize.php:252
 msgid "Middle Center"
 msgstr ""
 
-#: options-sanitize.php:239
+#: options-sanitize.php:253
 msgid "Middle Right"
 msgstr ""
 
-#: options-sanitize.php:240
+#: options-sanitize.php:254
 msgid "Bottom Left"
 msgstr ""
 
-#: options-sanitize.php:241
+#: options-sanitize.php:255
 msgid "Bottom Center"
 msgstr ""
 
-#: options-sanitize.php:242
+#: options-sanitize.php:256
 msgid "Bottom Right"
 msgstr ""
 
-#: options-sanitize.php:255
+#: options-sanitize.php:269
 msgid "Scroll Normally"
 msgstr ""
 
-#: options-sanitize.php:256
+#: options-sanitize.php:270
 msgid "Fixed in Place"
 msgstr ""
 
-#: options-sanitize.php:330
+#: options-sanitize.php:344
 msgid "Normal"
 msgstr ""
 
-#: options-sanitize.php:331
+#: options-sanitize.php:345
 msgid "Italic"
 msgstr ""
 
-#: options-sanitize.php:332
+#: options-sanitize.php:346
 msgid "Bold"
 msgstr ""
 
-#: options-sanitize.php:333
+#: options-sanitize.php:347
 msgid "Bold Italic"
 msgstr ""
 
@@ -501,406 +448,445 @@ msgid "Number of posts to show:"
 msgstr ""
 
 #: extensions.php:514
+#: options.php:186
 msgid "Social"
 msgstr ""
 
-#: options.php:38
+#: filters.php:33
+msgid "Search Results for:"
+msgstr ""
+
+#: filters.php:37
+msgid "Category Archives:"
+msgstr ""
+
+#: filters.php:41
+msgid "Tag Archives:"
+msgstr ""
+
+#: filters.php:45
+msgid "Not Found"
+msgstr ""
+
+#: filters.php:151
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: options.php:39
 msgid "Two"
 msgstr ""
 
-#: options.php:38
+#: options.php:40
 msgid "Three"
 msgstr ""
 
-#: options.php:38
+#: options.php:41
 msgid "Four"
 msgstr ""
 
-#: options.php:38
+#: options.php:42
 msgid "Five"
 msgstr ""
 
-#: options.php:38
+#: options.php:43
 msgid "Six"
 msgstr ""
 
-#: options.php:38
+#: options.php:44
 msgid "Seven"
 msgstr ""
 
-#: options.php:38
+#: options.php:45
 msgid "Eight"
 msgstr ""
 
-#: options.php:38
+#: options.php:46
 msgid "Nine"
 msgstr ""
 
-#: options.php:38
+#: options.php:47
 msgid "Ten"
 msgstr ""
 
-#: options.php:41
+#: options.php:51
 msgid "Enable"
 msgstr ""
 
-#: options.php:41
+#: options.php:52
 msgid "Disable"
 msgstr ""
 
-#: options.php:70
-msgid "General Settings"
-msgstr ""
-
-#: options.php:73
-msgid "Custom Logo"
-msgstr ""
-
-#: options.php:74
-msgid "Upload a logo for your website, or specify the image address of your online logo. (http://example.com/logo.png)"
-msgstr ""
-
-#: options.php:78
-msgid "Custom Favicon"
-msgstr ""
-
-#: options.php:79
-msgid "Upload a favicon for your website, or specify the image address of your online favicon. (http://example.com/favicon.png)"
-msgstr ""
-
-#: options.php:83
-msgid "Custom CSS"
-msgstr ""
-
-#: options.php:84
-msgid "Quickly add some CSS to your theme by adding it to this block."
-msgstr ""
-
-#: options.php:89
-msgid "Analytic Code"
-msgstr ""
-
-#: options.php:90
-msgid "Paste your Google Analytics (or other) tracking code here. It will be inserted before the closing body tag of your theme."
-msgstr ""
-
-#: options.php:94
-msgid "Iframe Blocker"
-msgstr ""
-
-#: options.php:95
-msgid "Enable or disable iframe blocker."
-msgstr ""
-
-#: options.php:103
-msgid "Theme Settings"
-msgstr ""
-
-#: options.php:106
-msgid "Facebook open graph default thumb"
-msgstr ""
-
-#: options.php:107
-msgid "Upload the default facebook open graph thumbnail"
-msgstr ""
-
-#: options.php:111
-msgid "Layouts"
-msgstr ""
-
-#: options.php:112
-msgid "Available layout(left content, right content)"
-msgstr ""
-
-#: options.php:121
-msgid "Show featured posts"
-msgstr ""
-
-#: options.php:122
-msgid "Check this options to show featured posts on home page"
-msgstr ""
-
-#: options.php:126
-msgid "Select a number of featured posts"
-msgstr ""
-
-#: options.php:127
-msgid "How many featured posts you want to show ?"
-msgstr ""
-
-#: options.php:134
-msgid "Use footer widgets"
-msgstr ""
-
-#: options.php:135
-msgid "Check this option if you want to use the footer widgets"
-msgstr ""
-
-#: options.php:139
-msgid "Display social share button"
-msgstr ""
-
-#: options.php:140
-msgid "Display social share on single post and page"
-msgstr ""
-
-#: options.php:145
+#: options.php:56
 msgid "Single post"
 msgstr ""
 
-#: options.php:146
+#: options.php:57
 msgid "Page"
 msgstr ""
 
-#: options.php:147
+#: options.php:58
 msgid "Both"
 msgstr ""
 
-#: options.php:150
-msgid "Display author box"
+#: options.php:59
+msgid "None"
+msgstr ""
+
+#: options.php:67
+msgid "General"
+msgstr ""
+
+#: options.php:72
+msgid "Custom Logo"
+msgstr ""
+
+#: options.php:73
+msgid "Upload a logo for your website, or specify the image address of your online logo. (http://example.com/logo.png)"
+msgstr ""
+
+#: options.php:79
+msgid "Custom Favicon"
+msgstr ""
+
+#: options.php:80
+msgid "Upload a favicon for your website, or specify the image address of your online favicon. (http://example.com/favicon.png)"
+msgstr ""
+
+#: options.php:86
+msgid "Custom CSS"
+msgstr ""
+
+#: options.php:87
+msgid "Quickly add some CSS to your theme by adding it to this block."
+msgstr ""
+
+#: options.php:94
+msgid "Analytic Code"
+msgstr ""
+
+#: options.php:95
+msgid "Paste your Google Analytics (or other) tracking code here. It will be inserted before the closing body tag of your theme."
+msgstr ""
+
+#: options.php:101
+msgid "Iframe Blocker"
+msgstr ""
+
+#: options.php:102
+msgid "Iframe blocker is for block iframe to your site such as google image."
+msgstr ""
+
+#: options.php:112
+msgid "Theme"
+msgstr ""
+
+#: options.php:117
+msgid "Facebook open graph default thumb"
+msgstr ""
+
+#: options.php:118
+msgid "Upload your default facebook open graph thumbnail"
+msgstr ""
+
+#: options.php:124
+msgid "Layouts"
+msgstr ""
+
+#: options.php:125
+msgid "Available layout(left content, right content)"
+msgstr ""
+
+#: options.php:136
+msgid "Custom background"
+msgstr ""
+
+#: options.php:137
+msgid "Customize your background"
+msgstr ""
+
+#: options.php:144
+msgid "Show featured posts"
+msgstr ""
+
+#: options.php:145
+msgid "Check this options to show featured posts on home page"
 msgstr ""
 
 #: options.php:151
-msgid "Check this option if you want display the author box on single posts"
+msgid "Select a number of featured posts"
 msgstr ""
 
-#: options.php:157
-msgid "Social Settings"
-msgstr ""
-
-#: options.php:160
-msgid "Social settings"
+#: options.php:152
+msgid "How many featured posts you want to show ?"
 msgstr ""
 
 #: options.php:161
-msgid "If you want to display the social button, first you should fill the form below, put only the <strong>username</strong>. After that, go to Appearance > Widgets then drag the widget called &raquo; tiga socia widget."
+msgid "Use footer widgets"
 msgstr ""
 
-#: options.php:164
-msgid "Email"
+#: options.php:162
+msgid "Check this option if you want to use the footer widgets"
 msgstr ""
 
-#: options.php:165
-msgid "Your email"
+#: options.php:168
+msgid "Display social share button"
 msgstr ""
 
 #: options.php:169
-msgid "Twitter Username"
+msgid "Display social share on single post and page"
 msgstr ""
 
-#: options.php:170
-msgid "Your twitter username"
+#: options.php:177
+msgid "Display author box"
 msgstr ""
 
-#: options.php:174
-msgid "Facebook Username"
+#: options.php:178
+msgid "Check this option if you want display the author box on single posts"
 msgstr ""
 
-#: options.php:175
-msgid "Your facebook username"
+#: options.php:191
+msgid "Social settings"
 msgstr ""
 
-#: options.php:179
-msgid "Google Plus Username"
+#: options.php:192
+msgid "If you want to display the social button, first you should fill the form below, put only the <strong>username</strong>. After that, go to Appearance > Widgets then drag the widget called &raquo; tiga socia widget."
 msgstr ""
 
-#: options.php:180
-msgid "https://plus.google.com/u/<strong>109253446701726260861</strong>"
+#: options.php:197
+msgid "Email"
 msgstr ""
 
-#: options.php:184
-msgid "Youtube Username"
-msgstr ""
-
-#: options.php:185
-msgid "Your youtube username"
-msgstr ""
-
-#: options.php:189
-msgid "Flickr Username"
-msgstr ""
-
-#: options.php:190
-msgid "Your flickr username"
-msgstr ""
-
-#: options.php:194
-msgid "Linkedin Username"
-msgstr ""
-
-#: options.php:195
-msgid "http://id.linkedin.com/in/<strong>username</strong>"
-msgstr ""
-
-#: options.php:199
-msgid "Pinterest Username"
-msgstr ""
-
-#: options.php:200
-msgid "Your pinterest username"
+#: options.php:198
+msgid "Your email"
 msgstr ""
 
 #: options.php:204
-msgid "Dribbble Username"
+msgid "Twitter Username"
 msgstr ""
 
 #: options.php:205
-msgid "Your dribbble username"
+msgid "Your twitter username"
 msgstr ""
 
-#: options.php:209
-msgid "Github Username"
+#: options.php:211
+msgid "Facebook Username"
 msgstr ""
 
-#: options.php:210
-msgid "Your github username"
+#: options.php:212
+msgid "Your facebook username"
 msgstr ""
 
-#: options.php:214
-msgid "LastFM Username"
-msgstr ""
-
-#: options.php:215
-msgid "Your lastfm username"
+#: options.php:218
+msgid "Google Plus Username"
 msgstr ""
 
 #: options.php:219
-msgid "Vimeo Username"
+msgid "https://plus.google.com/u/<strong>109253446701726260861</strong>"
 msgstr ""
 
-#: options.php:220
-msgid "Your vimeo username"
+#: options.php:225
+msgid "Youtube Username"
 msgstr ""
 
 #: options.php:226
-msgid "Meta Verification"
+msgid "Your youtube username"
 msgstr ""
 
-#: options.php:229
-msgid "Webmaster Tools Setting"
-msgstr ""
-
-#: options.php:230
-msgid "You can use the boxes below to verify with the different Webmaster Tools. Only enter the meta values/content. <br />ex: <i><meta name=\"google-site-verification\" content=\"<b>2141241512</b>\" /></i>"
+#: options.php:232
+msgid "Flickr Username"
 msgstr ""
 
 #: options.php:233
-msgid "Google Webmaster Tools"
-msgstr ""
-
-#: options.php:234
-msgid "<a href=\"http://www.google.com/webmasters/\">Google webmaster tools &raquo;</a>"
+msgid "Your flickr username"
 msgstr ""
 
 #: options.php:239
-msgid "Bing Webmaster"
+msgid "Linkedin Username"
 msgstr ""
 
 #: options.php:240
-msgid "<a href=\"http://www.bing.com/webmaster/\">Bing webmaster &raquo;</a>"
-msgstr ""
-
-#: options.php:245
-msgid "Alexa"
+msgid "http://id.linkedin.com/in/<strong>username</strong>"
 msgstr ""
 
 #: options.php:246
-msgid "<a href=\"http://www.alexa.com/\">Alexa &raquo;</a>"
+msgid "Pinterest Username"
+msgstr ""
+
+#: options.php:247
+msgid "Your pinterest username"
 msgstr ""
 
 #: options.php:253
-msgid "Ads Settings"
+msgid "Dribbble Username"
 msgstr ""
 
-#: options.php:256
+#: options.php:254
+msgid "Your dribbble username"
+msgstr ""
+
+#: options.php:260
+msgid "Github Username"
+msgstr ""
+
+#: options.php:261
+msgid "Your github username"
+msgstr ""
+
+#: options.php:267
+msgid "LastFM Username"
+msgstr ""
+
+#: options.php:268
+msgid "Your lastfm username"
+msgstr ""
+
+#: options.php:274
+msgid "Vimeo Username"
+msgstr ""
+
+#: options.php:275
+msgid "Your vimeo username"
+msgstr ""
+
+#: options.php:283
+msgid "Meta Verification"
+msgstr ""
+
+#: options.php:288
+msgid "Webmaster Tools Setting"
+msgstr ""
+
+#: options.php:289
+msgid "You can use the boxes below to verify with the different Webmaster Tools. Only enter the meta values/content. <br />ex: <i><meta name=\"google-site-verification\" content=\"<b>2141241512</b>\" /></i>"
+msgstr ""
+
+#: options.php:294
+msgid "Google Webmaster Tools"
+msgstr ""
+
+#: options.php:295
+msgid "<a href=\"http://www.google.com/webmasters/\">Google webmaster tools &raquo;</a>"
+msgstr ""
+
+#: options.php:302
+msgid "Bing Webmaster"
+msgstr ""
+
+#: options.php:303
+msgid "<a href=\"http://www.bing.com/webmaster/\">Bing webmaster &raquo;</a>"
+msgstr ""
+
+#: options.php:310
+msgid "Alexa"
+msgstr ""
+
+#: options.php:311
+msgid "<a href=\"http://www.alexa.com/\">Alexa &raquo;</a>"
+msgstr ""
+
+#: options.php:320
+msgid "Ads"
+msgstr ""
+
+#: options.php:325
 msgid "Ads 1"
 msgstr ""
 
-#: options.php:257
+#: options.php:326
 msgid "Ads after post title on single post"
 msgstr ""
 
-#: options.php:262
+#: options.php:333
 msgid "Ads 2"
 msgstr ""
 
-#: options.php:263
+#: options.php:334
 msgid "Ads after post content on single post"
 msgstr ""
 
-#: setup.php:47
+#: setup.php:36
 msgid "Primary Navigation"
 msgstr ""
 
-#: setup.php:48
+#: setup.php:37
 msgid "Secondary Navigation"
 msgstr ""
 
-#: templates.php:88
+#: templates.php:108
 msgid "Post navigation"
 msgstr ""
 
-#: templates.php:92
-msgid "&larr;"
-msgstr ""
-
-#: templates.php:93
-msgid "&rarr;"
-msgstr ""
-
-#: templates.php:99
+#: templates.php:119
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: templates.php:103
+#: templates.php:123
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: templates.php:194
+#: templates.php:142
+#, php-format
+msgid "Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+
+#: templates.php:148
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: templates.php:152
+msgid "Leave a comment"
+msgstr ""
+
+#: templates.php:152
+msgid "1 Comment"
+msgstr ""
+
+#: templates.php:152
+msgid "% Comments"
+msgstr ""
+
+#: templates.php:214
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: templates.php:231
+#: templates.php:251
 msgid "Pingback:"
 msgstr ""
 
-#: templates.php:248
+#: templates.php:268
 #, php-format
 msgid "%1$s on %2$s <span class=\"says\">said:</span>"
 msgstr ""
 
-#: templates.php:254
+#: templates.php:274
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: templates.php:263
+#: templates.php:283
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: templates.php:271
+#: templates.php:291
 msgid "Reply <span>&darr;</span>"
 msgstr ""
 
-#: templates.php:309
+#: templates.php:329
 msgid "Comment navigation"
 msgstr ""
 
-#: templates.php:310
+#: templates.php:330
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: templates.php:311
+#: templates.php:331
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: templates.php:342
+#: templates.php:362
 msgid "Share This:"
-msgstr ""
-
-#: widgets.php:19
-msgid "General"
 msgstr ""
 
 #: widgets.php:20

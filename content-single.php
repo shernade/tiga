@@ -77,8 +77,8 @@
 		<?php edit_post_link( __( 'Edit', 'tiga' ), '<span class="post-edit">', '</span>' ); ?>
 		
 		<?php if(of_get_option('tiga_author_box'))
-			tiga_the_author();
-		?>
+				tiga_the_author();
+			?>
 		
 	</footer><!-- .entry-meta -->
 	

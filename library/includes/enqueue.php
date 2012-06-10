@@ -54,7 +54,7 @@ function tiga_enqueue_scripts() {
 	
 	wp_enqueue_script( 'plugins', get_template_directory_uri() . '/library/js/plugins.js', array('jquery'), '20120410', true );
 	
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/library/js/script.js', array('jquery'), '20120410', true );
+	wp_enqueue_script( 'method', get_template_directory_uri() . '/library/js/methods.js', array('jquery'), '20120410', true );
 }
  
 ?>

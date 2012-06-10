@@ -25,7 +25,7 @@
 
 <div id="site-credit" class="site-info">
 	<?php do_action( 'tiga_credits' ); ?>
-	<span class="copyleft">&copy; Copyleft <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></span>
+	<span class="copyleft">&copy; Copyright <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></span>
 	
 	<span class="credit">
 		<?php printf( __('Powered by <a href="http://wordpress.org/" title="%1$s" rel="generator">%2$s</a> &middot; Theme by <a href="http://satrya.me/" title="%3$s" rel="designer">%4$s</a>', 'tiga'),

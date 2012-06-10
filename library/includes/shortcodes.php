@@ -6,7 +6,7 @@
  * @since tiga 0.0.1
  */
 
-add_shortcode( 'notice', 'tiga_notice' );
+// add_shortcode( 'notice', 'tiga_notice' );
 add_shortcode( 'button', 'tiga_button' );
 add_shortcode( 'fancybox', 'tiga_fancybox' );
  

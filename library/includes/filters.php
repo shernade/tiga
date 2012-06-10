@@ -10,21 +10,121 @@
 
 /**
  * wp_title filter
+ * Credit: Thematic theme
  *
- * @since tiga 0.0.1
+ * @since tiga 0.0.3
  */
 add_filter( 'wp_title', 'tiga_title' );
-function tiga_title( $title ) {
+function tiga_title() {
    
-    $site_title = get_bloginfo( 'name' );
-    $filtered_title = $site_title . $title;
-    
-    if ( is_singular() ) {
-        $the_title = get_the_title();
-        $filtered_title = $the_title;
-    }
-    
-    return $filtered_title;
+	$site_name = get_bloginfo('name' , 'display');
+	$separator = apply_filters('tiga_doctitle_separator', '|');
+			
+	if ( is_single() ) {
+		$content = single_post_title('', FALSE);
+	}
+	elseif ( is_home() || is_front_page() ) { 
+		$content = get_bloginfo('description', 'display');
+	}
+	elseif ( is_page() ) { 
+		$content = single_post_title('', FALSE); 
+	}
+	elseif ( is_search() ) { 
+		$content = __('Search Results for:', 'tiga'); 
+		$content .= ' ' . get_search_query();
+	}
+	elseif ( is_category() ) {
+		$content = __('Category Archives:', 'tiga');
+		$content .= ' ' . single_cat_title('', FALSE);;
+	}
+	elseif ( is_tag() ) { 
+		$content = __('Tag Archives:', 'tiga');
+		$content .= ' ' . tiga_tag_query();
+	}
+	elseif ( is_404() ) { 
+		$content = __('Not Found', 'tiga'); 
+	}
+	else { 
+		$content = get_bloginfo('description', 'display');
+	}
+
+	if ( get_query_var('paged') ) {
+		$content .= ' ' .$separator. ' ';
+		$content .= 'Page';
+		$content .= ' ';
+		$content .= get_query_var('paged');
+	}
+
+	if($content) {
+		if ( is_home() || is_front_page() ) {
+			$elements = array(
+				'site_name' => $site_name,
+				'separator' => $separator,
+				'content' => $content
+			);
+		}
+		else {
+			$elements = array(
+				'content' => $content
+			);
+		}  
+	} else {
+		$elements = array(
+			'site_name' => $site_name
+		);
+	}
+
+	// Filters should return an array
+	$elements = apply_filters('tiga_doctitle', $elements);
+	
+	// But if they don't, it won't try to implode
+	if( is_array($elements) ) {
+		$doctitle = implode(' ', $elements);
+	}
+	else {
+		$doctitle = $elements;
+	}
+	
+	$doctitle = $doctitle;
+	
+	echo $doctitle;
+   
+}
+
+
+/**
+ * Create nice multi_tag_title
+ * Credit: Thematic theme
+ *
+ * @since tiga 0.0.3
+ */
+function tiga_tag_query() {
+	$nice_tag_query = get_query_var( 'tag' ); // tags in current query
+	$nice_tag_query = str_replace(' ', '+', $nice_tag_query); // get_query_var returns ' ' for AND, replace by +
+	$tag_slugs = preg_split('%[,+]%', $nice_tag_query, -1, PREG_SPLIT_NO_EMPTY); // create array of tag slugs
+	$tag_ops = preg_split('%[^,+]*%', $nice_tag_query, -1, PREG_SPLIT_NO_EMPTY); // create array of operators
+
+	$tag_ops_counter = 0;
+	$nice_tag_query = '';
+
+	foreach ($tag_slugs as $tag_slug) { 
+		$tag = get_term_by('slug', $tag_slug ,'post_tag');
+		// prettify tag operator, if any
+		if ( isset($tag_ops[$tag_ops_counter])  &&  $tag_ops[$tag_ops_counter] == ',') {
+			$tag_ops[$tag_ops_counter] = ', ';
+		} elseif ( isset( $tag_ops[$tag_ops_counter])  &&  $tag_ops[$tag_ops_counter] == '+') {
+			$tag_ops[$tag_ops_counter] = ' + ';
+		}
+		// concatenate display name and prettified operators
+		if ( isset( $tag_ops[$tag_ops_counter] ) ) {
+			$nice_tag_query = $nice_tag_query.$tag->name.$tag_ops[$tag_ops_counter];
+			$tag_ops_counter += 1;
+		} else {
+			$nice_tag_query = $nice_tag_query.$tag->name;
+			$tag_ops_counter += 1;
+		}
+	}
+	return $nice_tag_query;
 }
 
  
@@ -186,4 +286,17 @@ function tiga_wp_page_menu ($page_markup) {
         return $new_markup; 
 	}
 
+
+/**
+ * Customize tag cloud widget
+ *
+ * @since tiga 0.0.1
+ */
+add_filter( 'widget_tag_cloud_args', 'tiga_new_tag_cloud' );
+function tiga_new_tag_cloud( $args ) {
+	$args['largest'] 	= 12;
+	$args['smallest'] 	= 12;
+	$args['unit'] 		= 'px';
+	return $args;
+}
 ?>

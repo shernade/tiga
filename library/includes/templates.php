@@ -9,65 +9,85 @@
  */
 
 /**
- * function to call first image
+ * Adding the Open Graph in the Language Attributes
  *
- * @since tiga 0.0.1
+ * @since tiga 0.0.3
  */
-function tiga_first_image() {
-	global $post, $posts;
-	$first_img = '';
-	ob_start();
-	ob_end_clean();
-	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-	if (array_key_exists(1, $matches)) {
-		if (array_key_exists(0, $matches[1])) {
-			$first_img  = $matches [1] [0];
-		}
+add_filter('language_attributes', 'tiga_add_opengraph_doctype');
+function tiga_add_opengraph_doctype( $output ) {
+		return $output . ' xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"';
 	}
-	
-	return $first_img;
-} 
-
 
 /**
  * Prints the Facebook open-graph meta
  *
- * @since tiga 0.0.1
+ * @since tiga 0.0.3
  */
 add_action('wp_head', 'tiga_open_graph', 1);
 function tiga_open_graph() {
-	global $post, $posts;
-	$thumbs = of_get_option('tiga_og_thumb');
-	$getthumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
+	global $post;
+	$thumbsfb = of_get_option('tiga_og_thumb');
 	
-	if(is_single() || is_page()) {
-		$excerpt = ""; 
+	$excerpt = ""; 
 		if (has_excerpt($post->ID)) {
 			$excerpt = esc_attr(strip_tags(get_the_excerpt($post->ID)));
-		}else{
+		} else {
 			$excerpt = esc_attr(str_replace("\r\n",' ',substr(strip_tags(strip_shortcodes($post->post_content)), 0, 160)));
 		}
 ?>
 	<!-- Open Graph Tags -->
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="<?php single_post_title(''); ?>">
-	<meta property="og:url" content="<?php the_permalink(); ?>">
-	<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
-	<meta property="og:description" content="<?php echo $excerpt; ?>">
-	<meta property="og:image" content="<?php if ( (has_post_thumbnail()) ) { echo $getthumbnail[0]; } else { echo tiga_first_image(); } ?>">
+	<meta property="og:type" content="<?php if ( is_singular() ) { echo "article"; } else { echo "website";} ?>">
+	<meta property="og:title" content="<?php if ( is_singular() ) { echo esc_attr( get_the_title() ); } else { echo get_bloginfo('name'); } ?>">
+	<meta property="og:url" content="<?php if ( is_singular() ) { echo esc_url( get_permalink() ); } else { echo esc_url( home_url( '/' ) ); } ?>">
+	<meta property="og:description" content="<?php
+		if ( is_singular() ) {
+			if ( function_exists('wpseo_get_value') ) {
+				echo wpseo_get_value('metadesc'); // get meta descriptions from WordPress SEO plugin
+			} else {
+				echo $excerpt;
+			}
+		} else {
+			echo get_bloginfo('description');
+		}
+	?>">
+	<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
+	<meta property="og:image" content="<?php if ( is_singular() ) { echo tiga_fb_image(); } else { echo esc_url( $thumbsfb ); } ?>">
 	<!-- End Open Graph Tags -->
-	<?php  } else { ?>
-	<!-- Open Graph Tags -->
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="<?php bloginfo('name'); ?>">
-	<meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<meta property="og:description" content="<?php bloginfo('description'); ?>">
-	<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
-	<meta property="og:image" content="<?php echo esc_url( $thumbs ); ?>">
-	<!-- End Open Graph Tags -->
-	<?php  }
+<?php
 	
 } //end tiga_open_graph()
+
+
+/**
+ * Get image for facebook open-graph
+ *
+ * @since tiga 0.0.3
+ */
+function tiga_fb_image() {
+	global $post;
+	$thumbsfb = of_get_option('tiga_og_thumb');
+	$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '', '' );
+	
+	if ( has_post_thumbnail($post->ID) ) {
+		$fbimage = $src[0];
+	} else {
+		global $post, $posts;
+		$fbimage = '';
+		ob_start();
+		ob_end_clean();
+		$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+		if (array_key_exists(1, $matches)) {
+			if (array_key_exists(0, $matches[1])) {
+				$fbimage  = $matches [1] [0];
+			}
+		}
+	}
+	if(empty($fbimage)) {
+		$fbimage = esc_url( $thumbsfb );
+	}
+	
+	return $fbimage;
+}
 
  
 /**
@@ -184,7 +204,7 @@ function tiga_the_author() {
 	if ( get_the_author_meta( 'description' ) && of_get_option('tiga_author_box') ) : // If a user has filled out their description and checked the "display author box" option, show a bio on their entries ?>
 	<div id="author-info">
 		<div id="author-avatar">
-			<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'tiga_author_bio_avatar_size', 68 ) ); ?>
+			<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'tiga_author_bio_avatar_size', 48 ) ); ?>
 		</div><!-- #author-avatar -->
 		<div id="author-description">
 			<h2><?php printf( __( 'About %s', 'tiga' ), get_the_author() ); ?></h2>

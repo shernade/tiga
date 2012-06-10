@@ -1,3 +1,9 @@
+
+0.0.3 - 02 June 2012
+- Update options theme framework
+- Remove post-format support
+- Remove blog template
+
 0.0.2 - 27 May 2012
 - Sanitize all theme options output
 - Update grids

@@ -45,5 +45,5 @@
 			</article> <!-- end #post-<?php the_ID(); ?> -->
 		</li>
 		
-	<?php endwhile; ?>
+	<?php endwhile; wp_reset_query();?>
 </ul> <!-- end .slides -->

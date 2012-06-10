@@ -4,7 +4,7 @@ Description: A framework for building theme options.
 Author: Devin Price
 Author URI: http://www.wptheming.com
 License: GPLv2
-Version: 1.0
+Version: 1.1
 */
 
 /*
@@ -96,6 +96,9 @@ function optionsframework_init() {
 	
 	// Registers the settings fields and callback
 	register_setting( 'optionsframework', $option_name, 'optionsframework_validate' );
+	
+	// Change the capability required to save the 'optionsframework' options group.
+	add_filter( 'option_page_capability_optionsframework', 'optionsframework_page_capability' );
 }
 
 /**
@@ -164,13 +167,7 @@ function optionsframework_setdefaults() {
 if ( !function_exists( 'optionsframework_add_page' ) ) {
 
 	function optionsframework_add_page() {
-		$of_page = add_theme_page(
-		__('Tiga Theme Options', 'tiga'), 
-		__('Tiga Theme Options', 'tiga'), 
-		'edit_theme_options', 
-		'options-framework',
-		'optionsframework_page'
-	);
+		$of_page = add_theme_page(__('Tiga Theme Options', 'tiga'), __('Tiga Theme Options', 'tiga'), 'edit_theme_options', 'options-framework','optionsframework_page');
 		
 		// Load the required CSS and javscript
 		add_action('admin_enqueue_scripts', 'optionsframework_load_scripts');
@@ -182,7 +179,7 @@ if ( !function_exists( 'optionsframework_add_page' ) ) {
 /* Loads the CSS */
 
 function optionsframework_load_styles() {
-	wp_enqueue_style('admin-style', OPTIONS_FRAMEWORK_DIRECTORY.'css/admin-style.css');
+	wp_enqueue_style('optionsframework', OPTIONS_FRAMEWORK_DIRECTORY.'css/optionsframework.css');
 	wp_enqueue_style('color-picker', OPTIONS_FRAMEWORK_DIRECTORY.'css/colorpicker.css');
 }	
 
@@ -243,10 +240,49 @@ if ( !function_exists( 'optionsframework_page' ) ) {
             <input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults', 'tiga' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!', 'tiga' ) ); ?>' );" />
             <div class="clear"></div>
 		</div>
-	</form>
-</div> <!-- / #container -->
-</div>
-</div> <!-- / .wrap -->
+		</form>
+	</div> <!-- / #container -->
+	
+	<div id="admin-side" class="admin-side">
+
+		<div class="postbox-container">
+			<div class="metabox-holder">	
+				<div class="meta-box-sortables ui-sortable">
+				
+					<div id="tiga-support" class="postbox">
+						<h3 class="hndle"><span><?php _e('Need a Support ?', 'tiga'); ?></span></h3>
+						<div class="inside">
+							<p><?php _e('You can report an issue <a href="http://satrya.me/tiga-wordpress-theme/" target="_blank">here</a> or you can just drop me an email to asksatrya@gmail.com.', 'tiga'); ?></p>
+						</div>
+					</div>
+					
+					<div id="tiga-links" class="postbox">
+						<h3 class="hndle"><span><?php _e('Links', 'tiga'); ?></span></h3>
+						<div class="inside">
+							<ul class="links">
+								<li><a href="http://satrya.me" target="_blank"><?php _e('Tiga by Satrya', 'tiga'); ?></a></li>
+								<li><a href="http://twitter.com/msattt" target="_blank"><?php _e('Follow me on Twitter @msattt', 'tiga'); ?></a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div id="tiga-contribute" class="postbox">
+						<h3 class="hndle"><span><?php _e('Contribute to Tiga Theme', 'tiga'); ?></span></h3>
+						<div class="inside">
+							<ul class="links">
+								<li><?php _e('You can contribute to this project by submitting a translation or you can <a href="https://github.com/satrya/tiga" target="_blank">fork the code on github</a>', 'tiga'); ?></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+	</div>
+	</div> <!-- / .wrap -->
 
 <?php
 	}
@@ -369,7 +405,7 @@ function optionsframework_adminbar() {
 	$wp_admin_bar->add_menu( array(
 			'parent' => 'appearance',
 			'id' => 'of_theme_options',
-			'title' => __( 'Tiga Theme Options', 'tiga' ),
+			'title' => __( 'Theme Options', 'tiga' ),
 			'href' => admin_url( 'themes.php?page=options-framework' )
 		));
 }

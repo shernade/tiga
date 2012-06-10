@@ -30,12 +30,6 @@ if ( ! function_exists( 'tiga_setup' ) ):
 		// Add default posts and comments RSS feed links to <head>.
 		add_theme_support( 'automatic-feed-links' );
 		
-		// Add support for custom backgrounds
-		add_custom_background();
-		
-		// Add support for a variety of post formats
-		add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'quote', 'image' ) );
-		
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( 
 			array(

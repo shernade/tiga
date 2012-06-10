@@ -48,7 +48,7 @@ function of_sanitize_multicheck( $input, $option ) {
 		}
 		foreach( $input as $key => $value ) {
 			if ( array_key_exists( $key, $option['options'] ) && $value ) {
-				$output[$key] = "1"; 
+				$output[$key] = "1";
 			}
 		}
 	}
@@ -71,6 +71,20 @@ function of_sanitize_upload( $input ) {
 	return $output;
 }
 add_filter( 'of_sanitize_upload', 'of_sanitize_upload' );
+
+/* Editor */
+
+function of_sanitize_editor($input) {
+	if ( current_user_can( 'unfiltered_html' ) ) {
+		$output = $input;
+	}
+	else {
+		global $allowedtags;
+		$output = wpautop(wp_kses( $input, $allowedtags));
+	}
+	return $output;
+}
+add_filter( 'of_sanitize_editor', 'of_sanitize_editor' );
 
 /* Allowed Tags */
 
@@ -153,17 +167,17 @@ add_filter( 'of_background_attachment', 'of_sanitize_background_attachment' );
 /* Typography */
 
 function of_sanitize_typography( $input, $option ) {
-	
+
 	$output = wp_parse_args( $input, array(
 		'size'  => '',
 		'face'  => '',
 		'style' => '',
 		'color' => ''
 	) );
-	
-	if ( isset( $option['options']['faces'] ) ) {
-		if ( array_key_exists( $input['face'], $option['options']['faces'] ) ) {
-			$output['face'] = $input['face'];
+
+	if ( isset( $option['options']['faces'] ) && isset( $input['face'] ) ) {
+		if ( !( array_key_exists( $input['face'], $option['options']['faces'] ) ) ) {
+			$output['face'] = '';
 		}
 	}
 	else {
@@ -173,7 +187,6 @@ function of_sanitize_typography( $input, $option ) {
 	$output['size']  = apply_filters( 'of_font_size', $output['size'] );
 	$output['style'] = apply_filters( 'of_font_style', $output['style'] );
 	$output['color'] = apply_filters( 'of_color', $output['color'] );
-
 	return $output;
 }
 add_filter( 'of_sanitize_typography', 'of_sanitize_typography', 10, 2 );
@@ -187,6 +200,7 @@ function of_sanitize_font_size( $value ) {
 	return apply_filters( 'of_default_font_size', $recognized );
 }
 add_filter( 'of_font_size', 'of_sanitize_font_size' );
+
 
 function of_sanitize_font_style( $value ) {
 	$recognized = of_recognized_font_styles();
@@ -218,7 +232,7 @@ function of_recognized_background_repeat() {
 		'no-repeat' => __('No Repeat', 'tiga'),
 		'repeat-x'  => __('Repeat Horizontally', 'tiga'),
 		'repeat-y'  => __('Repeat Vertically', 'tiga'),
-		'repeat'    => __('Repeat All', 'tiga')
+		'repeat'    => __('Repeat All', 'tiga'),
 		);
 	return apply_filters( 'of_recognized_background_repeat', $default );
 }
@@ -266,7 +280,7 @@ function of_recognized_background_attachment() {
  * @return   string
  *
  */
- 
+
 function of_sanitize_hex( $hex, $default = '' ) {
 	if ( of_validate_hex( $hex ) ) {
 		return $hex;
@@ -283,7 +297,7 @@ function of_sanitize_hex( $hex, $default = '' ) {
  *
  * @return   array
  */
- 
+
 function of_recognized_font_sizes() {
 	$sizes = range( 9, 71 );
 	$sizes = apply_filters( 'of_recognized_font_sizes', $sizes );
@@ -342,7 +356,7 @@ function of_recognized_font_styles() {
  * @return   bool
  *
  */
- 
+
 function of_validate_hex( $hex ) {
 	$hex = trim( $hex );
 	/* Strip recognized prefixes. */

@@ -1,0 +1,1 @@
+All images here are GPL compatible

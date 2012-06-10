@@ -8,6 +8,7 @@
 
 add_action('wp_head', 'tiga_custom_favicon', 5);
 add_action('wp_head', 'tiga_custom_css', 10);
+add_action('wp_head', 'tiga_custom_background', 10);
 add_action('wp_head', 'tiga_iframe_blocker', 11);
 add_filter( 'body_class', 'tiga_custom_layouts' );
 add_action('wp_head', 'tiga_meta_google', 2);
@@ -27,6 +28,25 @@ function tiga_custom_css() {
 	if ($custom_css != '') {
 		echo "<!-- Custom Styling -->\n<style type=\"text/css\">\n" . esc_attr( $custom_css ) . "\n</style>\n";
 	}
+}
+
+/**
+ * Custom background
+ *
+ * @since tiga 0.0.3
+ */
+function tiga_custom_background() {
+	$bg = of_get_option('tiga_custom_bg');
+	
+	if($bg) { ?>
+		<style type="text/css">
+			<?php if ($bg['image']) {
+				echo 'body { background: '.$bg['color'].' url('. esc_url( $bg['image'] ). ') '.$bg['repeat'].' '.$bg['position'].' '.$bg['attachment'].'; }'. "\n";
+			} else {
+				echo 'body { background: '.$bg['color']. ' }'. "\n";
+			} ?>
+		</style>
+	<?php }
 }
 
 /**
