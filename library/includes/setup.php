@@ -16,13 +16,6 @@ if ( ! function_exists( 'tiga_setup' ) ):
 		 */
 		global $content_width;
 		if ( ! isset( $content_width ) ) $content_width = 620;
-		
-		/* Make tiga available for translation.
-		 * Translations can be added to the /languages/ directory.
-		 * If you're building a theme based on tiga, use a find and replace
-		 * to change 'tiga' to the name of your theme in all the template files.
-		 */
-		 load_theme_textdomain( 'tiga', get_template_directory() . '/library/languages' );
 				
 		// This theme styles the visual editor with editor-style.css to match the theme style.
 		add_editor_style();

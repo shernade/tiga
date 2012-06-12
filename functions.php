@@ -18,6 +18,13 @@ if ( !function_exists( 'optionsframework_init' ) ) {
 	require_once dirname( __FILE__ ) . '/library/admin/options-framework.php';
 }
 
+/* Make tiga available for translation.
+ * Translations can be added to the library/languages/ directory.
+ * If you're building a theme based on tiga, use a find and replace
+ * to change 'tiga' to the name of your theme in all the template files.
+ */
+load_theme_textdomain( 'tiga', get_template_directory() . '/library/languages' );
+
 /**
  * Load all library files
  *

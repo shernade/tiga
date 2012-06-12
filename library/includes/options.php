@@ -10,7 +10,7 @@
 
 function optionsframework_option_name() {
 	// This gets the theme name from the stylesheet (lowercase and without spaces)
-	$themename = get_theme_data(STYLESHEETPATH . '/style.css');
+	$themename = get_theme_data(get_stylesheet_directory() . '/style.css');
 	$themename = $themename['Name'];
 	$themename = preg_replace('/\W/', '', strtolower($themename) );
 	
