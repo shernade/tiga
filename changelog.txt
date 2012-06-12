@@ -1,5 +1,8 @@
 
-0.0.3 - 02 June 2012
+0.0.4 - 12 June 2012
+- Move translation code support to functions.php
+
+0.0.3 - 12 June 2012
 - Update options theme framework
 - Remove post-format support
 - Remove blog template
