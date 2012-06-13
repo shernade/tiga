@@ -32,11 +32,14 @@ get_header(); ?>
 					if ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
 					$paged = intval( $paged );
 					
-					$args = array(
-						'post__not_in' => get_option('sticky_posts'),
-						'paged' => $paged,
-					);
-					query_posts( $args );
+					if( of_get_option('tiga_show_featured') ) {
+						$args = array(
+							'post__not_in' => get_option('sticky_posts'),
+							'paged' => $paged,
+						);
+						query_posts( $args );
+					}
+					
 					if ( have_posts() ) : 
 				?>
 

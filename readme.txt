@@ -8,7 +8,7 @@ Demo			: http://satrya.me/demo/tiga
 Description	: Responsive and super clean blogging theme. It supports 5 widget areas, facebook open-graph integration and more(try it yourself). Has an optional full-width page template and sitemap page template, also translation ready.
 Requires at least: 3.3.0
 Tested up to	: 3.3.2
-Stable tag	: 0.0.4
+Stable tag	: 0.0.5
 License	: http://www.gnu.org/licenses/gpl-3.0.html
 
 -------------------------------------------------------

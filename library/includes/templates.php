@@ -300,24 +300,6 @@ endif; // ends check for tiga_comment()
 
 
 /**
- * Display custom breadcrumbs
- *
- * @since tiga 0.0.1
- */
-if ( ! function_exists( 'tiga_do_breadrumbs' ) ) :
-function tiga_do_breadrumbs() {
-
-	// If you installed wordpress seo or yoast breadcrumbs plugin, this function will automatically
-	// display the yoast breadcrumbs, but if you're not. The custom breadcrumbs will change it
-	if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<div id="breadcrumbs">','</div>');
-	} else {
-		echo tiga_breadcrumbs();
-	}
-}
-endif; // tiga_do_breadrumbs()
-
-
-/**
  * Display navigation to next/previous comments pages when applicable
  *
  * @since tiga 0.0.1
@@ -380,10 +362,8 @@ function tiga_share_buttons() {
 		
 		<p class="pin-it">
 			<?php 
-			global $post;
-			$pinterestimage = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
-			
-			<a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink($post->ID)); ?>&media=<?php if ( (has_post_thumbnail()) ) { echo $pinterestimage[0]; } else { echo tiga_first_image(); } ?>&description=<?php the_title(); ?>" class="pin-it-button" count-layout="horizontal">Pin It</a>
+			global $post; ?>
+			<a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink($post->ID)); ?>&media=<?php echo tiga_fb_image(); ?>&description=<?php the_title(); ?>" class="pin-it-button" count-layout="horizontal">Pin It</a>
 		</p> <!-- end .pin-it -->
 		
 	</div> <!-- end .share -->

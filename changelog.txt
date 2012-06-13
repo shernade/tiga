@@ -1,3 +1,7 @@
+0.0.5 - 13 June 2012
+- Fix pinterest get image
+- Remove breadcrumbs function
+- If featured post false, sticky post still display in recent posts
 
 0.0.4 - 12 June 2012
 - Move translation code support to functions.php
