@@ -2,6 +2,7 @@
 - Update options theme
 - Update form style
 - Get back grey sidebar
+- Update language
 
 0.0.5 - 13 June 2012
 - Fix pinterest get image

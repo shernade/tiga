@@ -3,13 +3,13 @@
 -------------------------------------------------------
 Tiga is based on _s(https://github.com/Automattic/_s) theme by Automattic, rebuild using susy grid framework & Pondasee(https://github.com/tokokoo/pondasee).
 
-Contributors	: satrya
-Demo			: http://satrya.me/demo/tiga
-Description	: Responsive and super clean blogging theme. It supports 5 widget areas, facebook open-graph integration and more(try it yourself). Has an optional full-width page template and sitemap page template, also translation ready.
-Requires at least: 3.3.0
-Tested up to	: 3.3.2
-Stable tag	: 0.0.5
-License	: http://www.gnu.org/licenses/gpl-3.0.html
+Contributors: satrya
+Demo: http://satrya.me/demo/tiga
+Description: Responsive and super clean blogging theme with sticky posts slider. It supports 5 widget areas, facebook open-graph integration, custom social share buttons and widget social media buttons. Has an optional full-width page template and sitemap page template, also translation ready.
+Requires at least: 3.4
+Tested up to: 3.4
+Stable tag: 0.0.6
+License: http://www.gnu.org/licenses/gpl-3.0.html
 
 -------------------------------------------------------
     THANKS YOU FOR DOWNLOADING TIGA THEME!
