@@ -2,7 +2,7 @@
 Theme Name:		Tiga
 Theme URI:  	http://satrya.me/tiga-wordpress-theme
 Description: 	Responsive and super clean blogging theme. It supports 5 widget areas, facebook open-graph integration and more(try it yourself). Has an optional full-width page template and sitemap page template, also translation ready.
-Version: 		0.0.5
+Version: 		0.0.6
 Author: 		Satrya
 Author URI:		http://satrya.me
 Tags: 			white, light, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background, custom-menu, featured-images, full-width-template, microformats, post-formats, theme-options, threaded-comments, translation-ready
@@ -55,17 +55,17 @@ See: http://codex.wordpress.org/Child_Themes
    =============================================================================
 */
 @font-face {
-  font-family: 'BitterRegular';
-  src: url("library/fonts/bitter/Bitter-Regular-webfont.eot");
-  src: url("library/fonts/bitter/Bitter-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/bitter/Bitter-Regular-webfont.woff") format("woff"), url("library/fonts/bitter/Bitter-Regular-webfont.ttf") format("truetype"), url("library/fonts/bitter/Bitter-Regular-webfont.svg#BitterRegular") format("svg");
+  font-family: "BitterRegular";
+  src: url('library/fonts/bitter/Bitter-Regular-webfont.eot');
+  src: url('library/fonts/bitter/Bitter-Regular-webfont.eot?#iefix') format('eot'), url('library/fonts/bitter/Bitter-Regular-webfont.svg#BitterRegular') format('svg'), url('library/fonts/bitter/Bitter-Regular-webfont.woff') format('woff'), url('library/fonts/bitter/Bitter-Regular-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'FrancoisOneRegular';
-  src: url("library/fonts/francois/FrancoisOne-webfont.eot");
-  src: url("library/fonts/francois/FrancoisOne-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/francois/FrancoisOne-webfont.woff") format("woff"), url("library/fonts/francois/FrancoisOne-webfont.ttf") format("truetype"), url("library/fonts/francois/FrancoisOne-webfont.svg#FrancoisOneRegular") format("svg");
+  font-family: "FrancoisOneRegular";
+  src: url('library/fonts/francois/FrancoisOne-webfont.eot');
+  src: url('library/fonts/francois/FrancoisOne-webfont.eot?#iefix') format('eot'), url('library/fonts/francois/FrancoisOne-webfont.svg#FrancoisOneRegular') format('svg'), url('library/fonts/francois/FrancoisOne-webfont.woff') format('woff'), url('library/fonts/francois/FrancoisOne-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -169,6 +169,10 @@ Basic and global styles for structural layout, page templates and link styles
 html {
   font-size: 16px;
   line-height: 1.5em;
+  overflow-y: scroll;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -177,7 +181,6 @@ body {
   font-family: "BitterRegular", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
   margin: 1.5em 0;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* 	SELECTION
@@ -263,6 +266,15 @@ a:hover {
 }
 
 #secondary {
+  background-color: whitesmoke;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
   width: 31.915%;
   float: right;
   margin-right: 0;
@@ -706,25 +718,11 @@ textarea {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.075);
   -webkit-transition: all 0.2s linear;
   -webkit-transition-delay: 0s;
   -moz-transition: all 0.2s linear 0s;
-  -ms-transition: all 0.2s linear 0s;
   -o-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
-}
-input:focus,
-textarea:focus {
-  border-color: rgba(82, 168, 236, 0.8);
-  outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 input:invalid,
 textarea:invalid {
@@ -764,23 +762,21 @@ input[type="reset"],
 input[type="submit"],
 input[type="button"] {
   -webkit-appearance: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #dddddd url('library/img/button.png') repeat-x;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
-  background-image: -webkit-linear-gradient(#ffffff, #dddddd);
-  background-image: -moz-linear-gradient(#ffffff, #dddddd);
-  background-image: -o-linear-gradient(#ffffff, #dddddd);
-  background-image: -ms-linear-gradient(#ffffff, #dddddd);
-  background-image: linear-gradient(#ffffff, #dddddd);
-  border: 1px solid;
-  border-color: #dddddd #bbbbbb #999999;
+  background: #f2f2f2 url('library/img/button.png') repeat-x;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+  background-image: -webkit-linear-gradient(#ffffff, #f2f2f2);
+  background-image: -moz-linear-gradient(#ffffff, #f2f2f2);
+  background-image: -o-linear-gradient(#ffffff, #f2f2f2);
+  background-image: linear-gradient(#ffffff, #f2f2f2);
+  border: 1px solid #e6e6e6;
   cursor: pointer;
   color: #333333;
   font: bold 12px/1.3 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
@@ -793,7 +789,6 @@ input[type="button"] {
   text-shadow: white 0 1px 1px;
   -webkit-transition: none;
   -moz-transition: none;
-  -ms-transition: none;
   -o-transition: none;
   transition: none;
   vertical-align: top;
@@ -803,29 +798,20 @@ button:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
-  background: #eeeeee;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(1px, #eeeeee), color-stop(100%, #cccccc));
-  background-image: -webkit-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: -moz-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: -o-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: -ms-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  background: #f4f4f4;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(#f2f2f2, #ffffff);
+  background-image: -moz-linear-gradient(#f2f2f2, #ffffff);
+  background-image: -o-linear-gradient(#f2f2f2, #ffffff);
+  background-image: linear-gradient(#f2f2f2, #ffffff);
 }
 button:active,
 input[type="reset"]:active,
 input[type="submit"]:active,
 input[type="button"]:active {
-  background: #dddddd;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(1px, #dddddd), color-stop(100%, #eeeeee));
-  background-image: -webkit-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: -moz-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: -o-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: -ms-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
-  -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
-  box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
-  border-color: #999999 #bbbbbb #dddddd;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15);
+  outline: 0;
 }
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -861,15 +847,17 @@ input[type="week"] {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-appearance: none;
   background-color: white;
-  border: 1px solid;
-  border-color: #dddddd;
+  border: 1px solid #cccccc;
   color: black;
   outline: 0;
   margin: 0;
@@ -877,7 +865,7 @@ input[type="week"] {
   text-align: left;
   font-size: 13px;
   font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
-  height: 2em;
+  height: 2.2em;
   vertical-align: top;
   *padding-top: 2px;
   *padding-bottom: 1px;
@@ -899,6 +887,29 @@ input[type="time"][disabled],
 input[type="url"][disabled],
 input[type="week"][disabled] {
   background-color: #eeeeee;
+}
+textarea:focus,
+select:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
 button[disabled],
@@ -988,6 +999,7 @@ select[size="1"] {
 textarea {
   min-height: 40px;
   overflow: auto;
+  padding: 5px;
   resize: vertical;
   width: 100%;
 }
@@ -1098,7 +1110,6 @@ p img,
   -webkit-transition: all 0.15s ease-in-out;
   -webkit-transition-delay: 0s;
   -moz-transition: all 0.15s ease-in-out 0s;
-  -ms-transition: all 0.15s ease-in-out 0s;
   -o-transition: all 0.15s ease-in-out 0s;
   transition: all 0.15s ease-in-out 0s;
 }
@@ -1344,7 +1355,6 @@ Styles for header area such as header, custom header, menus etc.
   -webkit-transition: all 0.15s ease-in;
   -webkit-transition-delay: 0s;
   -moz-transition: all 0.15s ease-in 0s;
-  -ms-transition: all 0.15s ease-in 0s;
   -o-transition: all 0.15s ease-in 0s;
   transition: all 0.15s ease-in 0s;
   word-wrap: break-word;
@@ -1420,7 +1430,6 @@ Styles for header area such as header, custom header, menus etc.
   background-image: -webkit-linear-gradient(#252525, #0a0a0a);
   background-image: -moz-linear-gradient(#252525, #0a0a0a);
   background-image: -o-linear-gradient(#252525, #0a0a0a);
-  background-image: -ms-linear-gradient(#252525, #0a0a0a);
   background-image: linear-gradient(#252525, #0a0a0a);
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.6);
@@ -1462,7 +1471,6 @@ Styles for header area such as header, custom header, menus etc.
   -webkit-transition: all 0.15s ease-in;
   -webkit-transition-delay: 0s;
   -moz-transition: all 0.15s ease-in 0s;
-  -ms-transition: all 0.15s ease-in 0s;
   -o-transition: all 0.15s ease-in 0s;
   transition: all 0.15s ease-in 0s;
 }
@@ -1560,7 +1568,7 @@ This is our main styles for theme development
 /*	HOME PAGE FEATURED POSTS
 	----------------- */
 .featured-posts {
-  margin-bottom: 1.5em;
+  margin-bottom: 3em;
 }
 
 .featuredposts-heading {
@@ -1707,6 +1715,9 @@ article .entry-title a {
 article .entry-title a:hover {
   color: #5e9ae2;
 }
+article h1.entry-title {
+  margin: 0;
+}
 article .slides-content .entry-title a {
   color: white;
 }
@@ -1774,6 +1785,16 @@ article h6 {
   font-size: 0.688em;
   line-height: 2.182em;
   color: #999999;
+}
+.entry-meta .tag {
+  background: url('library/img/tags.png') no-repeat left center;
+  display: block;
+  padding-left: 20px;
+}
+.entry-meta .cat {
+  background: url('library/img/cats.png') no-repeat left center;
+  display: block;
+  padding-left: 20px;
 }
 @media screen and (max-width: 320px) {
   .entry-meta .share {
@@ -1945,8 +1966,9 @@ Styles for sidebar and all widget areas
   border-bottom: 4px double #eeeeee;
   font-size: 0.75em;
   line-height: 2em;
-  margin-bottom: 1.5em;
+  margin: 1.5em;
   padding-bottom: 0.75em;
+  word-wrap: break-word;
 }
 .widget:last-child {
   border-bottom: none;
@@ -1994,22 +2016,29 @@ Styles for sidebar and all widget areas
 /* 	TAG CLOUD WIDGET
 	----------------- */
 .widget_tag_cloud .tagcloud a {
-  background: #eee;
+  background: #f2f2f2;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+  background-image: -webkit-linear-gradient(#ffffff, #f2f2f2);
+  background-image: -moz-linear-gradient(#ffffff, #f2f2f2);
+  background-image: -o-linear-gradient(#ffffff, #f2f2f2);
+  background-image: linear-gradient(#ffffff, #f2f2f2);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  border: 1px solid #e6e6e6;
+  color: #999999;
   display: inline-block;
   *display: inline;
-  color: #999999;
-  margin: 0 5px 5px 0;
-  padding: 2px 5px;
-  text-shadow: #fbfbfb 0 1px 1px;
   *zoom: 1;
+  height: 2em;
+  margin: 0 5px 5px 0;
+  padding: 0 8px;
+  text-shadow: 0 1px 0 white;
 }
 .widget_tag_cloud .tagcloud a:hover {
-  background: #e1e1e1;
+  background: #f2f2f2;
   text-decoration: none;
 }
 
@@ -2065,23 +2094,43 @@ Styles for sidebar and all widget areas
   width: 100%;
 }
 
+/* 	RECENT COMMENTS WIDGET
+	----------------- */
+#recentcomments li a {
+  display: inline;
+}
+
 /* 	SEARCH WIDGET
 	----------------- */
 .widget_search {
-  padding-bottom: 1.5em;
+  overflow: hidden;
+  *zoom: 1;
 }
-.widget_search input[type="text"] {
-  background: #fafafa;
-  border: 1px solid #eeeeee;
-  padding: 0 10px;
-  width: 60%;
-  float: left;
-  margin-right: 20%;
-  display: inline;
+.widget_search #searchform {
+  position: relative;
+  width: 100%;
+}
+.widget_search #searchform input[type="text"] {
+  border: 1px solid #ddd;
+  height: 3em;
   margin-right: 5px;
+  padding: 5px 10px;
+  width: 100%;
 }
-.widget_search input[type="text"]:focus {
-  background: white;
+.widget_search #searchform input[type="text"]:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.widget_search #searchform input[type="submit"] {
+  background: url('library/img/search-icon.png') no-repeat;
+  border: none;
+  position: absolute;
+  right: 8px;
+  top: 12px;
+  text-indent: -999em;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .screen-reader-text {
@@ -2136,7 +2185,7 @@ ul.social-buttons {
 ul.social-buttons li {
   display: inline;
   float: left;
-  margin-right: 0.75em;
+  margin: 0 0.75em 0.75em 0;
 }
 ul.social-buttons li:before {
   content: "";
@@ -2295,20 +2344,6 @@ Styles for comments area(comment form & comment lists)
   font-size: 0.75em;
   line-height: 2em;
 }
-#respond input[type="text"],
-#respond textarea {
-  border: 1px solid #dddddd;
-  color: #333333;
-  -webkit-box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.1);
-}
-#respond input[type="text"]:focus,
-#respond textarea:focus {
-  -webkit-box-shadow: 0 0 5px 0 #0066ff;
-  -moz-box-shadow: 0 0 5px 0 #0066ff;
-  box-shadow: 0 0 5px 0 #0066ff;
-}
 #respond input[type="text"] {
   display: inline;
   float: left;
@@ -2319,7 +2354,6 @@ Styles for comments area(comment form & comment lists)
 #respond textarea {
   font-size: 1em;
   line-height: 1.5em;
-  padding: 7px;
 }
 #respond input[type="submit"] {
   padding: 10px 15px;
@@ -2741,16 +2775,15 @@ hr.lightborder {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: url('library/img/button.png') repeat-x, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
-  background: url('library/img/button.png') repeat-x, -webkit-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png') repeat-x, -moz-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png') repeat-x, -o-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png') repeat-x, -ms-linear-gradient(#ffffff, #dddddd);
-  background: url('library/img/button.png') repeat-x, linear-gradient(#ffffff, #dddddd);
-  border: 1px solid;
-  border-color: #dddddd #bbbbbb #999999;
+  background: #f2f2f2 url('library/img/button.png') repeat-x;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+  background-image: -webkit-linear-gradient(#ffffff, #f2f2f2);
+  background-image: -moz-linear-gradient(#ffffff, #f2f2f2);
+  background-image: -o-linear-gradient(#ffffff, #f2f2f2);
+  background-image: linear-gradient(#ffffff, #f2f2f2);
+  border: 1px solid #e6e6e6;
   cursor: pointer;
-  color: #333333;
+  color: #333;
   margin-right: 1em;
   padding: .75em 1em;
 }
@@ -2765,27 +2798,18 @@ hr.lightborder {
   margin-right: 0;
 }
 .wp-pagenavi a:hover {
-  background: #eeeeee;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(1px, #eeeeee), color-stop(100%, #cccccc));
-  background-image: -webkit-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: -moz-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: -o-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: -ms-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
-  background-image: linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  background: #f4f4f4;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(#f2f2f2, #ffffff);
+  background-image: -moz-linear-gradient(#f2f2f2, #ffffff);
+  background-image: -o-linear-gradient(#f2f2f2, #ffffff);
+  background-image: linear-gradient(#f2f2f2, #ffffff);
   text-decoration: none;
 }
 .wp-pagenavi a:active {
-  background: #dddddd;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(1px, #dddddd), color-stop(100%, #eeeeee));
-  background-image: -webkit-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: -moz-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: -o-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: -ms-linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  background-image: linear-gradient(#ffffff, #dddddd 1px, #eeeeee);
-  -webkit-box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.25);
-  border-color: #999999 #bbbbbb #dddddd;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15);
+  outline: 0;
 }
 @media screen and (max-width: 320px) {
   .wp-pagenavi .pages {
@@ -2889,7 +2913,7 @@ article #author-info #author-description p {
 /* 	CONTACT FORM 7
 	----------------- */
 .entry-content .wpcf7 {
-  background: #eeeeee;
+  background-color: whitesmoke;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -2899,22 +2923,11 @@ article #author-info #author-description p {
   padding: 1.4em;
 }
 .entry-content .wpcf7 input[type="text"],
-.entry-content .wpcf7 input[type="email"],
-.entry-content .wpcf7 textarea {
-  -webkit-box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.2);
-}
-.entry-content .wpcf7 input[type="text"]:focus,
-.entry-content .wpcf7 input[type="email"]:focus,
-.entry-content .wpcf7 textarea:focus {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.entry-content .wpcf7 input[type="text"],
 .entry-content .wpcf7 input[type="email"] {
   height: 2.5em;
+}
+.entry-content .wpcf7 input[type="submit"] {
+  padding: 10px 30px;
 }
 .entry-content div.wpcf7-validation-errors,
 .entry-content div.wpcf7-mail-sent-ng {

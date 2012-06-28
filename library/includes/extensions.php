@@ -7,7 +7,88 @@
  * @package tiga
  * @since tiga 0.0.1
  */
+ 
+/**
+ * Adding the Open Graph in the Language Attributes
+ *
+ * @since tiga 0.0.3
+ */
+add_filter('language_attributes', 'tiga_add_opengraph_doctype');
+function tiga_add_opengraph_doctype( $output ) {
+		return $output . ' xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"';
+	}
 
+/**
+ * Prints the Facebook open-graph meta
+ *
+ * @since tiga 0.0.3
+ */
+add_action('wp_head', 'tiga_open_graph', 1);
+function tiga_open_graph() {
+	global $post;
+	$thumbsfb = of_get_option('tiga_og_thumb');
+	
+	$excerpt = ""; 
+		if (has_excerpt($post->ID)) {
+			$excerpt = esc_attr(strip_tags(get_the_excerpt($post->ID)));
+		} else {
+			$excerpt = esc_attr(str_replace("\r\n",' ',substr(strip_tags(strip_shortcodes($post->post_content)), 0, 160)));
+		}
+?>
+	<!-- Open Graph Tags -->
+	<meta property="og:type" content="<?php if ( is_singular() ) { echo "article"; } else { echo "website";} ?>">
+	<meta property="og:title" content="<?php if ( is_singular() ) { echo esc_attr( get_the_title() ); } else { echo get_bloginfo('name'); } ?>">
+	<meta property="og:url" content="<?php if ( is_singular() ) { echo esc_url( get_permalink() ); } else { echo esc_url( home_url( '/' ) ); } ?>">
+	<meta property="og:description" content="<?php
+		if ( is_singular() ) {
+			if ( function_exists('wpseo_get_value') ) {
+				echo wpseo_get_value('metadesc'); // get meta descriptions from WordPress SEO plugin
+			} else {
+				echo $excerpt;
+			}
+		} else {
+			echo get_bloginfo('description');
+		}
+	?>">
+	<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>">
+	<meta property="og:image" content="<?php if ( is_singular() ) { echo tiga_fb_image(); } else { echo esc_url( $thumbsfb ); } ?>">
+	<!-- End Open Graph Tags -->
+<?php
+	
+} //end tiga_open_graph()
+
+/**
+ * Get image for facebook open-graph
+ *
+ * @since tiga 0.0.3
+ */
+function tiga_fb_image() {
+	global $post;
+	$thumbsfb = of_get_option('tiga_og_thumb');
+	$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '', '' );
+	
+	if ( has_post_thumbnail($post->ID) ) {
+		$fbimage = $src[0];
+	} else {
+		global $post, $posts;
+		$fbimage = '';
+		ob_start();
+		ob_end_clean();
+		$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+		if (array_key_exists(1, $matches)) {
+			if (array_key_exists(0, $matches[1])) {
+				$fbimage  = $matches [1] [0];
+			}
+		}
+	}
+	if(empty($fbimage)) {
+		$fbimage = esc_url( $thumbsfb );
+	}
+	
+	return $fbimage;
+	
+} // end tiga_fb_image()
+ 
 /**
  * Custom twitter widget function
  *

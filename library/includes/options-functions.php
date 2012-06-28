@@ -38,7 +38,7 @@ function tiga_custom_css() {
 function tiga_custom_background() {
 	$bg = of_get_option('tiga_custom_bg');
 	
-	if($bg) { ?>
+	if($bg['image'] OR $bg['color']) { ?>
 		<style type="text/css">
 			<?php if ($bg['image']) {
 				echo 'body { background: '.$bg['color'].' url('. esc_url( $bg['image'] ). ') '.$bg['repeat'].' '.$bg['position'].' '.$bg['attachment'].'; }'. "\n";

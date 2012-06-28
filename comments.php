@@ -42,7 +42,7 @@
 				 * to use tiga_comment() to format the comments.
 				 * If you want to overload this in a child theme then you can
 				 * define tiga_comment() and that will be used instead.
-				 * See tiga_comment() in functions.php for more.
+				 * See tiga_comment() in includes/templates.php for more.
 				 */
 				wp_list_comments( array( 'callback' => 'tiga_comment' ) );
 			?>

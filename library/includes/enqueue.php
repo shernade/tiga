@@ -20,7 +20,7 @@ add_action( 'wp_footer', 'tiga_js_ie' );
  * @since tiga 0.0.1
  */
 function tiga_enqueue_styles() {
-	wp_enqueue_style( 'style', get_stylesheet_uri(), '', '0.0.4', 'all' );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), '', '0.0.6', 'all' );
 	
 	wp_enqueue_style('shortcodes', get_template_directory_uri() . '/library/css/shortcodes.css', '', '0.0.1', 'all');
 }

@@ -1,3 +1,8 @@
+0.0.6 - 28 June 2012
+- Update options theme
+- Update form style
+- Get back grey sidebar
+
 0.0.5 - 13 June 2012
 - Fix pinterest get image
 - Remove breadcrumbs function

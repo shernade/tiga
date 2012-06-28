@@ -1,15 +1,14 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tiga 0.0.3\n"
+"Project-Id-Version: Tiga 0.0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-10 18:16+0700\n"
-"PO-Revision-Date: 2012-06-10 18:16+0700\n"
+"POT-Creation-Date: 2012-06-28 22:39+0700\n"
+"PO-Revision-Date: 2012-06-28 22:41+0700\n"
 "Last-Translator: Satrya <satryabima24@gmail.com>\n"
 "Language-Team: Satrya <satryabima24@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_n;esc_attr__\n"
 
 #: 404.php:16
 msgid "Oops! That page can&rsquo;t be found."
@@ -81,13 +80,6 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-featured.php:37
-#: content-single.php:14
-#: content.php:13
-#, php-format
-msgid "Permalink to %s"
-msgstr ""
-
 #: content-page.php:18
 #: content-single.php:28
 #: image.php:86
@@ -95,30 +87,20 @@ msgid "Pages:"
 msgstr ""
 
 #: content-page.php:19
-#: content-single.php:77
+#: content-single.php:51
 #: image.php:34
 #: image.php:100
 msgid "Edit"
 msgstr ""
 
-#: content-single.php:53
+#: content-single.php:45
 #, php-format
-msgid "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgid "<span class=\"%1$s\">%2$s</span>"
 msgstr ""
 
-#: content-single.php:55
+#: content-single.php:48
 #, php-format
-msgid "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: content-single.php:61
-#, php-format
-msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
-
-#: content-single.php:63
-#, php-format
-msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgid "<span class=\"%1$s category\">%2$s</span>"
 msgstr ""
 
 #: footer.php:31
@@ -192,7 +174,12 @@ msgid "Search Results for: %s"
 msgstr ""
 
 #: searchform.php:10
+#: searchform.php:12
 msgid "Search"
+msgstr ""
+
+#: searchform.php:11
+msgid "Search &hellip;"
 msgstr ""
 
 #: template-archives.php:29
@@ -215,47 +202,27 @@ msgstr ""
 msgid "Tiga Theme Options"
 msgstr ""
 
-#: options-framework.php:240
+#: options-framework.php:237
+msgid "Save Options"
+msgstr ""
+
+#: options-framework.php:238
+msgid "Restore Defaults"
+msgstr ""
+
+#: options-framework.php:238
 msgid "Click OK to reset. Any theme settings will be lost!"
 msgstr ""
 
-#: options-framework.php:253
-msgid "Need a Support ?"
-msgstr ""
-
-#: options-framework.php:255
-msgid "You can report an issue <a href=\"http://satrya.me/tiga-wordpress-theme/\" target=\"_blank\">here</a> or you can just drop me an email to asksatrya@gmail.com."
-msgstr ""
-
-#: options-framework.php:260
-msgid "Links"
-msgstr ""
-
-#: options-framework.php:263
-msgid "Tiga by Satrya"
-msgstr ""
-
-#: options-framework.php:264
-msgid "Follow me on Twitter @msattt"
-msgstr ""
-
 #: options-framework.php:270
-msgid "Contribute to Tiga Theme"
-msgstr ""
-
-#: options-framework.php:273
-msgid "You can contribute to this project by submitting a translation or you can <a href=\"https://github.com/satrya/tiga\" target=\"_blank\">fork the code on github</a>"
-msgstr ""
-
-#: options-framework.php:311
 msgid "Default options restored."
 msgstr ""
 
-#: options-framework.php:352
+#: options-framework.php:313
 msgid "Options saved."
 msgstr ""
 
-#: options-framework.php:408
+#: options-framework.php:365
 msgid "Theme Options"
 msgstr ""
 
@@ -355,99 +322,60 @@ msgstr ""
 msgid "Bold Italic"
 msgstr ""
 
-#: extensions.php:72
-#: extensions.php:74
-msgid "Category Archive: "
-msgstr ""
-
-#: extensions.php:98
-#, php-format
-msgid "Posts Published in: %s"
-msgstr ""
-
-#: extensions.php:150
-msgid "Search Results:"
-msgstr ""
-
-#: extensions.php:155
-msgid "Tag Archive:"
-msgstr ""
-
-#: extensions.php:160
-msgid "Posts Written by:"
-msgstr ""
-
-#: extensions.php:165
-msgid "Error 404:"
-msgstr ""
-
-#: extensions.php:166
-msgid "Page Not Found"
-msgstr ""
-
-#: extensions.php:170
-msgid "Post Format Archive:"
-msgstr ""
-
-#: extensions.php:214
+#: extensions.php:105
 msgid "Display your recent tweets to your readers."
 msgstr ""
 
-#: extensions.php:215
+#: extensions.php:106
 msgid "&raquo; tiga Twitter Widget"
 msgstr ""
 
-#: extensions.php:227
-#: extensions.php:470
-#: extensions.php:498
+#: extensions.php:118
+#: extensions.php:361
+#: extensions.php:389
 msgid "Title:"
 msgstr ""
 
-#: extensions.php:232
+#: extensions.php:123
 msgid "Twitter Username:"
 msgstr ""
 
-#: extensions.php:238
+#: extensions.php:129
 msgid "Number of Tweets to Retrieve:"
 msgstr ""
 
-#: extensions.php:332
+#: extensions.php:223
 msgid "Use this widget to list your recent Aside, Status, Quote, and Link posts"
 msgstr ""
 
-#: extensions.php:333
+#: extensions.php:224
 msgid "&raquo; tiga Ephemera"
 msgstr ""
 
-#: extensions.php:365
+#: extensions.php:256
 msgid "Ephemera"
 msgstr ""
 
-#: extensions.php:404
-#: extensions.php:420
+#: extensions.php:295
+#: extensions.php:311
 msgid "0 <span class=\"reply\">comments &rarr;</span>"
 msgstr ""
 
-#: extensions.php:404
-#: extensions.php:420
+#: extensions.php:295
+#: extensions.php:311
 msgid "1 <span class=\"reply\">comment &rarr;</span>"
 msgstr ""
 
-#: extensions.php:404
-#: extensions.php:420
+#: extensions.php:295
+#: extensions.php:311
 msgid "% <span class=\"reply\">comments &rarr;</span>"
 msgstr ""
 
-#: extensions.php:418
-#, php-format
-msgid "Link to %s"
-msgstr ""
-
-#: extensions.php:473
+#: extensions.php:364
 msgid "Number of posts to show:"
 msgstr ""
 
-#: extensions.php:514
+#: extensions.php:405
 #: options.php:186
 msgid "Social"
 msgstr ""
@@ -470,6 +398,30 @@ msgstr ""
 
 #: filters.php:151
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: options-sidebar.php:17
+msgid "Give Tiga Theme 5 Star Rating"
+msgstr ""
+
+#: options-sidebar.php:19
+msgid "If you love Tiga theme, please give 5 star rating at WordPress directory. <a href=\"http://wordpress.org/extend/themes/tiga\" target=\"_blank\">Give 5 star rating &rarr;</a>"
+msgstr ""
+
+#: options-sidebar.php:24
+msgid "Support"
+msgstr ""
+
+#: options-sidebar.php:26
+msgid "Need a support ? Create a ticket <a href=\"http://www.themephe.com/tickets/\" target=\"_blank\">here</a> or you can <a href=\"http://twitter.com/msattt\" target=\"_blank\">follow me @msattt</a>"
+msgstr ""
+
+#: options-sidebar.php:31
+msgid "Contribute to Tiga Theme"
+msgstr ""
+
+#: options-sidebar.php:34
+msgid "You can contribute to this project by submit a translation <a href=\"http://www.themephe.com/tickets/\" target=\"_blank\">here</a>"
 msgstr ""
 
 #: options.php:39
@@ -804,88 +756,96 @@ msgstr ""
 msgid "Ads after post content on single post"
 msgstr ""
 
-#: setup.php:36
+#: setup.php:29
 msgid "Primary Navigation"
 msgstr ""
 
-#: setup.php:37
+#: setup.php:30
 msgid "Secondary Navigation"
 msgstr ""
 
-#: templates.php:108
+#: templates.php:26
 msgid "Post navigation"
 msgstr ""
 
-#: templates.php:119
+#: templates.php:30
+msgid "&larr;"
+msgstr ""
+
+#: templates.php:31
+msgid "&rarr;"
+msgstr ""
+
+#: templates.php:37
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: templates.php:123
+#: templates.php:41
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: templates.php:142
+#: templates.php:60
 #, php-format
 msgid "Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 msgstr ""
 
-#: templates.php:148
+#: templates.php:66
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: templates.php:152
+#: templates.php:70
 msgid "Leave a comment"
 msgstr ""
 
-#: templates.php:152
+#: templates.php:70
 msgid "1 Comment"
 msgstr ""
 
-#: templates.php:152
+#: templates.php:70
 msgid "% Comments"
 msgstr ""
 
-#: templates.php:214
+#: templates.php:132
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: templates.php:251
+#: templates.php:169
 msgid "Pingback:"
 msgstr ""
 
-#: templates.php:268
+#: templates.php:186
 #, php-format
 msgid "%1$s on %2$s <span class=\"says\">said:</span>"
 msgstr ""
 
-#: templates.php:274
+#: templates.php:192
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: templates.php:283
+#: templates.php:201
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: templates.php:291
+#: templates.php:209
 msgid "Reply <span>&darr;</span>"
 msgstr ""
 
-#: templates.php:329
+#: templates.php:229
 msgid "Comment navigation"
 msgstr ""
 
-#: templates.php:330
+#: templates.php:230
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: templates.php:331
+#: templates.php:231
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: templates.php:362
+#: templates.php:262
 msgid "Share This:"
 msgstr ""
 

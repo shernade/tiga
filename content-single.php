@@ -41,37 +41,11 @@
 		?>
 	
 		<?php 
-			/* translators: used between list items, there is a space after the comma */
-			$tiga_category_list = get_the_category_list( __( ', ', 'tiga' ) );
-			
-			/* translators: used between list items, there is a space after the comma */
-			$tiga_tag_list = get_the_tag_list( '', ', ' );
+			$tags_list = get_the_tag_list( '', ', ' );
+				printf( __( '<span class="%1$s">%2$s</span>', 'tiga' ), 'entry-utility-prep entry-utility-prep-tag-links tag', $tags_list );
 
-			if ( ! tiga_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tiga_tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'tiga' );
-				} else {
-					$tiga_meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'tiga' );
-				}
-
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tiga_tag_list ) {
-					$tiga_meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'tiga' );
-				} else {
-					$tiga_meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'tiga' );
-				}
-
-			} // end check for categories on this blog
-
-			printf(
-				$tiga_meta_text,
-				$tiga_category_list,
-				$tiga_tag_list,
-				get_permalink(),
-				the_title_attribute( 'echo=0' )
-			);
+			$categories_list = get_the_category_list(', ');
+				printf( __( '<span class="%1$s category">%2$s</span>', 'tiga' ), 'entry-utility-prep entry-utility-prep-cat-links cat', $categories_list );
 		?>
 
 		<?php edit_post_link( __( 'Edit', 'tiga' ), '<span class="post-edit">', '</span>' ); ?>
