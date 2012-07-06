@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tiga 0.0.6\n"
+"Project-Id-Version: Tiga 0.0.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-28 22:39+0700\n"
-"PO-Revision-Date: 2012-06-28 22:41+0700\n"
+"POT-Creation-Date: 2012-07-06 21:55+0700\n"
+"PO-Revision-Date: 2012-07-06 21:56+0700\n"
 "Last-Translator: Satrya <satryabima24@gmail.com>\n"
-"Language-Team: Satrya <satryabima24@gmail.com>\n"
+"Language-Team: satrya <satryabima24@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -322,61 +322,61 @@ msgstr ""
 msgid "Bold Italic"
 msgstr ""
 
-#: extensions.php:105
+#: extensions.php:25
 msgid "Display your recent tweets to your readers."
 msgstr ""
 
-#: extensions.php:106
+#: extensions.php:26
 msgid "&raquo; tiga Twitter Widget"
 msgstr ""
 
-#: extensions.php:118
-#: extensions.php:361
-#: extensions.php:389
+#: extensions.php:38
+#: extensions.php:281
+#: extensions.php:309
 msgid "Title:"
 msgstr ""
 
-#: extensions.php:123
+#: extensions.php:43
 msgid "Twitter Username:"
 msgstr ""
 
-#: extensions.php:129
+#: extensions.php:49
 msgid "Number of Tweets to Retrieve:"
 msgstr ""
 
-#: extensions.php:223
+#: extensions.php:143
 msgid "Use this widget to list your recent Aside, Status, Quote, and Link posts"
 msgstr ""
 
-#: extensions.php:224
+#: extensions.php:144
 msgid "&raquo; tiga Ephemera"
 msgstr ""
 
-#: extensions.php:256
+#: extensions.php:176
 msgid "Ephemera"
 msgstr ""
 
-#: extensions.php:295
-#: extensions.php:311
+#: extensions.php:215
+#: extensions.php:231
 msgid "0 <span class=\"reply\">comments &rarr;</span>"
 msgstr ""
 
-#: extensions.php:295
-#: extensions.php:311
+#: extensions.php:215
+#: extensions.php:231
 msgid "1 <span class=\"reply\">comment &rarr;</span>"
 msgstr ""
 
-#: extensions.php:295
-#: extensions.php:311
+#: extensions.php:215
+#: extensions.php:231
 msgid "% <span class=\"reply\">comments &rarr;</span>"
 msgstr ""
 
-#: extensions.php:364
+#: extensions.php:284
 msgid "Number of posts to show:"
 msgstr ""
 
-#: extensions.php:405
-#: options.php:186
+#: extensions.php:325
+#: options.php:201
 msgid "Social"
 msgstr ""
 
@@ -401,27 +401,23 @@ msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: options-sidebar.php:17
-msgid "Give Tiga Theme 5 Star Rating"
-msgstr ""
-
-#: options-sidebar.php:19
-msgid "If you love Tiga theme, please give 5 star rating at WordPress directory. <a href=\"http://wordpress.org/extend/themes/tiga\" target=\"_blank\">Give 5 star rating &rarr;</a>"
-msgstr ""
-
-#: options-sidebar.php:24
-msgid "Support"
+msgid "Recommended Theme"
 msgstr ""
 
 #: options-sidebar.php:26
-msgid "Need a support ? Create a ticket <a href=\"http://www.themephe.com/tickets/\" target=\"_blank\">here</a> or you can <a href=\"http://twitter.com/msattt\" target=\"_blank\">follow me @msattt</a>"
+msgid "Give Tiga Theme 5 Star Rating"
 msgstr ""
 
-#: options-sidebar.php:31
-msgid "Contribute to Tiga Theme"
+#: options-sidebar.php:28
+msgid "If you love Tiga theme, please give 5 star rating at WordPress directory. <a href=\"http://wordpress.org/extend/themes/tiga\" target=\"_blank\">Give 5 star rating &rarr;</a>"
 msgstr ""
 
-#: options-sidebar.php:34
-msgid "You can contribute to this project by submit a translation <a href=\"http://www.themephe.com/tickets/\" target=\"_blank\">here</a>"
+#: options-sidebar.php:33
+msgid "Support & Contribute"
+msgstr ""
+
+#: options-sidebar.php:35
+msgid "Need a support? Or you want to submit a translation. Create a ticket <a href=\"http://www.themephe.com/tickets/\" target=\"_blank\">here</a> or you can <a href=\"http://twitter.com/msattt\" target=\"_blank\">follow me @msattt</a>"
 msgstr ""
 
 #: options.php:39
@@ -484,275 +480,291 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: options.php:67
+#: options.php:68
 msgid "General"
 msgstr ""
 
-#: options.php:72
+#: options.php:73
 msgid "Custom Logo"
 msgstr ""
 
-#: options.php:73
+#: options.php:74
 msgid "Upload a logo for your website, or specify the image address of your online logo. (http://example.com/logo.png)"
 msgstr ""
 
-#: options.php:79
+#: options.php:80
 msgid "Custom Favicon"
 msgstr ""
 
-#: options.php:80
+#: options.php:81
 msgid "Upload a favicon for your website, or specify the image address of your online favicon. (http://example.com/favicon.png)"
 msgstr ""
 
-#: options.php:86
+#: options.php:87
 msgid "Custom CSS"
 msgstr ""
 
-#: options.php:87
+#: options.php:88
 msgid "Quickly add some CSS to your theme by adding it to this block."
 msgstr ""
 
-#: options.php:94
+#: options.php:95
 msgid "Analytic Code"
 msgstr ""
 
-#: options.php:95
+#: options.php:96
 msgid "Paste your Google Analytics (or other) tracking code here. It will be inserted before the closing body tag of your theme."
 msgstr ""
 
-#: options.php:101
+#: options.php:102
 msgid "Iframe Blocker"
 msgstr ""
 
-#: options.php:102
+#: options.php:103
 msgid "Iframe blocker is for block iframe to your site such as google image."
 msgstr ""
 
-#: options.php:112
+#: options.php:113
 msgid "Theme"
 msgstr ""
 
-#: options.php:117
-msgid "Facebook open graph default thumb"
-msgstr ""
-
 #: options.php:118
-msgid "Upload your default facebook open graph thumbnail"
-msgstr ""
-
-#: options.php:124
 msgid "Layouts"
 msgstr ""
 
-#: options.php:125
+#: options.php:119
 msgid "Available layout(left content, right content)"
 msgstr ""
 
-#: options.php:136
-msgid "Custom background"
+#: options.php:130
+msgid "Background Pattern"
 msgstr ""
 
-#: options.php:137
-msgid "Customize your background"
-msgstr ""
-
-#: options.php:144
-msgid "Show featured posts"
-msgstr ""
-
-#: options.php:145
-msgid "Check this options to show featured posts on home page"
+#: options.php:131
+msgid "Available background pattern to customize your site"
 msgstr ""
 
 #: options.php:151
-msgid "Select a number of featured posts"
+msgid "Custom background"
 msgstr ""
 
 #: options.php:152
+msgid "Customize your background"
+msgstr ""
+
+#: options.php:159
+msgid "Show featured posts"
+msgstr ""
+
+#: options.php:160
+msgid "Check this options to show featured posts on home page"
+msgstr ""
+
+#: options.php:166
+msgid "Select a number of featured posts"
+msgstr ""
+
+#: options.php:167
 msgid "How many featured posts you want to show ?"
 msgstr ""
 
-#: options.php:161
+#: options.php:176
 msgid "Use footer widgets"
 msgstr ""
 
-#: options.php:162
+#: options.php:177
 msgid "Check this option if you want to use the footer widgets"
 msgstr ""
 
-#: options.php:168
+#: options.php:183
 msgid "Display social share button"
 msgstr ""
 
-#: options.php:169
+#: options.php:184
 msgid "Display social share on single post and page"
 msgstr ""
 
-#: options.php:177
+#: options.php:192
 msgid "Display author box"
 msgstr ""
 
-#: options.php:178
+#: options.php:193
 msgid "Check this option if you want display the author box on single posts"
 msgstr ""
 
-#: options.php:191
+#: options.php:206
 msgid "Social settings"
 msgstr ""
 
-#: options.php:192
+#: options.php:207
 msgid "If you want to display the social button, first you should fill the form below, put only the <strong>username</strong>. After that, go to Appearance > Widgets then drag the widget called &raquo; tiga socia widget."
 msgstr ""
 
-#: options.php:197
+#: options.php:212
 msgid "Email"
 msgstr ""
 
-#: options.php:198
+#: options.php:213
 msgid "Your email"
 msgstr ""
 
-#: options.php:204
+#: options.php:219
 msgid "Twitter Username"
 msgstr ""
 
-#: options.php:205
+#: options.php:220
 msgid "Your twitter username"
 msgstr ""
 
-#: options.php:211
+#: options.php:226
 msgid "Facebook Username"
 msgstr ""
 
-#: options.php:212
+#: options.php:227
 msgid "Your facebook username"
 msgstr ""
 
-#: options.php:218
+#: options.php:233
 msgid "Google Plus Username"
 msgstr ""
 
-#: options.php:219
+#: options.php:234
 msgid "https://plus.google.com/u/<strong>109253446701726260861</strong>"
 msgstr ""
 
-#: options.php:225
+#: options.php:240
 msgid "Youtube Username"
 msgstr ""
 
-#: options.php:226
+#: options.php:241
 msgid "Your youtube username"
 msgstr ""
 
-#: options.php:232
+#: options.php:247
 msgid "Flickr Username"
 msgstr ""
 
-#: options.php:233
+#: options.php:248
 msgid "Your flickr username"
 msgstr ""
 
-#: options.php:239
+#: options.php:254
 msgid "Linkedin Username"
 msgstr ""
 
-#: options.php:240
+#: options.php:255
 msgid "http://id.linkedin.com/in/<strong>username</strong>"
 msgstr ""
 
-#: options.php:246
+#: options.php:261
 msgid "Pinterest Username"
 msgstr ""
 
-#: options.php:247
+#: options.php:262
 msgid "Your pinterest username"
 msgstr ""
 
-#: options.php:253
+#: options.php:268
 msgid "Dribbble Username"
 msgstr ""
 
-#: options.php:254
+#: options.php:269
 msgid "Your dribbble username"
 msgstr ""
 
-#: options.php:260
+#: options.php:275
 msgid "Github Username"
 msgstr ""
 
-#: options.php:261
+#: options.php:276
 msgid "Your github username"
 msgstr ""
 
-#: options.php:267
+#: options.php:282
 msgid "LastFM Username"
 msgstr ""
 
-#: options.php:268
+#: options.php:283
 msgid "Your lastfm username"
 msgstr ""
 
-#: options.php:274
+#: options.php:289
 msgid "Vimeo Username"
 msgstr ""
 
-#: options.php:275
+#: options.php:290
 msgid "Your vimeo username"
 msgstr ""
 
-#: options.php:283
-msgid "Meta Verification"
+#: options.php:296
+msgid "Tumblr Username"
 msgstr ""
 
-#: options.php:288
-msgid "Webmaster Tools Setting"
-msgstr ""
-
-#: options.php:289
-msgid "You can use the boxes below to verify with the different Webmaster Tools. Only enter the meta values/content. <br />ex: <i><meta name=\"google-site-verification\" content=\"<b>2141241512</b>\" /></i>"
-msgstr ""
-
-#: options.php:294
-msgid "Google Webmaster Tools"
-msgstr ""
-
-#: options.php:295
-msgid "<a href=\"http://www.google.com/webmasters/\">Google webmaster tools &raquo;</a>"
-msgstr ""
-
-#: options.php:302
-msgid "Bing Webmaster"
+#: options.php:297
+msgid "Your tumblr username"
 msgstr ""
 
 #: options.php:303
+msgid "Instagram Username"
+msgstr ""
+
+#: options.php:304
+msgid "Your instagram username"
+msgstr ""
+
+#: options.php:312
+msgid "Meta Verification"
+msgstr ""
+
+#: options.php:317
+msgid "Webmaster Tools Setting"
+msgstr ""
+
+#: options.php:318
+msgid "You can use the boxes below to verify with the different Webmaster Tools. Only enter the meta values/content. <br />ex: <i><meta name=\"google-site-verification\" content=\"<b>2141241512</b>\" /></i>"
+msgstr ""
+
+#: options.php:323
+msgid "Google Webmaster Tools"
+msgstr ""
+
+#: options.php:324
+msgid "<a href=\"http://www.google.com/webmasters/\">Google webmaster tools &raquo;</a>"
+msgstr ""
+
+#: options.php:331
+msgid "Bing Webmaster"
+msgstr ""
+
+#: options.php:332
 msgid "<a href=\"http://www.bing.com/webmaster/\">Bing webmaster &raquo;</a>"
 msgstr ""
 
-#: options.php:310
+#: options.php:339
 msgid "Alexa"
 msgstr ""
 
-#: options.php:311
+#: options.php:340
 msgid "<a href=\"http://www.alexa.com/\">Alexa &raquo;</a>"
 msgstr ""
 
-#: options.php:320
+#: options.php:349
 msgid "Ads"
 msgstr ""
 
-#: options.php:325
+#: options.php:354
 msgid "Ads 1"
 msgstr ""
 
-#: options.php:326
+#: options.php:355
 msgid "Ads after post title on single post"
 msgstr ""
 
-#: options.php:333
+#: options.php:362
 msgid "Ads 2"
 msgstr ""
 
-#: options.php:334
+#: options.php:363
 msgid "Ads after post content on single post"
 msgstr ""
 
@@ -766,14 +778,6 @@ msgstr ""
 
 #: templates.php:26
 msgid "Post navigation"
-msgstr ""
-
-#: templates.php:30
-msgid "&larr;"
-msgstr ""
-
-#: templates.php:31
-msgid "&rarr;"
 msgstr ""
 
 #: templates.php:37
