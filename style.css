@@ -1,11 +1,11 @@
 /*
-Theme Name:		Tiga
+Theme Name: 	Tiga
 Theme URI:  	http://satrya.me/tiga-wordpress-theme
-Description: 	Responsive and super clean blogging theme with sticky posts slider. It supports 5 widget areas, facebook open-graph integration, custom social share buttons and widget social media buttons. Has an optional full-width page template and sitemap page template, also translation ready.
-Version: 		0.0.6
+Description: 	Multidevice layout, optimized for mobile browsing and super clean blogging WordPress theme, perfect for you who wants focused on the content. It supports 5 widget areas, 10 custom background patterns, custom social share buttons, 14 social media buttons widget and featured posts with slider option. Has an optional full-width page template and sitemap page template, also translation ready.
+Version: 		0.0.7
 Author: 		Satrya
 Author URI:		http://satrya.me
-Tags: 			white, light, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background, custom-menu, featured-images, full-width-template, microformats, post-formats, theme-options, threaded-comments, translation-ready
+Tags: 			white, light, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background, custom-menu, featured-images, full-width-template, microformats, theme-options, threaded-comments, translation-ready
 
 License: 		GNU General Public License v3
 License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
@@ -42,7 +42,7 @@ See: http://codex.wordpress.org/Child_Themes
 	- Footer
 		Styles for footer area
 	- Plugins
-		Collection of styles for theme plugins such as lightbox, slider, tooltip etc
+		Collection of styles for theme plugins
 	- Utilities
 		List of helper classes (eg clearfix, alignment, etc)
 	- WordPress Pagination
@@ -58,6 +58,22 @@ See: http://codex.wordpress.org/Child_Themes
   font-family: "BitterRegular";
   src: url('library/fonts/bitter/Bitter-Regular-webfont.eot');
   src: url('library/fonts/bitter/Bitter-Regular-webfont.eot?#iefix') format('eot'), url('library/fonts/bitter/Bitter-Regular-webfont.svg#BitterRegular') format('svg'), url('library/fonts/bitter/Bitter-Regular-webfont.woff') format('woff'), url('library/fonts/bitter/Bitter-Regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BitterItalic";
+  src: url('library/fonts/bitter/Bitter-Italic-webfont.eot');
+  src: url('library/fonts/bitter/Bitter-Italic-webfont.eot?#iefix') format('eot'), url('library/fonts/bitter/Bitter-Italic-webfont.svg#BitterItalic') format('svg'), url('library/fonts/bitter/Bitter-Italic-webfont.woff') format('woff'), url('library/fonts/bitter/Bitter-Italic-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BitterBold";
+  src: url('library/fonts/bitter/Bitter-Bold-webfont.eot');
+  src: url('library/fonts/bitter/Bitter-Bold-webfont.eot?#iefix') format('eot'), url('library/fonts/bitter/Bitter-Bold-webfont.svg#BitterBold') format('svg'), url('library/fonts/bitter/Bitter-Bold-webfont.woff') format('woff'), url('library/fonts/bitter/Bitter-Bold-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -269,8 +285,6 @@ a:hover {
   background-color: whitesmoke;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
@@ -432,13 +446,16 @@ p {
   margin: 0 0 1.5em;
 }
 
+i,
 em {
   font-style: italic;
+  font-family: "BitterItalic", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
 b,
 strong {
   font-weight: bold;
+  font-family: "BitterBold", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
 small {
@@ -452,6 +469,7 @@ cite {
 dfn {
   font-style: italic;
   font-weight: bold;
+  font-family: "BitterBold", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
 sub,
@@ -566,6 +584,7 @@ address {
   display: block;
   margin: 0 0 1.5em;
   font-style: italic;
+  font-family: "BitterItalic", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
 /* 	LISTS
@@ -607,6 +626,7 @@ dl {
 
 dt {
   font-weight: bold;
+  font-family: "BitterBold", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
 dd {
@@ -622,6 +642,7 @@ Base styles for various input types and form layouts
 label {
   font-weight: bold;
   font-size: 12px;
+  font-family: "BitterBold", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
 fieldset {
@@ -637,10 +658,9 @@ legend {
   border: 1px solid #dddddd;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   font-weight: bold;
+  font-family: "BitterBold", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
   display: block;
   left: 0;
   margin: 0;
@@ -715,8 +735,6 @@ input,
 textarea {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: all 0.2s linear;
   -webkit-transition-delay: 0s;
@@ -764,8 +782,6 @@ input[type="button"] {
   -webkit-appearance: none;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
@@ -849,8 +865,6 @@ input[type="week"] {
   background-clip: padding-box;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -1142,6 +1156,7 @@ p img,
   line-height: 1.714em;
   font-style: normal;
   font-weight: bold;
+  font-family: "BitterBold", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
   margin-right: 5px;
   position: absolute;
   left: 10px;
@@ -1415,8 +1430,6 @@ Styles for header area such as header, custom header, menus etc.
 .main-navigation ul ul ul {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
   left: 100%;
   top: 0;
@@ -1436,8 +1449,6 @@ Styles for header area such as header, custom header, menus etc.
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.6);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   margin-top: 0.15em;
   position: relative;
@@ -1489,8 +1500,6 @@ Styles for header area such as header, custom header, menus etc.
 .secondary-navigation ul li:hover:first-child {
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
-  -ms-border-radius: 5px 0 0 5px;
-  -o-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
 }
 .secondary-navigation ul li.arrow {
@@ -1532,8 +1541,6 @@ Styles for header area such as header, custom header, menus etc.
 .secondary-navigation ul ul li:hover:first-child {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
 }
 .secondary-navigation ul ul li:last-child {
@@ -1821,36 +1828,8 @@ article h6 {
   background-color: transparent;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
   padding: 0;
-}
-
-/*	POST FORMATS
-	----------------- */
-.entry-format {
-  font-size: 0.75em;
-  line-height: 2em;
-  color: #999999;
-}
-
-.format-quote blockquote {
-  background: whitesmoke url('library/img/quotes.png') no-repeat 1.3em 1.8em;
-  border: 0;
-  color: #111;
-  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
-  font-size: 1.385em;
-  line-height: 1.333em;
-  padding: 2em 20px;
-}
-.format-quote blockquote p {
-  margin: 0;
-  padding: 0 0 0 2.5em;
-}
-.format-quote blockquote p cite {
-  display: block;
-  padding-top: 0.75em;
 }
 
 /*	AUTHOR PAGE
@@ -1870,15 +1849,13 @@ article h6 {
   border: 1px solid #eeeeee;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
   border-radius: 10px;
   padding: 0.15em;
 }
 #author-info #author-description h2 {
   font-size: 1em;
   line-height: 1.5em;
-  font-family: "BitterRegular", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  font-family: "BitterBold", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
   font-weight: bold;
 }
 #author-info #author-description p {
@@ -2024,8 +2001,6 @@ Styles for sidebar and all widget areas
   background-image: linear-gradient(#ffffff, #f2f2f2);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #e6e6e6;
   color: #999999;
@@ -2067,6 +2042,7 @@ Styles for sidebar and all widget areas
   color: #222222;
   font-size: 14px;
   font-weight: bold;
+  font-family: "BitterBold", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
   padding-bottom: 4px;
   text-align: left;
 }
@@ -2165,6 +2141,7 @@ Styles for sidebar and all widget areas
 }
 .widget_tiga_ephemera ol li a {
   font-weight: bold;
+  font-family: "BitterBold", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
   display: block;
 }
 .widget_tiga_ephemera ol li .comments-link {
@@ -2258,8 +2235,6 @@ Styles for comments area(comment form & comment lists)
   border: 1px solid #eeeeee;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
   border-radius: 10px;
   display: inline;
   float: left;
@@ -2370,8 +2345,6 @@ Styles for footer area
   background: #222222;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   margin-bottom: 1.5em;
 }
@@ -2452,7 +2425,7 @@ Styles for footer area
 
 /* =============================================================================
 - Plugins
-Collection of styles for theme plugins such as lightbox, slider, tooltip etc
+Collection of styles for theme plugins
 ============================================================================= */
 /* http://responsiveslides.com v1.25 by @viljamis */
 .rslides {
@@ -2535,8 +2508,6 @@ Collection of styles for theme plugins such as lightbox, slider, tooltip etc
   background: rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
   border-radius: 15px;
   -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, 0.3);
@@ -2769,8 +2740,6 @@ hr.lightborder {
   -webkit-appearance: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
   border-radius: 4px;
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
@@ -2867,10 +2836,9 @@ Miscellaneous styles
   color: #555555;
   font-size: 1.273em;
   line-height: 1.714em;
-  font-weight: bold;
-  margin-right: 0.75em;
+  margin: 0.3em 0.75em 0 0;
 }
-.share p.twitter, .share p.fb-like, .share p.plusone, .share p.stumble, .share p.pin-it {
+.share p.twitter, .share p.fb-like, .share p.plusone, .share p.stumble, .share p.linkedin {
   position: relative;
   top: 5px;
 }
@@ -2916,8 +2884,6 @@ article #author-info #author-description p {
   background-color: whitesmoke;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
   margin: 0 0 1.5em 0;
   padding: 1.4em;
@@ -2946,6 +2912,48 @@ article #author-info #author-description p {
 }
 .entry-content div.wpcf7 img.ajax-loader {
   margin-left: 1em;
+}
+
+/* 	PATTERN
+	----------------- */
+body.pattern-1 {
+  background: url('library/img/bg/1.png') repeat left center;
+}
+
+body.pattern-2 {
+  background: url('library/img/bg/2.png') repeat left center;
+}
+
+body.pattern-3 {
+  background: url('library/img/bg/3.png') repeat left center;
+}
+
+body.pattern-4 {
+  background: url('library/img/bg/4.png') repeat left center;
+}
+
+body.pattern-5 {
+  background: url('library/img/bg/5.jpg') repeat left center;
+}
+
+body.pattern-6 {
+  background: url('library/img/bg/6.jpg') repeat left center;
+}
+
+body.pattern-7 {
+  background: url('library/img/bg/7.png') repeat left center;
+}
+
+body.pattern-8 {
+  background: url('library/img/bg/8.png') repeat left center;
+}
+
+body.pattern-9 {
+  background: url('library/img/bg/9.png') repeat left center;
+}
+
+body.pattern-10 {
+  background: url('library/img/bg/10.png') repeat left center;
 }
 
 /* =============================================================================

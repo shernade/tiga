@@ -9,14 +9,14 @@
  */
 
 function optionsframework_option_name() {
-	// This gets the theme name from the stylesheet (lowercase and without spaces)
-	$themename = get_theme_data(get_stylesheet_directory() . '/style.css');
-	$themename = $themename['Name'];
-	$themename = preg_replace('/\W/', '', strtolower($themename) );
-	
-	$optionsframework_settings = get_option('optionsframework');
+
+	// This gets the theme name from the stylesheet
+	$themename = get_option( 'stylesheet' );
+	$themename = preg_replace("/\W/", "_", strtolower($themename) );
+
+	$optionsframework_settings = get_option( 'optionsframework' );
 	$optionsframework_settings['id'] = $themename;
-	update_option('optionsframework', $optionsframework_settings);
+	update_option( 'optionsframework', $optionsframework_settings );
 }
 
 /**
@@ -60,6 +60,7 @@ function optionsframework_options() {
 	);
 	
 	$imagepath =  get_stylesheet_directory_uri() . '/library/admin/images/layouts/';
+	$patternpath =  get_stylesheet_directory_uri() . '/library/img/bg/';
 		
 	$options = array();
 		
@@ -112,13 +113,6 @@ function optionsframework_options() {
 		'name' => __('Theme', 'tiga'),
 		'type' => 'heading'
 	);
-	
-	$options[] = array( 
-		'name' => __('Facebook open graph default thumb', 'tiga'),
-		'desc' => __('Upload your default facebook open graph thumbnail', 'tiga'),
-		'id' => 'tiga_og_thumb',
-		'type' => 'upload'
-	);
 						
 	$options[] = array( 
 		'name' => __('Layouts', 'tiga'),
@@ -129,6 +123,27 @@ function optionsframework_options() {
 		'options' => array(
 			'lcontent' => $imagepath . '2cr.png',
 			'rcontent' => $imagepath . '2cl.png'
+		)
+	);
+	
+	$options[] = array( 
+		'name' => __('Background Pattern', 'tiga'),
+		'desc' => __('Available background pattern to customize your site', 'tiga'),
+		'id' => 'tiga_pattern',
+		'std' => 'pattern-0',
+		'type' => 'images',
+		'options' => array(
+			'pattern-0' => $patternpath . '0.png',
+			'pattern-1' => $patternpath . '1.png',
+			'pattern-2' => $patternpath . '2.png',
+			'pattern-3' => $patternpath . '3.png',
+			'pattern-4' => $patternpath . '4.png',
+			'pattern-5' => $patternpath . '5.jpg',
+			'pattern-6' => $patternpath . '6.jpg',
+			'pattern-7' => $patternpath . '7.png',
+			'pattern-8' => $patternpath . '8.png',
+			'pattern-9' => $patternpath . '9.png',
+			'pattern-10' => $patternpath . '10.png'
 		)
 	);
 	
@@ -277,6 +292,20 @@ function optionsframework_options() {
 		'type' => 'text'
 	);
 	
+	$options[] = array( 
+		'name' => __('Tumblr Username', 'tiga'),
+		'desc' => __('Your tumblr username', 'tiga'),
+		'id' => 'tiga_tumblr_username',
+		'type' => 'text'
+	);
+	
+	$options[] = array( 
+		'name' => __('Instagram Username', 'tiga'),
+		'desc' => __('Your instagram username', 'tiga'),
+		'id' => 'tiga_instagram_username',
+		'type' => 'text'
+	);
+	
 	/* ============================== End Social Settings ================================= */
 	
 	$options[] = array( 
@@ -338,7 +367,7 @@ function optionsframework_options() {
 	); 
 	
 	/* ============================== End Ads Settings ================================= */	
-			
+	
 	return $options;
 }
 

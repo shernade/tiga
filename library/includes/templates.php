@@ -23,7 +23,7 @@ function tiga_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="assistive-text"><?php _e( 'Post navigation', 'tiga' ); ?></h1>
+		<h5 class="assistive-text"><?php _e( 'Post navigation', 'tiga' ); ?></h5>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
@@ -226,7 +226,7 @@ if ( ! function_exists( 'tiga_comment_nav' ) ) :
 function tiga_comment_nav() {
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 	<nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation clearfix">
-		<h1 class="assistive-text"><?php _e( 'Comment navigation', 'tiga' ); ?></h1>
+		<h5 class="assistive-text"><?php _e( 'Comment navigation', 'tiga' ); ?></h5>
 		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'tiga' ) ); ?></div>
 		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'tiga' ) ); ?></div>
 	</nav>
@@ -278,11 +278,10 @@ function tiga_share_buttons() {
 			<su:badge layout="1"></su:badge>
 		</p> <!-- end .stumble -->
 		
-		<p class="pin-it">
-			<?php 
-			global $post; ?>
-			<a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink($post->ID)); ?>&media=<?php echo tiga_fb_image(); ?>&description=<?php the_title(); ?>" class="pin-it-button" count-layout="horizontal">Pin It</a>
-		</p> <!-- end .pin-it -->
+		<p class="linkedin">
+			<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+			<script type="IN/Share" data-counter="right"></script>
+		</p> <!-- end .linkedin -->
 		
 	</div> <!-- end .share -->
 <?php

@@ -49,7 +49,7 @@
 			</div> <!-- end .site-branding -->
 
 			<nav class="site-navigation main-navigation" role="navigation">
-				<h1 class="assistive-text"><?php _e( 'Menu', 'tiga' ); ?></h1>
+				<h5 class="assistive-text"><?php _e( 'Menu', 'tiga' ); ?></h5>
 				<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tiga' ); ?>"><?php _e( 'Skip to content', 'tiga' ); ?></a></div>
 
 				<?php wp_nav_menu( array(  

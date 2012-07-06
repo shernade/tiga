@@ -13,6 +13,15 @@ function tiga_options_sidebar() { ?>
 	<div id="optionsframework-sidebar">
 		<div class="metabox-holder">
 			
+			<div id="tiga-themes" class="postbox">
+				<h3 class="hndle"><span><?php _e('Recommended Theme', 'tiga'); ?></span></h3>
+				<div class="inside">
+					<p><strong>Rumput Hijau</strong></p>
+					<a href="http://satrya.me/rumput-hijau-wordpress-theme/" title="Download now!" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/library/img/rumput-hijau.png"></a>
+					<p>Responsive, clean and search engine friendly WordPress theme.<br><a href="http://satrya.me/rumput-hijau-wordpress-theme/" title="Download now!" target="_blank">Get it for free! &rarr;</a></p>
+				</div>
+			</div>
+			
 			<div id="tiga-rating" class="postbox">
 				<h3 class="hndle"><span><?php _e('Give Tiga Theme 5 Star Rating', 'tiga'); ?></span></h3>
 				<div class="inside">
@@ -21,18 +30,9 @@ function tiga_options_sidebar() { ?>
 			</div>
 			
 			<div id="tiga-support" class="postbox">
-				<h3 class="hndle"><span><?php _e('Support', 'tiga'); ?></span></h3>
+				<h3 class="hndle"><span><?php _e('Support & Contribute', 'tiga'); ?></span></h3>
 				<div class="inside">
-					<p><?php _e('Need a support ? Create a ticket <a href="http://www.themephe.com/tickets/" target="_blank">here</a> or you can <a href="http://twitter.com/msattt" target="_blank">follow me @msattt</a>', 'tiga'); ?></p>
-				</div>
-			</div>
-			
-			<div id="tiga-contribute" class="postbox">
-				<h3 class="hndle"><span><?php _e('Contribute to Tiga Theme', 'tiga'); ?></span></h3>
-				<div class="inside">
-					<ul class="links">
-						<li><?php _e('You can contribute to this project by submit a translation <a href="http://www.themephe.com/tickets/" target="_blank">here</a>', 'tiga'); ?></li>
-					</ul>
+					<p><?php _e('Need a support? Or you want to submit a translation. Create a ticket <a href="http://www.themephe.com/tickets/" target="_blank">here</a> or you can <a href="http://twitter.com/msattt" target="_blank">follow me @msattt</a>', 'tiga'); ?></p>
 				</div>
 			</div>
 			

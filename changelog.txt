@@ -1,3 +1,10 @@
+0.0.7 - 06 July 2012
+- Add tumblr & intagram social button
+- Remove Facebook open-graph
+- Add 10 background pattern
+- Remove shortcodes
+- Change pinterest button with linkedin button
+
 0.0.6 - 28 June 2012
 - Update options theme
 - Update form style

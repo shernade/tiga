@@ -1,34 +1,35 @@
--------------------------------------------------------
-	TIGA THEME
--------------------------------------------------------
-Tiga is based on _s(https://github.com/Automattic/_s) theme by Automattic, rebuild using susy grid framework & Pondasee(https://github.com/tokokoo/pondasee).
+=== Tiga ===
 
-Contributors: satrya
+Contributor: satrya
 Demo: http://satrya.me/demo/tiga
-Description: Responsive and super clean blogging theme with sticky posts slider. It supports 5 widget areas, facebook open-graph integration, custom social share buttons and widget social media buttons. Has an optional full-width page template and sitemap page template, also translation ready.
 Requires at least: 3.4
 Tested up to: 3.4
-Stable tag: 0.0.6
+Stable tag: 0.0.7
 License: http://www.gnu.org/licenses/gpl-3.0.html
 
--------------------------------------------------------
-    THANKS YOU FOR DOWNLOADING TIGA THEME!
--------------------------------------------------------
+== Description ==
 
-Thanks for downloading tiga theme, I hope you enjoyed it!. If you spot a bug you can report to https://github.com/satrya/tiga/issues or just send me an email.
+Tiga is based on _s(https://github.com/Automattic/_s) theme by Automattic, rebuild using susy grid framework & Pondasee(https://github.com/tokokoo/pondasee).
 
+Multidevice layout, optimized for mobile browsing and super clean blogging WordPress theme, perfect for you who wants focused on the content. It supports 5 widget areas, 10 custom background patterns, custom social share buttons, 14 social media buttons widget and featured posts with slider option. Has an optional full-width page template and sitemap page template, also translation ready.
 
--------------------------------------------------------
-    LANGUAGE
--------------------------------------------------------
+== Features ==
+* Multidevice layout and optimized for mobile browsing
+* Clean design, perfect for you who wants focused on the content
+* Featured posts with slider option
+* Custom menus and background
+* 10 Custom patterns for background
+* 14 Social media buttons widget
+* Social share buttons(twitter, facebook like, google plusone, stumble upon and linkedin)
+* Twitter widget
+* Full width page
+* Sitemap page
+* Easy to use theme options
+* Translation-ready (contains .po/.mo files)
 
-no available language for now, you can contribute to this project by submit a translation
+== Components ==
 
-
--------------------------------------------------------
-    LICENSE
--------------------------------------------------------
-
+0. Pondasee - The Unlicense, https://github.com/tokokoo/pondasee
 1. jQuery - MIT/GPL, http://jquery.org/license
 2. Formalize - MIT/GPL, http://formalize.me/
 3. Selectivizr - MIT, http://selectivizr.com

@@ -37,7 +37,6 @@ require_once get_template_directory() . '/library/includes/enqueue.php';
 require_once get_template_directory() . '/library/includes/extensions.php';
 require_once get_template_directory() . '/library/includes/filters.php';
 require_once get_template_directory() . '/library/includes/options-functions.php';
-require_once get_template_directory() . '/library/includes/shortcodes.php';
 require_once get_template_directory() . '/library/includes/templates.php';
 require_once get_template_directory() . '/library/includes/widgets.php';
 require_once get_template_directory() . '/library/includes/options-sidebar.php'; // load sidebar for theme options

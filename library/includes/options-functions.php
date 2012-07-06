@@ -8,6 +8,7 @@
 
 add_action('wp_head', 'tiga_custom_favicon', 5);
 add_action('wp_head', 'tiga_custom_css', 10);
+add_filter( 'body_class', 'tiga_bg_pattern' );
 add_action('wp_head', 'tiga_custom_background', 10);
 add_action('wp_head', 'tiga_iframe_blocker', 11);
 add_filter( 'body_class', 'tiga_custom_layouts' );
@@ -28,6 +29,40 @@ function tiga_custom_css() {
 	if ($custom_css != '') {
 		echo "<!-- Custom Styling -->\n<style type=\"text/css\">\n" . esc_attr( $custom_css ) . "\n</style>\n";
 	}
+}
+
+/**
+ * Background pattern
+ *
+ * @since tiga 0.0.7
+ */
+function tiga_bg_pattern($classes) {
+	$pattern = of_get_option('tiga_pattern');
+	
+	if ( 'pattern-1' == $pattern )
+		$classes[] = 'pattern-1';
+	elseif ( 'pattern-2' == $pattern )
+		$classes[] = 'pattern-2';
+	elseif ( 'pattern-3' == $pattern )
+		$classes[] = 'pattern-3';
+	elseif ( 'pattern-4' == $pattern )
+		$classes[] = 'pattern-4';
+	elseif ( 'pattern-5' == $pattern )
+		$classes[] = 'pattern-5';
+	elseif ( 'pattern-6' == $pattern )
+		$classes[] = 'pattern-6';
+	elseif ( 'pattern-7' == $pattern )
+		$classes[] = 'pattern-7';
+	elseif ( 'pattern-8' == $pattern )
+		$classes[] = 'pattern-8';
+	elseif ( 'pattern-9' == $pattern )
+		$classes[] = 'pattern-9';
+	elseif ( 'pattern-10' == $pattern )
+		$classes[] = 'pattern-10';
+	else
+		$classes[] = 'no-pattern';
+		
+	return $classes;
 }
 
 /**
