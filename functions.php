@@ -32,13 +32,13 @@ load_theme_textdomain( 'tiga', get_template_directory() . '/library/languages' )
  * @since tiga 0.0.1
  */
 
-require_once get_template_directory() . '/library/includes/setup.php';
-require_once get_template_directory() . '/library/includes/enqueue.php';
-require_once get_template_directory() . '/library/includes/extensions.php';
-require_once get_template_directory() . '/library/includes/filters.php';
-require_once get_template_directory() . '/library/includes/options-functions.php';
-require_once get_template_directory() . '/library/includes/templates.php';
-require_once get_template_directory() . '/library/includes/widgets.php';
-require_once get_template_directory() . '/library/includes/options-sidebar.php'; // load sidebar for theme options
+require( get_template_directory() . '/library/includes/setup.php' );
+require( get_template_directory() . '/library/includes/enqueue.php' );
+require( get_template_directory() . '/library/includes/extensions.php' );
+require( get_template_directory() . '/library/includes/filters.php' );
+require( get_template_directory() . '/library/includes/options-functions.php' );
+require( get_template_directory() . '/library/includes/templates.php' );
+require( get_template_directory() . '/library/includes/widgets.php' );
+require( get_template_directory() . '/library/includes/options-sidebar.php' ); // load sidebar for theme options
 
 ?>

@@ -21,13 +21,6 @@ $j(document).ready(function(){
     
     });
 	
-	// Fancybox shortcode
-	$j(".fancyimg, .format-gallery-item a").fancybox({
-		'overlayShow'	: true,
-		'transitionIn'	: 'elastic',
-		'transitionOut'	: 'elastic'
-	});
-	
 	// Slideshow
     $j(".rslides").responsiveSlides({
 		auto: true,
