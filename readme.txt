@@ -4,7 +4,7 @@ Contributor: satrya
 Demo: http://satrya.me/demo/tiga
 Requires at least: 3.4
 Tested up to: 3.4
-Stable tag: 0.0.7
+Stable tag: 0.0.8
 License: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
@@ -25,7 +25,7 @@ Multidevice layout, optimized for mobile browsing and super clean blogging WordP
 * Full width page
 * Sitemap page
 * Easy to use theme options
-* Translation-ready (contains .po/.mo files)
+* Translation-ready (contains .pot files)
 
 == Components ==
 
