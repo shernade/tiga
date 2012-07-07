@@ -20,7 +20,7 @@ add_action( 'wp_footer', 'tiga_js_ie' );
  * @since tiga 0.0.1
  */
 function tiga_enqueue_styles() {
-	wp_enqueue_style( 'tiga-style', get_stylesheet_uri(), '', '0.0.7', 'all' );
+	wp_enqueue_style( 'tiga-style', get_stylesheet_uri(), '', '0.0.8', 'all' );
 }
 
 /**
