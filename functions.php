@@ -16,7 +16,6 @@
 if ( !function_exists( 'optionsframework_init' ) ) {
 	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/library/admin/' );
 	require_once dirname( __FILE__ ) . '/library/admin/options-framework.php';
-	require_once dirname( __FILE__ ) . '/library/includes/options.php';
 }
 
 /* Make tiga available for translation.
