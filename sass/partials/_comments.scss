@@ -1,0 +1,155 @@
+.comments-title {
+	@include trailer;
+}
+
+/* 	COMMENT LISTS
+	----------------- */
+.commentlist {
+	@include reset-list;
+	@include adjust-font-size-to(12px);
+	li {
+		article {
+			@include trailer(2);
+		}
+		.children {
+			list-style: none;
+			@include trailer(2);
+			article {
+				@include trailer;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&.pingback {
+			border-bottom: 4px double $borderColor;
+			@include trailer;
+			@include padding-trailer(.5);
+		}
+		&.comment {
+			#respond {
+				.comment-notes {
+					@include adjust-font-size-to(11px, 1, 12px);
+				}
+				label{
+					@include adjust-font-size-to(12px, 1, 12px);
+				}
+				.form-allowed-tags {
+					@include adjust-font-size-to(12px, 1, 12px);
+					code {
+						@include adjust-font-size-to(11px, 1, 12px);
+					}
+				}
+			}
+		}
+		&.bypostauthor {
+			/* color: #5E9AE2; */
+		}
+	}
+	
+}
+
+.comment-meta {
+	display: block;
+	@include adjust-font-size-to(11px, 1, 12px);
+	@include trailer(.7);
+	overflow: hidden;
+	img.avatar {
+		border: 1px solid $borderColor;
+		@include border-radius(10px);
+		@include float(left);
+		margin-right: rhythm(.5);
+		padding: rhythm(.1);
+	}
+	.fn {
+		@include adjust-font-size-to(12px, 1, 11px);
+		display: block;
+	}
+	.comment-awaiting-moderation {
+		background: #fbe3e4;
+		border: 1px solid #fbc2c4;
+		color: #8a1f11;
+		clear: both;
+		display: block;
+		@include leader(.8);
+		padding: rhythm(.15);
+	}
+}
+
+.comment-content {
+	/* 	RESET TYPOGRAPHY ON COMMENT CONTENT
+	----------------- */
+	h1 {
+		@include adjust-font-size-to(24px, 1.5, 12px);
+	}
+	h2 {
+		@include adjust-font-size-to(21px, 1.5, 12px);
+	}
+	h3 {
+		@include adjust-font-size-to(18px, 1.5, 12px);
+	}
+	h4 {
+		@include adjust-font-size-to(16px, 1.5, 12px);
+	}
+	h5 {
+		@include adjust-font-size-to(14px, 1.5, 12px);
+	}
+	h6 {
+		@include adjust-font-size-to(14px, 1.5, 12px);
+	}
+	
+	code {
+		@include adjust-font-size-to(11px, 1, 12px);
+	}
+}
+
+.comment-navigation {
+	@include adjust-font-size-to(11px);
+	margin: rhythm(2) 0;
+	overflow: hidden;
+}
+
+/* 	COMMENT FORMS
+	----------------- */
+.comment-notes {
+	@include adjust-font-size-to(11px);
+}
+
+.form-allowed-tags {
+	@include adjust-font-size-to(12px);
+	code {
+		@include adjust-font-size-to(11px, 1, 12px);
+	}
+}
+
+.logged-in-as {
+	@extend .comment-notes;
+}
+
+#respond {
+	margin: 0;
+	
+	label{
+		@include adjust-font-size-to(12px);
+	}
+
+	
+	input[type="text"] {
+		@include float(left);
+		height: 2.2em;
+		margin: 0 5px 10px 0;
+		width: 250px;
+	}
+	
+	textarea {
+		@include adjust-font-size-to(16px);
+	}
+	
+	input[type="submit"] {
+		padding: 10px 15px;
+	}
+	
+	.required {
+		color: #f00;
+	}
+}

@@ -1,0 +1,92 @@
+/*! http://responsiveslides.com v1.25 by @viljamis */
+
+.rslides {
+	@include reset-list;
+	position: relative;
+	width: 100%;
+	li {
+		display: none;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		&::first-child {
+			display: block;
+			float: left;
+			position: relative;
+		}
+	}
+	img {
+		border: 0;
+		display: block;
+		float: left;
+		height: auto;
+		width: 100%;
+	}
+}
+
+.rslides_container {
+	@include float-left;
+	position: relative;
+	width: 100%;
+}
+
+.rslides1_nav {
+	background: transparent image-url("slide-nav.gif") no-repeat left top;
+	height: 61px;
+	left: 0;
+	margin-top: -25px;
+	@include opacity(.7);
+	overflow: hidden;
+	position: absolute;
+	text-indent: -9999px;
+	text-decoration: none;
+	top: 50%;
+	width: 38px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	&:hover {
+		opacity: 1.0;
+	}
+	&.next {
+		background-position: right top;
+		left: auto;
+		right: 0;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.rslides_tabs {
+	clear: both;
+	margin-top: 10px;
+	padding: 0;
+	text-align: center;
+	li {
+		display: inline;
+		float: none;
+		_float: left;
+		*float: left;
+		margin-right: 5px;
+	}
+}
+
+
+.rslides_tabs a {
+	background: $gray;
+	background: rgba($black, .2);
+	@include border-radius(15px);
+	@include single-box-shadow( rgba($black,.3), 0, 0, 2px, 0, true );
+	@include inline-block;
+	_display: block;
+	*display: block;
+	height: 12px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 12px;
+}
+
+.rslides_tabs .rslides_here a {
+	background: #222;
+	background: rgba($black, .8);
+}

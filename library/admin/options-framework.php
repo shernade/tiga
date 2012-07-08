@@ -294,7 +294,7 @@ function optionsframework_validate( $input ) {
 
 			// Set checkbox to false if it wasn't sent in the $_POST
 			if ( 'checkbox' == $option['type'] && ! isset( $input[$id] ) ) {
-				$input[$id] = '0';
+				$input[$id] = false;
 			}
 
 			// Set each item in the multicheck to false if it wasn't sent in the $_POST
@@ -313,8 +313,7 @@ function optionsframework_validate( $input ) {
 		add_settings_error( 'options-framework', 'save_options', __( 'Options saved.', 'tiga' ), 'updated fade' );
 		return $clean;
 	}
-	
-	return of_get_default_values();
+
 }
 
 /**

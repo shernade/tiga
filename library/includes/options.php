@@ -9,8 +9,7 @@
  */
 
 function optionsframework_option_name() {
-
-	// This gets the theme name from the stylesheet
+   // This gets the theme name from the stylesheet
 	$themename = get_option( 'stylesheet' );
 	$themename = preg_replace("/\W/", "_", strtolower($themename) );
 
@@ -179,7 +178,7 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
 						
-	$options[] = array( 
+	$options['tiga_social_share'] = array( 
 		'name' => __('Display social share button', 'tiga'),
 		'desc' => __('Display social share on single post and page', 'tiga'),
 		'id' => "tiga_social_share",
