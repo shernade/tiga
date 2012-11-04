@@ -67,8 +67,7 @@ p img,
 			content: '\2014';
 			@include adjust-font-size-to(14px); 
 			font-style: normal;
-			font-weight: bold;
-			@include ff-bitter-bold;
+			font-weight: 700;
 			margin-right: 5px;
 			position: absolute;
 			left: 10px;

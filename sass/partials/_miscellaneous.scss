@@ -19,7 +19,8 @@
 		margin: 0;
 		&.share-title {
 			color: $blackLighter;
-			@include adjust-font-size-to(14px, 1, 11px);
+			@include adjust-font-size-to(12px, 1, 11px);
+			font-weight: 700;
 			margin: .3em rhythm(.5) 0 0;
 		}
 		&.twitter {
@@ -117,21 +118,63 @@ article {
 /* 	PATTERN
 	----------------- */
 @for $n from 1 through 4 {
-	body.pattern-#{$n} {
+	body.custom-background.pattern-#{$n} {
 		@include background( image-url('bg/#{$n}.png') repeat left center );
 	}
 }
 
-body.pattern-5 {
+body.custom-background.pattern-5 {
 	@include background( image-url('bg/5.jpg') repeat left center );
 }
 
-body.pattern-6 {
+body.custom-background.pattern-6 {
 	@include background( image-url('bg/6.jpg') repeat left center );
 }
 
 @for $n from 7 through 10 {
-	body.pattern-#{$n} {
+	body.custom-background.pattern-#{$n} {
 		@include background( image-url('bg/#{$n}.png') repeat left center );
 	}
 }
+
+/* 	TOOLTIPS
+	----------------- */
+
+  .has-tip { font-weight: bold; color: #333;
+
+    &:hover { color: #0192dd; }
+    &.tip-left, &.tip-right { float: none !important; }
+
+  }
+
+  .tooltip { display: none; background: rgb(0,0,0); background: rgba(0,0,0,0.8); position: absolute; color: #fff; font-weight: bold; font-size: 12px; padding: 10px; z-index: 999; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; line-height: normal;
+
+    &>.nub { display: block; width: 0; height: 0; border: solid 5px; border-color: transparent transparent rgb(0,0,0) transparent; border-color: transparent transparent rgba(0,0,0,0.8) transparent; position: absolute; top: -10px; left: 10px; }
+    &.tip-override>.nub { border-color: transparent transparent rgb(0,0,0) transparent !important; border-color: transparent transparent rgba(0,0,0,0.8) transparent !important; top: -10px !important; }
+    &.tip-top>.nub { border-color: rgb(0,0,0) transparent transparent transparent; border-color: rgba(0,0,0,0.8) transparent transparent transparent; top: auto; bottom: -10px; }
+
+    &.tip-left, &.tip-right { float: none !important; }
+
+    &.tip-left>.nub { border-color: transparent transparent transparent rgb(0,0,0); border-color: transparent transparent transparent rgba(0,0,0,0.8); right: -10px; left: auto; }
+    &.tip-right>.nub { border-color: transparent rgb(0,0,0) transparent transparent; border-color: transparent rgba(0,0,0,0.8) transparent transparent; right: auto; left: -10px; }
+
+    &.noradius { @include border-radius(0); }
+    &.opened { color: #0192DD !important; border-bottom: dotted 1px #0593DC !important; }
+
+  }
+
+  .tap-to-close { display: block; font-size: 10px;; color: #888; font-weight: normal; }
+
+  @media only screen and (max-width: 768px - 1) {
+    .tooltip {
+      font-size: 14px;
+      line-height: 1.4;
+      padding: 7px 10px 9px 10px;
+    }
+    .tooltip > .nub, .tooltip.top > .nub, .tooltip.left > .nub, .tooltip.right > .nub {
+      border-color: transparent transparent rgb(0,0,0) transparent;
+      border-color: transparent transparent rgba(0,0,0,0.85) transparent;
+      top: -12px;
+      left: 10px;
+    }
+  }

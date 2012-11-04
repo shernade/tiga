@@ -2,14 +2,25 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package tiga
- * @since tiga 0.0.1
+ * @package 	Tiga
+ * @author		Satrya
+ * @license		license.txt
+ * @since 		Tiga 0.0.1
+ *
  */
 ?>
-<aside id="secondary" class="widget-area" role="complementary">
-	<?php do_action( 'tiga_before_sidebar' ); ?>
 
-	<?php if ( ! dynamic_sidebar( 'General' ) ) : ?>
-	<?php endif; // end sidebar widget area ?>
+	<?php
+		$layout = of_get_option('tiga_layouts');
+		if( 'onecolumn' != $layout ) :
+	?>
 
-</aside><!-- #secondary .widget-area -->
+		<aside id="secondary" class="widget-area" role="complementary">
+			<?php tiga_sidebar_before(); ?>
+
+			<?php if ( ! dynamic_sidebar( 'General' ) ) : ?>
+			<?php endif; // end sidebar widget area ?>
+
+		</aside><!-- #secondary .widget-area -->
+
+	<?php endif; ?>

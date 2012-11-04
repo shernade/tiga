@@ -37,13 +37,11 @@ p {
 i,
 em {
 	font-style: italic;
-	@include ff-bitter-italic;
 }
 
 b, 
 strong {
-	font-weight: bold; 
-	@include ff-bitter-bold;
+	font-weight: 700; 
 }
 
 small { 
@@ -56,8 +54,7 @@ cite {
 
 dfn {
 	font-style: italic;
-	font-weight: bold;
-	@include ff-bitter-bold;
+	font-weight: 700;
 }
 
 sub, 
@@ -114,7 +111,7 @@ code,
 kbd, 
 samp,
 tt { 
-	font-family: $consolas-font-stack;
+	font-family: $consolas;
 }
 
 ins { 
@@ -133,7 +130,7 @@ blockquote {
 	border-left: 3px solid $grayLighter;
 	color: $grayDark;
 	font-style: italic;
-	font-family: $georgia-font-stack;
+	font-family: $georgia;
 	margin: 1em 40px; 
 	padding-left: rhythm(.9);
 	
@@ -166,7 +163,6 @@ address {
 	display: block;
 	margin: 0 0 1.5em;
 	font-style: italic;
-	@include ff-bitter-italic;
 }
 
 /* 	LISTS
@@ -207,8 +203,7 @@ dl {
 }
 
 dt {
-	font-weight: bold;
-	@include ff-bitter-bold;
+	font-weight: 700;
 }
 
 dd {

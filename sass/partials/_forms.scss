@@ -6,9 +6,8 @@
 	----------------- */
 
 label {
-	font-weight: bold; 
 	font-size: 12px;
-	@include ff-bitter-bold;
+	font-weight: 700;
 }
 
 fieldset {
@@ -23,8 +22,7 @@ legend {
 	background: $whiteDark;
 	border: 1px solid $grayLight;
 	@include border-radius(5px);
-	font-weight: bold;
-	@include ff-bitter-bold;
+	font-weight: 700;
 	display: block;
 	left: 0;
 	margin: 0;

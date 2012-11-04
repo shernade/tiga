@@ -27,6 +27,7 @@ a {
 	// @include susy-grid-background;
 	@include container;
 	@include trailer;
+	padding-bottom: 1.25em;
 	
 	@media screen and (min-width: 320px) and (max-width: 1024px) {
 		margin: 0 $gutter-width rhythm();
@@ -115,6 +116,8 @@ a {
 	}
 }
 
+/* 	RIGHT PRIMARY LAYOUT
+	----------------- */
 .right-primary {
 	#primary {
 		@include omega;

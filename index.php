@@ -8,46 +8,29 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package tiga
- * @since tiga 0.0.3
+ * @package 	Tiga
+ * @author		Satrya
+ * @license		license.txt
+ * @since 		Tiga 0.0.1
  */
 
 get_header(); ?>
 
-		<div id="primary" class="site-content">
+		<section id="primary" class="site-content">
+
+			<?php tiga_content_before(); ?>
+
 			<div id="content" role="main">
 				
-				<?php if( of_get_option('tiga_show_featured') ) : ?>
-					<section class="featured-posts rslides_container">
-						<div class="featuredposts-heading"><?php _e( 'Featured Posts', 'tiga' ); ?></div>
-					
-						<?php get_template_part( 'content', 'featured' ); ?>
-						
-					</section> <!-- end .featured-posts -->
-				<?php endif; ?>
+				<?php tiga_content(); ?>
 				
-				<?php
-					$paged = 1;
-					if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
-					if ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
-					$paged = intval( $paged );
-					
-					if( of_get_option('tiga_show_featured') ) {
-						$args = array(
-							'post__not_in' => get_option('sticky_posts'),
-							'paged' => $paged,
-						);
-						query_posts( $args );
-					}
-					
-					if ( have_posts() ) : 
-				?>
+				<?php if ( have_posts() ) : ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content' ); ?>
+						<?php get_template_part( 'content', 'index' ); ?>
 
-				<?php endwhile; ?>
+					<?php endwhile; ?>
 
 					<?php tiga_content_nav( 'nav-below' ); ?>
 
@@ -58,7 +41,10 @@ get_header(); ?>
 				<?php endif; ?>
 				
 			</div><!-- #content -->
-		</div><!-- #primary .site-content -->
+
+			<?php tiga_content_after(); ?>
+
+		</section><!-- #primary .site-content -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

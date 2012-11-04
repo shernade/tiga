@@ -9,8 +9,6 @@
 
 # Require any additional compass plugins here.
 require 'sassy-buttons'
-require 'compass-recipes'
-require 'compass-css-arrow'
 require 'susy'
 
 # Can be :stand_alone or :rails. Defaults to :stand_alone
@@ -21,9 +19,9 @@ project_type = :stand_alone
 http_path 		 = "/"
 css_dir			 = "/"
 sass_dir		 = "sass"
-images_dir		 = "library/img/"
-javascripts_dir	 = "library/js"
-fonts_dir		 = "library/fonts/"
+images_dir		 = "img"
+javascripts_dir	 = "js"
+fonts_dir		 = "css/fonts/"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output option: nested, expanded, compact, compressed

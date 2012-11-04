@@ -1,11 +1,15 @@
 <?php
 /**
- * The Header for our theme.
+ * Header Template Part
+ * 
+ * Template part file that contains the HTML document head and 
+ * opening HTML body elements, as well as the site header
  *
- * Displays all of the <head> section and everything up till <div id="main">
+ * @package 	Tiga
+ * @author		Satrya
+ * @license		license.txt
+ * @since 		Tiga 0.0.1
  *
- * @package tiga
- * @since tiga 0.0.1
  */
 ?>
 <!DOCTYPE html>
@@ -30,7 +34,7 @@
 <body <?php body_class(); ?>>
 
 <div id="page" class="hfeed site">
-<?php do_action( 'tiga_before' ); ?>
+	<?php tiga_before(); ?>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div id="main-header" class="clearfix">
@@ -52,7 +56,9 @@
 				<h5 class="assistive-text"><?php _e( 'Menu', 'tiga' ); ?></h5>
 				<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tiga' ); ?>"><?php _e( 'Skip to content', 'tiga' ); ?></a></div>
 
-				<?php wp_nav_menu( array(  
+				<?php 
+				if (has_nav_menu('primary'))
+				wp_nav_menu( array(  
 						'container' => '',
 						'menu_class' => 'main-nav',
 						'theme_location' => 'primary') 
@@ -70,6 +76,11 @@
 					'theme_location' => 'secondary' ) 
 				); ?>
 		</nav> <!-- end .site-navigation -->
+
+		<?php tiga_header(); ?>
 	</header><!-- #masthead .site-header -->
 	
+	<?php tiga_main_before(); ?>
+
 	<div id="main">
+		<?php tiga_main(); ?>

@@ -1,16 +1,25 @@
 <?php
 /**
- * The Template for displaying all single posts.
+ * Single Blog Post template file
+ * 
+ * This file is the single blog post template file, used to display single blog posts.
  *
- * @package tiga
- * @since tiga 0.0.1
+ * @package 	Tiga
+ * @author		Satrya
+ * @license		license.txt
+ * @since 		Tiga 0.0.1
+ *
  */
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
-		
+	<section id="primary" class="site-content">
+
+		<?php tiga_content_before(); ?>
+
 		<div id="content" role="main">
+
+		<?php tiga_content(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 			
@@ -27,7 +36,10 @@ get_header(); ?>
 		<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
-	</div><!-- #primary .site-content -->
+
+		<?php tiga_content_after(); ?>
+		
+	</section><!-- #primary .site-content -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

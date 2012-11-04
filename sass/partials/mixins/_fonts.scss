@@ -3,70 +3,18 @@
 // =================================================================================
 @import "compass/css3/font-face";
 
-@include font-face (
-	'BitterRegular',
-	font-files(
-		'bitter/Bitter-Regular-webfont.svg#BitterRegular', svg,
-		'bitter/Bitter-Regular-webfont.woff', woff,
-		'bitter/Bitter-Regular-webfont.ttf', truetype),
-	'bitter/Bitter-Regular-webfont.eot',
-	normal,
-	normal
-);
-
-@include font-face (
-	'BitterItalic',
-	font-files(
-		'bitter/Bitter-Italic-webfont.svg#BitterItalic', svg,
-		'bitter/Bitter-Italic-webfont.woff', woff,
-		'bitter/Bitter-Italic-webfont.ttf', truetype),
-	'bitter/Bitter-Italic-webfont.eot',
-	normal,
-	normal
-);
-
-@include font-face (
-	'BitterBold',
-	font-files(
-		'bitter/Bitter-Bold-webfont.svg#BitterBold', svg,
-		'bitter/Bitter-Bold-webfont.woff', woff,
-		'bitter/Bitter-Bold-webfont.ttf', truetype),
-	'bitter/Bitter-Bold-webfont.eot',
-	normal,
-	normal
-);
-
-@include font-face (
-	'FrancoisOneRegular',
-	font-files(
-		'francois/FrancoisOne-webfont.svg#FrancoisOneRegular', svg,
-		'francois/FrancoisOne-webfont.woff', woff,
-		'francois/FrancoisOne-webfont.ttf', truetype),
-	'francois/FrancoisOne-webfont.eot',
-	normal,
-	normal
-);
-
 @mixin ff-text{
-	font-family: "BitterRegular", $georgia-font-stack;
+	font-family: 'Open Sans', sans-serif;
 }
 
 @mixin ff-heading{
-	font-family: "FrancoisOneRegular", $arial-font-stack;
+	font-family: 'Francois One', sans-serif;
 }
 
 @mixin ff-decorative{
-	font-family: $cursive-font-stack; 
+	font-family: $cursive; 
 }
 
 @mixin ff-mono{
-	font-family: $consolas-font-stack;
-}
-
-@mixin ff-bitter-bold {
-	font-family: "BitterBold", $georgia-font-stack;
-}
-
-@mixin ff-bitter-italic {
-	font-family: "BitterItalic", $georgia-font-stack;
+	font-family: $consolas;
 }
