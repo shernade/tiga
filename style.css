@@ -1785,9 +1785,6 @@ article h6 {
 }
 #author-info img.avatar {
   border: 1px solid #eeeeee;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
   padding: 0.15em;
 }
 #author-info #author-description h2 {
@@ -2321,69 +2318,88 @@ ul.social-buttons li:before {
 
 /* 	FOOTER SIDEBAR
 	----------------- */
-#footer-sidebar {
-  display: block;
-  position: relative;
-}
-
-.footer-widget {
-  width: 23.40426%;
-  float: left;
-  margin-right: 2.12766%;
-  display: inline;
+.site-footer {
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
 }
-.footer-widget .widget {
+.site-footer .widget {
   border-bottom: none;
+  display: inline;
+  float: left;
   margin: 0 0 2.25em;
 }
-.footer-widget .widget .widget-title {
+.site-footer .widget .widget-title {
   color: #aaaaaa;
 }
-.footer-widget .widget ul {
+.site-footer .widget ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.footer-widget .widget ul li {
+.site-footer .widget ul li {
   border-bottom: 1px solid #333;
   padding: .4em 0;
 }
-.footer-widget .widget ul li:before {
+.site-footer .widget ul li:before {
   content: "";
   padding-right: 0;
 }
-.footer-widget .widget ul li a {
+.site-footer .widget ul li a {
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
 }
-.footer-widget .widget .tagcloud a {
+.site-footer .widget .tagcloud a {
   background: white;
   border: none;
   color: #333;
   text-shadow: none;
 }
-.footer-widget .widget.tiga_social_widget li {
+.site-footer .widget.tiga_social_widget li {
   border-bottom: none;
 }
-.footer-widget .widget.tiga_subscribe_widget input[type="text"] {
+.site-footer .widget.tiga_subscribe_widget input[type="text"] {
   width: 138px;
 }
-.footer-widget .widget.tiga_subscribe_widget input[type="submit"] {
+.site-footer .widget.tiga_subscribe_widget input[type="submit"] {
   font-size: 11px;
   padding: 6px 6px 7px;
 }
-.footer-widget .widget.widget_rss .rsswidget {
+.site-footer .widget.widget_rss .rsswidget {
   color: white;
   padding: 0 2px;
 }
 
-.footer-4 {
+.site-footer.one .widget {
+  width: 100%;
+}
+.site-footer.two .widget {
+  margin-right: 2%;
+  width: 48%;
+}
+.site-footer.two .widget:last-child {
+  display: inline;
   float: right;
   margin-right: 0;
-  #margin-left: -1.25em;
+  margin-left: 2%;
+}
+.site-footer.three .widget {
+  margin-right: 5%;
+  width: 30%;
+}
+.site-footer.three .widget:last-child {
   display: inline;
+  float: right;
+  margin-right: 0;
+}
+.site-footer.four .widget {
+  margin-right: 2%;
+  width: 23%;
+}
+.site-footer.four .widget:last-child {
+  display: inline;
+  float: right;
+  margin-right: 0;
+  margin-left: 2%;
 }
 
 /* =============================================================================

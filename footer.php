@@ -8,18 +8,18 @@
  * @package 	Tiga
  * @author		Satrya
  * @license		license.txt
- * @since 		Tiga 0.0.1
+ * @since 		0.0.1
  */
 ?>
 
 		</div><!-- #main -->
 	</div> <!-- end #page .hfeed .site -->
 
-	<?php if(of_get_option('tiga_footer_widgets')): ?>
-		<footer id="colophon" class="site-footer" role="contentinfo">
+	<?php if ( is_active_sidebar( 'subsidiary' ) ) : ?>
+		<footer id="colophon" class="site-footer <?php tiga_dynamic_sidebar_class( 'subsidiary' ); ?>" role="contentinfo">
 			<div class="footer">
 			
-				<?php get_sidebar( 'footer' ); ?>
+				<?php dynamic_sidebar( 'subsidiary' ); ?>
 			
 			</div> <!-- end .footer -->
 		</footer> <!-- end #colophon .site-footer -->

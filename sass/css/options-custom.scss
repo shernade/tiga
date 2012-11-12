@@ -1,0 +1,60 @@
+@import "compass";
+
+/*
+File Name: 		Options Custom
+Description: 	Custom css for theme options
+Version: 		1.0
+Author: 		Satrya
+Since:			tiga 0.0.6
+License: 		GNU General Public License v3
+License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+#optionsframework-metabox {
+	margin-right: 305px;
+}
+
+#optionsframework {
+	@include float(left);
+	max-width: 100%;
+	width: 100%;
+	.controls {
+		.of-radio-img-img {
+			height: 70px;
+			width: 90px;
+		}
+	}
+}
+
+#optionsframework-sidebar {
+	@include float(right);
+	width: 280px;
+	a {
+		text-decoration: none;
+	}
+	.metabox-holder {
+		padding-top:0;
+	}
+}
+
+#wpbody-content #optionsframework-sidebar .metabox-holder {
+	padding-top: 0;
+}
+
+.tiga-support {
+	display: block;
+	margin-bottom: 10px;
+	text-align: right;
+	a {
+		margin-left: 10px;
+		position: relative;
+		top: -8px
+	}
+	span {
+		display: inline-block;
+		margin-left: 10px;
+		a {
+			top: 0;
+		}
+	}
+}

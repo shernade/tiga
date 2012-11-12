@@ -561,43 +561,14 @@ function tiga_register_custom_sidebars() {
 	));
 	
 	register_sidebar(array(
-		'name'          => __( 'Footer Sidebar 1', 'tiga'),
-		'description'   => __('This sidebar appears on the footer side of your site', 'tiga'),
+		'id'			 => 'subsidiary',
+		'name'          => __( 'Subsidiary', 'tiga'),
+		'description'   => __( 'This sidebar appears on the footer side of your site', 'tiga' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<span class="widget-title">',
 		'after_title'   => '</span>',
 	));
-	
-	register_sidebar(array(
-		'name'          => __( 'Footer Sidebar 2', 'tiga'),
-		'description'   => __('This sidebar appears on the footer side of your site', 'tiga'),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<span class="widget-title">',
-		'after_title'   => '</span>',
-	));
-	
-	register_sidebar(array(
-		'name'          => __( 'Footer Sidebar 3', 'tiga'),
-		'description'   => __('This sidebar appears on the footer side of your site', 'tiga'),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<span class="widget-title">',
-		'after_title'   => '</span>',
-	));
-	
-	$layout = of_get_option('tiga_layouts');
-	if( 'onecolumn' != $layout ) :
-	register_sidebar(array(
-		'name'          => __( 'Footer Sidebar 4', 'tiga'),
-		'description'   => __('This sidebar appears on the footer side of your site', 'tiga'),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<span class="widget-title">',
-		'after_title'   => '</span>',
-	));
-	endif;
 
 	register_sidebar(array(
 		'name'          => __( 'Above Content', 'tiga'),
@@ -616,6 +587,38 @@ function tiga_register_custom_sidebars() {
 		'before_title'  => '<span class="widget-title">',
 		'after_title'   => '</span>',
 	));
+
+}
+
+/**
+ * Count the number of widgets to enable dynamic classes
+ *
+ * @since 1.0
+ */
+function tiga_dynamic_sidebar_class( $sidebar_id ) {
+
+	$sidebars = wp_get_sidebars_widgets();
+	$get_count = count( $sidebars[$sidebar_id] );
+
+	$class = '';
+
+	switch ( $get_count ) {
+		case '1':
+			$class = 'one';
+			break;
+		case '2':
+			$class = 'two';
+			break;
+		case '3':
+			$class = 'three';
+			break;
+		case '4':
+			$class = 'four';
+			break;
+	}
+
+	if ( $class )
+		echo $class;
 
 }
 

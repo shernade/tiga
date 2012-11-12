@@ -1,0 +1,214 @@
+// Style for all navigations
+//
+// =================================================================================
+
+/* 	MAIN NAVIGATION
+	----------------- */
+.main-navigation {
+	@include span-columns(14 omega, 24);
+	@include padding-leader;
+	position: relative;
+	z-index: 99;
+	@media screen and (max-width: 600px) {
+		@include span-columns(24 omega, 24);
+		margin: 0 0 rhythm();
+		text-align: left;
+		ul {
+			@include float-left;
+			li {
+				a {
+					margin: 0 3em 0 0;
+				}
+				&.arrow {
+					&:after {
+						right: 25px;
+					}
+				}
+			}
+		}
+	}
+	ul {
+		@include reset-list;
+		@include float(right);
+		ul {
+			background-color: $white;
+			border: 1px solid $grayLight;
+			@include single-box-shadow( rgba($black, .1), 0, 0, 5px, 0, false );
+			display: none;
+			left: 0;
+			position: absolute;
+			top: 100%;
+			width: rhythm(7);
+			z-index: 9;
+			li {
+				border-bottom: 1px solid $grayLighter;
+				width: 100%;
+				&:last-child {
+					border-bottom: none;
+				}
+				a {
+					margin: 0 rhythm(.4);
+					padding: rhythm(.3) 0;
+				}
+				
+				&.arrow {
+					padding-right: 0;
+					
+					&:after {
+						content: "\00BB";
+						@include adjust-font-size-to(13px);
+						position: absolute;
+						right: 5px;
+						top: 3px;
+					}
+				}
+			}
+			
+			ul {
+				@include border-radius(0);
+				left: 100%; 
+				top: 0;
+			}
+		}
+		
+	}
+	li {
+		@include float(left);
+		&.arrow {
+			padding-right: rhythm(.3);
+			position: relative;
+			
+			&:hover {
+				cursor: pointer;
+			}
+			
+			&:after {
+				content: "\00BB";
+				@include adjust-font-size-to(13px);
+				position: absolute;
+				right: -5px;
+				top: 0;
+			}
+		}
+	}
+	a {
+		display: block;
+		color: inherit;
+		@include adjust-font-size-to(11px);
+		margin-left: rhythm(2);
+		text-transform: uppercase;
+		@include single-transition( all, .15s, ease-in, 0s );
+		word-wrap: break-word;
+		&:hover,
+		&:active,
+		&:focus {
+			color: $linkColor;
+		}
+	}
+}
+
+
+/* 	SECONDARY NAVIGATION
+	----------------- */
+.secondary-navigation {
+	@include background(#252525);
+	@include background-image( linear-gradient( #252525, #0A0A0A ) );
+	@include single-box-shadow( rgba($black, .6), 0, 1px, 2px, 0, false );
+	@include border-radius;
+	margin-top: rhythm(.1);
+	position: relative;
+	@media screen and (max-width: 600px) { 
+		background: #fff;
+		@include box-shadow(none);
+		.mobileMenu {
+			@include float-left;
+			width: 100%;
+		}
+	}
+	ul {
+		@include reset-list;
+		@media screen and (max-width: 600px) { 
+			display: none;
+		}
+		ul {
+			background-color: $white;
+			border: 1px solid $grayLight;
+			@include single-box-shadow( rgba($black, .1), 0, 0, 5px, 0, false );
+			display: none;
+			left: 0;
+			position: absolute;
+			top: 100%;
+			width: rhythm(8);
+			z-index: 99;
+			li {
+				border-bottom: 1px solid $grayLighter;
+				width: 100%;
+				&:hover {
+					background-color: #e7e7e7;
+					&:first-child {
+						@include border-radius(0);
+					}
+				}
+				&:last-child {
+					border-bottom: none;
+				}
+				a {
+					color: #333;
+					margin: 0 rhythm(.4);
+					padding: rhythm(.3) 0;
+				}
+				
+				&.arrow {
+					padding-right: 0;
+					
+					&:after {
+						content: "\00BB";
+						color: #333;
+						@include adjust-font-size-to(13px);
+						position: absolute;
+						right: 5px;
+						top: 5px;
+					}
+				}
+			}
+			
+			ul {
+				left: 100%; 
+				top: 0;
+			}
+		}
+	}
+	li {
+		@include float(left);
+		@include single-transition( all, .15s, ease-in, 0s );
+		&:hover {
+			background-color: #151515;
+			&:first-child {
+				@include border-radius(5px 0 0 5px);
+			}
+		}
+		&.arrow {
+			padding-right: rhythm(.3);
+			position: relative;
+			&:hover {
+				cursor: pointer;
+			}
+			&:after {
+				content: "\00BB";
+				color: $white;
+				@include adjust-font-size-to(13px);
+				position: absolute;
+				right: 3px;
+				top: 11px;
+			}
+		}
+	}
+	a {
+		color: $white;
+		display: block;
+		@include adjust-font-size-to(12px);
+		padding: rhythm(.7);
+		text-transform: uppercase;
+		word-wrap: break-word;
+	}
+}

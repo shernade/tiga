@@ -1,0 +1,55 @@
+@import "susy";	
+@import "compass";
+@import "sassy-buttons";
+
+@import "partials/variable";
+@import "partials/mixins";
+@import "partials/sassybuttons";
+
+/*
+File Name: 		One Column
+Description: 	Responsive one column layout
+Version: 		0.1
+Author: 		Satrya
+Since:			Tiga 0.1
+License: 		GNU General Public License v3
+License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+// Susy Grid
+// ------------------
+$total-columns	: 12;
+$column-width	: 2.50em;
+$gutter-width	: 1.25em;
+$grid-padding	: $gutter-width;  // 1.25em
+
+#page {
+	@include container;
+}
+
+#primary {
+	@include span-columns(12 omega, 12);
+}
+
+.entry-thumbnail {
+	a,
+	img {
+		@media screen and (max-width: 767px) {
+			height: 100%;
+		}
+	}
+}
+
+#colophon {
+	@include container;
+	.footer-widget {
+		@include span-columns(4, 12);
+	}
+	.footer-3 {
+		@include omega;
+	}
+}
+
+#site-credit {
+	@include container;
+}

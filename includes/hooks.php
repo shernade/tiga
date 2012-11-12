@@ -98,16 +98,6 @@ function tiga_sidebar_before() {
 }
 
 /**
- * Action hook after #footer-sidebar
- *
- * @file 	sidebar-footer.php
- * @since 	0.2
- */
-function tiga_sidebar_footer_before() {
-    do_action('tiga_sidebar_footer_before');
-}
-
-/**
  * Action hook after .site-info
  *
  * @file 	footer.php

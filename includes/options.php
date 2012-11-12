@@ -202,19 +202,12 @@ function optionsframework_options() {
 	);
 						
 	$options[] = array(
-		'name' => __('Select a number of featured posts', 'tiga'),
-		'desc' => __('How many featured posts you want to show ?', 'tiga'),
+		'name' => __('Select the number of slider', 'tiga'),
+		'desc' => __('How many slider you want to show ?', 'tiga'),
 		'id' => 'tiga_featured',
 		'type' => 'select',
 		'std' => '3',
 		'options' => $tiga_numbers
-	);
-						
-	$options[] = array( 
-		'name' => __('Use footer widgets', 'tiga'),
-		'desc' => __('Check this option if you want to use the footer widgets', 'tiga'),
-		'id' => 'tiga_footer_widgets',
-		'type' => 'checkbox'
 	);
 						
 	$options[] = array( 
