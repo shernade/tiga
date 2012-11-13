@@ -5,19 +5,19 @@ var $j = jQuery.noConflict();
 $j(document).ready(function(){
 	
 	// Reponsive videos
-	$j("#content").fitVids();
+	$j( "#content" ).fitVids();
 	
 	// Reponsive menus
-	$j(".secondary-nav").mobileMenu();
+	$j( ".secondary-nav" ).mobileMenu();
 	
 	// Drop down menus
-	$j(".main-navigation ul li ul, .secondary-navigation ul li ul").parent().addClass("arrow");
-	$j(".main-navigation ul li, .secondary-navigation ul li").hover(function(){
-        $j(this).addClass("hover");
-        $j(this).find("ul:first").slideToggle("fast");
+	$j( ".main-navigation ul li ul, .secondary-navigation ul li ul" ).parent().addClass( "arrow" );
+	$j( ".main-navigation ul li, .secondary-navigation ul li" ).hover(function(){
+        $j(this).addClass( "hover" );
+        $j(this).find( "ul:first" ).slideToggle( "fast" );
     }, function(){
-        $j(this).removeClass("hover");
-        $j(this).find("ul:first").slideUp("fast");
+        $j(this).removeClass( "hover" );
+        $j(this).find( "ul:first" ).slideUp( "fast" );
     
     });
 	

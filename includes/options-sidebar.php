@@ -16,18 +16,18 @@ function tiga_options_sidebar() { ?>
 		<div class="metabox-holder">
 			
 			<div class="tiga-support">
-				<a href="http://satrya.me/" title="Support" target="_blank">Support</a> <a href="http://about.me/margasatrya" title="About theme author" target="_blank">About Author</a>
+				<a href="http://wordpress.org/support/theme/tiga/" title="Support" target="_blank">Support</a> <a href="http://about.me/margasatrya" title="About theme author" target="_blank">About Author</a>
 			</div>
 
 			<div id="tiga-buddypress" class="postbox">
 				<h3 class="hndle">Components</span></h3>
 				<div class="inside">
 					<ol>
-						<li><a href="http://dl.dropbox.com/u/4357218/Theme/Components/tiga-bp.zip" title="BuddyPress for tiga" target="_blank">Buddypress</a> <br />
+						<li><a href="https://github.com/satrya/tiga/downloads" title="BuddyPress for tiga" target="_blank">Buddypress</a> <br />
 							A child theme for buddypress compatibility.</li>
-						<li><a href="http://dl.dropbox.com/u/4357218/Theme/Components/tiga-child.zip" title="Sample child theme" target="_blank">Sample child theme</a> <br />
+						<li><a href="https://github.com/satrya/tiga/downloads" title="Sample child theme" target="_blank">Sample child theme</a> <br />
 							Sample child theme for Tiga.</li>
-						<li><a href="http://dl.dropbox.com/u/4357218/Theme/Components/tiga-sass.zip" title="Sass files" target="_blank">Sass files</a> <br />
+						<li><a href="https://github.com/satrya/tiga/downloads" title="Sass files" target="_blank">Sass files</a> <br />
 							I'm building Tiga with SASS & Compass, download it if you need.</li>
 					</ol>
 				</div>

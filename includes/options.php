@@ -201,15 +201,6 @@ function optionsframework_options() {
 		)
 	);
 						
-	$options[] = array(
-		'name' => __('Select the number of slider', 'tiga'),
-		'desc' => __('How many slider you want to show ?', 'tiga'),
-		'id' => 'tiga_featured',
-		'type' => 'select',
-		'std' => '3',
-		'options' => $tiga_numbers
-	);
-						
 	$options[] = array( 
 		'name' => __('Display social share button', 'tiga'),
 		'desc' => __('Display social share on single post and page', 'tiga'),
@@ -292,6 +283,39 @@ function optionsframework_options() {
 	);
 
 	/* ============================== End Typography Settings ================================= */
+
+	$options[] = array( 
+		'name' => __( 'Slides', 'tiga' ),
+		'type' => 'heading'
+	);
+
+	$options[] = array(
+		'desc' => __( 'Here is the settings for the sticky posts slideshow.', 'tiga' ),
+		'type' => 'info'
+	);
+						
+	$options[] = array(
+		'name' => __( 'Select the number of slider', 'tiga' ),
+		'desc' => __( 'How many slider you want to show ?', 'tiga' ),
+		'id' => 'tiga_featured',
+		'type' => 'select',
+		'std' => '3',
+		'options' => $tiga_numbers
+	);
+
+	$options[] = array( 
+		'name' => __( 'Animate automatically', 'tiga' ),
+		'desc' => __( 'Animate the slides automatically?', 'tiga' ),
+		'id' => 'tiga_animate_slides',
+		'std' => 'true',
+		'type' => 'select',
+		'options' => array(
+			'true' => __( 'True', 'tiga' ), 
+			'false' => __( 'False', 'tiga' ) 
+		)
+	);
+
+	/* ============================== End Slides Settings ================================= */
 
 	return $options;
 }
