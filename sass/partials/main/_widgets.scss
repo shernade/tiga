@@ -2,6 +2,8 @@
 //
 // =================================================================================
 
+/*	WIDGET AREAS
+	----------------- */
 .widget {
 	border-bottom: 4px double $borderColor;
 	@include adjust-font-size-to(12px);

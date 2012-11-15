@@ -2,8 +2,8 @@
 
 Contributor: satrya
 Demo: http://satrya.me/demo/tiga
-Requires at least: 3.4
-Tested up to: 3.4
+Requires at least: 3.3
+Tested up to: 3.4.2
 Stable tag: 1.0
 License: GNU General Public License v2
 
@@ -40,5 +40,3 @@ Premium like WordPress theme comes with multidevice layout, optimized for mobile
 6. Responsive Menu - No License, https://github.com/mattkersley/Responsive-Menu
 7. FancyBox - MIT/GPL, http://fancybox.net
 8. Reponsive Slides - MIT,http://responsiveslides.com
-9. Nwmatcher - License URL https://github.com/dperini/nwmatcher/blob/master/LICENSE
-10. Foundation Tooltips - MIT, http://foundation.zurb.com

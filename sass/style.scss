@@ -17,31 +17,18 @@ See: http://codex.wordpress.org/Child_Themes
 /* 
    Table of Contents
    =============================================================================
-	- Reset Stylesheet
-		Normalize.css + Eric Meyer Reset
-	- Base
-		Basic and global styles for structural layout, page templates and link styles
-	- Typography
-		Headings, text element, lists, code, and more
-	- Form
-		Base styles for various input types and form layouts
-	- Table
-		Base styles for all tables
-	- Images
-		Basic and global styles for images, caption, & gallery
-	- Main styles
-		Global and main styles
-	- Plugins
-		Collection of styles for theme plugins
-	- Utilities
-		List of helper classes (eg clearfix, alignment, etc)
-	- WordPress Pagination
-		- Post pages <!--nextpage-->
-		- Post navigation previous_post_link() & next_post_link()
-	- Miscellaneous
-		Miscellaneous styles
-	- Conditional IE class
-		Style for IE only
+	0 Reset Stylesheet
+	1 Base
+	2 Typography
+	3 Form
+	4 Table
+	5 Images
+	6 Main styles
+	7 Plugins
+	8 Utilities
+	9 WordPress Pagination
+	10 Miscellaneous
+	11 Conditional IE class
    =============================================================================
 */
 
@@ -49,82 +36,67 @@ See: http://codex.wordpress.org/Child_Themes
 
 @import "susy";	
 @import "compass";
-@import "sassy-buttons";
 
 @import "partials/variable";
 @import "partials/mixins";
-@import "partials/sassybuttons";
 @import 'partials/mixins/fonts';
 
 /* =============================================================================
-- Reset Stylesheet
-Normalize.css + Eric Meyer Reset
+0 Reset Stylesheet
 ============================================================================= */
 @import "partials/reset";
 
 /* =============================================================================
-- Base
-Basic and global styles for structural layout, page templates and link styles
+1 Base
 ============================================================================= */
 @import "partials/theme-base";
 
 /* =============================================================================
-- Typography
-Headings, text element, lists, code, and more
+2 Typography
 ============================================================================= */
 @import "partials/typography";
 
 /* =============================================================================
-- Form
-Base styles for various input types and form layouts
+3 Form
 ============================================================================= */
 @import "partials/forms";
 
 /* =============================================================================
-- Table
-Base styles for all tables
+4 Table
 ============================================================================= */
 @import "partials/table";
 
 /* =============================================================================
-- Images
-Basic and global styles for images, caption, & gallery
+5 Images
 ============================================================================= */
 @import "partials/images";
 
 /* =============================================================================
-- Main styles
-Global and main styles
+6 Main styles
 ============================================================================= */
 @import "partials/main";
 
 /* =============================================================================
-- Plugins
-Collection of styles for theme plugins
+7 Plugins
 ============================================================================= */
 @import "partials/plugins";
 
 /* =============================================================================
-- Utilities
-List of helper classes (eg clearfix, alignment, etc)
+8 Utilities
 ============================================================================= */
 @import "partials/utilities";
 
 /* =============================================================================
-- WordPress Pagination
-	- Post pages <!--nextpage-->
-	- Post navigation previous_post_link() & next_post_link()
+9 WordPress Pagination
 ============================================================================= */
 @import "partials/pagination";
 
 /* =============================================================================
-- Miscellaneous
-Miscellaneous styles
+10 Miscellaneous
 ============================================================================= */
 @import "partials/miscellaneous";
 
 /* =============================================================================
-- Conditional IE class
-	Style for IE only
+11 Conditional IE class
 ============================================================================= */
 @import "partials/ie";

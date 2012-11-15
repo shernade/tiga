@@ -10,6 +10,7 @@
 - Twentytwelve like custom home page template
 - Remove tooltip
 - Update twitter widget
+- Update language
 
 0.2.1 - 02 Sept 2012
 - Support shortcode for widget

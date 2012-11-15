@@ -1,20 +1,20 @@
 /*
-File Name: 		One Column
-Description: 	Responsive one column layout
-Version: 		0.1
-Author: 		Satrya
-Since:			Tiga 0.1
-License: 		GNU General Public License v3
-License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
+File Name: One Column
+Description: Responsive one column layout
+Version: 0.1
+Author: Satrya
+Since: 0.1
+License: GNU General Public License v2
+License URI: license.txt
 */
 #page {
   *zoom: 1;
-  max-width: 43.75em;
-  _width: 43.75em;
+  max-width: 700px;
+  _width: 700px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.25em;
-  padding-right: 1.25em;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 #page:after {
   content: "";
@@ -26,7 +26,7 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
   width: 100%;
   float: right;
   margin-right: 0;
-  #margin-left: -1.25em;
+  #margin-left: -20px;
   display: inline;
 }
 
@@ -39,12 +39,12 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
 
 #colophon {
   *zoom: 1;
-  max-width: 43.75em;
-  _width: 43.75em;
+  max-width: 700px;
+  _width: 700px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.25em;
-  padding-right: 1.25em;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 #colophon:after {
   content: "";
@@ -60,18 +60,18 @@ License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
 #colophon .footer-3 {
   float: right;
   margin-right: 0;
-  #margin-left: -1.25em;
+  #margin-left: -20px;
   display: inline;
 }
 
 #site-credit {
   *zoom: 1;
-  max-width: 43.75em;
-  _width: 43.75em;
+  max-width: 700px;
+  _width: 700px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.25em;
-  padding-right: 1.25em;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 #site-credit:after {
   content: "";
