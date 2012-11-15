@@ -66,6 +66,7 @@ if ( ! function_exists( 'tiga_setup' ) ):
 		add_image_size( 'tiga-300px' , 300, 130, true );
 		add_image_size( 'tiga-700px' , 700, 300, true );
 		add_image_size( 'tiga-620px' , 620, 350, true );
+		add_image_size( 'tiga-460px' , 460, 300, true );
 
 		/* Enqueue styles. */
 		add_action( 'wp_enqueue_scripts', 'tiga_enqueue_styles' );
@@ -552,8 +553,9 @@ function tiga_register_widgets() {
 function tiga_register_custom_sidebars() {
 
     register_sidebar(array(
-		'name'          => __( 'General', 'tiga'),
-		'description'   => __('This sidebar appears on the right side of your site', 'tiga'),
+    	'id'			=> 'primary',
+		'name'          => __( 'Primary', 'tiga'),
+		'description'   => __( 'Primary sidebar, appears on all pages.', 'tiga' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<span class="widget-title">',
@@ -561,9 +563,9 @@ function tiga_register_custom_sidebars() {
 	));
 	
 	register_sidebar(array(
-		'id'			 => 'subsidiary',
+		'id'			=> 'subsidiary',
 		'name'          => __( 'Subsidiary', 'tiga'),
-		'description'   => __( 'This sidebar appears on the footer side of your site', 'tiga' ),
+		'description'   => __( 'Subsidiary sidebar, appears on the footer side of your site.', 'tiga' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<span class="widget-title">',
@@ -571,8 +573,9 @@ function tiga_register_custom_sidebars() {
 	));
 
 	register_sidebar(array(
-		'name'          => __( 'Above Content', 'tiga'),
-		'description'   => __('This sidebar appears on the single post, above the content', 'tiga'),
+		'id'			=> 'above-content',	
+		'name'          => __( 'Above Single Post Content', 'tiga'),
+		'description'   => __( 'This sidebar appears on the single post, above the content.', 'tiga' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<span class="widget-title">',
@@ -580,8 +583,19 @@ function tiga_register_custom_sidebars() {
 	));
 
 	register_sidebar(array(
-		'name'          => __( 'Below Content', 'tiga'),
-		'description'   => __('This sidebar appears on the single post, below the content', 'tiga'),
+		'id'			=> 'below-content',	
+		'name'          => __( 'Below Single Post Content', 'tiga'),
+		'description'   => __( 'This sidebar appears on the single post, below the content.', 'tiga' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<span class="widget-title">',
+		'after_title'   => '</span>',
+	));
+
+	register_sidebar(array(
+		'id'			=> 'home',	
+		'name'          => __( 'Custom Home Page', 'tiga'),
+		'description'   => __( 'This sidebar appears on custom home page template.', 'tiga' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<span class="widget-title">',

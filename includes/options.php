@@ -39,27 +39,27 @@ function optionsframework_options() {
 	);
 	
 	$tiga_numbers = array(
-		'2' => __('Two', 'tiga'), 
-		'3' => __('Three', 'tiga'), 
-		'4' => __('Four', 'tiga'), 
-		'5' => __('Five', 'tiga'), 
-		'6' => __('Six', 'tiga'), 
-		'7' => __('Seven', 'tiga'), 
-		'8' => __('Eight', 'tiga'), 
-		'9' => __('Nine', 'tiga'), 
-		'10' => __('Ten', 'tiga') 
+		'2' => __( 'Two', 'tiga' ), 
+		'3' => __( 'Three', 'tiga' ), 
+		'4' => __( 'Four', 'tiga' ), 
+		'5' => __( 'Five', 'tiga' ), 
+		'6' => __( 'Six', 'tiga' ), 
+		'7' => __( 'Seven', 'tiga' ), 
+		'8' => __( 'Eight', 'tiga' ), 
+		'9' => __( 'Nine', 'tiga' ), 
+		'10' => __( 'Ten', 'tiga' ) 
 	);
 	
 	$tiga_select = array(
-		'enable' => __('Enable', 'tiga'), 
-		'disable' => __('Disable', 'tiga') 
+		'enable' => __( 'Enable', 'tiga' ), 
+		'disable' => __( 'Disable', 'tiga' ) 
 	);
 
 	$tiga_social = array(
-		'tiga_post' => __('Single post', 'tiga'),
-		'tiga_page' => __('Page', 'tiga'),
-		'tiga_both' => __('Both', 'tiga'),
-		'tiga_none' => __('None', 'tiga')
+		'tiga_post' => __( 'Single post', 'tiga' ),
+		'tiga_page' => __( 'Page', 'tiga' ),
+		'tiga_both' => __( 'Both', 'tiga' ),
+		'tiga_none' => __( 'None', 'tiga' )
 	);
 	
 	$imagepath =  get_template_directory_uri() . '/admin/images/layouts/';
@@ -68,7 +68,7 @@ function optionsframework_options() {
 	$options = array();
 
 	$options[] = array( 
-		'name' => __('Announcement', 'tiga'),
+		'name' => __( 'Announcement', 'tiga' ),
 		'type' => 'heading'
 	);
 
@@ -77,9 +77,12 @@ function optionsframework_options() {
 			<ul class='ul-disc'>
 				<li>Facebook like box widget.</li>
 				<li>Social network button settings in theme options moved to the widget itself.</li>
-				<li>Page template to display Home page with slider.</li>
+				<li>Page template to display Blog page with slider.</li>
 				<li>Sidebar on single page(above and below content).</li>
 				<li>Remove all @font-face, now using google webfonts. Change bitter with open sans.</li>
+				<li>Dynamic width footer widget.</li>
+				<li>Twentytwelve like custom home page template.</li>
+				<li>Update twitter widget.</li>
 			</ul>
 			",
 		"type" => "info"
@@ -88,9 +91,8 @@ function optionsframework_options() {
 	$options[] = array(
 		"desc" => "<p>Future Plans:</p>
 			<ul class='ul-disc'>
-				<li>Change sticky post slider with custom post type.</li>
-				<li>Support BuddyPress without child theme.</li>
 				<li>Support bbPress.</li>
+				<li>Custom home page with big slider.</li>
 			</ul>
 			",
 		"type" => "info"
@@ -99,65 +101,72 @@ function optionsframework_options() {
 	/* ============================== End Announcement ================================= */
 
 	$options[] = array( 
-		'name' => __('General', 'tiga'),
+		'name' => __( 'General', 'tiga' ),
 		'type' => 'heading'
 	);
 							
 	$options[] = array( 
-		'name' => __('Custom Logo', 'tiga'),
-		'desc' => __('Upload a logo for your website, or specify the image address of your online logo. (http://example.com/logo.png)', 'tiga'),
+		'name' => __( 'Custom Logo', 'tiga' ),
+		'desc' => __( 'Upload a logo for your website, or specify the image address of your online logo. (http://example.com/logo.png)', 'tiga' ),
 		'id' => 'tiga_custom_logo',
 		'type' => 'upload'
 	);
 								
 	$options[] = array( 
-		'name' => __('Custom Favicon', 'tiga'),
-		'desc' => __('Upload a favicon for your website, or specify the image address of your online favicon. (http://example.com/favicon.png)', 'tiga'),
+		'name' => __( 'Custom Favicon', 'tiga' ),
+		'desc' => __( 'Upload a favicon for your website, or specify the image address of your online favicon. (http://example.com/favicon.png)', 'tiga' ),
 		'id' => 'tiga_custom_favicon',
 		'type' => 'upload'
 	);
 							
 	$options[] = array( 
-		'name' => __('Custom CSS', 'tiga'),
-		'desc' => __('Quickly add some CSS to your theme by adding it to this block.', 'tiga'),
+		'name' => __( 'Custom CSS', 'tiga' ),
+		'desc' => __( 'Quickly add some CSS to your theme by adding it to this block.', 'tiga' ),
 		'id' => 'tiga_custom_css',
 		'std' => '',
 		'type' => 'textarea'
 	); 
 						
 	$options[] = array( 
-		'name' => __('Header Code', 'tiga'),
-		'desc' => __('Add any custom script like the meta verification from various search engine. It will be inserted before the closing head tag of your theme', 'tiga'),
+		'name' => __( 'Header Code', 'tiga' ),
+		'desc' => __( 'Add any custom script like the meta verification from various search engine. It will be inserted before the closing head tag of your theme', 'tiga' ),
 		'id' => 'tiga_header_code',
 		'type' => 'textarea'
 	); 	
 						
 	$options[] = array( 
-		'name' => __('Footer Code', 'tiga'),
-		'desc' => __('Add your analytic code or you can add any custom script here. It will be inserted before the closing body tag of your theme', 'tiga'),
+		'name' => __( 'Footer Code', 'tiga' ),
+		'desc' => __( 'Add your analytic code or you can add any custom script here. It will be inserted before the closing body tag of your theme', 'tiga' ),
 		'id' => 'tiga_footer_code',
 		'type' => 'textarea'
 	); 		 	 
 						
 	$options[] = array( 
-		'name' => __('Iframe Blocker', 'tiga'),
-		'desc' => __('Iframe blocker is for block iframe to your site such as google image.', 'tiga'),
+		'name' => __( 'Iframe Blocker', 'tiga' ),
+		'desc' => __( 'Iframe blocker is for block iframe to your site such as google image.', 'tiga' ),
 		'id' => 'tiga_iframe_blocker',
 		'std' => 'disable',
 		'type' => 'select',
 		'options' => $tiga_select
 	);
+
+	$options[] = array( 
+		'name' => __(  'Disable credit links', 'tiga' ),
+		'desc' => __(  'Are you sure want to disable the credit link for WordPress and theme author?', 'tiga' ),
+		'id' => 'tiga_credits',
+		'type' => 'checkbox'
+	);
 						
 	/* ============================== End General Settings ================================= */					
 	
 	$options[] = array( 
-		'name' => __('Theme', 'tiga'),
+		'name' => __( 'Theme', 'tiga' ),
 		'type' => 'heading'
 	);
 						
 	$options[] = array( 
-		'name' => __('Global Layouts', 'tiga'),
-		'desc' => __('Left content, right content or one column', 'tiga'),
+		'name' => __( 'Global Layouts', 'tiga' ),
+		'desc' => __( 'Left content, right content or one column', 'tiga' ),
 		'id' => 'tiga_layouts',
 		'std' => 'lcontent',
 		'type' => 'images',
@@ -169,8 +178,8 @@ function optionsframework_options() {
 	);
 
 	$options[] = array( 
-		'name' => __('Home Page Layouts', 'tiga'),
-		'desc' => __('Two columns or one column', 'tiga'),
+		'name' => __( 'Home Page Layouts', 'tiga' ),
+		'desc' => __( 'Two columns or one column', 'tiga' ),
 		'id' => 'tiga_home_layouts',
 		'std' => 'one-col',
 		'type' => 'images',
@@ -181,8 +190,8 @@ function optionsframework_options() {
 	);
 	
 	$options[] = array( 
-		'name' => __('Background Pattern', 'tiga'),
-		'desc' => __('Available background pattern to customize your site', 'tiga'),
+		'name' => __( 'Background Pattern', 'tiga' ),
+		'desc' => __( 'Available background pattern to customize your site', 'tiga' ),
 		'id' => 'tiga_pattern',
 		'std' => 'pattern-0',
 		'type' => 'images',
@@ -202,8 +211,8 @@ function optionsframework_options() {
 	);
 						
 	$options[] = array( 
-		'name' => __('Display social share button', 'tiga'),
-		'desc' => __('Display social share on single post and page', 'tiga'),
+		'name' => __( 'Display social share button', 'tiga' ),
+		'desc' => __( 'Display social share on single post and page', 'tiga' ),
 		'id' => "tiga_social_share",
 		'std' => 'tiga_post', // These items get checked by default
 		'type' => "radio",
@@ -211,8 +220,8 @@ function optionsframework_options() {
 	);
 						
 	$options[] = array( 
-		'name' => __('Display author box', 'tiga'),
-		'desc' => __('Check this option if you want display the author box on single posts', 'tiga'),
+		'name' => __( 'Display author box', 'tiga' ),
+		'desc' => __( 'Check this option if you want display the author box on single posts', 'tiga' ),
 		'id' => 'tiga_author_box',
 		'type' => 'checkbox'
 	);
@@ -220,24 +229,24 @@ function optionsframework_options() {
 	/* ============================== End Theme Settings ================================= */	
 	
 	$options[] = array( 
-		'name' => __('Typography', 'tiga'),
+		'name' => __( 'Typography', 'tiga' ),
 		'type' => 'heading'
 	);
 
 	$options[] = array( 
-		'name' => __('Disable custom typography', 'tiga'),
-		'desc' => __('Disable custom typography and use theme defaults.', 'tiga'),
+		'name' => __( 'Disable custom typography', 'tiga' ),
+		'desc' => __( 'Disable custom typography and use theme defaults.', 'tiga' ),
 		'id' => 'tiga_disable_typography',
 		'std' => true,
 		'type' => 'checkbox' 
 	);
 
 	$options[] = array( 
-		'name' => __('Content typography', 'tiga'),
-		'desc' => __('This font is used for content text.', 'tiga'),
+		'name' => __( 'Content typography', 'tiga' ),
+		'desc' => __( 'This font is used for content text.', 'tiga' ),
 		'id' => 'tiga_content_font',
 		'class' => 'hidden',
-		'std' => array('size' => '13px','face' => '"Open Sans", sans-serif', 'color' => '#333333'),
+		'std' => array('size' => '13px','face' => '"Open Sans", sans-serif', 'color' => '#333333' ),
 		'type' => 'typography',
 		'options' => array(
 			'sizes' => array( '12','13','14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24' ),
@@ -258,11 +267,11 @@ function optionsframework_options() {
 	);
 
 	$options[] = array( 
-		'name' => __('Content heading typography', 'tiga'),
-		'desc' => __('Select the headline font (h1,h2,h3 etc)', 'tiga'),
+		'name' => __( 'Content heading typography', 'tiga' ),
+		'desc' => __( 'Select the headline font (h1,h2,h3 etc)', 'tiga' ),
 		'id' => 'tiga_heading_font',
 		'class' => 'hidden',
-		'std' => array('size' => '13px','face' => '"Francois One", sans-serif', 'color' => '#333333'),
+		'std' => array('size' => '13px','face' => '"Francois One", sans-serif', 'color' => '#333333' ),
 		'type' => 'typography',
 		'options' => array(
 			'sizes' => false,
@@ -284,40 +293,9 @@ function optionsframework_options() {
 
 	/* ============================== End Typography Settings ================================= */
 
-	$options[] = array( 
-		'name' => __( 'Slides', 'tiga' ),
-		'type' => 'heading'
-	);
-
-	$options[] = array(
-		'desc' => __( 'Here is the settings for the sticky posts slideshow.', 'tiga' ),
-		'type' => 'info'
-	);
-						
-	$options[] = array(
-		'name' => __( 'Select the number of slider', 'tiga' ),
-		'desc' => __( 'How many slider you want to show ?', 'tiga' ),
-		'id' => 'tiga_featured',
-		'type' => 'select',
-		'std' => '3',
-		'options' => $tiga_numbers
-	);
-
-	$options[] = array( 
-		'name' => __( 'Animate automatically', 'tiga' ),
-		'desc' => __( 'Animate the slides automatically?', 'tiga' ),
-		'id' => 'tiga_animate_slides',
-		'std' => 'true',
-		'type' => 'select',
-		'options' => array(
-			'true' => __( 'True', 'tiga' ), 
-			'false' => __( 'False', 'tiga' ) 
-		)
-	);
-
-	/* ============================== End Slides Settings ================================= */
 
 	return $options;
+	
 }
 
 /** 
@@ -326,13 +304,13 @@ function optionsframework_options() {
  * @since 0.0.1
  */
 
-add_action('optionsframework_custom_scripts', 'tiga_custom_scripts');
+add_action('optionsframework_custom_scripts', 'tiga_custom_scripts' );
 function tiga_custom_scripts() { ?>
 	<script type='text/javascript'>
 	jQuery(document).ready(function($) {
 
-		$('#tiga_disable_typography').click(function() {
-			$('#section-tiga_content_font, #section-tiga_heading_font').fadeToggle(400);
+		$('#tiga_disable_typography' ).click(function() {
+			$('#section-tiga_content_font, #section-tiga_heading_font' ).fadeToggle(400);
 		});
 		
 	});

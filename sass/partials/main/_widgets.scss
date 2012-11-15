@@ -36,6 +36,46 @@
 	}
 }
 
+.widget-area {
+	&.one {
+		.widget {
+			width: 100%;
+		}
+	}
+	&.two {
+		.widget {
+			margin-right: 2%;
+			width: 48%;
+			&:last-child {
+				@include float( right );
+				margin-right: 0;
+				margin-left: 2%;
+			}
+		}
+	}
+	&.three {
+		.widget {
+			margin-right: 5%;
+			width: 30%;
+			&:last-child {
+				@include float( right );
+				margin-right: 0;
+			}
+		}
+	}
+	&.four {
+		.widget {
+			margin-right: 2%;
+			width: 23%;
+			&:last-child {
+				@include float( right );
+				margin-right: 0;
+				margin-left: 2%;
+			}
+		}
+	}
+}
+
 /* 	ARCHIVES WIDGET
 	----------------- */
 .widget_archive {
@@ -236,23 +276,35 @@
 
 /* 	CUSTOM TWITTER WIDGET
 	----------------- */
-.widget_rumputhijau_twitter_widget {
+.tiga_twitter {
 	ul {
-		li {
-			border-bottom: 1px solid $grayLighter;
-			padding-bottom: 8px;
-			margin-bottom: 8px;
-			
-			a {
-				display: inline;
-			}
+		@include reset-list;
+	}
+	li {
+		&:first-child {
+			border-top: none;
+		}
+	}
+}
+
+.widget.tiga_twitter ul li a {
+	color: $linkColor;
+	display: inline;
+	vertical-align: baseline;
+}
+
+#secondary,
+#colophon {
+	.tiga_twitter {
+		.jta-tweet-list-item {
+			background: none;
 		}
 	}
 }
 
 .follow-me {
-	display:block;
-	margin-top:10px;
+	display: block;
+	margin-top: 10px;
 }
 
 /* 	CUSTOM SOCIAL SHARE WIDGET

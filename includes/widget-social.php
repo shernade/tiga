@@ -26,7 +26,7 @@ class tiga_social extends WP_Widget {
 			'id_base' => 'tiga_social_widget' 
 		);
 
-		$this->WP_Widget( 'tiga_social_widget', __( '&raquo; Tiga Social Icons', 'tiga' ), $widget_ops, $control_ops );
+		$this->WP_Widget( 'tiga_social_widget', __( '&raquo; Tiga Social Network', 'tiga' ), $widget_ops, $control_ops );
 	}
 
 	/**
@@ -59,33 +59,33 @@ class tiga_social extends WP_Widget {
 		
 		<ul class="social-buttons clearfix">
 			<?php if ( $email_id ) { ?>
-				<li class="has-tip tip-top" data-width="35" title="Email"><a href="mailto:<?php echo is_email( $email_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/mail.png'; ?>"></a></li>
+				<li><a href="mailto:<?php echo is_email( $email_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/mail.png'; ?>"></a></li>
 			<?php } if ( $twitter_id ) { ?>
-				<li class="has-tip tip-top" data-width="45" title="Twitter"><a href="http://twitter.com/<?php echo esc_attr( $twitter_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/twitter.png'; ?>"></a></li>
+				<li><a href="http://twitter.com/<?php echo esc_attr( $twitter_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/twitter.png'; ?>"></a></li>
 			<?php } if ( $fb_id ) { ?>
-				<li class="has-tip tip-top" data-width="55" title="Facebook"><a href="http://www.facebook.com/<?php echo esc_attr( $fb_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/facebook.png'; ?>"></a></li>
+				<li><a href="http://www.facebook.com/<?php echo esc_attr( $fb_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/facebook.png'; ?>"></a></li>
 			<?php } if ( $gplus_id ) { ?>
-				<li class="has-tip tip-top" data-width="70" title="Google Plus"><a href="https://plus.google.com/u/<?php echo esc_attr( $gplus_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/google+.png'; ?>"></a></li>
+				<li><a href="https://plus.google.com/u/<?php echo esc_attr( $gplus_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/google+.png'; ?>"></a></li>
 			<?php } if ( $ytube_id ) { ?>
-				<li class="has-tip tip-top" data-width="50" title="Youtube"><a href="http://www.youtube.com/user/<?php echo esc_attr( $ytube_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/youtube.png'; ?>"></a></li>
+				<li><a href="http://www.youtube.com/user/<?php echo esc_attr( $ytube_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/youtube.png'; ?>"></a></li>
 			<?php } if ( $flickr_id ) { ?>
-				<li class="has-tip tip-top" data-width="35" title="Flickr"><a href="http://www.flickr.com/photos/<?php echo esc_attr( $flickr_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/flickr.png'; ?>"></a></li>
+				<li><a href="http://www.flickr.com/photos/<?php echo esc_attr( $flickr_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/flickr.png'; ?>"></a></li>
 			<?php } if ( $linkedin_id ) { ?>
-				<li class="has-tip tip-top" data-width="50" title="Linkedin"><a href="http://linkedin.com/in/<?php echo esc_attr( $linkedin_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/linkedin.png'; ?>"></a></li>
+				<li><a href="http://linkedin.com/in/<?php echo esc_attr( $linkedin_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/linkedin.png'; ?>"></a></li>
 			<?php } if ( $pinterest_id ) { ?>
-				<li class="has-tip tip-top" data-width="55" title="Pinterest"><a href="http://pinterest.com/<?php echo esc_attr( $pinterest_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/pinterest.png'; ?>"></a></li>
+				<li><a href="http://pinterest.com/<?php echo esc_attr( $pinterest_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/pinterest.png'; ?>"></a></li>
 			<?php } if ( $dribbble_id ) { ?>
-				<li class="has-tip tip-top" data-width="50" title="Dribbble"><a href="http://dribbble.com/<?php echo esc_attr( $dribbble_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/dribbble.png'; ?>"></a></li>
+				<li><a href="http://dribbble.com/<?php echo esc_attr( $dribbble_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/dribbble.png'; ?>"></a></li>
 			<?php } if ( $github_id ) { ?>
-				<li class="has-tip tip-top" data-width="40" title="Github"><a href="https://github.com/<?php echo esc_attr( $github_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/github.png'; ?>"></a></li>
+				<li><a href="https://github.com/<?php echo esc_attr( $github_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/github.png'; ?>"></a></li>
 			<?php } if ( $lastfm_id ) { ?>
-				<li class="has-tip tip-top" data-width="50" title="Last FM"><a href="http://www.last.fm/user/<?php echo esc_attr( $lastfm_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/last_fm.png'; ?>"></a></li>
+				<li><a href="http://www.last.fm/user/<?php echo esc_attr( $lastfm_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/last_fm.png'; ?>"></a></li>
 			<?php } if ( $vimeo_id ) { ?>
-				<li class="has-tip tip-top" data-width="40" title="Vimeo"><a href="http://vimeo.com/<?php echo esc_attr( $vimeo_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/vimeo.png'; ?>"></a></li>
+				<li><a href="http://vimeo.com/<?php echo esc_attr( $vimeo_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/vimeo.png'; ?>"></a></li>
 			<?php } if ( $tumblr_id ) { ?>
-				<li class="has-tip tip-top" data-width="45" title="Tumblr"><a href="http://<?php echo esc_attr( $tumblr_id ); ?>.tumblr.com" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/tumblr.png'; ?>"></a></li>
+				<li><a href="http://<?php echo esc_attr( $tumblr_id ); ?>.tumblr.com" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/tumblr.png'; ?>"></a></li>
 			<?php } if ( $instagram_id ) { ?>
-				<li class="has-tip tip-top" data-width="60" title="Instagram"><a href="http://statigr.am/<?php echo esc_attr( $instagram_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/instagram.png'; ?>"></a></li>
+				<li><a href="http://instagram.com/<?php echo esc_attr( $instagram_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/instagram.png'; ?>"></a></li>
 			<?php } ?>
 		</ul>
 		

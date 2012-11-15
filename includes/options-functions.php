@@ -17,8 +17,8 @@
 add_action( 'wp_head', 'tiga_custom_css', 10 );
 function tiga_custom_css() {
 
-	$custom_css = of_get_option('tiga_custom_css');
-	if ($custom_css != '') {
+	$custom_css = of_get_option( 'tiga_custom_css' );
+	if ( $custom_css != '' ) {
 		echo "<!-- Custom style -->\n<style type=\"text/css\">\n" . esc_html( $custom_css ) . "\n</style>\n";
 	}
 
@@ -29,7 +29,7 @@ function tiga_custom_css() {
  *
  * @since 0.2
  */
-add_action('wp_head', 'tiga_custom_typography');
+add_action( 'wp_head', 'tiga_custom_typography' );
 function tiga_custom_typography() {
 
 	if ( !of_get_option( 'tiga_disable_typography' ) ) {
@@ -58,7 +58,7 @@ function tiga_custom_typography() {
  * @since 0.2
  */
  
-function tiga_content_font_styles($option, $selectors) {
+function tiga_content_font_styles( $option, $selectors ) {
 	$output = $selectors . ' {';
 	$output .= ' color:' . $option['color'] .'; ';
 	$output .= 'font-family:' . $option['face'] . '; ';
@@ -75,7 +75,7 @@ function tiga_content_font_styles($option, $selectors) {
  *
  * @since 0.2
  */
-function tiga_heading_font_styles($option, $selectors) {
+function tiga_heading_font_styles( $option, $selectors ) {
 	$output = $selectors . ' {';
 	$output .= ' color:' . $option['color'] .'; ';
 	$output .= 'font-family:' . $option['face'] . '; ';
@@ -92,8 +92,8 @@ function tiga_heading_font_styles($option, $selectors) {
  * @since 0.0.7
  */
 add_filter( 'body_class', 'tiga_bg_pattern' );
-function tiga_bg_pattern($classes) {
-	$pattern = of_get_option('tiga_pattern');
+function tiga_bg_pattern( $classes ) {
+	$pattern = of_get_option( 'tiga_pattern' );
 	
 	if ( 'pattern-1' == $pattern )
 		$classes[] = 'pattern-1';
@@ -129,8 +129,8 @@ function tiga_bg_pattern($classes) {
 add_action( 'wp_head', 'tiga_custom_favicon', 5 );
 function tiga_custom_favicon() {
 
-	if (of_get_option('tiga_custom_favicon'))
-		echo '<link rel="shortcut icon" href="'. esc_url( of_get_option('tiga_custom_favicon') ) .'">'."\n";
+	if ( of_get_option( 'tiga_custom_favicon' ) )
+		echo '<link rel="shortcut icon" href="'. esc_url( of_get_option( 'tiga_custom_favicon' ) ) .'">'."\n";
 
 }
 
@@ -178,8 +178,9 @@ add_action( 'wp_enqueue_scripts', 'tiga_onecol_style', 10 );
 function tiga_onecol_style() {
 
 	$layouts = of_get_option('tiga_layouts');
+
 	if ( 'onecolumn' == $layouts ) :
-		wp_enqueue_style('tiga-onecolumn', get_template_directory_uri() . '/css/one-column.css', '', '0.1', 'all');
+		wp_enqueue_style( 'tiga-onecolumn', get_template_directory_uri() . '/css/one-column.css', '', '0.1', 'all' );
 	endif;
 
 }
@@ -219,11 +220,11 @@ function tiga_header_code() {
  * @since 1.0
  */
 add_action( 'wp_footer', 'tiga_footer_code' );
-function tiga_analytics() {
+function tiga_footer_code() {
 
-	$output = of_get_option('tiga_footer_code');
+	$output = of_get_option( 'tiga_footer_code' );
 	if ( $output ) 
-		echo "\n" . stripslashes($output) . "\n";
+		echo "\n" . stripslashes( $output ) . "\n";
 
 }
 
@@ -234,11 +235,14 @@ function tiga_analytics() {
  */
 add_action('admin_init', 'tiga_change_santiziation', 100);
 function tiga_change_santiziation() {
+
     remove_filter( 'of_sanitize_textarea', 'of_sanitize_textarea' );
     add_filter( 'of_sanitize_textarea', 'tiga_sanitize_textarea' );
+    
 }
 
 function tiga_sanitize_textarea($input) {
+
     global $allowedposttags;
     $custom_allowedtags["embed"] = array(
 		"src" => array(),
@@ -259,5 +263,6 @@ function tiga_sanitize_textarea($input) {
 	$custom_allowedtags = array_merge($custom_allowedtags, $allowedposttags);
 	$output = wp_kses( $input, $custom_allowedtags);
     return $output;
+
 }
 ?>

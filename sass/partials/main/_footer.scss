@@ -14,13 +14,15 @@
 }
 	
 .copyleft {
-	display: block;
-	@include adjust-font-size-to(12px);
+	@include float( left );
+	@include adjust-font-size-to( 12px );
 	@include text-shadow( 1px 1px 0 rgba($white, .5) );
 }
 
 .credit {
-	@extend .copyleft;
+	@include float( right );
+	@include adjust-font-size-to(12px);
+	@include text-shadow( 1px 1px 0 rgba($white, .5) );
 }
 
 /* 	FOOTER SIDEBAR

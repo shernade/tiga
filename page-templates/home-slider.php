@@ -1,13 +1,14 @@
 <?php
 /**
- * Template Name: Home Page w/ Slider
- * Description: A Page Template for displaying a recent post with slider
+ * Template Name: Blog Page w/ Slider
+ * Description: A Page Template for displaying a recent post with slider.
  *
  * @package 	Tiga
  * @author		Satrya
  * @license		license.txt
- * @since 		Tiga 1.0
+ * @since 		1.0
  */
+
 get_header(); ?>
 
 	<section id="primary" class="site-content">

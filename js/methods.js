@@ -1,7 +1,9 @@
 /* Author:
-Satrya - http://twitter.com/msattt
+M.Satrya - http://twitter.com/msattt
 */
+
 var $j = jQuery.noConflict();
+
 $j(document).ready(function(){
 	
 	// Reponsive videos
@@ -20,22 +22,31 @@ $j(document).ready(function(){
         $j(this).find( "ul:first" ).slideUp( "fast" );
     
     });
-	
-	// Tooltip
-	$j(document).tooltips();
 
-	// Slideshow
-    $j(".rslides").responsiveSlides({
+	// Blog page w/ slider
+    $j( ".rslides" ).responsiveSlides({
 		auto: true,
         pager: true,
         nav: true,
         speed: 500,
 		pauseControls: true,
-		pause: true,
-        maxwidth: 700
-    }).find(".featured-slides").hover(
-		function() { $j(this).find(".slides-content").slideDown(); },
-		function() { $j(this).find(".slides-content").slideUp(); }
+		pause: true		    
+	}).find( ".featured-slides" ).hover(
+		function() { $j(this).find( ".slides-content" ).slideDown(); },
+		function() { $j(this).find( ".slides-content" ).slideUp(); }
+		
 	);
+
+	// Custom home page slide
+	$j( ".home-slides" ).responsiveSlides({
+		auto: true,
+        pager: false,
+        nav: false,
+        speed: 700,
+		pauseControls: false,
+		pause: false,
+		maxwidth: 460
+    });
+
 	
 });

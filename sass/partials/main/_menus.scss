@@ -198,7 +198,7 @@
 				color: $white;
 				@include adjust-font-size-to(13px);
 				position: absolute;
-				right: 3px;
+				right: 6px;
 				top: 11px;
 			}
 		}
@@ -207,7 +207,7 @@
 		color: $white;
 		display: block;
 		@include adjust-font-size-to(12px);
-		padding: rhythm(.7);
+		padding: rhythm(.7) rhythm(.9);
 		text-transform: uppercase;
 		word-wrap: break-word;
 	}

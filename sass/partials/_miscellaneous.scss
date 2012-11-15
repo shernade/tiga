@@ -137,44 +137,258 @@ body.custom-background.pattern-6 {
 	}
 }
 
-/* 	TOOLTIPS
-	----------------- */
+/*
+ * jTweetsAnywhere V1.3.1
+ * http://thomasbillenstein.com/jTweetsAnywhere/
+ */
+.jta-tweet-list {
+  padding: 0;
+  list-style: none;
+}
 
-  .has-tip { font-weight: bold; color: #333;
+.jta-tweet-list-item {
+  background: #fafafa;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 8px 0px 8px 0px;
+  overflow: hidden;
+}
 
-    &:hover { color: #0192dd; }
-    &.tip-left, &.tip-right { float: none !important; }
+.jta-tweet-list-item:first-child {
+  border-top: 1px solid #e4e4e4;
+}
 
-  }
+.jta-tweet-profile-image {
+  width: 48px;
+  display: inline;
+  float: left;
+}
 
-  .tooltip { display: none; background: rgb(0,0,0); background: rgba(0,0,0,0.8); position: absolute; color: #fff; font-weight: bold; font-size: 12px; padding: 10px; z-index: 999; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; line-height: normal;
+.jta-tweet-profile-image img {
+  width: 48px;
+  height: 48px;
+}
 
-    &>.nub { display: block; width: 0; height: 0; border: solid 5px; border-color: transparent transparent rgb(0,0,0) transparent; border-color: transparent transparent rgba(0,0,0,0.8) transparent; position: absolute; top: -10px; left: 10px; }
-    &.tip-override>.nub { border-color: transparent transparent rgb(0,0,0) transparent !important; border-color: transparent transparent rgba(0,0,0,0.8) transparent !important; top: -10px !important; }
-    &.tip-top>.nub { border-color: rgb(0,0,0) transparent transparent transparent; border-color: rgba(0,0,0,0.8) transparent transparent transparent; top: auto; bottom: -10px; }
+.jta-tweet-body-list-profile-image-present {
+  margin-left: 58px;
+}
 
-    &.tip-left, &.tip-right { float: none !important; }
+.jta-tweet-user-name {
+  display: block;
+}
 
-    &.tip-left>.nub { border-color: transparent transparent transparent rgb(0,0,0); border-color: transparent transparent transparent rgba(0,0,0,0.8); right: -10px; left: auto; }
-    &.tip-right>.nub { border-color: transparent rgb(0,0,0) transparent transparent; border-color: transparent rgba(0,0,0,0.8) transparent transparent; right: auto; left: -10px; }
+.jta-tweet-user-screen-name {
+  font-weight: bold;
+}
 
-    &.noradius { @include border-radius(0); }
-    &.opened { color: #0192DD !important; border-bottom: dotted 1px #0593DC !important; }
+.jta-tweet-user-full-name {
+  font-size: 11px;
+  color: #999;
+}
 
-  }
+.jta-tweet-user-screen-name-link,
+.jta-tweet-a,
+.twitter-anywhere-user {
+  color: #900;
+  text-decoration: none;
+}
 
-  .tap-to-close { display: block; font-size: 10px;; color: #888; font-weight: normal; }
+.jta-tweet-user-screen-name-link:hover,
+.jta-tweet-a:hover,
+.twitter-anywhere-user:hover {
+  color: #900;
+  text-decoration: underline;
+}
 
-  @media only screen and (max-width: 768px - 1) {
-    .tooltip {
-      font-size: 14px;
-      line-height: 1.4;
-      padding: 7px 10px 9px 10px;
-    }
-    .tooltip > .nub, .tooltip.top > .nub, .tooltip.left > .nub, .tooltip.right > .nub {
-      border-color: transparent transparent rgb(0,0,0) transparent;
-      border-color: transparent transparent rgba(0,0,0,0.85) transparent;
-      top: -12px;
-      left: 10px;
-    }
-  }
+.jta-tweet-user-full-name-link {
+  color: #999;
+  text-decoration: none;
+}
+
+.jta-tweet-user-full-name-link:hover {
+  color: #666666;
+  text-decoration: underline;
+}
+
+.jta-tweet-attributes {
+  display: block;
+  color: #999;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.jta-tweet-twitter-bird-icon {
+  float: left;
+  width: 19px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0px 5px;
+  background-image: url(http://si0.twimg.com/images/dev/cms/intents/bird/bird_gray/bird_16_gray.png);
+}
+
+.jta-tweet-twitter-bird-icon:hover {
+  background-image: url(http://si0.twimg.com/images/dev/cms/intents/bird/bird_black/bird_16_black.png);
+}
+
+.jta-tweet-timestamp-link,
+.jta-tweet-source-link a,
+.jta-tweet-inreplyto-link,
+.jta-tweet-location-link,
+.jta-tweet-retweeter-link {
+  color: #999;
+  text-decoration: none;
+}
+
+.jta-tweet-timestamp-link:hover,
+.jta-tweet-source-link a:hover,
+.jta-tweet-inreplyto-link:hover,
+.jta-tweet-location-link:hover,
+.jta-tweet-retweeter-link:hover {
+  color: #999;
+  text-decoration: underline;
+}
+
+.jta-tweet-actions {
+  display: block;
+  color: #999;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.jta-tweet-action-reply,
+.jta-tweet-action-retweet,
+.jta-tweet-action-favorite {
+  padding-right: 1em;
+}
+
+.jta-tweet-action-reply a,
+.jta-tweet-action-retweet a,
+.jta-tweet-action-favorite a {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  padding-left: 19px;
+  color: #999;
+  text-decoration: none;
+}
+
+.jta-tweet-action-reply a {
+  background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/reply.png);
+}
+
+.jta-tweet-action-retweet a {
+  background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/retweet.png);
+}
+
+.jta-tweet-action-favorite a {
+  background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/favorite.png);
+}
+
+.jta-tweet-action-reply a:hover,
+.jta-tweet-action-retweet a:hover,
+.jta-tweet-action-favorite a:hover {
+  color: #666666;
+  text-decoration: underline;
+}
+
+.jta-tweet-action-reply a:hover {
+  background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/reply_hover.png);
+}
+
+.jta-tweet-action-retweet a:hover {
+  background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/retweet_hover.png);
+}
+
+.jta-tweet-action-favorite a:hover {
+  background-image: url(http://si0.twimg.com/images/dev/cms/intents/icons/favorite_hover.png);
+}
+
+.jta-tweet-list-controls {
+  margin-top: 20px;
+}
+
+.jta-tweet-list-controls-button {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  border: 1px solid #999;
+}
+
+.jta-tweet-list-controls-button:hover {
+  color: black;
+  background-color: #999;
+  cursor: pointer;
+}
+
+.jta-tweet-list-controls-button-next {
+  margin-left: 10px;
+}
+
+.jta-tweet-list-autorefresh-trigger {
+  padding: 8px 0px 8px 0px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid #999;
+}
+
+.jta-tweet-list-autorefresh-trigger:hover {
+  color: black;
+  background-color: #999;
+  cursor: pointer;
+}
+
+.jta-login-info-profile-image {
+  width: 48px;
+  display: inline;
+  float: left;
+}
+
+.jta-login-info-profile-image img {
+  width: 48px;
+  height: 48px;
+}
+
+.jta-login-info-block {
+  margin-left: 58px;
+}
+
+.jta-login-info-sign-out {
+  width: 97px;
+  margin-top: 2px;
+  padding: 1px;
+  text-align: center;
+  border: 1px solid #999;
+}
+
+.jta-login-info-sign-out:hover {
+  color: black;
+  background-color: #999;
+  cursor: pointer;
+}
+
+.jta-loading {
+  margin: 0;
+  padding: 8px 0px 8px 0px;
+}
+
+.jta-error {
+  margin: 0;
+  padding: 8px;
+  color: #000;
+  background-color: red;
+}
+
+.jta-nodata {
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.jta-clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}

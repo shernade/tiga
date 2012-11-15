@@ -1,6 +1,7 @@
 /*! http://responsiveslides.com v1.25 by @viljamis */
 
-.rslides {
+.rslides,
+.home-slides {
 	@include reset-list;
 	position: relative;
 	width: 100%;

@@ -5,7 +5,7 @@
  * @package 	Tiga
  * @author		Satrya
  * @license		license.txt
- * @since 		Tiga 0.0.1
+ * @since 		0.0.1
  *
  */
 ?>
@@ -14,7 +14,9 @@
 
 		<header class="entry-header">
 		
-			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'tiga' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+			<h1 class="entry-title">
+				<a href="<?php esc_url( the_permalink() ); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'tiga' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php esc_attr( the_title() ); ?></a>
+			</h1>
 
 			<div class="entry-meta">
 				<?php tiga_posted_on(); ?>
@@ -22,28 +24,22 @@
 			
 		</header><!-- .entry-header -->
 		
-		<div id="above-content" class="widget-area">
-			<?php if ( ! dynamic_sidebar( 'Above Content' ) ) : ?>
-			<?php endif; ?>
-		</div><!-- #above-content .widget-area -->
+		<?php get_sidebar( 'above-content' ); ?>
 		
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tiga' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		
-		<div id="above-content" class="widget-area">
-			<?php if ( ! dynamic_sidebar( 'Below Content' ) ) : ?>
-			<?php endif; ?>
-		</div><!-- #above-content .widget-area -->
+		<?php get_sidebar( 'below-content' ); ?>
 		
 		<footer class="entry-meta">
 		
 			<?php 
-				$tiga_socialpage = of_get_option('tiga_social_share');
+				$tiga_socialpage = of_get_option( 'tiga_social_share' );
 				$disable_social = get_post_meta(get_the_ID(), 'tiga_social_check', true);
 
-				if( ('tiga_post' == $tiga_socialpage) || ('tiga_both' == $tiga_socialpage) && ($disable_social != 'true') )
+				if( ( 'tiga_post' == $tiga_socialpage ) || ( 'tiga_both' == $tiga_socialpage ) && ( $disable_social != 'true' ) )
 					tiga_share_buttons();
 			?>
 		
@@ -57,7 +53,7 @@
 
 			<?php edit_post_link( __( 'Edit', 'tiga' ), '<span class="post-edit">', '</span>' ); ?>
 			
-			<?php if(of_get_option('tiga_author_box'))
+			<?php if( of_get_option( 'tiga_author_box' ) )
 					tiga_the_author();
 				?>
 			

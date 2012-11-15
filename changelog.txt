@@ -7,6 +7,9 @@
 - Custom background now using WordPress core
 - Remove all @font-face, now using google webfonts
 - Dynamic footer widget
+- Twentytwelve like custom home page template
+- Remove tooltip
+- Update twitter widget
 
 0.2.1 - 02 Sept 2012
 - Support shortcode for widget

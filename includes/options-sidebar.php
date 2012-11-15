@@ -16,7 +16,7 @@ function tiga_options_sidebar() { ?>
 		<div class="metabox-holder">
 			
 			<div class="tiga-support">
-				<a href="http://wordpress.org/support/theme/tiga/" title="Support" target="_blank">Support</a> <a href="http://about.me/margasatrya" title="About theme author" target="_blank">About Author</a>
+				<a href="http://wordpress.org/support/theme/tiga/" title="Support" target="_blank">Support</a> <a href="http://wordpress.org/support/view/theme-reviews/tiga/" title="Feedback" target="_blank">Feedback</a> <a href="http://about.me/margasatrya" title="About theme author" target="_blank">Author Profile</a>
 			</div>
 
 			<div id="tiga-buddypress" class="postbox">
@@ -31,6 +31,11 @@ function tiga_options_sidebar() { ?>
 							I'm building Tiga with SASS & Compass, download it if you need.</li>
 					</ol>
 				</div>
+			</div>
+
+			<div id="tiga-project" class="postbox">
+				<h3 class="hndle">Project</span></h3>
+				<div class="inside">Need a custom WordPress theme? <a href="http://www.emailmeform.com/builder/form/HX03Jzb3Ac3UfK6SVqIPa" target="_blank">Contact me!</a></div>
 			</div>
 			
 			<div id="tiga-themes" class="postbox">

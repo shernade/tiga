@@ -330,3 +330,64 @@ article {
 		margin: 15px 0;
 	}
 }
+
+/*	CUSTOM HOME PAGE
+	----------------- */
+.home-custom {
+	overflow: hidden;
+	.thumbnail {
+		@include span-columns(12 omega, 24);
+		@include pre(1);
+		margin-bottom: 20px;
+	}
+	.entry-content {
+		overflow: hidden;
+	}
+}
+
+#home-content {
+	overflow: hidden;
+	padding-bottom: 20px;
+	.widget {
+		border-bottom: none;
+		@include float(left);
+		margin: 0;
+	}
+	&.one {
+		.widget {
+			width: 100%;
+		}
+	}
+	&.two {
+		.widget {
+			margin-right: 2%;
+			width: 48%;
+			&:last-child {
+				@include float( right );
+				margin-right: 0;
+				margin-left: 2%;
+			}
+		}
+	}
+	&.three {
+		.widget {
+			margin-right: 5%;
+			width: 30%;
+			&:last-child {
+				@include float( right );
+				margin-right: 0;
+			}
+		}
+	}
+	&.four {
+		.widget {
+			margin-right: 2%;
+			width: 23%;
+			&:last-child {
+				@include float( right );
+				margin-right: 0;
+				margin-left: 2%;
+			}
+		}
+	}
+}

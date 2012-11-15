@@ -15,7 +15,7 @@
 		</div><!-- #main -->
 	</div> <!-- end #page .hfeed .site -->
 
-	<?php if ( is_active_sidebar( 'subsidiary' ) ) : ?>
+	<?php if ( is_active_sidebar( 'subsidiary' ) && !is_page_template( 'page-templates/home.php' ) ) : ?>
 		<footer id="colophon" class="site-footer <?php tiga_dynamic_sidebar_class( 'subsidiary' ); ?>" role="contentinfo">
 			<div class="footer">
 			
@@ -31,14 +31,18 @@
 		<span class="copyleft">&copy; Copyright <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
 		</span>
 		
-		<span class="credit">
-			<?php printf( __('Powered by <a href="http://wordpress.org/" title="%1$s" rel="generator">%2$s</a> &middot; Theme by <a href="http://satrya.me/" title="%3$s" rel="designer">%4$s</a>', 'tiga'),
-				esc_attr( 'A Semantic Personal Publishing Platform'),
-				'WordPress',
-				esc_attr( 'Satrya'),
-				'Satrya'
-			); ?>
-		</span>
+		<?php if( of_get_option( 'tiga_credits' ) == false ) { ?>
+
+			<span class="credit">
+				<?php printf( __('Powered by <a href="http://wordpress.org/" title="%1$s" rel="generator">%2$s</a> &middot; Theme by <a href="http://satrya.me/" title="%3$s" rel="designer">%4$s</a>', 'tiga'),
+					esc_attr( 'A Semantic Personal Publishing Platform'),
+					'WordPress',
+					esc_attr( 'Satrya'),
+					'Satrya'
+				); ?>
+			</span>
+
+		<?php } ?>
 		
 	</div> <!-- #site-credit .site-info -->
 

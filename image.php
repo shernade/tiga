@@ -5,7 +5,7 @@
  * @package 	Tiga
  * @author		Satrya
  * @license		license.txt
- * @since 		Tiga 0.0.1
+ * @since 		0.0.1
  *
  */
 
@@ -23,7 +23,7 @@ get_header(); ?>
 				
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<h1 class="entry-title"><?php esc_attr( the_title() ); ?></h1>
 
 						<div class="entry-meta">
 							<?php

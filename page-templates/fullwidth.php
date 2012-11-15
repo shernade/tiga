@@ -6,7 +6,7 @@
  * @package 	Tiga
  * @author		Satrya
  * @license		license.txt
- * @since 		Tiga 0.0.1
+ * @since 		0.0.1
  */
 get_header(); ?>
 
@@ -30,6 +30,6 @@ get_header(); ?>
 
 		<?php tiga_content_after(); ?>
 		
-	</section><!-- #primary .site-content -->
+	</section><!-- #full-primary .site-content -->
 
 <?php get_footer(); ?>

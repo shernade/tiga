@@ -8,7 +8,7 @@
  * @package 	Tiga
  * @author		Satrya
  * @license		license.txt
- * @since 		Tiga 0.0.1
+ * @since 		0.0.1
  *
  */
 ?>
@@ -37,50 +37,81 @@
 	<?php tiga_before(); ?>
 
 	<header id="masthead" class="site-header" role="banner">
+
 		<div id="main-header" class="clearfix">
 		
 			<div class="site-branding">
-				<?php if(of_get_option('tiga_custom_logo')) :
+
+				<?php if( of_get_option( 'tiga_custom_logo' ) ) {
 					
-					$logotag  = (is_home() || is_front_page())? 'h1':'div'; // only display h1 tag in home page, SEO reason ?>
-						<<?php echo $logotag; ?> class="site-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" src="<?php echo esc_url( of_get_option('tiga_custom_logo') ); ?>"><span><?php bloginfo('name'); ?></span></a></<?php echo $logotag; ?>>
+					$logotag  = ( is_home() || is_front_page() )? 'h1':'div'; ?>
+
+						<<?php echo $logotag; ?> class="site-logo">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" src="<?php echo esc_url( of_get_option( 'tiga_custom_logo' ) ); ?>"><span><?php bloginfo('name'); ?></span></a>
+						</<?php echo $logotag; ?>>
+
 					<?php
-				else :
-					$titletag  = (is_home() || is_front_page())? 'h1':'div'; // only display h1 tag in home page, SEO reason ?>
-						<<?php echo $titletag; ?> class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></<?php echo $titletag; ?>>
-						<div class="site-description"><?php bloginfo( 'description' ); ?></div>
-				<?php endif; ?>
-			</div> <!-- end .site-branding -->
 
-			<nav class="site-navigation main-navigation" role="navigation">
-				<h5 class="assistive-text"><?php _e( 'Menu', 'tiga' ); ?></h5>
-				<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tiga' ); ?>"><?php _e( 'Skip to content', 'tiga' ); ?></a></div>
+				} else {
 
-				<?php 
-				if (has_nav_menu('primary'))
-				wp_nav_menu( array(  
-						'container' => '',
-						'menu_class' => 'main-nav',
-						'theme_location' => 'primary') 
-					); ?>
-			</nav> <!-- end .site-navigation -->
+					$titletag  = ( is_home() || is_front_page() )? 'h1':'div'; ?>
+
+						<<?php echo $titletag; ?> class="site-title">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						</<?php echo $titletag; ?>>
+						<div class="site-description"><?php esc_attr( bloginfo( 'description' ) ); ?></div>
+
+				<?php } ?>
+
+			</div><!-- end .site-branding -->
+
+			<?php if ( has_nav_menu( 'primary' ) ) { ?>
+
+				<nav class="site-navigation main-navigation" role="navigation">
+
+					<h5 class="assistive-text"><?php _e( 'Menu', 'tiga' ); ?></h5>
+					<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tiga' ); ?>"><?php _e( 'Skip to content', 'tiga' ); ?></a></div>
+
+					<?php
+						wp_nav_menu( 
+							array(  
+								'container' => '',
+								'menu_class' => 'main-nav',
+								'theme_location' => 'primary'
+							) 
+						); 
+					?>
+						
+				</nav><!-- end .site-navigation .main-navigation -->
+
+			<?php } ?>
 			
 		</div> <!-- end #main-header -->
 		
-		<nav class="site-navigation secondary-navigation clearfix" role="navigation">
-			<?php 
-			if (has_nav_menu('secondary'))
-			wp_nav_menu( array(  
-					'container' => '',
-					'menu_class' => 'secondary-nav',
-					'theme_location' => 'secondary' ) 
-				); ?>
-		</nav> <!-- end .site-navigation -->
+		<?php if ( has_nav_menu( 'secondary' ) ) { ?>
+
+			<nav class="site-navigation secondary-navigation clearfix" role="navigation">
+
+				<?php 
+					wp_nav_menu( 
+						array(  
+							'container' => '',
+							'menu_class' => 'secondary-nav',
+							'theme_location' => 'secondary' 
+						) 
+					); 
+				?>
+
+			</nav><!-- end .site-navigation -->
+
+		<?php } ?>
 
 		<?php tiga_header(); ?>
+
 	</header><!-- #masthead .site-header -->
 	
 	<?php tiga_main_before(); ?>
 
 	<div id="main">
+		
 		<?php tiga_main(); ?>
