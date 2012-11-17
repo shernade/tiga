@@ -44,9 +44,13 @@ $j(document).ready(function(){
         nav: false,
         speed: 700,
 		pauseControls: false,
-		pause: false,
-		maxwidth: 460
+		pause: false
     });
 
+	// add class last if has ie8 class
+    if( $j( "html" ).hasClass( "ie8" ) ) { 
+    	$j( "#home-content .widget:last-child" ).addClass( "last" );
+    	$j( ".two-cols:nth-child(2n)" ).addClass( "last" );
+    };
 	
 });

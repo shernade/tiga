@@ -15,7 +15,8 @@
 <!DOCTYPE html>
 <!--[if IE 7]>    <html class="no-js ie7 oldie" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" <?php language_attributes(); ?>> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -44,7 +45,7 @@
 
 				<?php if( of_get_option( 'tiga_custom_logo' ) ) {
 					
-					$logotag  = ( is_home() || is_front_page() )? 'h1':'div'; ?>
+					$logotag  = ( is_home() || is_front_page() )? 'h1':'h2'; ?>
 
 						<<?php echo $logotag; ?> class="site-logo">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" src="<?php echo esc_url( of_get_option( 'tiga_custom_logo' ) ); ?>"><span><?php bloginfo('name'); ?></span></a>
@@ -54,7 +55,7 @@
 
 				} else {
 
-					$titletag  = ( is_home() || is_front_page() )? 'h1':'div'; ?>
+					$titletag  = ( is_home() || is_front_page() )? 'h1':'h2'; ?>
 
 						<<?php echo $titletag; ?> class="site-title">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>

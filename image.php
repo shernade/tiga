@@ -42,8 +42,8 @@ get_header(); ?>
 						</div><!-- .entry-meta -->
 
 						<nav id="image-navigation">
-							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'tiga' ) ); ?></span>
-							<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'tiga' ) ); ?></span>
+							<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous Image', 'tiga' ) ); ?></span>
+							<span class="next-image"><?php next_image_link( false, __( 'Next Image &rarr;', 'tiga' ) ); ?></span>
 						</nav><!-- #image-navigation -->
 					</header><!-- .entry-header -->
 

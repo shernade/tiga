@@ -10,7 +10,7 @@
  */
 get_header(); ?>
 
-	<section id="full-primary" class="site-content">
+	<section id="full-primary" class="site-content full-width">
 
 		<?php tiga_content_before(); ?>
 

@@ -16,7 +16,7 @@ function tiga_options_sidebar() { ?>
 		<div class="metabox-holder">
 			
 			<div class="tiga-support">
-				<a href="http://wordpress.org/support/theme/tiga/" title="Support" target="_blank">Support</a> <a href="http://wordpress.org/support/view/theme-reviews/tiga/" title="Feedback" target="_blank">Feedback</a> <a href="http://about.me/margasatrya" title="About theme author" target="_blank">Author Profile</a>
+				<a href="http://wordpress.org/support/theme/tiga/" title="Support" target="_blank">Support</a> <a href="http://wordpress.org/support/view/theme-reviews/tiga/" title="Feedback" target="_blank">Feedback</a> <a href="http://dl.dropbox.com/u/4357218/Theme/Docs/Tiga/docs.html" title="Documentation" target="_blank" style="color: #f00;">Documentation</a>
 			</div>
 
 			<div id="tiga-buddypress" class="postbox">

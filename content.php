@@ -11,9 +11,9 @@
 ?>
 
 	<?php
-		$class = of_get_option('tiga_home_layouts');
+		$class = of_get_option( 'tiga_home_layouts' );
 	?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class( '$class clearfix' ); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( "$class clearfix" ); ?>>
 				
 		<header>
 			<h2 class="entry-title">
@@ -27,7 +27,7 @@
 				<a href="<?php esc_url( the_permalink() ); ?>">
 					<?php 
 					$thumb_size = '';
-					if ($class == 'two-cols')
+					if ( $class == 'two-cols' )
 						$thumb_size = 'tiga-300px';
 					else
 						$thumb_size = 'tiga-140px';

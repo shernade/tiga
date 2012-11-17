@@ -69,7 +69,7 @@ function tiga_posted_on() {
 		esc_attr( sprintf( __( 'View all posts by %s', 'tiga' ), get_the_author() ) ),
 		esc_html( get_the_author() )
 	); 
-	if ( !is_home() && comments_open() || ( '0' != get_comments_number() && ! comments_open() ) ) : ?>
+	if ( comments_open() || ( '0' != get_comments_number() && ! comments_open() ) ) : ?>
 		<span class="comments-link">&middot; <?php comments_popup_link( __( 'Leave a comment', 'tiga' ), __( '1 Comment', 'tiga' ), __( '% Comments', 'tiga' ) ); ?></span>
 	<?php endif;
 }

@@ -42,6 +42,9 @@ if ( ! function_exists( 'tiga_setup' ) ):
 		/* Set the content width based on the theme's design and stylesheet. */
 		global $content_width;
 		if ( ! isset( $content_width ) ) $content_width = 620;
+
+		/* Embed width defaults. */
+		add_filter( 'embed_defaults', 'tiga_embed_defaults' );
 		
 		/* Make tiga available for translation. */
 		load_theme_textdomain( 'tiga', get_template_directory() . '/languages' );
@@ -133,6 +136,25 @@ if ( ! function_exists( 'tiga_setup' ) ):
 endif; // end tiga_setup
 
 /**
+ * Overwrites the default widths for embeds.  This is especially useful for making sure videos properly
+ * expand the full width on video pages.  This function overwrites what the $content_width variable handles
+ * with context-based widths.
+ *
+ * @since 1.0
+ */
+function tiga_embed_defaults( $args ) {
+	
+	$args['width'] = 620;
+	
+	$layout = of_get_option( 'tiga_layouts' );
+
+	if ( 'onecolumn' == $layout )
+		$args['width'] = 700;
+
+	return $args;
+}
+
+/**
  * Enqueue styles
  *
  * @since 0.0.1
@@ -166,7 +188,7 @@ function tiga_enqueue_scripts() {
 
 	wp_enqueue_script( 'jquery' );
 	
-	wp_enqueue_script( 'tiga-modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.1.min.js', array('jquery'), '2.6.1' );
+	wp_enqueue_script( 'tiga-modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js', array('jquery'), '2.6.1' );
 
 	if ( is_singular() && wp_attachment_is_image( $post->ID ) ) {
 		wp_enqueue_script( 'tiga-keyboard-image-navigation', get_template_directory_uri() . '/js/vendor/keyboard-image-navigation.js', array( 'jquery' ), '20120410', true );

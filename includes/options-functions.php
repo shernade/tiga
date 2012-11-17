@@ -174,10 +174,10 @@ function tiga_custom_layouts($classes) {
  *
  * @since 0.1
  */
-add_action( 'wp_enqueue_scripts', 'tiga_onecol_style', 10 );
+add_action( 'wp_enqueue_scripts', 'tiga_onecol_style', 30 );
 function tiga_onecol_style() {
 
-	$layouts = of_get_option('tiga_layouts');
+	$layouts = of_get_option( 'tiga_layouts' );
 
 	if ( 'onecolumn' == $layouts ) :
 		wp_enqueue_style( 'tiga-onecolumn', get_template_directory_uri() . '/css/one-column.css', '', '0.1', 'all' );
@@ -192,10 +192,11 @@ function tiga_onecol_style() {
  */
 add_filter( 'excerpt_length', 'tiga_excerpt' );
 function tiga_excerpt( $length ) {
-	$home_layout = of_get_option('tiga_home_layouts');
+
+	$home_layout = of_get_option( 'tiga_home_layouts' );
 
 	if( 'one-col' == $home_layout )
-		return 50;
+		return 60;
 	else
 		return 35;
 }

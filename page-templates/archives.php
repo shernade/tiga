@@ -32,18 +32,18 @@ get_header(); ?>
 							<div class="archives-content clearfix">
 							
 								<div class="archives-left">
-									<h2><?php _e('By Category', 'tiga'); ?></h2>
+									<h2><?php _e( 'By Category', 'tiga' ); ?></h2>
 										<ul><?php wp_list_categories('depth=0&title_li=&'); ?></ul>
 										
-									<h2><?php _e('By Monthly', 'tiga'); ?></h2>
+									<h2><?php _e( 'By Monthly', 'tiga' ); ?></h2>
 										<ul><?php wp_get_archives('type=monthly&limit=12'); ?> </ul>
 									
-									<h2><?php _e('By Yearly', 'tiga'); ?></h2>
+									<h2><?php _e( 'By Yearly', 'tiga' ); ?></h2>
 										<ul><?php wp_get_archives('type=yearly'); ?></ul>
 								</div> <!-- end .archives-left -->
 								
 								<div class="archives-right">
-									<h2><?php _e('Latest Posts', 'tiga'); ?></h2>
+									<h2><?php _e( 'Latest Posts', 'tiga' ); ?></h2>
 										<ul>  
 											<?php wp_get_archives('type=postbypost'); ?>
 										</ul>  
