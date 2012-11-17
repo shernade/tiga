@@ -1,4 +1,4 @@
-1.0 - Beta
+1.0 - 17 Nov 2012
 - FB Like box widget
 - Social settings in theme options moved to the widget itself
 - Page template to display Home page with slider
