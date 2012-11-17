@@ -196,7 +196,7 @@ function tiga_excerpt( $length ) {
 	$home_layout = of_get_option( 'tiga_home_layouts' );
 
 	if( 'one-col' == $home_layout )
-		return 60;
+		return 50;
 	else
 		return 35;
 }
