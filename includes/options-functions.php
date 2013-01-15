@@ -180,7 +180,7 @@ function tiga_onecol_style() {
 	$layouts = of_get_option( 'tiga_layouts' );
 
 	if ( 'onecolumn' == $layouts ) :
-		wp_enqueue_style( 'tiga-onecolumn', get_template_directory_uri() . '/css/one-column.css', '', '0.1', 'all' );
+		wp_enqueue_style( 'tiga-onecolumn', trailingslashit( TIGA_CSS ) . 'one-column.css', '', TIGA_VERSION, 'all' );
 	endif;
 
 }
