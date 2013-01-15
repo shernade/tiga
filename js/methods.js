@@ -38,7 +38,7 @@ $j(document).ready(function(){
 	);
 
 	// Custom home page slide
-	$j( ".rlides" ).responsiveSlides({
+	$j( ".home-slides" ).responsiveSlides({
 		auto: true,
         pager: false,
         nav: false,

@@ -16,32 +16,27 @@ function tiga_options_sidebar() { ?>
 		<div class="metabox-holder">
 			
 			<div class="tiga-support">
-				<a href="http://wordpress.org/support/theme/tiga/" title="Support" target="_blank">Support</a> <a href="http://wordpress.org/support/view/theme-reviews/tiga/" title="Feedback" target="_blank">Feedback</a> <a href="http://dl.dropbox.com/u/4357218/Theme/Docs/Tiga/docs.html" title="Documentation" target="_blank" style="color: #f00;">Documentation</a>
+				<a href="<?php echo esc_url( 'http://wordpress.org/support/theme/tiga/' ); ?>" title="Support" target="_blank">Support</a> <a href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/tiga/' ); ?>" title="Feedback" target="_blank">Feedback</a> <a href="<?php echo esc_url( 'http://dl.dropbox.com/u/4357218/Theme/Docs/Tiga/docs.html' ); ?>" title="Documentation" target="_blank" style="color: #f00;">Documentation</a>
 			</div>
 
 			<div id="tiga-buddypress" class="postbox">
 				<h3 class="hndle">Components</span></h3>
 				<div class="inside">
 					<ol>
-						<li><a href="https://github.com/satrya/tiga/downloads" title="BuddyPress for tiga" target="_blank">Buddypress</a> <br />
+						<li><a href="<?php echo esc_url( 'https://github.com/satrya/tiga/downloads', 'https' ) ?>" title="BuddyPress for tiga" target="_blank">Buddypress</a> <br />
 							A child theme for buddypress compatibility.</li>
-						<li><a href="https://github.com/satrya/tiga/downloads" title="Sample child theme" target="_blank">Sample child theme</a> <br />
+						<li><a href="<?php echo esc_url( 'https://github.com/satrya/tiga/downloads', 'https' ) ?>" title="Sample child theme" target="_blank">Sample child theme</a> <br />
 							Sample child theme for Tiga.</li>
-						<li><a href="https://github.com/satrya/tiga/downloads" title="Sass files" target="_blank">Sass files</a> <br />
+						<li><a href="<?php echo esc_url( 'https://github.com/satrya/tiga/downloads', 'https' ) ?>" title="Sass files" target="_blank">Sass files</a> <br />
 							I'm building Tiga with SASS & Compass, download it if you need.</li>
 					</ol>
 				</div>
 			</div>
-
-			<div id="tiga-project" class="postbox">
-				<h3 class="hndle">Project</span></h3>
-				<div class="inside">Need a custom WordPress theme? <a href="http://www.emailmeform.com/builder/form/HX03Jzb3Ac3UfK6SVqIPa" target="_blank">Contact me!</a></div>
-			</div>
 			
 			<div id="tiga-themes" class="postbox">
-				<h3 class="hndle"><span>Recommended</span></h3>
+				<h3 class="hndle"><span><?php _e( 'Recommended' , 'tiga' ); ?></span></h3>
 				<div class="inside">
-					<a href="http://tokokoo.com" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/tokokoo.png" width="250"></a>
+					<a href="<?php echo esc_url( 'http://tokokoo.com' ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/tokokoo.png" width="250"></a>
 				</div>
 			</div>
 			

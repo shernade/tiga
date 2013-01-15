@@ -1,3 +1,8 @@
+1.1 - 19 Dec 2012
+- WordPress 3.5 compatibility
+- Support 'link' in header code option(you can embed the google font)
+- Update social widget
+
 1.0 - 17 Nov 2012
 - FB Like box widget
 - Social settings in theme options moved to the widget itself
