@@ -16,18 +16,19 @@ function tiga_options_sidebar() { ?>
 		<div class="metabox-holder">
 			
 			<div class="tiga-support">
-				<a href="<?php echo esc_url( 'http://wordpress.org/support/theme/tiga/' ); ?>" target="_blank"><?php _e( 'Support', 'tiga' ); ?></a> <a href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/tiga/' ); ?>" target="_blank"><?php _e( 'Feedback', 'tiga' ); ?></a> <a href="<?php echo esc_url( 'http://dl.dropbox.com/u/4357218/Theme/Docs/Tiga/docs.html' ); ?>" target="_blank" style="color: #f00;"><?php _e( 'Documentation', 'tiga' ); ?></a>
+				<a class="button button-primary button-hero" href="<?php echo esc_url( 'http://satrya.me/tiga/' ); ?>" target="_blank"><?php _e( 'Support', 'tiga' ); ?></a>
+				<a class="button button-primary button-hero" href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/tiga' ); ?>" target="_blank"><?php _e( 'Feedback', 'tiga' ); ?></a>
 			</div>
 
 			<div id="tiga-buddypress" class="postbox">
 				<h3 class="hndle"><?php _e( 'Components', 'tiga' ); ?></span></h3>
 				<div class="inside">
 					<ol>
-						<li><a href="<?php echo esc_url( 'https://github.com/satrya/tiga/downloads', 'https' ) ?>" target="_blank"><?php _e( 'Buddypress', 'tiga' ); ?></a> <br />
+						<li><a href="<?php echo esc_url( 'http://satrya.me/forums/topic/tiga-components/' ) ?>" target="_blank"><?php _e( 'Buddypress', 'tiga' ); ?></a> <br />
 							<?php _e( 'A child theme for buddypress compatibility.', 'tiga' ); ?></li>
-						<li><a href="<?php echo esc_url( 'https://github.com/satrya/tiga/downloads', 'https' ) ?>" target="_blank"><?php _e( 'Sample child theme', 'tiga' ); ?></a> <br />
+						<li><a href="<?php echo esc_url( 'http://satrya.me/forums/topic/tiga-components/' ) ?>" target="_blank"><?php _e( 'Sample child theme', 'tiga' ); ?></a> <br />
 							<?php _e( 'Sample child theme for Tiga.', 'tiga' ) ?></li>
-						<li><a href="<?php echo esc_url( 'https://github.com/satrya/tiga/downloads', 'https' ) ?>" target="_blank"><?php _e( 'Sass files', 'tiga' ); ?></a> <br />
+						<li><a href="<?php echo esc_url( 'http://satrya.me/forums/topic/tiga-components/' ) ?>" target="_blank"><?php _e( 'Sass files', 'tiga' ); ?></a> <br />
 							<?php _e( 'I\'m building Tiga with SASS & Compass, download it if you need.', 'tiga' ); ?></li>
 					</ol>
 				</div>
