@@ -11,8 +11,8 @@
 
 add_action( 'add_meta_boxes', 'tiga_meta_box' );
 function tiga_meta_box() {
-	add_meta_box( 'tiga_social_option', __('Tiga social share', 'tiga'), 'tiga_social_option_box', 'post', 'side', 'high' );
-	add_meta_box( 'tiga_social_option', __('Tiga social share', 'tiga'), 'tiga_social_option_box', 'page', 'side', 'high' );
+	add_meta_box( 'tiga_social_option', __( 'Tiga social share', 'tiga' ), 'tiga_social_option_box', 'post', 'side', 'high' );
+	add_meta_box( 'tiga_social_option', __( 'Tiga social share', 'tiga' ), 'tiga_social_option_box', 'page', 'side', 'high' );
 }
 
 function tiga_social_option_box( $post ) {
@@ -22,7 +22,7 @@ function tiga_social_option_box( $post ) {
 	?>
 	<p>
 		<input type="checkbox" name="tiga_social_check" id="tiga_social_check" <?php checked( $check, 'true' ); ?> />
-		<label for="tiga_social_check"><?php _e('Disable social share button on this post?', 'tiga'); ?></label>
+		<label for="tiga_social_check"><?php _e( 'Disable social share button on this post?', 'tiga' ); ?></label>
 	</p>
 	<?php	
 }

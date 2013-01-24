@@ -142,7 +142,7 @@ function tiga_custom_favicon() {
 add_action( 'wp_head', 'tiga_iframe_blocker', 11 );
 function tiga_iframe_blocker() {
 		
-	if(of_get_option('tiga_iframe_blocker') == 'enable'):?>
+	if( of_get_option('tiga_iframe_blocker') == 'enable' ) : ?>
 		<script language="javascript" type="text/javascript"> 
 			if (top.location != self.location) top.location.replace(self.location); 
 		</script>

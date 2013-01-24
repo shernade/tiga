@@ -10,7 +10,8 @@ $j(document).ready(function(){
 	$j( "#content" ).fitVids();
 	
 	// Reponsive menus
-	$j( ".secondary-nav" ).mobileMenu();
+	$j( ".secondary-nav" ).tinyNav();
+	$j( ".main-nav" ).tinyNav();
 	
 	// Drop down menus
 	$j( ".main-navigation ul li ul, .secondary-navigation ul li ul" ).parent().addClass( "arrow" );
@@ -27,14 +28,13 @@ $j(document).ready(function(){
     $j( ".rslides" ).responsiveSlides({
 		auto: true,
         pager: true,
-        nav: true,
+        nav: false,
         speed: 500,
 		pauseControls: true,
 		pause: true		    
 	}).find( ".featured-slides" ).hover(
 		function() { $j(this).find( ".slides-content" ).slideDown(); },
 		function() { $j(this).find( ".slides-content" ).slideUp(); }
-		
 	);
 
 	// Custom home page slide

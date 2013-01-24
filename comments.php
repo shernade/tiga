@@ -27,8 +27,6 @@
 		endif;
 	?>
 
-	<?php // You can start editing here -- including this comment! ?>
-
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
@@ -40,25 +38,14 @@
 		<?php tiga_comment_nav(); ?>
 
 		<ol class="commentlist">
-			<?php
-				/* Loop through and list the comments. Tell wp_list_comments()
-				 * to use tiga_comment() to format the comments.
-				 * If you want to overload this in a child theme then you can
-				 * define tiga_comment() and that will be used instead.
-				 * See tiga_comment() in includes/templates.php for more.
-				 */
-				wp_list_comments( array( 'callback' => 'tiga_comment' ) );
-			?>
+			<?php wp_list_comments( array( 'callback' => 'tiga_comment' ) ); ?>
 		</ol>
 
 		<?php tiga_comment_nav(); ?>
 
 	<?php endif; // have_comments() ?>
 
-	<?php
-		// If comments are closed and there are no comments, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
+	<?php if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'tiga' ); ?></p>
 	<?php endif; ?>
 

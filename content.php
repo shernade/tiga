@@ -17,14 +17,14 @@
 				
 		<header>
 			<h2 class="entry-title">
-				<a href="<?php esc_url( the_permalink() ); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'tiga' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php esc_attr( the_title() ); ?></a>
+				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'tiga' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h2>
 		</header>
 		
 		<?php if(has_post_thumbnail()) { ?>
 
 			<figure class="entry-thumbnail">
-				<a href="<?php esc_url( the_permalink() ); ?>">
+				<a href="<?php the_permalink(); ?>">
 					<?php 
 					$thumb_size = '';
 					if ( $class == 'two-cols' )

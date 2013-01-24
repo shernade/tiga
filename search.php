@@ -27,7 +27,6 @@ get_header(); ?>
 
 				<?php tiga_content_nav( 'nav-above' ); ?>
 
-				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'content' ); ?>

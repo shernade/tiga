@@ -35,6 +35,7 @@
 <body <?php body_class(); ?>>
 
 <div id="page" class="hfeed site">
+	
 	<?php tiga_before(); ?>
 
 	<header id="masthead" class="site-header" role="banner">

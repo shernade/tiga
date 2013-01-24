@@ -1,3 +1,9 @@
+1.2 - 24 jan 2013
+- Remove unecessary code & comment code
+- Tweak responsive layout
+- Update language
+- Update oudated scripts
+
 1.1 - 16 Jan 2013
 - WordPress 3.5 compatibility
 - Support 'link' in header code option(you can embed the google font)

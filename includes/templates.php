@@ -235,7 +235,7 @@ function tiga_share_buttons() {
 	?>
 
 	<div class="share">
-		<p class="share-title"><?php _e('Share This:', 'tiga'); ?></p>
+		<p class="share-title"><?php _e( 'Share This:', 'tiga' ); ?></p>
 		
 		<p class="twitter">
 			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>

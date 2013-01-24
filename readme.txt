@@ -2,10 +2,10 @@
 
 Contributor: satrya
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q3DV4C5M3Q596
-Demo: http://satrya.me/demo/tiga
+Demo: http://satrya.me/preview/tiga
 Requires at least: 3.3
-Tested up to: 3.4.2
-Stable tag: 1.0
+Tested up to: 3.5
+Stable tag: 1.2
 License: GNU General Public License v2
 
 Browser support: Google Chrome, Firefox, Opera, Safari, IE8, IE9
