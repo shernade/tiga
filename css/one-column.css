@@ -11,10 +11,10 @@ License URI: license.txt
   *zoom: 1;
   max-width: 700px;
   _width: 700px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .site:after {
   content: "";
@@ -34,10 +34,10 @@ License URI: license.txt
   *zoom: 1;
   max-width: 700px;
   _width: 700px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .site-footer:after {
   content: "";
@@ -49,10 +49,10 @@ License URI: license.txt
   *zoom: 1;
   max-width: 700px;
   _width: 700px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #site-credit:after {
   content: "";

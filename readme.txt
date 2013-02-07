@@ -2,19 +2,16 @@
 
 Contributor: satrya
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q3DV4C5M3Q596
-Demo: http://satrya.me/preview/tiga
 Requires at least: 3.3
 Tested up to: 3.5
-Stable tag: 1.2
+Stable tag: 1.3
 License: GNU General Public License v2
 
 Browser support: Google Chrome, Firefox, Opera, Safari, IE8, IE9
 
 == Description ==
 
-Tiga is based on _s(https://github.com/Automattic/_s) theme by Automattic
-
-Tiga is premium like WordPress theme comes with multidevice layout, optimized for mobile browsing, clean and elegant theme. Perfect for bloggers or even internet marketers to showcase their products.
+Tiga is based on _s(https://github.com/Automattic/_s) theme by Automattic. Responsive, clean and elegant theme, perfect for bloggers or even professionals.
 
 == Features ==
 
@@ -48,5 +45,5 @@ Tiga is premium like WordPress theme comes with multidevice layout, optimized fo
 3. Selectivizr - MIT, http://selectivizr.com
 4. FitVids - WTFPL license, http://fitvidsjs.com/
 5. jQuery Friendly IE6 Upgrade Notice - GPL, http://code.google.com/p/friendly-ie6-upgrade-notice/
-6. Responsive Menu - No License, https://github.com/mattkersley/Responsive-Menu
+6. Tinynav - MIT License, http://tinynav.viljamis.com
 7. Reponsive Slides - MIT,http://responsiveslides.com

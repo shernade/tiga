@@ -20,6 +20,11 @@ function tiga_options_sidebar() { ?>
 				<a class="button button-primary button-hero" href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/tiga' ); ?>" target="_blank"><?php _e( 'Feedback', 'tiga' ); ?></a>
 			</div>
 
+			<div class="tiga-ads">
+				<a href="<?php echo esc_url( 'http://bit.ly/YVWpF5' ); ?>" target="_blank"><img class="ads-img" width="280" src="<?php echo get_template_directory_uri(); ?>/img/ads.png"></a>
+				<p></p>
+			</div>
+
 			<div id="tiga-buddypress" class="postbox">
 				<h3 class="hndle"><?php _e( 'Components', 'tiga' ); ?></span></h3>
 				<div class="inside">
