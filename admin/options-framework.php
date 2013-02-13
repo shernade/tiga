@@ -4,7 +4,7 @@ Description: A framework for building theme options.
 Author: Devin Price
 Author URI: http://www.wptheming.com
 License: GPLv2
-Version: 1.4
+Version: 1.5
 */
 
 /*
@@ -32,14 +32,13 @@ function optionsframework_rolescheck () {
 		// If the user can edit theme options, let the fun begin!
 		add_action( 'admin_menu', 'optionsframework_add_page');
 		add_action( 'admin_init', 'optionsframework_init' );
-		add_action( 'admin_init', 'optionsframework_mlu_init' );
 		add_action( 'wp_before_admin_bar_render', 'optionsframework_adminbar' );
 	}
 }
 
 /* Loads the file for option sanitization */
 
-add_action('init', 'optionsframework_load_sanitization' );
+add_action( 'init', 'optionsframework_load_sanitization' );
 
 function optionsframework_load_sanitization() {
 	require_once dirname( __FILE__ ) . '/options-sanitize.php';
@@ -59,7 +58,7 @@ function optionsframework_init() {
 
 	// Include the required files
 	require_once dirname( __FILE__ ) . '/options-interface.php';
-	require_once dirname( __FILE__ ) . '/options-medialibrary-uploader.php';
+	require_once dirname( __FILE__ ) . '/options-media-uploader.php';
 	
 	// Loads the options array from the theme
 	if ( $optionsfile = locate_template( array('includes/options.php') ) ) {
@@ -69,17 +68,26 @@ function optionsframework_init() {
 		require_once dirname( __FILE__ ) . '/includes/options.php';
 	}
 	
+	// Load settings
 	$optionsframework_settings = get_option('optionsframework' );
+	
+	// Update routine
+	// This code can be removed if you're starting a new project
+	// and don't have legacy users to support
+	if ( $optionsframework_settings && !isset($optionsframework_settings['version']) ) {
+		require_once dirname( __FILE__ ) . '/upgrade.php';
+		optionsframework_upgrade_routine();
+	}
 	
 	// Updates the unique option id in the database if it has changed
 	optionsframework_option_name();
 	
 	// Gets the unique id, returning a default if it isn't defined
-	if ( isset($optionsframework_settings['id']) ) {
+	if ( isset( $optionsframework_settings['id'] ) ) {
 		$option_name = $optionsframework_settings['id'];
 	}
 	else {
-		$option_name = 'optionsframework';
+		$option_name = 'tiga';
 	}
 	
 	// If the option has no saved data, load the defaults
@@ -118,7 +126,7 @@ function optionsframework_page_capability( $capability ) {
 
 function optionsframework_setdefaults() {
 	
-	$optionsframework_settings = get_option('optionsframework');
+	$optionsframework_settings = get_option( 'optionsframework' );
 
 	// Gets the unique option id
 	$option_name = $optionsframework_settings['id'];
@@ -131,17 +139,17 @@ function optionsframework_setdefaults() {
 	 *
 	 */
 	
-	if ( isset($optionsframework_settings['knownoptions']) ) {
+	if ( isset( $optionsframework_settings['knownoptions'] ) ) {
 		$knownoptions =  $optionsframework_settings['knownoptions'];
-		if ( !in_array($option_name, $knownoptions) ) {
+		if ( !in_array( $option_name, $knownoptions ) ) {
 			array_push( $knownoptions, $option_name );
 			$optionsframework_settings['knownoptions'] = $knownoptions;
-			update_option('optionsframework', $optionsframework_settings);
+			update_option( 'optionsframework', $optionsframework_settings );
 		}
 	} else {
-		$newoptionname = array($option_name);
+		$newoptionname = array( $option_name );
 		$optionsframework_settings['knownoptions'] = $newoptionname;
-		update_option('optionsframework', $optionsframework_settings);
+		update_option( 'optionsframework', $optionsframework_settings );
 	}
 	
 	// Gets the default options data from the array in options.php
@@ -150,7 +158,7 @@ function optionsframework_setdefaults() {
 	// If the options haven't been added to the database yet, they are added now
 	$values = of_get_default_values();
 	
-	if ( isset($values) ) {
+	if ( isset( $values ) ) {
 		add_option( $option_name, $values ); // Add option with default settings
 	}
 }
@@ -160,10 +168,11 @@ function optionsframework_setdefaults() {
 if ( !function_exists( 'optionsframework_add_page' ) ) {
 
 	function optionsframework_add_page() {
-		$of_page = add_theme_page( __( 'Tiga Theme Options', 'tiga' ), __( 'Tiga Theme Options', 'tiga' ), 'edit_theme_options', 'options-framework','optionsframework_page');
-		
+		$of_page = add_theme_page( __('Tiga Theme Options', 'tiga'), __('Tiga Theme Options', 'tiga'), 'edit_theme_options', 'options-framework','optionsframework_page' );
+
 		// Load the required CSS and javscript
-		add_action('admin_enqueue_scripts', 'optionsframework_load_scripts');
+		add_action( 'admin_enqueue_scripts', 'optionsframework_load_scripts' );
+		add_action( 'admin_enqueue_scripts', 'optionsframework_media_scripts' );
 		add_action( 'admin_print_styles-' . $of_page, 'optionsframework_load_styles' );
 	}
 	
@@ -172,28 +181,26 @@ if ( !function_exists( 'optionsframework_add_page' ) ) {
 /* Loads the CSS */
 
 function optionsframework_load_styles() {
-	wp_enqueue_style('optionsframework', OPTIONS_FRAMEWORK_DIRECTORY . 'css/optionsframework.css');
+	wp_enqueue_style( 'optionsframework', OPTIONS_FRAMEWORK_DIRECTORY.'css/optionsframework.css' );
 	if ( !wp_style_is( 'wp-color-picker','registered' ) ) {
-		wp_register_style('wp-color-picker', OPTIONS_FRAMEWORK_DIRECTORY . 'css/color-picker.min.css');
+		wp_register_style( 'wp-color-picker', OPTIONS_FRAMEWORK_DIRECTORY.'css/color-picker.min.css' );
 	}
 	wp_enqueue_style( 'wp-color-picker' );
 }
 
 /* Loads the javascript */
 
-function optionsframework_load_scripts($hook) {
+function optionsframework_load_scripts( $hook ) {
 
 	if ( 'appearance_page_options-framework' != $hook )
         return;
 
-	// Enqueue colorpicker scripts for versions below 3.5
-	// for compatibility
-	
+	// Enqueue colorpicker scripts for versions below 3.5 for compatibility
 	if ( !wp_script_is( 'wp-color-picker', 'registered' ) ) {
 		wp_register_script( 'iris', OPTIONS_FRAMEWORK_DIRECTORY . 'js/iris.min.js', array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), false, 1 );
 		wp_register_script( 'wp-color-picker', OPTIONS_FRAMEWORK_DIRECTORY . 'js/color-picker.min.js', array( 'jquery', 'iris' ) );
 		$colorpicker_l10n = array(
-			'clear' => __( 'Clear', 'tiga' ),
+			'clear' => __( 'Clear','tiga' ),
 			'defaultString' => __( 'Default', 'tiga' ),
 			'pick' => __( 'Select Color', 'tiga' )
 		);
@@ -237,7 +244,7 @@ function optionsframework_page() {
     <div id="optionsframework-metabox" class="metabox-holder">
 	    <div id="optionsframework" class="postbox">
 			<form action="options.php" method="post">
-			<?php settings_fields('optionsframework'); ?>
+			<?php settings_fields( 'optionsframework' ); ?>
 			<?php optionsframework_fields(); /* Settings */ ?>
 			<div id="optionsframework-submit">
 				<input type="submit" class="button-primary" name="update" value="<?php esc_attr_e( 'Save Options', 'tiga' ); ?>" />
@@ -247,7 +254,7 @@ function optionsframework_page() {
 			</form>
 		</div> <!-- / #container -->
 	</div>
-	<?php do_action('optionsframework_after'); ?>
+	<?php do_action( 'optionsframework_after' ); ?>
 	</div> <!-- / .wrap -->
 	
 <?php

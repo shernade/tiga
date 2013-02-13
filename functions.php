@@ -93,20 +93,17 @@ function tiga_setup() {
 		) 
 	);
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'tiga-140px' , 140, 140, true );
-	add_image_size( 'tiga-300px' , 300, 130, true );
-	add_image_size( 'tiga-700px' , 700, 300, true );
-	add_image_size( 'tiga-620px' , 620, 350, true );
-	add_image_size( 'tiga-460px' , 460, 300, true );
 
-	/* Enqueue styles. */
-	add_action( 'wp_enqueue_scripts', 'tiga_enqueue_styles' );
+	/* Add custom image sizes. */
+	add_action( 'init', 'tiga_add_image_sizes' );
+	/* Add custom image sizes custom name. */
+	add_filter( 'image_size_names_choose', 'tiga_custom_name_image_sizes' );
+
+	/* Enqueue styles & scripts. */
+	add_action( 'wp_enqueue_scripts', 'tiga_enqueue_scripts' );
 
 	/* Deregister wp-pagenavi plugin style. */
 	add_action( 'wp_print_styles', 'tiga_deregister_styles', 100 );
-
-	/* Enqueue scripts. */
-	add_action( 'wp_enqueue_scripts', 'tiga_enqueue_scripts' );
 	
 	/* Fallback script for IE. */
 	add_action( 'wp_footer', 'tiga_js_ie' );
@@ -134,12 +131,6 @@ function tiga_setup() {
 
 	/* Filter in a link to a content ID attribute for the next/previous image links on image attachment pages. */
 	add_filter( 'attachment_link', 'tiga_enhanced_image_navigation', 10, 2 );
-
-	/* Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link. */
-	add_filter( 'wp_page_menu_args', 'tiga_page_menu_args' );
-
-	/* Remove div from wp_page_menu() and replace with ul. */
-	add_filter( 'wp_page_menu', 'tiga_wp_page_menu' );
 
 	/* Customize tag cloud widget. */
 	add_filter( 'widget_tag_cloud_args', 'tiga_new_tag_cloud' );
@@ -181,25 +172,31 @@ function tiga_embed_defaults( $args ) {
 }
 
 /**
- * Enqueue styles
+ * Adds custom image sizes.
  *
- * @since 0.0.1
+ * @since 1.0
  */
-function tiga_enqueue_styles() {
-
-	wp_enqueue_style( 'tiga-font', 'http://fonts.googleapis.com/css?family=Francois+One|Open+Sans:400italic,400,700', '', TIGA_VERSION, 'all' );
-
-	wp_enqueue_style( 'tiga-style', get_stylesheet_uri(), '', TIGA_VERSION, 'all' );
-
+function tiga_add_image_sizes() {
+	add_image_size( 'tiga-140px' , 140, 140, true );
+	add_image_size( 'tiga-300px' , 300, 130, true );
+	add_image_size( 'tiga-700px' , 700, 300, true );
+	add_image_size( 'tiga-620px' , 620, 350, true );
+	add_image_size( 'tiga-460px' , 460, 300, true );
 }
 
 /**
- * Deregistering default wp-pagenavi style
+ * Adds custom image sizes custom name.
  *
- * @since 0.0.1
+ * @since 1.0
  */
-function tiga_deregister_styles() {
-	wp_deregister_style( 'wp-pagenavi' );
+function tiga_custom_name_image_sizes( $sizes ) {
+    $sizes['tiga-140px'] = __( 'Small Thumbnail', 'tiga' );
+    $sizes['tiga-300px'] = __( 'Medium Thumbnail', 'tiga' );
+    $sizes['tiga-700px'] = __( 'Featured', 'tiga' );
+    $sizes['tiga-620px'] = __( 'Medium Featured', 'tiga' );
+    $sizes['tiga-460px'] = __( 'Home Slides', 'tiga' );
+ 
+    return $sizes;
 }
 
 /**
@@ -209,6 +206,10 @@ function tiga_deregister_styles() {
  */
 function tiga_enqueue_scripts() {
 	global $post;
+
+	wp_enqueue_style( 'tiga-font', 'http://fonts.googleapis.com/css?family=Francois+One|Open+Sans:400italic,400,700', '', TIGA_VERSION, 'all' );
+
+	wp_enqueue_style( 'tiga-style', get_stylesheet_uri(), '', TIGA_VERSION, 'all' );
 
 	wp_enqueue_script( 'jquery' );
 	
@@ -226,6 +227,15 @@ function tiga_enqueue_scripts() {
 	
 	wp_enqueue_script( 'tiga-methods', trailingslashit( TIGA_JS ) . 'methods.js', array('jquery'), TIGA_VERSION, true );
 
+}
+
+/**
+ * Deregistering default wp-pagenavi style
+ *
+ * @since 0.0.1
+ */
+function tiga_deregister_styles() {
+	wp_deregister_style( 'wp-pagenavi' );
 }
 
 /**
@@ -480,32 +490,6 @@ function tiga_enhanced_image_navigation( $url, $id ) {
 	return $url;
 
 }
-
-/**
- * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
- *
- * @since 0.0.1
- */
-function tiga_page_menu_args( $args ) {
-
-	$args['show_home'] = true;
-	return $args;
-
-}
-
-/**
- * Remove div from wp_page_menu() and replace with ul
- *
- * @since 0.0.1
- */
-function tiga_wp_page_menu ($page_markup) {
-    preg_match('/^<div class=\"([a-z0-9-_]+)\">/i', $page_markup, $matches);
-        $divclass = $matches[1];
-        $replace = array('<div class="'.$divclass.'">', '</div>');
-        $new_markup = str_replace($replace, '', $page_markup);
-        $new_markup = preg_replace('/^<ul>/i', '<ul class="'.$divclass.'">', $new_markup);
-        return $new_markup; 
-	}
 
 /**
  * Customize tag cloud widget

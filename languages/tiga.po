@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tiga 1.3\n"
-"POT-Creation-Date: 2013-02-07 20:11+0700\n"
-"PO-Revision-Date: 2013-02-07 20:12+0700\n"
+"POT-Creation-Date: 2013-02-14 01:57+0700\n"
+"PO-Revision-Date: 2013-02-14 01:57+0700\n"
 "Last-Translator: M.Satrya <satrya@tokokoo.com>\n"
 "Language-Team: Satrya <satrya@satrya.me>\n"
 "Language: English\n"
@@ -145,71 +145,91 @@ msgstr ""
 msgid "Secondary Navigation"
 msgstr ""
 
-#: ../functions.php:282
+#: ../functions.php:193
+msgid "Small Thumbnail"
+msgstr ""
+
+#: ../functions.php:194
+msgid "Medium Thumbnail"
+msgstr ""
+
+#: ../functions.php:195
+msgid "Featured"
+msgstr ""
+
+#: ../functions.php:196
+msgid "Medium Featured"
+msgstr ""
+
+#: ../functions.php:197
+msgid "Home Slides"
+msgstr ""
+
+#: ../functions.php:292
 msgid "Search Results for:"
 msgstr ""
 
-#: ../functions.php:286
+#: ../functions.php:296
 msgid "Category Archives:"
 msgstr ""
 
-#: ../functions.php:290
+#: ../functions.php:300
 msgid "Tag Archives:"
 msgstr ""
 
-#: ../functions.php:294
+#: ../functions.php:304
 msgid "Not Found"
 msgstr ""
 
-#: ../functions.php:406
+#: ../functions.php:416
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: ../functions.php:600
+#: ../functions.php:584
 msgid "Primary"
 msgstr ""
 
-#: ../functions.php:601
+#: ../functions.php:585
 msgid "Primary sidebar, appears on all pages."
 msgstr ""
 
-#: ../functions.php:610
+#: ../functions.php:594
 msgid "Subsidiary"
 msgstr ""
 
-#: ../functions.php:611
+#: ../functions.php:595
 msgid "Subsidiary sidebar, appears on the footer side of your site."
 msgstr ""
 
-#: ../functions.php:620
+#: ../functions.php:604
 msgid "Above Single Post Content"
 msgstr ""
 
-#: ../functions.php:621
+#: ../functions.php:605
 msgid "This sidebar appears on the single post, above the content."
 msgstr ""
 
-#: ../functions.php:630
+#: ../functions.php:614
 msgid "Below Single Post Content"
 msgstr ""
 
-#: ../functions.php:631
+#: ../functions.php:615
 msgid "This sidebar appears on the single post, below the content."
 msgstr ""
 
-#: ../functions.php:640
+#: ../functions.php:624
 msgid "Custom Home Page"
 msgstr ""
 
-#: ../functions.php:641
+#: ../functions.php:625
 msgid "This sidebar appears on custom home page template."
 msgstr ""
 
-#: ../header.php:74
+#: ../header.php:73
 msgid "Menu"
 msgstr ""
 
-#: ../header.php:75
+#: ../header.php:74
 msgid "Skip to content"
 msgstr ""
 
@@ -291,64 +311,62 @@ msgstr ""
 msgid "Search &hellip;"
 msgstr ""
 
-#: ../admin/options-framework.php:163
+#: ../admin/options-framework.php:171
 msgid "Tiga Theme Options"
 msgstr ""
 
-#: ../admin/options-framework.php:196
+#: ../admin/options-framework.php:203
 msgid "Clear"
 msgstr ""
 
-#: ../admin/options-framework.php:197
+#: ../admin/options-framework.php:204
 msgid "Default"
 msgstr ""
 
-#: ../admin/options-framework.php:198
+#: ../admin/options-framework.php:205
 msgid "Select Color"
 msgstr ""
 
-#: ../admin/options-framework.php:243
+#: ../admin/options-framework.php:250
 msgid "Save Options"
 msgstr ""
 
-#: ../admin/options-framework.php:244
+#: ../admin/options-framework.php:251
 msgid "Restore Defaults"
 msgstr ""
 
-#: ../admin/options-framework.php:244
+#: ../admin/options-framework.php:251
 msgid "Click OK to reset. Any theme settings will be lost!"
 msgstr ""
 
-#: ../admin/options-framework.php:276
+#: ../admin/options-framework.php:283
 msgid "Default options restored."
 msgstr ""
 
-#: ../admin/options-framework.php:330
+#: ../admin/options-framework.php:337
 msgid "Options saved."
 msgstr ""
 
-#: ../admin/options-framework.php:380
+#: ../admin/options-framework.php:387
 msgid "Theme Options"
 msgstr ""
 
-#: ../admin/options-medialibrary-uploader.php:26
-msgid "Theme Options Media"
+#: ../admin/options-media-uploader.php:51
+msgid "No file chosen"
 msgstr ""
 
-#: ../admin/options-medialibrary-uploader.php:126
+#: ../admin/options-media-uploader.php:53
+#: ../admin/options-media-uploader.php:100
 msgid "Upload"
 msgstr ""
 
-#: ../admin/options-medialibrary-uploader.php:149
+#: ../admin/options-media-uploader.php:55
+#: ../admin/options-media-uploader.php:101
+msgid "Remove"
+msgstr ""
+
+#: ../admin/options-media-uploader.php:79
 msgid "View File"
-msgstr ""
-
-#: ../admin/options-medialibrary-uploader.php:282
-msgid "Gallery"
-msgstr ""
-
-#: ../admin/options-medialibrary-uploader.php:282
-msgid "Previously Uploaded"
 msgstr ""
 
 #: ../admin/options-sanitize.php:232
@@ -425,6 +443,10 @@ msgstr ""
 
 #: ../admin/options-sanitize.php:347
 msgid "Bold Italic"
+msgstr ""
+
+#: ../admin/upgrade.php:31
+msgid "Theme Options Media"
 msgstr ""
 
 #: ../includes/metabox.php:14 ../includes/metabox.php:15
