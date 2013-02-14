@@ -42,70 +42,14 @@
 		<div id="main-header" class="clearfix">
 		
 			<div class="site-branding">
-
-				<?php if( of_get_option( 'tiga_custom_logo' ) ) {
-					
-					$logotag  = ( is_home() || is_front_page() )? 'h1':'h2'; ?>
-
-						<<?php echo $logotag; ?> class="site-logo">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" src="<?php echo esc_url( of_get_option( 'tiga_custom_logo' ) ); ?>"><span><?php bloginfo('name'); ?></span></a>
-						</<?php echo $logotag; ?>>
-
-					<?php
-
-				} else {
-
-					$titletag  = ( is_home() || is_front_page() )? 'h1':'h2'; ?>
-
-						<<?php echo $titletag; ?> class="site-title">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-						</<?php echo $titletag; ?>>
-						<div class="site-description"><?php esc_attr( bloginfo( 'description' ) ); ?></div>
-
-				<?php } ?>
-
+				<?php tiga_site_title(); ?>
 			</div><!-- end .site-branding -->
 
-			<?php if ( has_nav_menu( 'primary' ) ) { ?>
-
-				<nav class="site-navigation main-navigation" role="navigation">
-
-					<h5 class="assistive-text"><?php _e( 'Menu', 'tiga' ); ?></h5>
-					<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tiga' ); ?>"><?php _e( 'Skip to content', 'tiga' ); ?></a></div>
-
-					<?php
-						wp_nav_menu( 
-							array(  
-								'container' => '',
-								'menu_class' => 'main-nav',
-								'theme_location' => 'primary'
-							) 
-						); 
-					?>
-						
-				</nav><!-- end .site-navigation .main-navigation -->
-
-			<?php } ?>
+			<?php get_template_part( 'menu', 'primary' ); // load menu-primary.php file. ?>
 			
 		</div> <!-- end #main-header -->
 		
-		<?php if ( has_nav_menu( 'secondary' ) ) { ?>
-
-			<nav class="site-navigation secondary-navigation clearfix" role="navigation">
-
-				<?php 
-					wp_nav_menu( 
-						array(  
-							'container' => '',
-							'menu_class' => 'secondary-nav',
-							'theme_location' => 'secondary' 
-						) 
-					); 
-				?>
-
-			</nav><!-- end .site-navigation -->
-
-		<?php } ?>
+		<?php get_template_part( 'menu', 'secondary' ); // load menu-secondary.php file. ?>
 
 		<?php tiga_header(); ?>
 

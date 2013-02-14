@@ -12,19 +12,30 @@
  *
  */
 
+/* Loads the Options Panel. */
+if ( !function_exists( 'optionsframework_init' ) ) {
+
+	define( 'OPTIONS_FRAMEWORK_DIRECTORY', trailingslashit( get_template_directory_uri() ) . 'admin/' );
+	require_once dirname( __FILE__ ) . '/admin/options-framework.php';
+
+	/* Options panel extras. */
+	require( trailingslashit( get_template_directory() ) . 'includes/options-functions.php' );
+	require( trailingslashit( get_template_directory() ) . 'includes/options-sidebar.php' );
+
+}
+
+add_action( 'after_setup_theme', 'tiga_setup' );
 /**
  * Define Theme setup
  * 
  * @since 0.0.1
  */
-add_action( 'after_setup_theme', 'tiga_setup' );
-
 function tiga_setup() {
 
 	global $content_width;
 
 	/* Sets the theme version number. */
-	define( 'TIGA_VERSION', 1.2 );
+	define( 'TIGA_VERSION', 1.4 );
 
 	/* Sets the path to the theme directory. */
 	define( 'THEME_DIR', get_template_directory() );
@@ -38,26 +49,14 @@ function tiga_setup() {
 	/* Sets the path to the includes directory. */
 	define( 'TIGA_INCLUDES', trailingslashit( THEME_DIR ) . 'includes' );
 
-	/* Sets the path to the js directory. */
+	/* Sets the path to the img directory. */
 	define( 'TIGA_IMAGE', trailingslashit( THEME_URI ) . 'img' );
 
-	/* Sets the path to the js directory. */
+	/* Sets the path to the css directory. */
 	define( 'TIGA_CSS', trailingslashit( THEME_URI ) . 'css' );
 
 	/* Sets the path to the js directory. */
 	define( 'TIGA_JS', trailingslashit( THEME_URI ) . 'js' );
-
-	/* Loads the Options Panel. */
-	if ( !function_exists( 'optionsframework_init' ) ) {
-
-		define( 'OPTIONS_FRAMEWORK_DIRECTORY', trailingslashit( get_template_directory_uri() ) . 'admin/' );
-		require_once dirname( __FILE__ ) . '/admin/options-framework.php';
-
-		/* Options panel extras. */
-		require( trailingslashit( TIGA_INCLUDES ) . 'options-functions.php' );
-		require( trailingslashit( TIGA_INCLUDES ) . 'options-sidebar.php' );
-
-	}
 
 	/* Loads the template tags. */
 	require( trailingslashit( TIGA_INCLUDES ) . 'templates.php' );
@@ -66,8 +65,9 @@ function tiga_setup() {
 	require( trailingslashit( TIGA_INCLUDES ) . 'hooks.php' );
 
 	/* Loads the theme metabox. */
-	require( trailingslashit( TIGA_INCLUDES ) . 'metabox.php' );
-
+	if( is_admin() ) 
+		require( trailingslashit( TIGA_INCLUDES ) . 'metabox.php' );
+		
 	/* Set the content width based on the theme's design and stylesheet. */
 	if ( ! isset( $content_width ) ) $content_width = 620;
 
@@ -104,9 +104,6 @@ function tiga_setup() {
 
 	/* Deregister wp-pagenavi plugin style. */
 	add_action( 'wp_print_styles', 'tiga_deregister_styles', 100 );
-	
-	/* Fallback script for IE. */
-	add_action( 'wp_footer', 'tiga_js_ie' );
 
 	/* Comment reply js */
 	add_action( 'comment_form_before', 'tiga_enqueue_comment_reply_script' );
@@ -115,7 +112,7 @@ function tiga_setup() {
 	add_filter( 'use_default_gallery_style', '__return_false' );
 
 	/* wp_title filter. */
-	add_filter( 'wp_title', 'tiga_title' );
+	add_filter( 'wp_title', 'tiga_title', 10, 2 );
 
 	/* Replace [...] */
 	add_filter( 'excerpt_more', 'tiga_auto_excerpt_more' );
@@ -212,8 +209,6 @@ function tiga_enqueue_scripts() {
 	wp_enqueue_style( 'tiga-style', get_stylesheet_uri(), '', TIGA_VERSION, 'all' );
 
 	wp_enqueue_script( 'jquery' );
-	
-	wp_enqueue_script( 'tiga-modernizr', trailingslashit( TIGA_JS ) . 'vendor/modernizr-2.6.2.min.js', array('jquery'), '2.6.1' );
 
 	if ( is_singular() && wp_attachment_is_image( $post->ID ) ) {
 		wp_enqueue_script( 'tiga-keyboard-image-navigation', trailingslashit( TIGA_JS ) . 'vendor/keyboard-image-navigation.js', array( 'jquery' ), TIGA_VERSION, true );
@@ -230,26 +225,12 @@ function tiga_enqueue_scripts() {
 }
 
 /**
- * Deregistering default wp-pagenavi style
+ * Deregister default wp-pagenavi style
  *
  * @since 0.0.1
  */
 function tiga_deregister_styles() {
 	wp_deregister_style( 'wp-pagenavi' );
-}
-
-/**
- * Fallback script for IE
- *
- * @since 0.0.3
- */
-function tiga_js_ie() { ?>
-
-	<!--[if (gte IE 6)&(lte IE 8)]>
-		<script src="<?php echo trailingslashit( TIGA_JS ) . 'vendor/selectivizr-min.js'; ?>"></script>
-	<![endif]-->
-	
-<?php 
 }
 
 /**
@@ -266,145 +247,30 @@ function tiga_enqueue_comment_reply_script() {
 }
 
 /**
- * wp_title filter
- * Credit: Thematic theme
+ * Creates a nicely formatted and more specific title element text
+ * for output in head of document, based on current view.
  *
- * @since 0.0.3
+ * @since 1.4
  */
-function tiga_title( $wp_doctitle ) {
-   
- 	if ( is_feed() || !tiga_seo() )
-    	return $wp_doctitle;
+function tiga_title( $title, $sep ) {
+	global $paged, $page;
 
-	$site_name = get_bloginfo('name' , 'display');
-	$separator = apply_filters('tiga_doctitle_separator', '|');
-			
-	if ( is_single() ) {
-		$content = single_post_title('', FALSE);
-	}
-	elseif ( is_home() || is_front_page() ) { 
-		$content = get_bloginfo('description', 'display');
-	}
-	elseif ( is_page() ) { 
-		$content = single_post_title('', FALSE); 
-	}
-	elseif ( is_search() ) { 
-		$content = __('Search Results for:', 'tiga'); 
-		$content .= ' ' . get_search_query();
-	}
-	elseif ( is_category() ) {
-		$content = __('Category Archives:', 'tiga');
-		$content .= ' ' . single_cat_title('', FALSE);;
-	}
-	elseif ( is_tag() ) { 
-		$content = __('Tag Archives:', 'tiga');
-		$content .= ' ' . tiga_tag_query();
-	}
-	elseif ( is_404() ) { 
-		$content = __('Not Found', 'tiga'); 
-	}
-	else { 
-		$content = get_bloginfo('description', 'display');
-	}
+	if ( is_feed() )
+		return $title;
 
-	if ( get_query_var('paged') ) {
-		$content .= ' ' .$separator. ' ';
-		$content .= 'Page';
-		$content .= ' ';
-		$content .= get_query_var('paged');
-	}
+	// Add the site name.
+	$title .= get_bloginfo( 'name' );
 
-	if($content) {
-		if ( is_home() || is_front_page() ) {
-			$elements = array(
-				'site_name' => $site_name,
-				'separator' => $separator,
-				'content' => $content
-			);
-		}
-		else {
-			$elements = array(
-				'content' => $content
-			);
-		}  
-	} else {
-		$elements = array(
-			'site_name' => $site_name
-		);
-	}
+	// Add the site description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+		$title = "$title $sep $site_description";
 
-	// Filters should return an array
-	$elements = apply_filters( 'tiga_doctitle', $elements );
-	
-	// But if they don't, it won't try to implode
-	if( is_array($elements) ) {
-		$doctitle = implode(' ', $elements);
-	}
-	else {
-		$doctitle = $elements;
-	}
-	
-	$doctitle = $doctitle;
-	
-	echo $doctitle;
-   
-}
+	// Add a page number if necessary.
+	if ( $paged >= 2 || $page >= 2 )
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'tiga' ), max( $paged, $page ) );
 
-/**
- * Create nice multi_tag_title
- * Credit: Thematic theme
- *
- * @since Tiga 0.0.3
- */
-function tiga_tag_query() {
-
-	$nice_tag_query = get_query_var( 'tag' ); // tags in current query
-	$nice_tag_query = str_replace(' ', '+', $nice_tag_query); // get_query_var returns ' ' for AND, replace by +
-	$tag_slugs = preg_split('%[,+]%', $nice_tag_query, -1, PREG_SPLIT_NO_EMPTY); // create array of tag slugs
-	$tag_ops = preg_split('%[^,+]*%', $nice_tag_query, -1, PREG_SPLIT_NO_EMPTY); // create array of operators
-
-	$tag_ops_counter = 0;
-	$nice_tag_query = '';
-
-	foreach ($tag_slugs as $tag_slug) { 
-		$tag = get_term_by('slug', $tag_slug ,'post_tag');
-		// prettify tag operator, if any
-		if ( isset($tag_ops[$tag_ops_counter])  &&  $tag_ops[$tag_ops_counter] == ',') {
-			$tag_ops[$tag_ops_counter] = ', ';
-		} elseif ( isset( $tag_ops[$tag_ops_counter])  &&  $tag_ops[$tag_ops_counter] == '+') {
-			$tag_ops[$tag_ops_counter] = ' + ';
-		}
-		// concatenate display name and prettified operators
-		if ( isset( $tag_ops[$tag_ops_counter] ) ) {
-			$nice_tag_query = $nice_tag_query.$tag->name.$tag_ops[$tag_ops_counter];
-			$tag_ops_counter += 1;
-		} else {
-			$nice_tag_query = $nice_tag_query.$tag->name;
-			$tag_ops_counter += 1;
-		}
-	}
-	return $nice_tag_query;
-
-}
-
-/**
- * Switch Tiga SEO functions on or off
- * 
- * Provides compatibility with SEO plugins: All in One SEO Pack, HeadSpace, 
- * Platinum SEO Pack, wpSEO and Yoast SEO. Default: ON
- * 
- * Credit: Thematic theme
- * @since Tiga 0.1
- */
-function tiga_seo() {
-
-	if ( class_exists('All_in_One_SEO_Pack') || class_exists('HeadSpace_Plugin') || class_exists('Platinum_SEO_Pack') || class_exists('wpSEO') || defined('WPSEO_VERSION') ) {
-		$content = FALSE;
-	} else {
-		$content = true;
-	}
-		return apply_filters( 'tiga_seo', $content );
-
+	return $title;
 }
 
 /**
@@ -506,7 +372,7 @@ function tiga_new_tag_cloud( $args ) {
 /**
  * HTML5 tag for image and caption
  *
- * @since Tiga 0.2.1
+ * @since 0.2.1
  */
 function tiga_html5_caption( $output, $attr, $content ) {
 
@@ -672,6 +538,34 @@ function tiga_remove_recent_comments_style() {
 
 	global $wp_widget_factory;
 	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
+
+}
+
+/**
+ * Tiga site title.
+ *
+ * @since 1.4
+ */
+function tiga_site_title() {	
+
+	$titletag  = ( is_front_page() ) ? 'h1' : 'h2';
+
+	if( of_get_option( 'tiga_custom_logo' ) ) { ?>
+
+			<div class="site-logo">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" src="<?php echo esc_url( of_get_option( 'tiga_custom_logo' ) ); ?>"></a>
+			</div>
+
+		<?php
+
+	} else { ?>
+
+			<<?php echo $titletag; ?> class="site-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			</<?php echo $titletag; ?>>
+			<div class="site-description"><?php bloginfo( 'description' ); ?></div>
+
+	<?php }
 
 }
 ?>

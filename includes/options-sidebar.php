@@ -17,7 +17,7 @@ function tiga_options_sidebar() { ?>
 			
 			<div class="tiga-support">
 				<a class="button button-primary button-hero" href="<?php echo esc_url( 'http://satrya.me/tiga/' ); ?>" target="_blank"><?php _e( 'Support', 'tiga' ); ?></a>
-				<a class="button button-primary button-hero" href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/tiga' ); ?>" target="_blank"><?php _e( 'Feedback', 'tiga' ); ?></a>
+				<a href="<?php echo esc_url( 'http://satrya.me/donate/' ); ?>" target="_blank"><img style="float: left; position: relative;" src="<?php echo get_template_directory_uri() . '/img/donate.gif'; ?>"></a>
 			</div>
 
 			<div class="tiga-ads">

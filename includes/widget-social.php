@@ -59,7 +59,7 @@ class tiga_social extends WP_Widget {
 		
 		<ul class="social-buttons clearfix">
 			<?php if ( $email_id ) { ?>
-				<li><a href="mailto:<?php echo is_email( $email_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/mail.png'; ?>"></a></li>
+				<li><a href="mailto:<?php echo antispambot( $email_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/mail.png'; ?>"></a></li>
 			<?php } if ( $twitter_id ) { ?>
 				<li><a href="http://twitter.com/<?php echo esc_attr( $twitter_id ); ?>" target="_blank"><img src="<?php echo get_template_directory_uri() . '/img/icons/twitter.png'; ?>"></a></li>
 			<?php } if ( $fb_id ) { ?>
