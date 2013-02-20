@@ -35,7 +35,7 @@ function tiga_setup() {
 	global $content_width;
 
 	/* Sets the theme version number. */
-	define( 'TIGA_VERSION', 1.5 );
+	define( 'TIGA_VERSION', 1.6 );
 
 	/* Sets the path to the theme directory. */
 	define( 'THEME_DIR', get_template_directory() );

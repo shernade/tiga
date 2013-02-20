@@ -1,3 +1,6 @@
+1.5 - 1.6 - 20 Feb 2013
+- Remove aff link!
+
 1.4 - 14 Feb 2013
 - Dropping support for IE7
 - Update theme settings
