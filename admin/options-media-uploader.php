@@ -21,7 +21,7 @@ function optionsframework_uploader( $_id, $_value, $_desc = '', $_name = '' ) {
 		$option_name = $optionsframework_settings['id'];
 	}
 	else {
-		$option_name = 'tiga';
+		$option_name = 'options_framework_theme';
 	};
 
 	$output = '';
@@ -49,10 +49,14 @@ function optionsframework_uploader( $_id, $_value, $_desc = '', $_name = '' ) {
 		$class = ' has-file';
 	}
 	$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="'.$name.'" value="' . $value . '" placeholder="' . __('No file chosen', 'tiga') .'" />' . "\n";
-	if ( $value == '' ) {
-		$output .= '<input id="upload-' . $id . '" class="upload-button button" type="button" value="' . __( 'Upload', 'tiga' ) . '" />' . "\n";
+	if ( function_exists( 'wp_enqueue_media' ) ) {
+		if ( ( $value == '' ) ) {
+			$output .= '<input id="upload-' . $id . '" class="upload-button button" type="button" value="' . __( 'Upload', 'tiga' ) . '" />' . "\n";
+		} else {
+			$output .= '<input id="remove-' . $id . '" class="remove-file button" type="button" value="' . __( 'Remove', 'tiga' ) . '" />' . "\n";
+		}
 	} else {
-		$output .= '<input id="remove-' . $id . '" class="remove-file button" type="button" value="' . __( 'Remove', 'tiga' ) . '" />' . "\n";
+		$output .= '<p><i>' . __( 'Upgrade your version of WordPress for full media support.', 'tiga' ) . '</i></p>';
 	}
 	
 	if ( $_desc != '' ) {
@@ -92,8 +96,15 @@ endif;
  
 if ( ! function_exists( 'optionsframework_media_scripts' ) ) :
 
-function optionsframework_media_scripts(){
-	wp_enqueue_media();
+add_action( 'admin_enqueue_scripts', 'optionsframework_media_scripts' );
+
+function optionsframework_media_scripts( $hook ) {
+
+	if ( 'appearance_page_options-framework' != $hook )
+		return;
+
+	if ( function_exists( 'wp_enqueue_media' ) )
+		wp_enqueue_media();
 	wp_register_script( 'of-media-uploader', OPTIONS_FRAMEWORK_DIRECTORY .'js/media-uploader.js', array( 'jquery' ) );
 	wp_enqueue_script( 'of-media-uploader' );
 	wp_localize_script( 'of-media-uploader', 'optionsframework_l10n', array(
