@@ -1,13 +1,11 @@
 <?php
 /**
- * Theme options
+ * Theme settings
  *
- * Theme options functions for Tiga theme
- *
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		0.0.1
+ * @package Tiga
+ * @author Satrya
+ * @license docs/license.txt
+ * @since 0.0.1
  *
  */
 
@@ -71,13 +69,6 @@ function optionsframework_options() {
 		'name' => __( 'General', 'tiga' ),
 		'type' => 'heading'
 	);
-							
-	$options[] = array( 
-		'name' => __( 'Custom Logo', 'tiga' ),
-		'desc' => __( 'Upload a logo for your website, or specify the image address of your online logo. (http://example.com/logo.png)', 'tiga' ),
-		'id' => 'tiga_custom_logo',
-		'type' => 'upload'
-	);
 								
 	$options[] = array( 
 		'name' => __( 'Custom Favicon', 'tiga' ),
@@ -85,28 +76,6 @@ function optionsframework_options() {
 		'id' => 'tiga_custom_favicon',
 		'type' => 'upload'
 	);
-							
-	$options[] = array( 
-		'name' => __( 'Custom CSS', 'tiga' ),
-		'desc' => __( 'Quickly add some CSS to your theme by adding it to this block.', 'tiga' ),
-		'id' => 'tiga_custom_css',
-		'std' => '',
-		'type' => 'textarea'
-	); 
-						
-	$options[] = array( 
-		'name' => __( 'Header Code', 'tiga' ),
-		'desc' => __( 'Add any custom script like the meta verification from various search engine. It will be inserted before the closing head tag of your theme', 'tiga' ),
-		'id' => 'tiga_header_code',
-		'type' => 'textarea'
-	); 	
-						
-	$options[] = array( 
-		'name' => __( 'Footer Code', 'tiga' ),
-		'desc' => __( 'Add your analytic code or you can add any custom script here. It will be inserted before the closing body tag of your theme', 'tiga' ),
-		'id' => 'tiga_footer_code',
-		'type' => 'textarea'
-	); 		 	 
 						
 	$options[] = array( 
 		'name' => __( 'Iframe Blocker', 'tiga' ),
@@ -118,8 +87,8 @@ function optionsframework_options() {
 	);
 
 	$options[] = array( 
-		'name' => __(  'Disable credit links', 'tiga' ),
-		'desc' => __(  'Are you sure want to disable the credit link for WordPress and theme author?', 'tiga' ),
+		'name' => __( 'Disable credit links', 'tiga' ),
+		'desc' => __( 'Are you sure want to disable the credit link for WordPress and theme author?', 'tiga' ),
 		'id' => 'tiga_credits',
 		'type' => 'checkbox'
 	);
@@ -175,22 +144,6 @@ function optionsframework_options() {
 			'pattern-9' => $patternpath . '9.png',
 			'pattern-10' => $patternpath . '10.png'
 		)
-	);
-						
-	$options[] = array( 
-		'name' => __( 'Display social share button', 'tiga' ),
-		'desc' => __( 'Display social share on single post and page', 'tiga' ),
-		'id' => "tiga_social_share",
-		'std' => 'tiga_post', // These items get checked by default
-		'type' => "radio",
-		'options' => $tiga_social
-	);
-						
-	$options[] = array( 
-		'name' => __( 'Display author box', 'tiga' ),
-		'desc' => __( 'Check this option if you want display the author box on single posts', 'tiga' ),
-		'id' => 'tiga_author_box',
-		'type' => 'checkbox'
 	);
 	
 	/* ============================== End Theme Settings ================================= */	
@@ -260,28 +213,59 @@ function optionsframework_options() {
 
 	/* ============================== End Typography Settings ================================= */
 
+	$options[] = array( 
+		'name' => __( 'Page', 'tiga' ),
+		'type' => 'heading'
+	);
+						
+	$options[] = array( 
+		'name' => __( 'Display social share button', 'tiga' ),
+		'desc' => __( 'Display social share on single post and page', 'tiga' ),
+		'id' => "tiga_social_share",
+		'std' => 'tiga_post',
+		'type' => "radio",
+		'options' => $tiga_social
+	);
+						
+	$options[] = array( 
+		'name' => __( 'Display author box', 'tiga' ),
+		'desc' => __( 'Check this option if you want display the author box on single posts', 'tiga' ),
+		'id' => 'tiga_author_box',
+		'type' => 'checkbox'
+	);
+
+	/* ============================== End Page Settings ================================= */
+
+	$options[] = array( 
+		'name' => __( 'Custom Code', 'tiga' ),
+		'type' => 'heading'
+	);
+
+	$options[] = array( 
+		'name' => __( 'Custom CSS', 'tiga' ),
+		'desc' => __( 'Quickly add some CSS to your theme by adding it to this block.', 'tiga' ),
+		'id' => 'tiga_custom_css',
+		'std' => '',
+		'type' => 'textarea'
+	); 
+						
+	$options[] = array( 
+		'name' => __( 'Header Code', 'tiga' ),
+		'desc' => __( 'Add any custom script like the meta verification from various search engine. It will be inserted before the closing head tag of your theme', 'tiga' ),
+		'id' => 'tiga_header_code',
+		'type' => 'textarea'
+	); 	
+						
+	$options[] = array( 
+		'name' => __( 'Footer Code', 'tiga' ),
+		'desc' => __( 'Add your analytic code or you can add any custom script here. It will be inserted before the closing body tag of your theme', 'tiga' ),
+		'id' => 'tiga_footer_code',
+		'type' => 'textarea'
+	); 		 	 
+
+	/* ============================== End Custom Code Settings ================================= */
 
 	return $options;
 	
-}
-
-/** 
- * Custom script for theme options
- *
- * @since 0.0.1
- */
-
-add_action('optionsframework_custom_scripts', 'tiga_custom_scripts' );
-function tiga_custom_scripts() { ?>
-	<script type='text/javascript'>
-	jQuery(document).ready(function($) {
-
-		$('#tiga_disable_typography' ).click(function() {
-			$('#section-tiga_content_font, #section-tiga_heading_font' ).fadeToggle(400);
-		});
-		
-	});
-	</script>
-<?php
 }
 ?>

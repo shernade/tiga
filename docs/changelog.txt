@@ -1,8 +1,17 @@
-1.7 - Beta
-- Add Germany language
-- Fix IE8 bug
-- Update scripts
-- Update theme settings
+1.7 - 31 May 2013
+[Add] 
+- 	Germany language
+
+[Fix] 
+- 	IE8 bug
+
+[Update] 
+- 	Outdated scripts
+- 	Theme settings
+- 	Language
+- 	Code refactored
+
+===========================================================================================
 
 1.5 - 1.6 - 20 Feb 2013
 - Remove aff link!

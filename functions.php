@@ -90,6 +90,17 @@ function tiga_setup() {
 	);
 	add_theme_support( 'post-thumbnails' );
 
+	/* Add support for custom headers. */
+	$args = array(
+		'width'         => 200,
+		'height'        => 80,
+		'flex-height'   => true,
+		'flex-width'    => true,		
+		'header-text'   => false,
+		'uploads'       => true,
+	);
+	add_theme_support( 'custom-header', $args );
+
 	/* Add custom image sizes. */
 	add_action( 'init', 'tiga_add_image_sizes' );
 	/* Add custom image sizes custom name. */
@@ -133,9 +144,11 @@ function tiga_load_libraries() {
 
 	/* Options panel extras. */
 	require( trailingslashit( get_template_directory() ) . 'includes/options-functions.php' );
-	require( trailingslashit( get_template_directory() ) . 'includes/options-sidebar.php' );
 
-	/* Loads the template tags. */
+	/* Loads the additional theme functions. */
+	require( trailingslashit( TIGA_INCLUDES ) . 'theme-functions.php' );
+
+	/* Loads the custom template tags. */
 	require( trailingslashit( TIGA_INCLUDES ) . 'templates.php' );
 
 	/* Loads the theme hooks. */
@@ -365,22 +378,18 @@ function tiga_site_title() {
 
 	$titletag  = ( is_front_page() ) ? 'h1' : 'h2';
 
-	if( of_get_option( 'tiga_custom_logo' ) ) { ?>
-
-			<div class="site-logo">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" src="<?php echo esc_url( of_get_option( 'tiga_custom_logo' ) ); ?>"></a>
-			</div>
-
-		<?php
-
-	} else { ?>
-
-			<<?php echo $titletag; ?> class="site-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</<?php echo $titletag; ?>>
-			<div class="site-description"><?php bloginfo( 'description' ); ?></div>
-
-	<?php }
+	if ( get_header_image() ) {
+		echo '<div class="site-logo">' . "\n";
+			echo '<a href="' . get_home_url() . '" title="' . get_bloginfo( 'name' ) . '" rel="home">' . "\n";
+				echo '<img class="logo" src="' . get_header_image() . '" alt="' . get_bloginfo( 'name' ) . '" />' . "\n";
+			echo '</a>' . "\n";
+		echo '</div>' . "\n";
+	} else {
+		echo '<' . $titletag . ' class="site-title">' . "\n";
+			echo '<a href="' . get_home_url() . '" title="' . get_bloginfo( 'name' ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a>' . "\n";
+		echo '</' . $titletag . '>' . "\n";
+		echo '<div class="site-description">' . get_bloginfo( 'description' ) . '</div>';
+	}
 
 }
 
@@ -389,7 +398,7 @@ function tiga_site_title() {
  *
  * @since 1.7
  */
-function tiga_theme_settings_location(){
+function tiga_theme_settings_location() {
 	return array( 'includes/options.php' );
 }
 ?>

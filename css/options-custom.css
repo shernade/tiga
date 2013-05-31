@@ -1,7 +1,7 @@
 /*
 File Name: Options Custom
 Description: Custom css for theme options
-Version: 1.0
+Version: 1.1
 Author: Satrya
 Since: 0.0.6
 License: GNU General Public License v2
@@ -36,22 +36,4 @@ License URI: license.txt
 
 #wpbody-content #optionsframework-sidebar .metabox-holder {
   padding-top: 0;
-}
-
-.tiga-support {
-  display: block;
-  margin: 10px 0;
-  text-align: right;
-}
-.tiga-support a {
-  margin-left: 10px;
-  position: relative;
-  top: -8px;
-}
-.tiga-support span {
-  display: inline-block;
-  margin-left: 10px;
-}
-.tiga-support span a {
-  top: 0;
 }

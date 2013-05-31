@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tiga 1.3\n"
-"POT-Creation-Date: 2013-02-14 10:20+0700\n"
-"PO-Revision-Date: 2013-02-14 10:20+0700\n"
+"Project-Id-Version: Tiga 1.7\n"
+"POT-Creation-Date: 2013-05-31 08:00+0700\n"
+"PO-Revision-Date: 2013-05-31 08:01+0700\n"
 "Last-Translator: M.Satrya <satrya@tokokoo.com>\n"
 "Language-Team: Satrya <satrya@satrya.me>\n"
 "Language: English\n"
@@ -137,80 +137,71 @@ msgid ""
 "rel=\"designer\">%4$s</a>"
 msgstr ""
 
-#: ../functions.php:91
+#: ../functions.php:87
 msgid "Primary Navigation"
 msgstr ""
 
-#: ../functions.php:92
+#: ../functions.php:88
 msgid "Secondary Navigation"
 msgstr ""
 
-#: ../functions.php:190
+#: ../functions.php:201
 msgid "Small Thumbnail"
 msgstr ""
 
-#: ../functions.php:191
+#: ../functions.php:202
 msgid "Medium Thumbnail"
 msgstr ""
 
-#: ../functions.php:192
+#: ../functions.php:203
 msgid "Featured"
 msgstr ""
 
-#: ../functions.php:193
+#: ../functions.php:204
 msgid "Medium Featured"
 msgstr ""
 
-#: ../functions.php:194
+#: ../functions.php:205
 msgid "Home Slides"
 msgstr ""
 
-#: ../functions.php:271
-#, php-format
-msgid "Page %s"
-msgstr ""
-
-#: ../functions.php:282
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: ../functions.php:450
+#: ../functions.php:290
 msgid "Primary"
 msgstr ""
 
-#: ../functions.php:451
+#: ../functions.php:291
 msgid "Primary sidebar, appears on all pages."
 msgstr ""
 
-#: ../functions.php:460
+#: ../functions.php:300
 msgid "Subsidiary"
 msgstr ""
 
-#: ../functions.php:461
+#: ../functions.php:301
 msgid "Subsidiary sidebar, appears on the footer side of your site."
 msgstr ""
 
-#: ../functions.php:470
+#: ../functions.php:310
 msgid "Above Single Post Content"
 msgstr ""
 
-#: ../functions.php:471
+#: ../functions.php:311
 msgid "This sidebar appears on the single post, above the content."
 msgstr ""
 
-#: ../functions.php:480
+#: ../functions.php:320
 msgid "Below Single Post Content"
 msgstr ""
 
-#: ../functions.php:481
+#: ../functions.php:321
 msgid "This sidebar appears on the single post, below the content."
 msgstr ""
 
-#: ../functions.php:490
+#: ../functions.php:330
 msgid "Custom Home Page"
 msgstr ""
 
-#: ../functions.php:491
+#: ../functions.php:331
 msgid "This sidebar appears on custom home page template."
 msgstr ""
 
@@ -300,61 +291,61 @@ msgstr ""
 msgid "Search &hellip;"
 msgstr ""
 
-#: ../admin/options-framework.php:171
-msgid "Tiga Theme Options"
-msgstr ""
-
-#: ../admin/options-framework.php:203
-msgid "Clear"
+#: ../admin/options-framework.php:173 ../admin/options-framework.php:388
+msgid "Theme Options"
 msgstr ""
 
 #: ../admin/options-framework.php:204
-msgid "Default"
+msgid "Clear"
 msgstr ""
 
 #: ../admin/options-framework.php:205
+msgid "Default"
+msgstr ""
+
+#: ../admin/options-framework.php:206
 msgid "Select Color"
 msgstr ""
 
-#: ../admin/options-framework.php:250
+#: ../admin/options-framework.php:251
 msgid "Save Options"
 msgstr ""
 
-#: ../admin/options-framework.php:251
+#: ../admin/options-framework.php:252
 msgid "Restore Defaults"
 msgstr ""
 
-#: ../admin/options-framework.php:251
+#: ../admin/options-framework.php:252
 msgid "Click OK to reset. Any theme settings will be lost!"
 msgstr ""
 
-#: ../admin/options-framework.php:283
+#: ../admin/options-framework.php:284
 msgid "Default options restored."
 msgstr ""
 
-#: ../admin/options-framework.php:337
+#: ../admin/options-framework.php:338
 msgid "Options saved."
-msgstr ""
-
-#: ../admin/options-framework.php:387
-msgid "Theme Options"
 msgstr ""
 
 #: ../admin/options-media-uploader.php:51
 msgid "No file chosen"
 msgstr ""
 
-#: ../admin/options-media-uploader.php:53
-#: ../admin/options-media-uploader.php:100
+#: ../admin/options-media-uploader.php:54
+#: ../admin/options-media-uploader.php:111
 msgid "Upload"
 msgstr ""
 
-#: ../admin/options-media-uploader.php:55
-#: ../admin/options-media-uploader.php:101
+#: ../admin/options-media-uploader.php:56
+#: ../admin/options-media-uploader.php:112
 msgid "Remove"
 msgstr ""
 
-#: ../admin/options-media-uploader.php:79
+#: ../admin/options-media-uploader.php:59
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: ../admin/options-media-uploader.php:83
 msgid "View File"
 msgstr ""
 
@@ -434,10 +425,6 @@ msgstr ""
 msgid "Bold Italic"
 msgstr ""
 
-#: ../admin/upgrade.php:31
-msgid "Theme Options Media"
-msgstr ""
-
 #: ../includes/metabox.php:14 ../includes/metabox.php:15
 msgid "Tiga social share"
 msgstr ""
@@ -446,237 +433,199 @@ msgstr ""
 msgid "Disable social share button on this post?"
 msgstr ""
 
-#: ../includes/options-sidebar.php:19
-msgid "Support"
-msgstr ""
-
-#: ../includes/options-sidebar.php:29
-msgid "Components"
-msgstr ""
-
-#: ../includes/options-sidebar.php:32
-msgid "Buddypress"
-msgstr ""
-
-#: ../includes/options-sidebar.php:33
-msgid "A child theme for buddypress compatibility."
-msgstr ""
-
-#: ../includes/options-sidebar.php:34
-msgid "Sample child theme"
-msgstr ""
-
-#: ../includes/options-sidebar.php:35
-msgid "Sample child theme for Tiga."
-msgstr ""
-
-#: ../includes/options-sidebar.php:36
-msgid "Sass files"
-msgstr ""
-
-#: ../includes/options-sidebar.php:37
-msgid "I'm building Tiga with SASS & Compass, download it if you need."
-msgstr ""
-
-#: ../includes/options.php:42
+#: ../includes/options.php:40
 msgid "Two"
 msgstr ""
 
-#: ../includes/options.php:43
+#: ../includes/options.php:41
 msgid "Three"
 msgstr ""
 
-#: ../includes/options.php:44
+#: ../includes/options.php:42
 msgid "Four"
 msgstr ""
 
-#: ../includes/options.php:45
+#: ../includes/options.php:43
 msgid "Five"
 msgstr ""
 
-#: ../includes/options.php:46
+#: ../includes/options.php:44
 msgid "Six"
 msgstr ""
 
-#: ../includes/options.php:47
+#: ../includes/options.php:45
 msgid "Seven"
 msgstr ""
 
-#: ../includes/options.php:48
+#: ../includes/options.php:46
 msgid "Eight"
 msgstr ""
 
-#: ../includes/options.php:49
+#: ../includes/options.php:47
 msgid "Nine"
 msgstr ""
 
-#: ../includes/options.php:50
+#: ../includes/options.php:48
 msgid "Ten"
 msgstr ""
 
-#: ../includes/options.php:54
+#: ../includes/options.php:52
 msgid "Enable"
 msgstr ""
 
-#: ../includes/options.php:55
+#: ../includes/options.php:53
 msgid "Disable"
 msgstr ""
 
-#: ../includes/options.php:59
+#: ../includes/options.php:57
 msgid "Single post"
 msgstr ""
 
-#: ../includes/options.php:60
+#: ../includes/options.php:58 ../includes/options.php:217
 msgid "Page"
 msgstr ""
 
-#: ../includes/options.php:61
+#: ../includes/options.php:59
 msgid "Both"
 msgstr ""
 
-#: ../includes/options.php:62
+#: ../includes/options.php:60
 msgid "None"
 msgstr ""
 
-#: ../includes/options.php:71
+#: ../includes/options.php:69
 msgid "General"
 msgstr ""
 
-#: ../includes/options.php:76
-msgid "Custom Logo"
-msgstr ""
-
-#: ../includes/options.php:77
-msgid ""
-"Upload a logo for your website, or specify the image address of your online "
-"logo. (http://example.com/logo.png)"
-msgstr ""
-
-#: ../includes/options.php:83
+#: ../includes/options.php:74
 msgid "Custom Favicon"
 msgstr ""
 
-#: ../includes/options.php:84
+#: ../includes/options.php:75
 msgid ""
 "Upload a favicon for your website, or specify the image address of your "
 "online favicon. (http://example.com/favicon.png)"
 msgstr ""
 
+#: ../includes/options.php:81
+msgid "Iframe Blocker"
+msgstr ""
+
+#: ../includes/options.php:82
+msgid "Iframe blocker is for block iframe to your site such as google image."
+msgstr ""
+
 #: ../includes/options.php:90
-msgid "Custom CSS"
+msgid "Disable credit links"
 msgstr ""
 
 #: ../includes/options.php:91
-msgid "Quickly add some CSS to your theme by adding it to this block."
-msgstr ""
-
-#: ../includes/options.php:98
-msgid "Header Code"
+msgid ""
+"Are you sure want to disable the credit link for WordPress and theme author?"
 msgstr ""
 
 #: ../includes/options.php:99
+msgid "Theme"
+msgstr ""
+
+#: ../includes/options.php:104
+msgid "Global Layouts"
+msgstr ""
+
+#: ../includes/options.php:105
+msgid "Left content, right content or one column"
+msgstr ""
+
+#: ../includes/options.php:117
+msgid "Home Page Layouts"
+msgstr ""
+
+#: ../includes/options.php:118
+msgid "Two columns or one column"
+msgstr ""
+
+#: ../includes/options.php:129
+msgid "Background Pattern"
+msgstr ""
+
+#: ../includes/options.php:130
+msgid "Available background pattern to customize your site"
+msgstr ""
+
+#: ../includes/options.php:152
+msgid "Typography"
+msgstr ""
+
+#: ../includes/options.php:157
+msgid "Disable custom typography"
+msgstr ""
+
+#: ../includes/options.php:158
+msgid "Disable custom typography and use theme defaults."
+msgstr ""
+
+#: ../includes/options.php:165
+msgid "Content typography"
+msgstr ""
+
+#: ../includes/options.php:166
+msgid "This font is used for content text."
+msgstr ""
+
+#: ../includes/options.php:190
+msgid "Content heading typography"
+msgstr ""
+
+#: ../includes/options.php:191
+msgid "Select the headline font (h1,h2,h3 etc)"
+msgstr ""
+
+#: ../includes/options.php:222
+msgid "Display social share button"
+msgstr ""
+
+#: ../includes/options.php:223
+msgid "Display social share on single post and page"
+msgstr ""
+
+#: ../includes/options.php:231
+msgid "Display author box"
+msgstr ""
+
+#: ../includes/options.php:232
+msgid "Check this option if you want display the author box on single posts"
+msgstr ""
+
+#: ../includes/options.php:240
+msgid "Custom Code"
+msgstr ""
+
+#: ../includes/options.php:245
+msgid "Custom CSS"
+msgstr ""
+
+#: ../includes/options.php:246
+msgid "Quickly add some CSS to your theme by adding it to this block."
+msgstr ""
+
+#: ../includes/options.php:253
+msgid "Header Code"
+msgstr ""
+
+#: ../includes/options.php:254
 msgid ""
 "Add any custom script like the meta verification from various search engine. "
 "It will be inserted before the closing head tag of your theme"
 msgstr ""
 
-#: ../includes/options.php:105
+#: ../includes/options.php:260
 msgid "Footer Code"
 msgstr ""
 
-#: ../includes/options.php:106
+#: ../includes/options.php:261
 msgid ""
 "Add your analytic code or you can add any custom script here. It will be "
 "inserted before the closing body tag of your theme"
-msgstr ""
-
-#: ../includes/options.php:112
-msgid "Iframe Blocker"
-msgstr ""
-
-#: ../includes/options.php:113
-msgid "Iframe blocker is for block iframe to your site such as google image."
-msgstr ""
-
-#: ../includes/options.php:121
-msgid "Disable credit links"
-msgstr ""
-
-#: ../includes/options.php:122
-msgid ""
-"Are you sure want to disable the credit link for WordPress and theme author?"
-msgstr ""
-
-#: ../includes/options.php:130
-msgid "Theme"
-msgstr ""
-
-#: ../includes/options.php:135
-msgid "Global Layouts"
-msgstr ""
-
-#: ../includes/options.php:136
-msgid "Left content, right content or one column"
-msgstr ""
-
-#: ../includes/options.php:148
-msgid "Home Page Layouts"
-msgstr ""
-
-#: ../includes/options.php:149
-msgid "Two columns or one column"
-msgstr ""
-
-#: ../includes/options.php:160
-msgid "Background Pattern"
-msgstr ""
-
-#: ../includes/options.php:161
-msgid "Available background pattern to customize your site"
-msgstr ""
-
-#: ../includes/options.php:181
-msgid "Display social share button"
-msgstr ""
-
-#: ../includes/options.php:182
-msgid "Display social share on single post and page"
-msgstr ""
-
-#: ../includes/options.php:190
-msgid "Display author box"
-msgstr ""
-
-#: ../includes/options.php:191
-msgid "Check this option if you want display the author box on single posts"
-msgstr ""
-
-#: ../includes/options.php:199
-msgid "Typography"
-msgstr ""
-
-#: ../includes/options.php:204
-msgid "Disable custom typography"
-msgstr ""
-
-#: ../includes/options.php:205
-msgid "Disable custom typography and use theme defaults."
-msgstr ""
-
-#: ../includes/options.php:212
-msgid "Content typography"
-msgstr ""
-
-#: ../includes/options.php:213
-msgid "This font is used for content text."
-msgstr ""
-
-#: ../includes/options.php:237
-msgid "Content heading typography"
-msgstr ""
-
-#: ../includes/options.php:238
-msgid "Select the headline font (h1,h2,h3 etc)"
 msgstr ""
 
 #: ../includes/templates.php:29
@@ -768,6 +717,15 @@ msgstr ""
 
 #: ../includes/templates.php:238
 msgid "Share This:"
+msgstr ""
+
+#: ../includes/theme-functions.php:34
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../includes/theme-functions.php:46
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: ../includes/widget-fbfans.php:20
