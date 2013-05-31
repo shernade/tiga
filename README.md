@@ -11,6 +11,7 @@ Requires at least: 3.4
 Tested up to: 3.5.1  
 Stable tag: 1.7  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
+Browser support: Google Chrome, Firefox, Opera, Safari, IE8, IE9  
 
 ## Installation
 
@@ -36,12 +37,37 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	* Subscribe
 	* Social network
 * 10 background patterns to customize your background
+* Easy theme settings.
+* Social share button
+* Author box
+* 4 custom page templates
+	* Twentytwelve like custom home page
+	* Blog page with slider
+	* Archive/sitemap
+	* Full width
+* Child-theme friendly
+* Custom style for [Contact Form 7](http://wordpress.org/plugins/contact-form-7/)
+* Plug-n-play support for the [Wp-Pagenavi](http://wordpress.org/plugins/wp-pagenavi/) plugin
+* Translation-ready (contains .po/.mo/.pot files)
+
+## Language
+
+* English
+* Germany
+* [Submit yours](https://github.com/satrya/tiga/issues)
 
 ## License
 
 All bundled files license:
 * [Pondasee](https://github.com/tokokoo/pondasee) - The Unlicense
 * [jQuery](http://jquery.org/) - MIT/GPL
+* [FitVids](http://fitvidsjs.com/) - WTFPL license
+* [Tinynav](http://tinynav.viljamis.com) - MIT License
+* [Reponsive Slides](http://responsiveslides.com) - MIT License
+* [Respond](http://j.mp/respondjs) - MIT/GPLv2
+* [Formalize](http://formalize.me/) - MIT/GPL
+* [iOS orientationchange](https://github.com/scottjehl/iOS-Orientationchange-Fix) - MIT License
+* [jTweetsAnywhere](http://thomasbillenstein.com/jTweetsAnywhere/) - MIT License
 
 ## Changelog
 ```
