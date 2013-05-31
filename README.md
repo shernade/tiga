@@ -1,4 +1,4 @@
-![Customizr - Free Wordpress Theme](/screenshot.png)  
+![Tiga - Free Wordpress Theme](/screenshot.png)  
 
 Mobile friendly, clean and elegant theme, perfect for bloggers or even professionals. It supports 5 widget areas, 4 custom widgets(facebook like box, subscribe, social and twitter), 10 custom background patterns and social share buttons, Search engine friendly, cross browser also translation ready. It has an optional custom home page template, full-width page template, sitemap page template, blog page with slider page, one-column & two-columns flexible-width layouts. It include plug-and-play support for the WP-Pagenavi plugin.  
 
@@ -6,11 +6,10 @@ Mobile friendly, clean and elegant theme, perfect for bloggers or even professio
 Contributors: Satrya  
 Donate link: http://satrya.me/donate/  
 Demo: http://demo.themephe.com/tiga  
-Tags: white, light, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background, custom-menu, featured-images, full-width-template, microformats, sticky-post, theme-options, threaded-comments, translation-ready  
+Documentation: https://github.com/satrya/tiga/wiki  
 Requires at least: 3.4  
 Tested up to: 3.5.1  
 Stable tag: 1.7  
-License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 ## Installation
@@ -29,12 +28,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Features Include
 
-* Display thumbnails, with customizable size.
-* Display excerpt, with customizable length.
-* Display from all or a specific category.
-* Display post date.
-* Support `get_the_image` function.
-* Multiple widgets.
+* Multidevice layout and optimized for mobile browsing a.k.a responsive layouts.
+* Custom menus and background.
+* 4 custom widgets.
+	* Twitter
+	* Facebook like
+	* Subscribe
+	* Social network
+* 10 background patterns to customize your background
+
+## License
+
+All bundled files license:
+* [Pondasee](https://github.com/tokokoo/pondasee) - The Unlicense
+* [jQuery](http://jquery.org/) - MIT/GPL
 
 ## Changelog
 ```
