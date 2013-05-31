@@ -10,6 +10,7 @@
 - 	Theme settings
 - 	Language
 - 	Code refactored
+- 	Custom home page now needs a featured image
 
 ===========================================================================================
 

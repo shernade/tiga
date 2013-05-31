@@ -27,31 +27,11 @@ get_header(); ?>
 						<h1 class="entry-title"><?php esc_attr( the_title() ); ?></h1>
 					</header><!-- .entry-header -->
 
-					<?php 
-						$args = array(
-							'order'          => 'ASC',
-							'post_type'      => 'attachment',
-							'post_parent'    => $post->ID,
-							'post_mime_type' => 'image',
-							'post_status'    => null,
-							'numberposts'    => -1,
-						);
-						$attachments = get_posts($args);
-
-						if ( $attachments ) {
-
-							echo '<ul class="home-slides thumbnail">';
-
-							foreach ( $attachments as $attachment ) {
-								echo '<li>';
-								echo wp_get_attachment_image( $attachment->ID, 'tiga-460px', false, false );
-								echo '</li>';
-							}
-
-							echo '</ul>';
-
-						}
-					?>
+					<?php if ( has_post_thumbnail() ) { ?>
+						<figure class="thumb thumbnail">
+							<?php the_post_thumbnail( 'tiga-460px', array( 'class' => 'entry-img', 'alt' => get_the_title(), 'title' => get_the_title() ) ); ?>
+						</figure>
+					<?php } ?>
 
 					<div class="entry-content">
 						<?php the_content(); ?>

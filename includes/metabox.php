@@ -2,10 +2,10 @@
 /**
  * Custom meta box for Tiga theme
  * 
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		0.2
+ * @package Tiga
+ * @author Satrya
+ * @license docs/license.txt
+ * @since 0.2
  *
  */
 
@@ -27,8 +27,8 @@ function tiga_social_option_box( $post ) {
 	<?php	
 }
 
-add_action( 'save_post', 'cd_meta_box_save' );
-function cd_meta_box_save( $post_id ) {
+add_action( 'save_post', 'tiga_meta_box_save' );
+function tiga_meta_box_save( $post_id ) {
 
 	if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
 	

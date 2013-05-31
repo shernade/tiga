@@ -37,16 +37,6 @@ $j(document).ready(function(){
 		function() { $j(this).find( ".slides-content" ).slideUp(); }
 	);
 
-	// Custom home page slide
-	$j( ".home-slides" ).responsiveSlides({
-		auto: true,
-        pager: false,
-        nav: false,
-        speed: 700,
-		pauseControls: false,
-		pause: false
-    });
-
 	// add class last if has ie8 class
     if( $j( "html" ).hasClass( "ie8" ) ) { 
     	$j( "#home-content .widget:last-child" ).addClass( "last" );

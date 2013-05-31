@@ -275,6 +275,7 @@ function optionsframework_options() {
 		'desc' => '
 			<ol class="ol-decimal">
 				<li><a href="#logo">Custom Logo</a></li>
+				<li><a href="#home">Custom Home Page Template</a></li>
 				<li><a href="#ie">IE8 Bug</a></li>
 				<li><a href="#lang">Added Germany Language</a></li>
 				<li><a href="#support">Support</a></li>
@@ -289,13 +290,16 @@ function optionsframework_options() {
 				<li>Mission completed.</li>
 			</ul>
 
-			<h4 id="ie" class="heading">2. IE8 Bug</h4>
+			<h4 id="home" class="heading">2. Custom Home Page Template</h4>
+			<p>You need to set an image as featured image if you need to display image on home page.</p>
+
+			<h4 id="ie" class="heading">3. IE8 Bug</h4>
 			<p>I noticed a few but on IE8, it should be fixed in this version.</p>
 
-			<h4 id="lang" class="heading">3. Added Germany Language</h4>
+			<h4 id="lang" class="heading">4. Added Germany Language</h4>
 			Now tiga support Germany. Whoosah! But, I\'m sorry i forgot who sended the translation. If you the sender, please just contact me. :)
 
-			<h4 id="support" class="heading">4. Support</h4>
+			<h4 id="support" class="heading">5. Support</h4>
 			<p>If you wish to contribute to all of my projects including this theme development & support, you can make a donation to the theme author.</p>
 			<a href="http://satrya.me/donate/" target="_blank"><img src="' . get_template_directory_uri() . '/img/donate.gif"></a>
 		',

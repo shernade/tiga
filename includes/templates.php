@@ -4,10 +4,10 @@
  * 
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		0.0.1
+ * @package Tiga
+ * @author Satrya
+ * @license docs/license.txt
+ * @since 0.0.1
  *
  */
 
