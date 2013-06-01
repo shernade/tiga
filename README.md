@@ -1,4 +1,4 @@
-![Tiga - Free Wordpress Theme](/screenshot.png)  
+![Tiga - Free Wordpress Theme](http://satrya.me/wp-content/uploads/2013/04/tiga-free-wordpress-theme-530x450.png)  
 
 Mobile friendly, clean and elegant theme, perfect for bloggers or even professionals. It supports 5 widget areas, 4 custom widgets(facebook like box, subscribe, social and twitter), 10 custom background patterns and social share buttons, Search engine friendly, cross browser also translation ready. It has an optional custom home page template, full-width page template, sitemap page template, blog page with slider page, one-column & two-columns flexible-width layouts. It include plug-and-play support for the WP-Pagenavi plugin.  
 
