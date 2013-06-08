@@ -271,35 +271,25 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
-		'name' => 'New in TIGA 1.7',
+		'name' => 'New in TIGA 1.8',
 		'desc' => '
 			<ol class="ol-decimal">
-				<li><a href="#logo">Custom Logo</a></li>
-				<li><a href="#home">Custom Home Page Template</a></li>
-				<li><a href="#ie">IE8 Bug</a></li>
-				<li><a href="#lang">Added Germany Language</a></li>
+				<li><a href="#lang">Added Italian Language</a></li>
+				<li><a href="#title">Fix wp_title issue</a></li>
+				<li><a href="#child">Update child theme for BuddyPress support</a></li>
 				<li><a href="#support">Support</a></li>
 			</ol>
 
-			<h4 id="logo" class="heading">1. Custom Logo</h4>
-			<p>I decided to remove the custom logo uploader from the theme settings, I changed it with the custom header function. If you already uploaded a logo, it will disappear now. But you don\'t need to worry, just follow the steps below to get back your logo.</p>
-			<ul class="ul-disc">
-				<li>Select <strong>Appearance &raquo; Header</strong></li>
-				<li>On the <em>\'Select Image\'</em> options, choose the option <strong>Or choose an image from your media library:</strong> </li>
-				<li>Click the <em>Choose Image</em> button, pick your logo then skip the crop option. Save it.</li>
-				<li>Mission completed.</li>
-			</ul>
+			<h4 id="lang" class="heading">1. Added Italian Language</h4>
+			<p>Now Tiga support Italian. Whoosah! Say thanks to <a href="http://blog.stefanomonti.net/" target="_blank">Stefano</a>.</p>
 
-			<h4 id="home" class="heading">2. Custom Home Page Template</h4>
-			<p>You need to set an image as featured image if you need to display image on home page.</p>
+			<h4 id="title" class="heading">2. Fix wp_title issue</h4>
+			<p>Fix wrong placement between post title and blog title.</p>
 
-			<h4 id="ie" class="heading">3. IE8 Bug</h4>
-			<p>I noticed a few but on IE8, it should be fixed in this version.</p>
+			<h4 id="title" class="heading">3. Update child theme for BuddyPress support</h4>
+			<p>I already fixed the issue with the child theme, please re-download here <a href="https://github.com/satrya/tiga-buddypress/archive/master.zip">https://github.com/satrya/tiga-buddypress/archive/master.zip</a>.</p>
 
-			<h4 id="lang" class="heading">4. Added Germany Language</h4>
-			Now tiga support Germany. Whoosah! But, I\'m sorry i forgot who sended the translation. If you the sender, please just contact me. :)
-
-			<h4 id="support" class="heading">5. Support</h4>
+			<h4 id="support" class="heading">4. Support</h4>
 			<p>If you wish to contribute to all of my projects including this theme development & support, you can make a donation to the theme author.</p>
 			<a href="http://satrya.me/donate/" target="_blank"><img src="' . get_template_directory_uri() . '/img/donate.gif"></a>
 		',
