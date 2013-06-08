@@ -72,6 +72,15 @@ All bundled files license:
 
 ## Changelog
 ```
+1.8 - 08 June 2013
+[Add]
+-	Italian language (pros @Stefano)
+
+[Fix] 
+- 	wp_title issue
+-	Child theme for BuddyPress
+
+===========================================================================================
 1.7 - 31 May 2013
 [Add] 
 - 	Germany language
