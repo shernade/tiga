@@ -54,6 +54,7 @@ Browser support: Google Chrome, Firefox, Opera, Safari, IE8, IE9
 
 * English
 * Germany
+* [Italian](http://blog.stefanomonti.net/)
 * [Submit yours](https://github.com/satrya/tiga/issues)
 
 ## License

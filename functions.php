@@ -29,7 +29,7 @@ add_action( 'after_setup_theme', 'tiga_load_libraries', 11 );
 function tiga_constants() {
 
 	/* Sets the theme version number. */
-	define( 'TIGA_VERSION', 1.7 );
+	define( 'TIGA_VERSION', 1.8 );
 
 	/* Sets the path to the theme directory. */
 	define( 'THEME_DIR', get_template_directory() );
