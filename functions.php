@@ -29,7 +29,7 @@ add_action( 'after_setup_theme', 'tiga_load_libraries', 11 );
 function tiga_constants() {
 
 	/* Sets the theme version number. */
-	define( 'TIGA_VERSION', 1.8 );
+	define( 'TIGA_VERSION', 1.9 );
 
 	/* Sets the path to the theme directory. */
 	define( 'THEME_DIR', get_template_directory() );
@@ -270,9 +270,6 @@ function tiga_register_widgets() {
 	require_once( trailingslashit( TIGA_INCLUDES ) . 'widget-subscribe.php' );
 	register_widget( 'tiga_subscribe' );
 
-	require_once( trailingslashit( TIGA_INCLUDES ) . 'widget-twitter.php' );
-	register_widget( 'tiga_twitter' );
-
 	require_once( trailingslashit( TIGA_INCLUDES ) . 'widget-fbfans.php' );
 	register_widget( 'tiga_fb_box' );
 
@@ -379,11 +376,11 @@ function tiga_site_title() {
 	$titletag  = ( is_front_page() ) ? 'h1' : 'h2';
 
 	if ( get_header_image() ) {
-		echo '<div class="site-logo">' . "\n";
+		echo '<' . $titletag . ' class="site-logo">' . "\n";
 			echo '<a href="' . get_home_url() . '" title="' . get_bloginfo( 'name' ) . '" rel="home">' . "\n";
 				echo '<img class="logo" src="' . get_header_image() . '" alt="' . get_bloginfo( 'name' ) . '" />' . "\n";
 			echo '</a>' . "\n";
-		echo '</div>' . "\n";
+		echo '</' . $titletag . '>' . "\n";
 	} else {
 		echo '<' . $titletag . ' class="site-title">' . "\n";
 			echo '<a href="' . get_home_url() . '" title="' . get_bloginfo( 'name' ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a>' . "\n";

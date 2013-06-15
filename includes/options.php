@@ -271,25 +271,29 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
-		'name' => 'New in TIGA 1.8',
+		'name' => 'New in TIGA 1.9',
 		'desc' => '
 			<ol class="ol-decimal">
-				<li><a href="#lang">Added Italian Language</a></li>
-				<li><a href="#title">Fix wp_title issue</a></li>
-				<li><a href="#child">Update child theme for BuddyPress support</a></li>
+				<li><a href="#lang">Added Spanish Language</a></li>
+				<li><a href="#tag">Fix H1 on home page</a></li>
+				<li><a href="#select">Fix long select menu</a></li>
+				<li><a href="#twitter">Remove the twitter widget</a></li>
 				<li><a href="#support">Support</a></li>
 			</ol>
 
-			<h4 id="lang" class="heading">1. Added Italian Language</h4>
-			<p>Now Tiga support Italian. Whoosah! Say thanks to <a href="http://blog.stefanomonti.net/" target="_blank">Stefano</a>.</p>
+			<h4 id="lang" class="heading">1. Added Spanish Language</h4>
+			<p>Now Tiga support Spanish. Whoosah! Say thanks to <a href="http://wordpress.org/support/topic/header-logo-on-tiga-child-theme" target="_blank">josediez</a>.</p>
 
-			<h4 id="title" class="heading">2. Fix wp_title issue</h4>
-			<p>Fix wrong placement between post title and blog title.</p>
+			<h4 id="tag" class="heading">2. Fix H1 on home page</h4>
+			<p>Fix H1 on home page when user use logo.</p>
 
-			<h4 id="title" class="heading">3. Update child theme for BuddyPress support</h4>
-			<p>I already fixed the issue with the child theme, please re-download here <a href="https://github.com/satrya/tiga-buddypress/archive/master.zip">https://github.com/satrya/tiga-buddypress/archive/master.zip</a>.</p>
+			<h4 id="tag" class="heading">3. Fix long select menu</h4>
+			<p>Fix long select menu in the sidebar.</p>
 
-			<h4 id="support" class="heading">4. Support</h4>
+			<h4 id="twitter" class="heading">4. Remove the twitter widget</h4>
+			<p>Twitter just update their API and this cause the problem with the twitter widget. I decided to remove it now, please just use <a href="http://wordpress.org/plugins/recent-tweets-widget/" target="_blank">http://wordpress.org/plugins/recent-tweets-widget/</a></p>
+
+			<h4 id="support" class="heading">5. Support</h4>
 			<p>If you wish to contribute to all of my projects including this theme development & support, you can make a donation to the theme author.</p>
 			<a href="http://satrya.me/donate/" target="_blank"><img src="' . get_template_directory_uri() . '/img/donate.gif"></a>
 		',

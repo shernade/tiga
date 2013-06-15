@@ -1,8 +1,8 @@
 /*
 Theme Name: Tiga
 Theme URI: http://satrya.me/portfolio/project/tiga-wordpress-theme/
-Description: Mobile friendly, clean and elegant theme, perfect for bloggers or even professionals. It supports 5 widget areas, 4 custom widgets(facebook like box, subscribe, social and twitter), 10 custom background patterns and social share buttons, Search engine friendly, cross browser also translation ready. It has an optional custom home page template, full-width page template, sitemap page template, blog page with slider page, one-column & two-columns flexible-width layouts. It include plug-and-play support for the WP-Pagenavi plugin. Currently translated into Germany and Italian.
-Version: 1.8
+Description: Mobile friendly, clean and elegant theme, perfect for bloggers or even professionals. It supports 5 widget areas, 4 custom widgets(facebook like box, subscribe, social and twitter), 10 custom background patterns and social share buttons, Search engine friendly, cross browser also translation ready. It has an optional custom home page template, full-width page template, sitemap page template, blog page with slider page, one-column & two-columns flexible-width layouts. It include plug-and-play support for the WP-Pagenavi plugin. Currently translated into Germany, Italian and Spanish.
+Version: 1.9
 Author: Satrya
 Author URI:	http://satrya.me
 Tags: white, light, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, custom-background, custom-menu, featured-images, full-width-template, microformats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -2161,6 +2161,9 @@ article #searchform {
 .widget ul li a:hover {
   color: #5e9ae2;
 }
+.widget select {
+  width: 100%;
+}
 
 .widget-area.one .widget {
   width: 100%;
@@ -3281,10 +3284,6 @@ body.custom-background.pattern-10 {
 ============================================================================= */
 .oldie .site {
   border: 1px solid #eeeeee;
-}
-.oldie .secondary-navigation {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF252525', endColorstr='#FF0A0A0A');
 }
 .oldie .slides-content {
   background: transparent;

@@ -1,3 +1,17 @@
+1.9 - 15 June 2013
+[Add]
+-	Spanish language (pros @josediez)
+
+[Fix] 
+- 	H1 tag on homepage
+-	Long select menu is overflowing the sidebar
+-	Remove the IE fallback for the secondary menu
+
+[Remove]
+-	Twitter widget
+
+===========================================================================================
+
 1.8 - 08 June 2013
 [Add]
 -	Italian language (pros @Stefano)
