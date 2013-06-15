@@ -9,7 +9,7 @@ Demo: http://demo.themephe.com/tiga
 Documentation: https://github.com/satrya/tiga/wiki  
 Requires at least: 3.4  
 Tested up to: 3.5.1  
-Stable tag: 1.7  
+Stable tag: 1.9  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 Browser support: Google Chrome, Firefox, Opera, Safari, IE8, IE9  
 
@@ -55,6 +55,7 @@ Browser support: Google Chrome, Firefox, Opera, Safari, IE8, IE9
 * English
 * Germany
 * [Italian](http://blog.stefanomonti.net/)
+* Spanish
 * [Submit yours](https://github.com/satrya/tiga/issues)
 
 ## License
@@ -68,10 +69,23 @@ All bundled files license:
 * [Respond](http://j.mp/respondjs) - MIT/GPLv2
 * [Formalize](http://formalize.me/) - MIT/GPL
 * [iOS orientationchange](https://github.com/scottjehl/iOS-Orientationchange-Fix) - MIT License
-* [jTweetsAnywhere](http://thomasbillenstein.com/jTweetsAnywhere/) - MIT License
 
 ## Changelog
 ```
+1.9 - 15 June 2013
+[Add]
+-	Spanish language (pros @josediez)
+
+[Fix] 
+- 	H1 tag on homepage
+-	Long select menu is overflowing the sidebar
+-	Remove the IE fallback for the secondary menu
+
+[Remove]
+-	Twitter widget
+
+===========================================================================================
+
 1.8 - 08 June 2013
 [Add]
 -	Italian language (pros @Stefano)
@@ -81,6 +95,7 @@ All bundled files license:
 -	Child theme for BuddyPress
 
 ===========================================================================================
+
 1.7 - 31 May 2013
 [Add] 
 - 	Germany language
