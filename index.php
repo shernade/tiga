@@ -12,7 +12,10 @@
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'index' ); ?>
+					<?php 
+						// Loads the content-__.php
+						get_template_part( 'content', 'index' );
+					?>
 
 				<?php endwhile; ?>
 

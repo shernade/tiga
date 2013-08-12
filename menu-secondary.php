@@ -1,15 +1,4 @@
-<?php
-/**
- * Menu Secondary Template
- * 
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		1.4
- *
- */
-
-if ( has_nav_menu( 'secondary' ) ) : ?>
+<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 
 	<nav class="site-navigation secondary-navigation clearfix" role="navigation">
 

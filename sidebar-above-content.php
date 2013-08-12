@@ -1,17 +1,7 @@
-<?php
-/**
- * The Sidebar containing the above single post content widget areas.
- *
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		1.0
- *
- */
-?>
+<?php if ( is_active_sidebar( 'above-content' ) ) : ?>
 
-	<div id="above-content" class="widget-area">
-		
+	<div id="above-content" class="widget-area">		
 		<?php dynamic_sidebar( 'above-content' ); ?>
-
 	</div><!-- #above-content .widget-area -->
+
+<?php endif; ?>

@@ -1,15 +1,5 @@
 <?php
 /**
- * Theme settings helper functions
- *
- * @package Tiga
- * @author Satrya
- * @license docs/license.txt
- * @since 0.0.1
- *
- */
-
-/**
  * Custom CSS
  *
  * @since 0.0.1

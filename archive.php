@@ -1,17 +1,4 @@
-<?php
-/**
- * The template for displaying Archive pages.
- * 
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		0.0.1
- *
- */
-
-get_header(); ?>
+<?php get_header(); ?>
 
 		<section id="primary" class="site-content">
 

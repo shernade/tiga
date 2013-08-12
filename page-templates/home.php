@@ -2,11 +2,6 @@
 /**
  * Template Name: Home Page
  * Description: A Page Template for displaying a custom home page like twentytwelve.
- *
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		1.0
  */
 
 get_header(); ?>

@@ -1,13 +1,4 @@
 <?php
-/**
- * Custom Facebook fans box widget
- * 
- * @package     Tiga
- * @author      Satrya
- * @license     license.txt
- * @since       1.0
- *
- */
 class tiga_fb_box extends WP_Widget {
 
 	/**
@@ -123,3 +114,4 @@ class tiga_fb_box extends WP_Widget {
 	}
 
 }
+?>

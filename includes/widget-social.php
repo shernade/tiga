@@ -1,13 +1,4 @@
 <?php
-/**
- * Custom social icons widget
- * 
- * @package     Tiga
- * @author      Satrya
- * @license     license.txt
- * @since       1.0
- *
- */
 class tiga_social extends WP_Widget {
 
 	/**

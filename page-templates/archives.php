@@ -2,11 +2,6 @@
 /**
  * Template Name: Archives Template
  * Description: A Page Template for displaying the archives
- *
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		0.0.1
  */
 get_header(); ?>
 

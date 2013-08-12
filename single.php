@@ -1,17 +1,4 @@
-<?php
-/**
- * Single Blog Post template file
- * 
- * This file is the single blog post template file, used to display single blog posts.
- *
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		0.0.1
- *
- */
-
-get_header(); ?>
+<?php get_header(); ?>
 
 	<section id="primary" class="site-content">
 

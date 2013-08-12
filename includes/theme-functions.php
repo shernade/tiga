@@ -1,15 +1,5 @@
 <?php
 /**
- * Theme additional functions.
- * 
- * @package Tiga
- * @author Satrya
- * @license docs/license.txt
- * @since 1.7
- *
- */
-
-/**
  * Creates a nicely formatted and more specific title element text
  * for output in head of document, based on current view.
  *

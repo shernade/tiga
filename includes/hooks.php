@@ -1,17 +1,5 @@
 <?php
 /**
- * Tiga Theme Custom Hooks
- * 
- * This file defines custom action hooks for the Tiga Theme.
- *
- * @package Tiga
- * @author Satrya
- * @license docs/license.txt
- * @since 0.2
- *
- */
-
-/**
  * Action hook after #page
  *
  * @file 	header.php

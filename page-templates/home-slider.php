@@ -2,11 +2,6 @@
 /**
  * Template Name: Blog Page with Slider
  * Description: A Page Template for displaying a recent post with slider.
- *
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		1.0
  */
 
 get_header(); ?>

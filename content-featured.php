@@ -1,16 +1,4 @@
 <?php
-/**
- * Featured posts 
- *
- * Display featured posts based on sticky post
- * 
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		1.0
- *
- */
-
 $sticky = get_option( 'sticky_posts' );
 
 if ( ! empty( $sticky ) ) { ?>

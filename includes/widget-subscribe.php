@@ -1,13 +1,4 @@
 <?php
-/**
- * Custom subscribe widget
- * 
- * @package     Tiga
- * @author      Satrya
- * @license     license.txt
- * @since       0.2
- *
- */
 class tiga_subscribe extends WP_Widget {
 
 	/**
@@ -96,5 +87,4 @@ class tiga_subscribe extends WP_Widget {
 
 
 }
-
 ?>

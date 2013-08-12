@@ -1,17 +1,5 @@
 <?php
 /**
- * Tiga custom template tags
- * 
- * Eventually, some of the functionality here could be replaced by core features
- *
- * @package Tiga
- * @author Satrya
- * @license docs/license.txt
- * @since 0.0.1
- *
- */
-
-/**
  * Display navigation to next/previous pages when applicable
  *
  * @since 0.0.1
@@ -114,7 +102,6 @@ function tiga_category_transient_flusher() {
 add_action( 'edit_category', 'tiga_category_transient_flusher' );
 add_action( 'save_post', 'tiga_category_transient_flusher' );
 
-
 /**
  * Display author information on single post
  *
@@ -205,7 +192,6 @@ function tiga_comment( $comment, $args, $depth ) {
 	endswitch;
 }
 endif; // ends check for tiga_comment()
-
 
 /**
  * Display navigation to next/previous comments pages when applicable

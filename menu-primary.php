@@ -1,15 +1,4 @@
-<?php
-/**
- * Menu Primary Template
- * 
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		1.4
- *
- */
-
-if ( has_nav_menu( 'primary' ) ) : ?>
+<?php if ( has_nav_menu( 'primary' ) ) : ?>
 
 	<nav class="site-navigation main-navigation" role="navigation">
 
