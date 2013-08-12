@@ -1,21 +1,6 @@
-<?php
-/**
- * Header Template Part
- * 
- * Template part file that contains the HTML document head and 
- * opening HTML body elements, as well as the site header
- *
- * @package 	Tiga
- * @author		Satrya
- * @license		license.txt
- * @since 		0.0.1
- *
- */
-?>
 <!DOCTYPE html>
-<!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 9]>    <html class="no-js ie9 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<!--[if IE 9]>    <html class="ie9 oldie" <?php language_attributes(); ?>> <![endif]-->
+<!--[if gt IE 9]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -28,7 +13,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/html5.js" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/html5.js"></script>
 <![endif]-->
 
 <?php wp_head(); ?>
@@ -49,11 +34,17 @@
 				<?php tiga_site_title(); ?>
 			</div><!-- end .site-branding -->
 
-			<?php get_template_part( 'menu', 'primary' ); // load menu-primary.php file. ?>
+			<?php 
+				// Load menu-primary.php file.
+				get_template_part( 'menu', 'primary' ); 
+			?>
 			
 		</div> <!-- end #main-header -->
 		
-		<?php get_template_part( 'menu', 'secondary' ); // load menu-secondary.php file. ?>
+		<?php
+			// Load menu-secondary.php file. 
+			get_template_part( 'menu', 'secondary' ); 
+		?>
 
 		<?php tiga_header(); ?>
 

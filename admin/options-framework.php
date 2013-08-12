@@ -4,7 +4,7 @@ Description: A framework for building theme options.
 Author: Devin Price
 Author URI: http://www.wptheming.com
 License: GPLv2
-Version: 1.5.2
+Version: 1.6
 */
 
 /*
@@ -165,18 +165,40 @@ function optionsframework_setdefaults() {
 	}
 }
 
+/* Define menu options (still limited to appearance section)
+ *
+ * Examples usage:
+ *
+ * add_filter( 'optionsframework_menu', function($menu) {
+ *     $menu['page_title'] = 'Hello Options';
+ *	   $menu['menu_title'] = 'Hello Options';
+ *     return $menu;
+ * });
+ */
+
+function optionsframework_menu_settings() {
+
+	$menu = array(
+		'page_title' => __( 'Theme Options', 'tiga'),
+		'menu_title' => __('Theme Options', 'tiga'),
+		'capability' => 'edit_theme_options',
+		'menu_slug' => 'options-framework',
+		'callback' => 'optionsframework_page'
+	);
+
+	return apply_filters( 'optionsframework_menu', $menu );
+}
+
 /* Add a subpage called "Theme Options" to the appearance menu. */
 
-if ( !function_exists( 'optionsframework_add_page' ) ) {
+function optionsframework_add_page() {
 
-	function optionsframework_add_page() {
-		$of_page = add_theme_page( __('Theme Options', 'tiga'), __('Theme Options', 'tiga'), 'edit_theme_options', 'options-framework','optionsframework_page' );
+	$menu = optionsframework_menu_settings();
+	$of_page = add_theme_page( $menu['page_title'], $menu['menu_title'], $menu['capability'], $menu['menu_slug'], $menu['callback'] );
 
-		// Load the required CSS and javscript
-		add_action( 'admin_enqueue_scripts', 'optionsframework_load_scripts' );
-		add_action( 'admin_print_styles-' . $of_page, 'optionsframework_load_styles' );
-	}
-	
+	// Load the required CSS and javscript
+	add_action( 'admin_enqueue_scripts', 'optionsframework_load_scripts' );
+	add_action( 'admin_print_styles-' . $of_page, 'optionsframework_load_styles' );
 }
 
 /* Loads the CSS */
@@ -193,7 +215,9 @@ function optionsframework_load_styles() {
 
 function optionsframework_load_scripts( $hook ) {
 
-	if ( 'appearance_page_options-framework' != $hook )
+	$menu = optionsframework_menu_settings();
+
+	if ( 'appearance_page_' . $menu['menu_slug'] != $hook )
         return;
 
 	// Enqueue colorpicker scripts for versions below 3.5 for compatibility
@@ -201,9 +225,9 @@ function optionsframework_load_scripts( $hook ) {
 		wp_register_script( 'iris', OPTIONS_FRAMEWORK_DIRECTORY . 'js/iris.min.js', array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), false, 1 );
 		wp_register_script( 'wp-color-picker', OPTIONS_FRAMEWORK_DIRECTORY . 'js/color-picker.min.js', array( 'jquery', 'iris' ) );
 		$colorpicker_l10n = array(
-			'clear' => __( 'Clear','tiga' ),
-			'defaultString' => __( 'Default', 'tiga' ),
-			'pick' => __( 'Select Color', 'tiga' )
+			'clear' => __( 'Clear','options_framework_theme' ),
+			'defaultString' => __( 'Default', 'options_framework_theme' ),
+			'pick' => __( 'Select Color', 'options_framework_theme' )
 		);
 		wp_localize_script( 'wp-color-picker', 'wpColorPickerL10n', $colorpicker_l10n );
 	}

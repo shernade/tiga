@@ -36,11 +36,5 @@ $j(document).ready(function(){
 		function() { $j(this).find( ".slides-content" ).slideDown(); },
 		function() { $j(this).find( ".slides-content" ).slideUp(); }
 	);
-
-	// add class last if has ie8 class
-    if( $j( "html" ).hasClass( "ie8" ) ) { 
-    	$j( "#home-content .widget:last-child" ).addClass( "last" );
-    	$j( ".two-cols:nth-child(2n)" ).addClass( "last" );
-    };
 	
 });

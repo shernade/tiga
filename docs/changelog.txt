@@ -1,3 +1,19 @@
+2.0 - Aug 2013
+[Add]
+-	
+
+[Fix] 
+- 	
+
+[Remove]
+-	Drop IE8 Support
+-	Remove social share button, http://make.wordpress.org/themes/guidelines/guidelines-plugin-territory/
+
+[Update]
+-	Options framework
+
+===========================================================================================
+
 1.9 - 15 June 2013
 [Add]
 -	Spanish language (pros @josediez)

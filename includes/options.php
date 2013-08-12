@@ -1,14 +1,4 @@
 <?php
-/**
- * Theme settings
- *
- * @package Tiga
- * @author Satrya
- * @license docs/license.txt
- * @since 0.0.1
- *
- */
-
 function optionsframework_option_name() {
 
 	// This gets the theme name from the stylesheet
@@ -23,9 +13,9 @@ function optionsframework_option_name() {
 
 /**
  * Defines an array of options that will be used to generate the settings page and be saved in the database.
- *  
+ *
+ * @since 1.0
  */
-
 function optionsframework_options() {
 	
 	$tiga_background = array(
@@ -51,13 +41,6 @@ function optionsframework_options() {
 	$tiga_select = array(
 		'enable' => __( 'Enable', 'tiga' ), 
 		'disable' => __( 'Disable', 'tiga' ) 
-	);
-
-	$tiga_social = array(
-		'tiga_post' => __( 'Single post', 'tiga' ),
-		'tiga_page' => __( 'Page', 'tiga' ),
-		'tiga_both' => __( 'Both', 'tiga' ),
-		'tiga_none' => __( 'None', 'tiga' )
 	);
 	
 	$imagepath =  get_template_directory_uri() . '/img/layouts/';
@@ -216,15 +199,6 @@ function optionsframework_options() {
 	$options[] = array( 
 		'name' => __( 'Page', 'tiga' ),
 		'type' => 'heading'
-	);
-						
-	$options[] = array( 
-		'name' => __( 'Display social share button', 'tiga' ),
-		'desc' => __( 'Display social share on single post and page', 'tiga' ),
-		'id' => "tiga_social_share",
-		'std' => 'tiga_post',
-		'type' => "radio",
-		'options' => $tiga_social
 	);
 						
 	$options[] = array( 

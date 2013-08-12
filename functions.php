@@ -1,17 +1,4 @@
 <?php
-/**
- * Theme functions file
- *
- * Contains all of the Theme's setup functions, custom functions,
- * custom Widgets, custom hooks, and Theme settings.
- * 
- * @package Tiga
- * @author Satrya
- * @license docs/license.txt
- * @since 0.0.1
- *
- */
-
 /* Defines constants used by the theme. */
 add_action( 'after_setup_theme', 'tiga_constants' );
 
@@ -29,7 +16,7 @@ add_action( 'after_setup_theme', 'tiga_load_libraries', 11 );
 function tiga_constants() {
 
 	/* Sets the theme version number. */
-	define( 'TIGA_VERSION', 1.9 );
+	define( 'TIGA_VERSION', 2.0 );
 
 	/* Sets the path to the theme directory. */
 	define( 'THEME_DIR', get_template_directory() );
@@ -154,10 +141,6 @@ function tiga_load_libraries() {
 	/* Loads the theme hooks. */
 	require( trailingslashit( TIGA_INCLUDES ) . 'hooks.php' );
 
-	/* Loads the theme metabox. */
-	if( is_admin() ) 
-		require( trailingslashit( TIGA_INCLUDES ) . 'metabox.php' );
-
 }
 
 /**
@@ -223,10 +206,6 @@ function tiga_enqueue_scripts() {
 
 	if ( is_singular() && wp_attachment_is_image( $post->ID ) ) {
 		wp_enqueue_script( 'tiga-keyboard-image-navigation', trailingslashit( TIGA_JS ) . 'vendor/keyboard-image-navigation.js', array( 'jquery' ), TIGA_VERSION, true );
-	}
-	
-	if ( is_singular() && of_get_option('tiga_social_share') ) {
-		wp_enqueue_script( 'tiga-social-share', trailingslashit( TIGA_JS ) . 'vendor/social-share.js', array( 'jquery' ), TIGA_VERSION, true );
 	}
 	
 	wp_enqueue_script( 'tiga-plugins', trailingslashit( TIGA_JS ) . 'plugins.js', array('jquery'), TIGA_VERSION, true );

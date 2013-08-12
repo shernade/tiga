@@ -223,44 +223,4 @@ function tiga_comment_nav() {
 	<?php endif; // check for comment navigation
 }
 endif; // tiga_comment_nav()
-
-/**
- * Display the social share button
- *
- * @since 0.0.1
- */
-if ( ! function_exists( 'tiga_share_buttons' ) ) :
-function tiga_share_buttons() {
-	global $post;
-	?>
-
-	<div class="share">
-		<p class="share-title"><?php _e( 'Share This:', 'tiga' ); ?></p>
-		
-		<p class="twitter">
-			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		</p> <!-- end .twitter -->
-		
-		<p class="fb-like">
-			<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;send=false&amp;layout=button_count&amp;width=96&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:96px; height:21px;" allowTransparency="true"></iframe>
-		</p> <!-- end .fb-like -->
-		
-		<p class="plusone">
-			<g:plusone size="medium"></g:plusone>
-		</p> <!-- end .plusone -->
-		
-		<p class="stumble">
-			<su:badge layout="1"></su:badge>
-		</p> <!-- end .stumble -->
-		
-		<p class="linkedin">
-			<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-			<script type="IN/Share" data-counter="right"></script>
-		</p> <!-- end .linkedin -->
-		
-	</div> <!-- end .share -->
-<?php
-}
-endif; // end tiga_share_button() 
 ?>

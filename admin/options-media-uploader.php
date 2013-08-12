@@ -100,7 +100,9 @@ add_action( 'admin_enqueue_scripts', 'optionsframework_media_scripts' );
 
 function optionsframework_media_scripts( $hook ) {
 
-	if ( 'appearance_page_options-framework' != $hook )
+	$menu = optionsframework_menu_settings();
+	
+	if ( 'appearance_page_' . $menu['menu_slug'] != $hook )
 		return;
 
 	if ( function_exists( 'wp_enqueue_media' ) )
@@ -108,8 +110,8 @@ function optionsframework_media_scripts( $hook ) {
 	wp_register_script( 'of-media-uploader', OPTIONS_FRAMEWORK_DIRECTORY .'js/media-uploader.js', array( 'jquery' ) );
 	wp_enqueue_script( 'of-media-uploader' );
 	wp_localize_script( 'of-media-uploader', 'optionsframework_l10n', array(
-		'upload' => __( 'Upload', 'tiga' ),
-		'remove' => __( 'Remove', 'tiga' )
+		'upload' => __( 'Upload', 'options_framework_theme' ),
+		'remove' => __( 'Remove', 'options_framework_theme' )
 	) );
 }
 
