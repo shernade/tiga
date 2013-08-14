@@ -45,9 +45,9 @@ if ( ! empty( $sticky ) ) { ?>
 							</article> <!-- end #post-<?php the_ID(); ?> -->
 						</li>
 						
-					<?php endwhile; wp_reset_postdata();?>
+					<?php endwhile; ?>
 
-				<?php endif; ?>
+				<?php endif; wp_reset_postdata(); ?>
 
 			</ul> <!-- end .slides -->
 			

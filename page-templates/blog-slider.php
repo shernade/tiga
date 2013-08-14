@@ -17,24 +17,20 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'featured' ); ?>
 			
 			<?php 
-				$paged = 1;
-				if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
-				if ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
-				$paged = intval( $paged );
-				
-				$args = array(
-					'post__not_in' => get_option('sticky_posts'),
-					'paged' => $paged,
-					'post_type' => 'post',
-				);
-				query_posts( $args );
-				
-				if ( have_posts() ) : 
-			?>
+			
+			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+			$args = array(
+				'paged' 	=> $paged,
+				'post_type'	=> 'post',
+			);
 
-				<?php while ( have_posts() ) : the_post(); ?>
+			$blog_query = new WP_Query( $args );
+				
+			if ( $blog_query->have_posts() ) : ?>
 
-					<?php get_template_part( 'content' ); ?>
+				<?php while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
+
+					<?php get_template_part( 'content', 'index' ); ?>
 
 				<?php endwhile; ?>
 
@@ -44,7 +40,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'no-results', 'index' ); ?>
 
-			<?php endif; ?>
+			<?php endif; wp_reset_postdata(); ?>
 			
 		</div><!-- #content -->
 

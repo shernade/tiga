@@ -190,4 +190,17 @@ function tiga_remove_recent_comments_style() {
 
 }
 add_action( 'widgets_init', 'tiga_remove_recent_comments_style' );
+
+/**
+ * Filter the main loop
+ *
+ * @since 2.0
+ */
+function tiga_filter_query( $query ) {
+	
+	if( is_page_template( 'page-templates/blog-slider.php' ) )
+		$query->set( 'post__not_in', get_option( 'sticky_posts' ) );
+	
+}
+add_action( 'pre_get_posts', 'tiga_filter_query' );
 ?>
